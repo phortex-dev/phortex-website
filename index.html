@@ -1,52 +1,719 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Phortex AI Solutions</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #0d0d0d;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 50px;
-        }
-        .container {
-            max-width: 720px;
-            margin: auto;
-        }
-        h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 20px;
-            line-height: 1.5;
-        }
-        .tagline {
-            color: #00e6e6;
-            margin-top: 20px;
-            font-size: 22px;
-        }
-        a.button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 20px;
-            background: #00e6e6;
-            color: #000;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Phortex AI | Agentic Intelligence & Automation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Phortex AI builds agentic AI solutions and automation platforms for businesses and teams." />
+
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-alt: #0a0c12;
+      --fg: #f7f7ff;
+      --muted: #a3a7c2;
+      --accent: #28f0ff;
+      --accent-soft: rgba(40, 240, 255, 0.18);
+      --border-soft: rgba(255, 255, 255, 0.08);
+      --card-bg: #0d1018;
+      --danger: #ff5c7b;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.7);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #13162a 0, #05060a 55%, #000 100%);
+      color: var(--fg);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 20px 18px 60px;
+    }
+
+    /* HEADER */
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 10px 6px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(5, 6, 10, 0.9), rgba(5, 6, 10, 0.4), transparent);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: radial-gradient(circle at 20% 10%, #ffffff 0, #b1f7ff 12%, #2ef4ff 24%, #072a38 55%, #02040b 100%);
+      box-shadow: 0 0 22px rgba(40, 240, 255, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .logo-inner {
+      position: absolute;
+      inset: 3px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 15% 0, rgba(255, 255, 255, 0.7), transparent 55%);
+      mix-blend-mode: screen;
+      opacity: 0.7;
+    }
+
+    .logo svg {
+      position: relative;
+      z-index: 1;
+      width: 22px;
+      height: 22px;
+      filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-name {
+      font-weight: 650;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.92rem;
+    }
+
+    .brand-tagline {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: var(--muted);
+      padding: 4px 10px;
+      border-radius: 999px;
+      transition: 0.15s ease-out;
+    }
+
+    nav a:hover {
+      color: var(--fg);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .nav-cta {
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(40, 240, 255, 0.7);
+      padding: 7px 14px;
+      color: #0a0c12;
+      background: linear-gradient(120deg, #28f0ff, #72ffe1);
+      font-weight: 600;
+      box-shadow: 0 0 16px rgba(40, 240, 255, 0.7);
+    }
+
+    .nav-cta:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    /* HERO */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 30px;
+      align-items: center;
+      padding: 26px 6px 40px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      padding: 4px 10px 4px 4px;
+      border-radius: 999px;
+      border: 1px solid rgba(40, 240, 255, 0.4);
+      background: radial-gradient(circle at 0 0, rgba(40, 240, 255, 0.17), rgba(10, 10, 20, 0.7));
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-kicker-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(40, 240, 255, 0.9);
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3vw + 1rem, 3.1rem);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(120deg, #28f0ff, #d4f4ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .btn-primary {
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(40, 240, 255, 0.82);
+      padding: 10px 18px;
+      background: linear-gradient(130deg, #28f0ff, #7af3d5);
+      color: #05060a;
+      font-weight: 600;
+      box-shadow: 0 18px 40px rgba(40, 240, 255, 0.35);
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary span.arrow {
+      font-size: 1.1rem;
+    }
+
+    .btn-secondary {
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 9px 16px;
+      background: rgba(9, 10, 20, 0.8);
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-footnote {
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-footnote span.pill {
+      border-radius: 999px;
+      border: 1px solid rgba(40, 240, 255, 0.4);
+      padding: 3px 9px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+
+    .hero-right {
+      background: radial-gradient(circle at 0 0, rgba(40, 240, 255, 0.25), rgba(5, 8, 18, 0.95));
+      border-radius: 22px;
+      border: 1px solid rgba(120, 225, 255, 0.32);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .hero-card {
+      background: rgba(6, 8, 18, 0.9);
+      border-radius: 16px;
+      padding: 12px 12px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.8rem;
+    }
+
+    .hero-card-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .hero-card-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 5px;
+      font-size: 0.7rem;
+      color: var(--accent);
+      background: rgba(40, 240, 255, 0.08);
+      padding: 3px 7px;
+      border-radius: 999px;
+    }
+
+    .hero-orbit {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(40, 240, 255, 0.5), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(212, 244, 255, 0.35), transparent 55%);
+      mix-blend-mode: screen;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 18px 6px 10px;
+    }
+
+    .section-heading {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+      max-width: 36rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      padding: 14px 14px 12px;
+      font-size: 0.9rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card-body {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 9px;
+    }
+
+    .chip {
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--muted);
+    }
+
+    .chip-accent {
+      border-color: rgba(40, 240, 255, 0.7);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .twocol {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 0.87rem;
+    }
+
+    ul li::before {
+      content: "•";
+      color: var(--accent);
+      margin-top: 1px;
+    }
+
+    /* CONTACT */
+
+    .contact-card {
+      margin-top: 12px;
+      padding: 16px 14px;
+      border-radius: 18px;
+      background: linear-gradient(120deg, rgba(40, 240, 255, 0.08), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(40, 240, 255, 0.42);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-email {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.9rem;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-email span.badge {
+      font-size: 0.7rem;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(40, 240, 255, 0.22);
+      color: var(--accent);
+      border: 1px solid rgba(40, 240, 255, 0.6);
+    }
+
+    footer {
+      margin-top: 26px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 840px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .twocol {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-title {
+        font-size: 1.9rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Phortex AI Solutions</h1>
-        <p class="tagline">Agentic AI • Automation • Intelligent Systems</p>
-        <p>We build next-generation intelligent agent systems for businesses, creators, and developers.</p>
-        <p>Full website coming soon.</p>
-        <a class="button" href="mailto:dev@phortex.com">Contact Us</a>
-    </div>
+  <div class="page">
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <div class="logo-inner"></div>
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path
+              d="M9 7h8.2c4.1 0 7.3 3.1 7.3 7.4 0 4.2-3.2 7.6-7.5 7.6h-3.9L11 25.5c-.4.9-1.5 1.3-2.4.9-.9-.4-1.3-1.5-.9-2.4L9 7zm4 4-2.3 8h4.5c2 0 3.4-1.5 3.4-3.6 0-2-1.4-3.4-3.4-3.4H13z"
+              fill="#02030a" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">Phortex AI</div>
+          <div class="brand-tagline">Agentic Intelligence & Automation</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#solutions">Solutions</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Talk to us</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section class="hero">
+        <div>
+          <div class="hero-kicker">
+            <div class="hero-kicker-dot"></div>
+            Early-stage lab. Production-grade thinking.
+          </div>
+
+          <h1 class="hero-title">
+            Agentic AI systems<br />
+            that <span>work like teams</span>.
+          </h1>
+
+          <p class="hero-subtitle">
+            Phortex AI designs and builds intelligent agents that orchestrate tools, data, and workflows —
+            turning your scattered processes into reliable, end-to-end automations.
+          </p>
+
+          <div class="hero-actions">
+            <a href="mailto:dev@phortex.com?subject=Phortex%20AI%20Inquiry" class="btn-primary">
+              <span>Schedule a discovery call</span>
+              <span class="arrow">↗</span>
+            </a>
+            <a href="#solutions" class="btn-secondary">
+              <span>Explore what we build</span>
+            </a>
+          </div>
+
+          <div class="hero-footnote">
+            <span class="pill">Agentic AI • RAG • Automation</span>
+            <span>Built and tested on modern LLM + container stacks.</span>
+          </div>
+        </div>
+
+        <aside class="hero-right" aria-label="Phortex AI capability snapshot">
+          <div class="hero-orbit"></div>
+          <div style="position: relative; z-index: 1;">
+            <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);">
+              Capability snapshot
+            </div>
+            <div style="font-size: 1rem; margin-top: 4px; margin-bottom: 8px;">
+              From prototype lab to client-ready blueprints.
+            </div>
+
+            <div class="hero-grid">
+              <div class="hero-card">
+                <div class="hero-card-label">Agent frameworks</div>
+                <div class="hero-card-value">LangGraph · CrewAI</div>
+                <div class="hero-card-badge">Multi-agent orchestration</div>
+              </div>
+              <div class="hero-card">
+                <div class="hero-card-label">Knowledge</div>
+                <div class="hero-card-value">RAG on your data</div>
+                <div class="hero-card-badge">Qdrant · Postgres · APIs</div>
+              </div>
+              <div class="hero-card">
+                <div class="hero-card-label">Deployment</div>
+                <div class="hero-card-value">Containers & clouds</div>
+                <div class="hero-card-badge">From lab to production</div>
+              </div>
+              <div class="hero-card">
+                <div class="hero-card-label">Focus areas</div>
+                <div class="hero-card-value">IT · Security · Ops</div>
+                <div class="hero-card-badge">Enterprise-friendly patterns</div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- SOLUTIONS -->
+      <section id="solutions">
+        <h2 class="section-heading">What we build</h2>
+        <p class="section-subtitle">
+          Phortex AI focuses on practical, high-leverage agentic systems — starting with your
+          existing tools, data, and teams.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-title">Agentic copilots for teams</div>
+            <div class="card-body">
+              Custom copilots that understand your documents, tickets, and systems —
+              answering questions, drafting responses, and coordinating tasks across tools.
+            </div>
+            <div class="chip-row">
+              <span class="chip chip-accent">RAG over private data</span>
+              <span class="chip">Knowledge bases</span>
+              <span class="chip">Internal chat interfaces</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">End-to-end automation agents</div>
+            <div class="card-body">
+              Multi-step agents that watch events (email, webhooks, logs),
+              make decisions, call APIs, and open or update tickets —
+              with humans looped in where it matters.
+            </div>
+            <div class="chip-row">
+              <span class="chip chip-accent">n8n · HTTP APIs</span>
+              <span class="chip">Incident triage</span>
+              <span class="chip">Ops workflows</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Evaluation & “agent arenas”</div>
+            <div class="card-body">
+              Harnesses that test different models, prompts, and agent graphs
+              on the same scenarios — so you can choose what actually performs best,
+              not just looks smart in a demo.
+            </div>
+            <div class="chip-row">
+              <span class="chip chip-accent">Quantitative evals</span>
+              <span class="chip">Model comparison</span>
+              <span class="chip">Dashboards</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- USE CASES -->
+      <section id="use-cases">
+        <h2 class="section-heading">Early use cases we love</h2>
+        <p class="section-subtitle">
+          These are the kinds of problems agentic systems are already strong at solving.
+          Phortex AI prototypes target real workflows instead of toy examples.
+        </p>
+
+        <div class="twocol">
+          <div class="card">
+            <div class="card-title">Operations & IT</div>
+            <ul>
+              <li>Transform inbound email into structured tickets with summaries and suggested responses.</li>
+              <li>Build “policy copilots” that answer questions from internal standards, PDFs, and runbooks.</li>
+              <li>Automate data enrichment and impact analysis when new incidents appear.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-title">Knowledge-driven work</div>
+            <ul>
+              <li>Let agents draft proposals, FAQs, and documentation from your existing sources.</li>
+              <li>Spin up temporary “project copilots” that live alongside current initiatives.</li>
+              <li>Benchmark local vs. cloud LLMs on your own tasks and constraints.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <h2 class="section-heading">About Phortex AI</h2>
+        <p class="section-subtitle">
+          Phortex AI is an early-stage lab exploring how to turn high-quality reasoning
+          and orchestration into tangible, reliable systems — not just one-off prompts.
+          We care about clarity, observability, and deployable patterns.
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2 class="section-heading">Contact</h2>
+        <p class="section-subtitle">
+          If you’re interested in collaborating, piloting an agentic workflow, or just trading notes
+          on AI + automation strategy, we’d be happy to talk.
+        </p>
+
+        <div class="contact-card">
+          <div>Reach us directly:</div>
+          <a href="mailto:dev@phortex.com?subject=Phortex%20AI%20Inquiry" class="contact-email">
+            <span class="badge">Primary contact</span>
+            <span>dev@phortex.com</span>
+          </a>
+          <div style="font-size: 0.8rem; color: var(--muted);">
+            Please include a brief description of your context (team size, tools you use today, and what you’d like
+            agents to handle).
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Phortex AI. All rights reserved.</div>
+      <div>Built on modern LLM + container stacks, starting from a home lab.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
