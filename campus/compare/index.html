@@ -898,15 +898,14 @@
     document.getElementById('resultsCount').textContent = 'Loading…';
     document.getElementById('pagination').innerHTML = '';
 
-    // Build sort params — api.data.gov uses _sort=field and _order=asc|desc separately
+    // Build sort params — College Scorecard API uses sort=field:direction format
     const { sortField, sortOrder } = getSortParam();
     const params = new URLSearchParams({
       api_key: API_KEY,
       fields: FIELDS,
       per_page: PER_PAGE,
       page: page - 1,
-      _sort: sortField,
-      _order: sortOrder,
+      sort: `${sortField}:${sortOrder}`,
     });
 
     // Apply filters to params — only add range filters when user has actually set them
