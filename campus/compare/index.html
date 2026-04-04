@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Comparison Tool — Phortex Campus</title>
+  <meta name="description" content="Search, filter, and compare U.S. colleges side-by-side using federal data. Acceptance rates, costs, earnings, SAT scores, and more — powered by College Scorecard." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://phortex.com/campus/compare/" />
+
+  <style>
+    /* ── Fonts ──────────────────────────────────────────── */
+    @import url('https://rsms.me/inter/inter.css');
+    @font-face {
+      font-family: 'Syne';
+      font-weight: 400 800;
+      font-display: swap;
+      src: url('https://fonts.gstatic.com/s/syne/v22/8vIS7w4qzmVxsWxjBZRjr0FKM_04uQ.woff2') format('woff2');
+    }
+
+    /* ── Tokens ─────────────────────────────────────────── */
+    :root {
+      --navy:      #070D1A;
+      --navy-1:    #0C1528;
+      --navy-2:    #111E36;
+      --navy-3:    #172544;
+      --emerald:   #10D98A;
+      --emerald-2: #0AB070;
+      --em-subtle: rgba(16,217,138,0.08);
+      --em-glow:   rgba(16,217,138,0.20);
+      --cyan:      #00D4F0;
+      --violet:    #8B5CF6;
+      --white:     #F4F8FF;
+      --g100:      #D4DDF0;
+      --g300:      #7A8AAC;
+      --g500:      #3A4A6A;
+      --g700:      #1A2438;
+      --r:   6px;
+      --rl:  12px;
+      --rxl: 20px;
+      --t: 0.2s cubic-bezier(0.4,0,0.2,1);
+      --font-d: 'Syne', sans-serif;
+      --font-b: 'Inter', sans-serif;
+      --font-m: 'JetBrains Mono','Fira Code',monospace;
+    }
+
+    /* ── Reset ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: var(--font-b);
+      background: var(--navy);
+      color: var(--white);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; }
+
+    /* ── Noise texture ──────────────────────────────────── */
+    body::after {
+      content: '';
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 9999; opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    }
+
+    /* ── Top nav ────────────────────────────────────────── */
+    .topnav {
+      position: sticky; top: 0; z-index: 200;
+      height: 56px;
+      background: rgba(7,13,26,0.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(16,217,138,0.15);
+      display: flex; align-items: center;
+      padding: 0 1.5rem;
+      gap: 1.5rem;
+    }
+    .topnav-brand {
+      font-family: var(--font-d);
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      display: flex; align-items: center; gap: 0.5rem;
+      flex-shrink: 0;
+    }
+    .topnav-brand span { color: var(--emerald); }
+    .topnav-sep { color: var(--g500); font-size: 0.75rem; }
+    .topnav-title {
+      font-family: var(--font-d);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--g300);
+      letter-spacing: 0.04em;
+    }
+    .topnav-actions { margin-left: auto; display: flex; align-items: center; gap: 0.75rem; }
+    .compare-count-badge {
+      background: var(--emerald);
+      color: var(--navy);
+      font-family: var(--font-d);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.25rem 0.7rem;
+      border-radius: 99px;
+      display: none;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .compare-count-badge.show { display: flex; }
+    .btn-compare-open {
+      background: var(--emerald);
+      color: var(--navy);
+      font-family: var(--font-d);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.4rem 1rem;
+      border-radius: var(--r);
+      transition: background var(--t), transform var(--t);
+      display: none;
+    }
+    .btn-compare-open.show { display: block; }
+    .btn-compare-open:hover { background: #3fffaa; transform: translateY(-1px); }
+
+    /* ── Layout ─────────────────────────────────────────── */
+    .layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      min-height: calc(100vh - 56px);
+    }
+
+    /* ── Sidebar ────────────────────────────────────────── */
+    .sidebar {
+      background: var(--navy-1);
+      border-right: 1px solid var(--g700);
+      padding: 1.5rem;
+      position: sticky;
+      top: 56px;
+      height: calc(100vh - 56px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--g700) transparent;
+    }
+    .sidebar::-webkit-scrollbar { width: 4px; }
+    .sidebar::-webkit-scrollbar-track { background: transparent; }
+    .sidebar::-webkit-scrollbar-thumb { background: var(--g700); border-radius: 4px; }
+
+    .sidebar-label {
+      font-family: var(--font-m);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--emerald);
+      margin-bottom: 0.6rem;
+      margin-top: 1.4rem;
+    }
+    .sidebar-label:first-child { margin-top: 0; }
+
+    .search-wrap { position: relative; margin-bottom: 0.5rem; }
+    .search-wrap input {
+      width: 100%;
+      background: var(--navy-2);
+      border: 1px solid var(--g700);
+      border-radius: var(--r);
+      padding: 0.6rem 0.85rem 0.6rem 2.25rem;
+      color: var(--white);
+      font-family: var(--font-b);
+      font-size: 0.875rem;
+      transition: border-color var(--t), box-shadow var(--t);
+    }
+    .search-wrap input:focus { outline: none; border-color: var(--emerald); box-shadow: 0 0 0 3px var(--em-subtle); }
+    .search-wrap input::placeholder { color: var(--g500); }
+    .search-icon {
+      position: absolute; left: 0.65rem; top: 50%;
+      transform: translateY(-50%);
+      color: var(--g500); font-size: 0.9rem; pointer-events: none;
+    }
+
+    .filter-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .filter-row {
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .filter-row label {
+      font-size: 0.78rem; color: var(--g300); flex: 1;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    select.filter-select, input[type="number"].filter-input {
+      background: var(--navy-2);
+      border: 1px solid var(--g700);
+      border-radius: var(--r);
+      padding: 0.4rem 0.6rem;
+      color: var(--white);
+      font-family: var(--font-b);
+      font-size: 0.78rem;
+      transition: border-color var(--t);
+      width: 100%;
+    }
+    select.filter-select:focus, input[type="number"].filter-input:focus {
+      outline: none; border-color: var(--emerald);
+    }
+    select.filter-select option { background: var(--navy-1); }
+
+    .range-wrap { display: flex; flex-direction: column; gap: 0.3rem; }
+    .range-row { display: flex; align-items: center; gap: 0.5rem; }
+    .range-row span { font-size: 0.72rem; color: var(--g500); white-space: nowrap; min-width: 28px; }
+    input[type="range"] {
+      -webkit-appearance: none; appearance: none;
+      height: 3px; background: var(--g700); border-radius: 3px;
+      width: 100%; cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 14px; height: 14px;
+      background: var(--emerald); border-radius: 50%;
+      border: 2px solid var(--navy);
+      box-shadow: 0 0 6px var(--em-glow);
+    }
+
+    .btn-apply {
+      width: 100%; padding: 0.6rem; border-radius: var(--r);
+      background: var(--emerald); color: var(--navy);
+      font-family: var(--font-d); font-weight: 700; font-size: 0.82rem;
+      transition: background var(--t), transform var(--t);
+      margin-top: 1rem;
+    }
+    .btn-apply:hover { background: #3fffaa; transform: translateY(-1px); }
+    .btn-reset {
+      width: 100%; padding: 0.45rem;
+      background: transparent; border: 1px solid var(--g700);
+      color: var(--g300); font-size: 0.75rem; border-radius: var(--r);
+      transition: border-color var(--t), color var(--t);
+      margin-top: 0.4rem;
+    }
+    .btn-reset:hover { border-color: var(--emerald); color: var(--emerald); }
+
+    /* ── Main results area ──────────────────────────────── */
+    .main { padding: 1.5rem; overflow-y: auto; }
+
+    .results-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1.25rem; gap: 1rem; flex-wrap: wrap;
+    }
+    .results-count {
+      font-family: var(--font-d); font-size: 0.8rem; font-weight: 700;
+      color: var(--g300);
+    }
+    .results-count strong { color: var(--emerald); }
+    .sort-wrap { display: flex; align-items: center; gap: 0.5rem; }
+    .sort-label { font-size: 0.72rem; color: var(--g500); white-space: nowrap; }
+    select.sort-select {
+      background: var(--navy-1); border: 1px solid var(--g700);
+      border-radius: var(--r); padding: 0.35rem 0.65rem;
+      color: var(--white); font-family: var(--font-b); font-size: 0.78rem;
+    }
+    select.sort-select:focus { outline: none; border-color: var(--emerald); }
+
+    /* ── School cards ───────────────────────────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1rem;
+    }
+
+    .school-card {
+      background: var(--navy-1);
+      border: 1px solid var(--g700);
+      border-radius: var(--rl);
+      padding: 1.35rem;
+      cursor: pointer;
+      transition: border-color var(--t), transform var(--t), box-shadow var(--t);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .school-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: var(--emerald);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.3s var(--t);
+    }
+    .school-card:hover {
+      border-color: rgba(16,217,138,0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 30px rgba(16,217,138,0.08);
+    }
+    .school-card:hover::before { transform: scaleX(1); }
+    .school-card.in-compare {
+      border-color: var(--emerald);
+      background: rgba(16,217,138,0.04);
+    }
+    .school-card.in-compare::before { transform: scaleX(1); }
+
+    .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; }
+    .card-logo {
+      width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+      background: var(--navy-2);
+      border: 1px solid var(--g700);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-d); font-weight: 800; font-size: 1rem;
+      color: var(--emerald);
+    }
+    .card-name {
+      font-family: var(--font-d); font-weight: 700; font-size: 0.95rem;
+      line-height: 1.25; color: var(--white); flex: 1;
+    }
+    .card-location {
+      font-size: 0.72rem; color: var(--g300); margin-top: 0.2rem;
+      display: flex; align-items: center; gap: 0.3rem;
+    }
+    .card-type-badge {
+      font-family: var(--font-m); font-size: 0.6rem;
+      padding: 0.2rem 0.5rem; border-radius: 4px;
+      border: 1px solid var(--g700); color: var(--g300);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .card-type-badge.public { border-color: rgba(0,212,240,0.3); color: var(--cyan); }
+    .card-type-badge.private { border-color: rgba(139,92,246,0.3); color: var(--violet); }
+
+    /* Metrics row */
+    .card-metrics {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+    .metric {
+      background: rgba(255,255,255,0.025);
+      border: 1px solid var(--g700);
+      border-radius: var(--r);
+      padding: 0.55rem 0.65rem;
+      text-align: center;
+    }
+    .metric-val {
+      font-family: var(--font-d); font-weight: 800; font-size: 1.1rem;
+      color: var(--white); line-height: 1;
+    }
+    .metric-val.good { color: var(--emerald); }
+    .metric-val.warn { color: #F59E0B; }
+    .metric-val.bad  { color: #F87171; }
+    .metric-lbl {
+      font-family: var(--font-m); font-size: 0.6rem; color: var(--g300);
+      margin-top: 0.2rem; letter-spacing: 0.06em;
+    }
+
+    /* Mini bar for acceptance rate */
+    .accept-bar-wrap { margin-top: 0.25rem; }
+    .accept-bar-label { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--g300); margin-bottom: 0.3rem; }
+    .accept-bar-track { height: 4px; background: var(--g700); border-radius: 4px; overflow: hidden; }
+    .accept-bar-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+
+    /* Card footer */
+    .card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--g700);
+      gap: 0.5rem;
+    }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; flex: 1; }
+    .card-tag {
+      font-family: var(--font-m); font-size: 0.58rem;
+      padding: 0.15rem 0.45rem; border-radius: 4px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.07);
+      color: var(--g300);
+    }
+    .btn-add-compare {
+      font-family: var(--font-d); font-size: 0.72rem; font-weight: 700;
+      padding: 0.35rem 0.8rem; border-radius: var(--r);
+      border: 1px solid var(--emerald); color: var(--emerald);
+      transition: all var(--t); white-space: nowrap;
+    }
+    .btn-add-compare:hover { background: var(--emerald); color: var(--navy); }
+    .btn-add-compare.added {
+      background: var(--emerald); color: var(--navy);
+    }
+    .btn-add-compare.added:hover { background: #F87171; color: var(--navy); border-color: #F87171; }
+
+    /* ── Loading / empty states ─────────────────────────── */
+    .state-message {
+      text-align: center; padding: 5rem 2rem;
+      color: var(--g300);
+    }
+    .state-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .state-title { font-family: var(--font-d); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--white); }
+    .state-sub { font-size: 0.875rem; max-width: 360px; margin: 0 auto; line-height: 1.6; }
+    .spinner {
+      width: 36px; height: 36px;
+      border: 3px solid var(--g700); border-top-color: var(--emerald);
+      border-radius: 50%; animation: spin 0.8s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Pagination ─────────────────────────────────────── */
+    .pagination {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.5rem; margin-top: 2rem; padding-bottom: 2rem;
+    }
+    .page-btn {
+      font-family: var(--font-d); font-size: 0.78rem; font-weight: 600;
+      padding: 0.45rem 0.85rem; border-radius: var(--r);
+      background: var(--navy-1); border: 1px solid var(--g700); color: var(--g300);
+      transition: all var(--t);
+    }
+    .page-btn:hover:not(:disabled) { border-color: var(--emerald); color: var(--emerald); }
+    .page-btn.active { background: var(--emerald); color: var(--navy); border-color: var(--emerald); }
+    .page-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+    /* ── COMPARE DRAWER ─────────────────────────────────── */
+    .compare-drawer {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
+      background: var(--navy-1);
+      border-top: 2px solid var(--emerald);
+      padding: 0; max-height: 0; overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding var(--t);
+      box-shadow: 0 -16px 48px rgba(0,0,0,0.6);
+    }
+    .compare-drawer.open { max-height: 90vh; padding: 0; overflow-y: auto; }
+    .drawer-header {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--navy-1);
+      border-bottom: 1px solid var(--g700);
+      padding: 1rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .drawer-title {
+      font-family: var(--font-d); font-weight: 800; font-size: 1.1rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .drawer-title span { color: var(--emerald); }
+    .drawer-subtitle { font-size: 0.78rem; color: var(--g300); margin-top: 0.2rem; }
+    .drawer-close {
+      width: 32px; height: 32px; border-radius: var(--r);
+      background: var(--g700); color: var(--g300);
+      font-size: 1.1rem; display: flex; align-items: center; justify-content: center;
+      transition: all var(--t);
+    }
+    .drawer-close:hover { background: var(--g500); color: var(--white); }
+
+    /* Compare table */
+    .compare-body { padding: 1.5rem; overflow-x: auto; }
+    .compare-table {
+      width: 100%; border-collapse: collapse;
+      min-width: 600px;
+    }
+    .compare-table th {
+      background: var(--navy-2);
+      padding: 1rem; text-align: left; vertical-align: top;
+      font-family: var(--font-d); font-weight: 700; font-size: 0.875rem;
+      border: 1px solid var(--g700);
+      position: sticky; top: 0; z-index: 5;
+      min-width: 200px;
+    }
+    .compare-table th:first-child { min-width: 160px; background: var(--navy-1); }
+    .compare-table th .th-name { color: var(--white); margin-bottom: 0.25rem; line-height: 1.3; }
+    .compare-table th .th-sub { font-size: 0.7rem; color: var(--g300); font-weight: 400; }
+    .compare-table th .btn-remove-col {
+      margin-top: 0.5rem; font-size: 0.68rem;
+      color: var(--g500); border: 1px solid var(--g700);
+      padding: 0.2rem 0.5rem; border-radius: 4px;
+      transition: all var(--t);
+    }
+    .compare-table th .btn-remove-col:hover { border-color: #F87171; color: #F87171; }
+
+    .compare-table td {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--g700);
+      font-size: 0.82rem;
+      vertical-align: middle;
+    }
+    .compare-table td:first-child {
+      background: var(--navy-1);
+      font-family: var(--font-m); font-size: 0.68rem;
+      color: var(--g300); letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+      position: sticky; left: 0;
+    }
+    .compare-table tr:nth-child(even) td { background: rgba(255,255,255,0.01); }
+    .compare-table tr:nth-child(even) td:first-child { background: var(--navy-1); }
+    .compare-table .best { color: var(--emerald); font-weight: 700; }
+    .compare-table .na { color: var(--g500); font-style: italic; }
+
+    /* Section headers in compare table */
+    .compare-table tr.section-row td {
+      background: var(--navy-2) !important;
+      color: var(--emerald);
+      font-family: var(--font-d);
+      font-weight: 800;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      border-color: rgba(16,217,138,0.2);
+    }
+
+    /* ── SCHOOL DETAIL MODAL ────────────────────────────── */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 400;
+      background: rgba(7,13,26,0.88);
+      backdrop-filter: blur(8px);
+      display: none; align-items: center; justify-content: center;
+      padding: 1.5rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--navy-1);
+      border: 1px solid rgba(16,217,138,0.3);
+      border-radius: var(--rxl);
+      width: 100%; max-width: 780px;
+      max-height: 88vh; overflow-y: auto;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.7);
+      scrollbar-width: thin;
+      scrollbar-color: var(--g700) transparent;
+    }
+    .modal-header {
+      padding: 2rem 2rem 1.25rem;
+      border-bottom: 1px solid var(--g700);
+      position: sticky; top: 0; background: var(--navy-1); z-index: 5;
+    }
+    .modal-name { font-family: var(--font-d); font-weight: 800; font-size: 1.4rem; line-height: 1.2; margin-bottom: 0.4rem; }
+    .modal-meta { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+    .modal-close {
+      position: absolute; top: 1.25rem; right: 1.25rem;
+      width: 32px; height: 32px; border-radius: var(--r);
+      background: var(--g700); color: var(--g300);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; transition: all var(--t);
+    }
+    .modal-close:hover { background: var(--g500); color: var(--white); }
+    .modal-body { padding: 1.5rem 2rem 2rem; }
+    .modal-section { margin-bottom: 2rem; }
+    .modal-section-title {
+      font-family: var(--font-d); font-weight: 700; font-size: 0.78rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--emerald); margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid rgba(16,217,138,0.2);
+    }
+    .detail-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.75rem; }
+    .detail-card {
+      background: var(--navy-2); border: 1px solid var(--g700);
+      border-radius: var(--r); padding: 0.85rem;
+    }
+    .detail-val {
+      font-family: var(--font-d); font-weight: 800; font-size: 1.35rem;
+      line-height: 1; margin-bottom: 0.25rem;
+    }
+    .detail-lbl { font-family: var(--font-m); font-size: 0.62rem; color: var(--g300); letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.4; }
+    .detail-note { font-size: 0.72rem; color: var(--g500); margin-top: 0.25rem; }
+    .modal-cta {
+      background: var(--em-subtle); border: 1px solid rgba(16,217,138,0.3);
+      border-radius: var(--rl); padding: 1.25rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .modal-cta-text { font-size: 0.875rem; color: var(--g100); line-height: 1.5; }
+    .modal-cta-text strong { color: var(--emerald); display: block; margin-bottom: 0.2rem; }
+    .btn-modal-counsel {
+      background: var(--emerald); color: var(--navy);
+      font-family: var(--font-d); font-weight: 700; font-size: 0.82rem;
+      padding: 0.6rem 1.25rem; border-radius: var(--r);
+      white-space: nowrap; flex-shrink: 0;
+      transition: background var(--t), transform var(--t);
+    }
+    .btn-modal-counsel:hover { background: #3fffaa; transform: translateY(-1px); }
+
+    /* ── Phortex insight box ─────────────────────────────── */
+    .insight-box {
+      background: rgba(0,212,240,0.04);
+      border: 1px solid rgba(0,212,240,0.2);
+      border-radius: var(--r); padding: 0.85rem 1rem;
+      margin-top: 0.5rem;
+    }
+    .insight-label {
+      font-family: var(--font-m); font-size: 0.62rem; color: var(--cyan);
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.3rem;
+    }
+    .insight-text { font-size: 0.8rem; color: var(--g100); line-height: 1.6; }
+
+    /* ── API key gate ────────────────────────────────────── */
+    .api-gate {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; min-height: 60vh;
+      padding: 3rem;
+      text-align: center;
+    }
+    .api-gate-icon { font-size: 3rem; margin-bottom: 1.25rem; }
+    .api-gate-title { font-family: var(--font-d); font-size: 1.5rem; font-weight: 800; margin-bottom: 0.75rem; }
+    .api-gate-desc { font-size: 0.9rem; color: var(--g300); max-width: 500px; line-height: 1.7; margin-bottom: 1.75rem; }
+    .api-key-form { display: flex; gap: 0.65rem; max-width: 420px; width: 100%; }
+    .api-key-input {
+      flex: 1; background: var(--navy-2); border: 1px solid var(--g700);
+      border-radius: var(--r); padding: 0.65rem 1rem;
+      color: var(--white); font-family: var(--font-m); font-size: 0.82rem;
+      transition: border-color var(--t), box-shadow var(--t);
+    }
+    .api-key-input:focus { outline: none; border-color: var(--emerald); box-shadow: 0 0 0 3px var(--em-subtle); }
+    .api-key-input::placeholder { color: var(--g500); }
+    .btn-api-submit {
+      background: var(--emerald); color: var(--navy);
+      font-family: var(--font-d); font-weight: 700; font-size: 0.82rem;
+      padding: 0.65rem 1.25rem; border-radius: var(--r); white-space: nowrap;
+      transition: background var(--t); flex-shrink: 0;
+    }
+    .btn-api-submit:hover { background: #3fffaa; }
+    .api-key-note { font-size: 0.75rem; color: var(--g500); margin-top: 0.65rem; max-width: 420px; }
+    .api-key-note a { color: var(--emerald); text-decoration: underline; }
+
+    /* Demo mode banner */
+    .demo-banner {
+      background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25);
+      border-radius: var(--r); padding: 0.6rem 1rem;
+      font-size: 0.75rem; color: #FCD34D; margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+
+    /* ── Responsive ─────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; max-height: none; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .topnav { padding: 0 1rem; gap: 0.75rem; }
+      .main { padding: 1rem; }
+      .modal { max-height: 95vh; }
+      .modal-header, .modal-body { padding-left: 1.25rem; padding-right: 1.25rem; }
+      .api-key-form { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ TOP NAV ══════════════════════════════════════════════ -->
+<nav class="topnav">
+  <a href="/campus/" class="topnav-brand">PHORTEX<span>.</span></a>
+  <span class="topnav-sep">›</span>
+  <span class="topnav-title">College Comparison Tool</span>
+  <div class="topnav-actions">
+    <div class="compare-count-badge" id="compareBadge">
+      <span id="compareCountNum">0</span> selected
+    </div>
+    <button class="btn-compare-open" id="btnCompareOpen" onclick="openDrawer()">
+      Compare Schools →
+    </button>
+  </div>
+</nav>
+
+<!-- ══ API GATE (shown when no key) ════════════════════════ -->
+<div class="api-gate" id="apiGate">
+  <div class="api-gate-icon">🔑</div>
+  <h2 class="api-gate-title">Enter Your College Scorecard API Key</h2>
+  <p class="api-gate-desc">
+    This tool uses the U.S. Department of Education's free College Scorecard API.
+    Getting a key takes 2 minutes — no credit card, no cost.
+  </p>
+  <div class="api-key-form">
+    <input class="api-key-input" type="text" id="apiKeyInput" placeholder="Paste your API key here…" />
+    <button class="btn-api-submit" onclick="submitApiKey()">Load Tool →</button>
+  </div>
+  <p class="api-key-note">
+    Get a free key at <a href="https://api.data.gov/signup/" target="_blank" rel="noopener">api.data.gov/signup</a> — select "College Scorecard" during registration.
+    Your key is stored locally in your browser and never sent to Phortex.
+    <br><br>
+    <button onclick="loadDemo()" style="color:var(--emerald);text-decoration:underline;background:none;border:none;cursor:pointer;font-size:inherit;">
+      → Or try with DEMO_KEY (limited to 100 requests/hour, data may be incomplete)
+    </button>
+  </p>
+</div>
+
+<!-- ══ MAIN APP (hidden until API key set) ═════════════════ -->
+<div id="appShell" style="display:none;">
+  <div class="layout">
+
+    <!-- SIDEBAR FILTERS -->
+    <aside class="sidebar">
+      <div class="sidebar-label">Search</div>
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="College or university name…" />
+      </div>
+
+      <div class="sidebar-label">Institution Type</div>
+      <select class="filter-select" id="filterOwnership">
+        <option value="">All Types</option>
+        <option value="1">Public</option>
+        <option value="2">Private Nonprofit</option>
+        <option value="3">Private For-Profit</option>
+      </select>
+
+      <div class="sidebar-label">State</div>
+      <select class="filter-select" id="filterState">
+        <option value="">All States</option>
+      </select>
+
+      <div class="sidebar-label">Degree Level</div>
+      <select class="filter-select" id="filterDegree">
+        <option value="">All Levels</option>
+        <option value="3">4-Year (Bachelor's)</option>
+        <option value="2">2-Year (Associate's)</option>
+        <option value="4">Graduate</option>
+      </select>
+
+      <div class="sidebar-label">Acceptance Rate</div>
+      <div class="range-wrap">
+        <div class="range-row">
+          <span>0%</span>
+          <input type="range" id="filterAcceptMin" min="0" max="100" value="0" step="5" oninput="updateRangeLabel('acceptMin',this.value,'%')" />
+          <span id="acceptMinLabel">0%</span>
+        </div>
+        <div class="range-row">
+          <span>Max</span>
+          <input type="range" id="filterAcceptMax" min="0" max="100" value="100" step="5" oninput="updateRangeLabel('acceptMax',this.value,'%')" />
+          <span id="acceptMaxLabel">100%</span>
+        </div>
+      </div>
+
+      <div class="sidebar-label">Annual Net Cost (avg)</div>
+      <div class="range-wrap">
+        <div class="range-row">
+          <span>$0</span>
+          <input type="range" id="filterCostMax" min="5000" max="80000" value="80000" step="2500" oninput="updateRangeLabel('costMax',this.value,'$',true)" />
+          <span id="costMaxLabel">Any</span>
+        </div>
+      </div>
+
+      <div class="sidebar-label">SAT Score (your score)</div>
+      <input type="number" class="filter-input" id="filterSAT" placeholder="e.g. 1300" min="400" max="1600" style="width:100%;"/>
+      <div style="font-size:0.7rem;color:var(--g500);margin-top:0.3rem;">Shows schools where you're competitive (25th–75th %ile)</div>
+
+      <div class="sidebar-label">Enrollment Size</div>
+      <select class="filter-select" id="filterSize">
+        <option value="">Any Size</option>
+        <option value="small">Small (&lt; 5,000)</option>
+        <option value="medium">Medium (5k–20k)</option>
+        <option value="large">Large (&gt; 20,000)</option>
+      </select>
+
+      <button class="btn-apply" onclick="applyFilters()">Apply Filters</button>
+      <button class="btn-reset" onclick="resetFilters()">Reset All Filters</button>
+    </aside>
+
+    <!-- RESULTS -->
+    <main class="main">
+      <div id="demoBanner" class="demo-banner" style="display:none;">
+        ⚠️ Running with DEMO_KEY — rate limited, some fields may be incomplete. <a href="https://api.data.gov/signup/" target="_blank" style="color:#FCD34D;text-decoration:underline;margin-left:0.25rem;">Get a free key →</a>
+      </div>
+
+      <div class="results-header">
+        <div class="results-count" id="resultsCount">Loading…</div>
+        <div class="sort-wrap">
+          <span class="sort-label">Sort by:</span>
+          <select class="sort-select" id="sortSelect" onchange="applyFilters()">
+            <option value="name">Name (A–Z)</option>
+            <option value="accept_asc">Acceptance Rate (Low→High)</option>
+            <option value="accept_desc">Acceptance Rate (High→Low)</option>
+            <option value="cost_asc">Net Cost (Low→High)</option>
+            <option value="cost_desc">Net Cost (High→Low)</option>
+            <option value="earn_desc">Median Earnings (High→Low)</option>
+            <option value="size_desc">Enrollment (Largest first)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="cards-grid" id="cardsGrid">
+        <div class="state-message">
+          <div class="spinner"></div>
+          <div class="state-title">Loading colleges…</div>
+          <div class="state-sub">Fetching data from the U.S. Dept. of Education</div>
+        </div>
+      </div>
+
+      <div class="pagination" id="pagination"></div>
+    </main>
+  </div>
+</div>
+
+<!-- ══ COMPARE DRAWER ══════════════════════════════════════ -->
+<div class="compare-drawer" id="compareDrawer">
+  <div class="drawer-header">
+    <div>
+      <div class="drawer-title">Side-by-Side Comparison <span id="drawerCount"></span></div>
+      <div class="drawer-subtitle">Federal data from College Scorecard · Values updated annually</div>
+    </div>
+    <button class="drawer-close" onclick="closeDrawer()">✕</button>
+  </div>
+  <div class="compare-body">
+    <div id="compareTableWrap"></div>
+    <div style="margin-top:1.5rem; background:var(--em-subtle); border:1px solid rgba(16,217,138,0.2); border-radius:var(--rl); padding:1.25rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+      <div>
+        <div style="font-family:var(--font-d);font-weight:700;color:var(--emerald);margin-bottom:0.3rem;">Want expert analysis of this list?</div>
+        <div style="font-size:0.82rem;color:var(--g300);">A 90-minute Phortex Campus Strategy Session gives you a data-backed school list with ED/EA strategy, positioning, and a written action plan.</div>
+      </div>
+      <a href="/campus/#strategy" style="background:var(--emerald);color:var(--navy);font-family:var(--font-d);font-weight:700;font-size:0.82rem;padding:0.6rem 1.25rem;border-radius:var(--r);white-space:nowrap;flex-shrink:0;">Book Strategy Session →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SCHOOL DETAIL MODAL ══════════════════════════════════ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modalBox">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModalBtn()">✕</button>
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-meta" id="modalMeta"></div>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- ══ APPLICATION LOGIC ════════════════════════════════════ -->
+<script>
+  /* ── State ────────────────────────────────────────────── */
+  let API_KEY = '';
+  const BASE = 'https://api.data.gov/ed/collegescorecard/v1/schools';
+  const PER_PAGE = 20;
+
+  // Core fields to fetch
+  const FIELDS = [
+    'id','school.name','school.city','school.state','school.ownership',
+    'school.school_url','school.degrees_awarded.predominant',
+    'latest.admissions.admission_rate.overall',
+    'latest.admissions.sat_scores.25th_percentile.math',
+    'latest.admissions.sat_scores.75th_percentile.math',
+    'latest.admissions.sat_scores.25th_percentile.critical_reading',
+    'latest.admissions.sat_scores.75th_percentile.critical_reading',
+    'latest.admissions.act_scores.25th_percentile.cumulative',
+    'latest.admissions.act_scores.75th_percentile.cumulative',
+    'latest.cost.avg_net_price.overall',
+    'latest.cost.tuition.in_state',
+    'latest.cost.tuition.out_of_state',
+    'latest.cost.attendance.academic_year',
+    'latest.student.size',
+    'latest.completion.completion_rate_4yr_150nt',
+    'latest.student.retention_rate.four_year.full_time',
+    'latest.earnings.6_yrs_after_entry.median',
+    'latest.earnings.10_yrs_after_entry.median',
+    'latest.aid.median_debt.completers.overall',
+    'latest.aid.pell_grant_rate',
+    'latest.aid.federal_loan_rate',
+    'latest.student.demographics.student_faculty_ratio',
+    'school.carnegie_basic',
+  ].join(',');
+
+  let allSchools = [];
+  let compareList = [];
+  let currentPage = 1;
+  let totalResults = 0;
+  let activeFilters = {};
+  let isLoading = false;
+
+  /* ── States list ─────────────────────────────────────── */
+  const STATES = ['AK','AL','AR','AZ','CA','CO','CT','DC','DE','FL','GA','HI','IA','ID','IL','IN','KS','KY','LA','MA','MD','ME','MI','MN','MO','MS','MT','NC','ND','NE','NH','NJ','NM','NV','NY','OH','OK','OR','PA','PR','RI','SC','SD','TN','TX','UT','VA','VT','WA','WI','WV','WY'];
+
+  /* ── Init ─────────────────────────────────────────────── */
+  function init() {
+    const savedKey = localStorage.getItem('phortex_api_key');
+    if (savedKey) { API_KEY = savedKey; showApp(); }
+
+    // Populate state filter
+    const stateSelect = document.getElementById('filterState');
+    STATES.forEach(s => {
+      const o = document.createElement('option');
+      o.value = s; o.textContent = s;
+      stateSelect.appendChild(o);
+    });
+  }
+
+  function submitApiKey() {
+    const val = document.getElementById('apiKeyInput').value.trim();
+    if (!val) return;
+    API_KEY = val;
+    localStorage.setItem('phortex_api_key', val);
+    showApp();
+  }
+
+  function loadDemo() {
+    API_KEY = 'DEMO_KEY';
+    document.getElementById('demoBanner').style.display = 'flex';
+    showApp();
+  }
+
+  function showApp() {
+    document.getElementById('apiGate').style.display = 'none';
+    document.getElementById('appShell').style.display = 'block';
+    fetchSchools();
+  }
+
+  /* ── API calls ────────────────────────────────────────── */
+  async function fetchSchools(page = 1) {
+    if (isLoading) return;
+    isLoading = true;
+    currentPage = page;
+
+    const grid = document.getElementById('cardsGrid');
+    grid.innerHTML = `<div class="state-message" style="grid-column:1/-1"><div class="spinner"></div><div class="state-title">Loading colleges…</div><div class="state-sub">Fetching from U.S. Dept. of Education</div></div>`;
+    document.getElementById('resultsCount').textContent = 'Loading…';
+    document.getElementById('pagination').innerHTML = '';
+
+    const params = new URLSearchParams({
+      api_key: API_KEY,
+      fields: FIELDS,
+      per_page: PER_PAGE,
+      page: page - 1,
+      _sort: getSortParam(),
+    });
+
+    // Apply filters to params
+    const f = activeFilters;
+    if (f.search) params.set('school.name', f.search);
+    if (f.ownership) params.set('school.ownership', f.ownership);
+    if (f.state) params.set('school.state', f.state);
+    if (f.degree) params.set('school.degrees_awarded.predominant', f.degree);
+
+    // Only show schools with data for 4yr completion
+    params.set('latest.admissions.admission_rate.overall__range', `${(f.acceptMin||0)/100}..${(f.acceptMax||100)/100}`);
+
+    if (f.costMax && f.costMax < 80000) {
+      params.set('latest.cost.avg_net_price.overall__range', `0..${f.costMax}`);
+    }
+
+    if (f.satScore) {
+      // Filter to schools where SAT score is between 25th and 75th percentile combined
+      const satMath = Math.round(f.satScore * 0.52);
+      const satRead = Math.round(f.satScore * 0.48);
+      params.set('latest.admissions.sat_scores.25th_percentile.math__range', `0..${satMath}`);
+      params.set('latest.admissions.sat_scores.75th_percentile.math__range', `${satMath}..800`);
+    }
+
+    if (f.size === 'small') params.set('latest.student.size__range', '1..4999');
+    else if (f.size === 'medium') params.set('latest.student.size__range', '5000..19999');
+    else if (f.size === 'large') params.set('latest.student.size__range', '20000..200000');
+
+    // Only 4-year and meaningful by default
+    if (!f.degree) params.set('school.degrees_awarded.predominant__range', '2..4');
+
+    try {
+      const res = await fetch(`${BASE}?${params}`);
+      if (!res.ok) {
+        if (res.status === 429) throw new Error('Rate limit hit — please wait a moment and try again, or use your own API key.');
+        throw new Error(`API error ${res.status}`);
+      }
+      const data = await res.json();
+      allSchools = data.results || [];
+      totalResults = data.metadata?.total || 0;
+      renderCards();
+      renderPagination();
+    } catch (err) {
+      grid.innerHTML = `<div class="state-message" style="grid-column:1/-1">
+        <div class="state-icon">⚠️</div>
+        <div class="state-title">Error loading data</div>
+        <div class="state-sub">${err.message}</div>
+      </div>`;
+      document.getElementById('resultsCount').textContent = 'Error';
+    }
+    isLoading = false;
+  }
+
+  function getSortParam() {
+    const sort = document.getElementById('sortSelect')?.value || 'name';
+    const map = {
+      name: 'school.name',
+      accept_asc: 'latest.admissions.admission_rate.overall',
+      accept_desc: 'latest.admissions.admission_rate.overall:desc',
+      cost_asc: 'latest.cost.avg_net_price.overall',
+      cost_desc: 'latest.cost.avg_net_price.overall:desc',
+      earn_desc: 'latest.earnings.6_yrs_after_entry.median:desc',
+      size_desc: 'latest.student.size:desc',
+    };
+    return map[sort] || 'school.name';
+  }
+
+  /* ── Filters ─────────────────────────────────────────── */
+  function applyFilters() {
+    activeFilters = {
+      search: document.getElementById('searchInput').value.trim(),
+      ownership: document.getElementById('filterOwnership').value,
+      state: document.getElementById('filterState').value,
+      degree: document.getElementById('filterDegree').value,
+      acceptMin: parseInt(document.getElementById('filterAcceptMin').value),
+      acceptMax: parseInt(document.getElementById('filterAcceptMax').value),
+      costMax: parseInt(document.getElementById('filterCostMax').value),
+      satScore: parseInt(document.getElementById('filterSAT').value) || 0,
+      size: document.getElementById('filterSize').value,
+    };
+    fetchSchools(1);
+  }
+
+  function resetFilters() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('filterOwnership').value = '';
+    document.getElementById('filterState').value = '';
+    document.getElementById('filterDegree').value = '';
+    document.getElementById('filterAcceptMin').value = 0;
+    document.getElementById('filterAcceptMax').value = 100;
+    document.getElementById('filterCostMax').value = 80000;
+    document.getElementById('filterSAT').value = '';
+    document.getElementById('filterSize').value = '';
+    document.getElementById('acceptMinLabel').textContent = '0%';
+    document.getElementById('acceptMaxLabel').textContent = '100%';
+    document.getElementById('costMaxLabel').textContent = 'Any';
+    activeFilters = {};
+    fetchSchools(1);
+  }
+
+  function updateRangeLabel(id, val, prefix, isMoney) {
+    const el = document.getElementById(id + 'Label');
+    if (!el) return;
+    if (isMoney) {
+      el.textContent = parseInt(val) >= 80000 ? 'Any' : '$' + parseInt(val).toLocaleString();
+    } else {
+      el.textContent = prefix === '$' ? '$' + parseInt(val).toLocaleString() : val + prefix;
+    }
+  }
+
+  /* ── Render cards ────────────────────────────────────── */
+  function renderCards() {
+    const grid = document.getElementById('cardsGrid');
+    const countEl = document.getElementById('resultsCount');
+
+    if (!allSchools.length) {
+      grid.innerHTML = `<div class="state-message" style="grid-column:1/-1">
+        <div class="state-icon">🔭</div>
+        <div class="state-title">No schools found</div>
+        <div class="state-sub">Try adjusting your filters or broadening your search.</div>
+      </div>`;
+      countEl.textContent = '0 results';
+      return;
+    }
+
+    countEl.innerHTML = `<strong>${totalResults.toLocaleString()}</strong> schools · Page ${currentPage} of ${Math.ceil(totalResults/PER_PAGE)}`;
+
+    grid.innerHTML = allSchools.map(s => schoolCard(s)).join('');
+  }
+
+  function schoolCard(s) {
+    const name = s['school.name'] || 'Unknown';
+    const city = s['school.city'] || '';
+    const state = s['school.state'] || '';
+    const ownership = s['school.ownership'];
+    const admit = s['latest.admissions.admission_rate.overall'];
+    const cost = s['latest.cost.avg_net_price.overall'];
+    const size = s['latest.student.size'];
+    const grad = s['latest.completion.completion_rate_4yr_150nt'];
+    const earn6 = s['latest.earnings.6_yrs_after_entry.median'];
+    const satM25 = s['latest.admissions.sat_scores.25th_percentile.math'];
+    const satM75 = s['latest.admissions.sat_scores.75th_percentile.math'];
+    const satR25 = s['latest.admissions.sat_scores.25th_percentile.critical_reading'];
+    const satR75 = s['latest.admissions.sat_scores.75th_percentile.critical_reading'];
+    const inCompare = compareList.some(c => c.id === s.id);
+
+    const typeLabel = {1:'PUBLIC',2:'PRIVATE',3:'FOR-PROFIT'}[ownership] || 'OTHER';
+    const typeClass = {1:'public',2:'private',3:''}[ownership] || '';
+
+    const admitPct = admit != null ? Math.round(admit * 100) : null;
+    const admitColor = admitPct == null ? '' : admitPct < 15 ? 'bad' : admitPct < 35 ? 'warn' : 'good';
+    const admitBar = admitPct != null ? `
+      <div class="accept-bar-wrap">
+        <div class="accept-bar-label">
+          <span>Acceptance Rate</span>
+          <span>${admitPct}%</span>
+        </div>
+        <div class="accept-bar-track">
+          <div class="accept-bar-fill" style="width:${admitPct}%;background:${admitPct<15?'#F87171':admitPct<35?'#F59E0B':'#10D98A'}"></div>
+        </div>
+      </div>` : '';
+
+    const satRange = (satM25 && satR25) ? `${satM25+satR25}–${satM75+satR75}` : null;
+    const initial = name.split(' ').filter(w=>/^[A-Z]/.test(w)).slice(0,2).map(w=>w[0]).join('') || name[0];
+
+    const tags = [];
+    if (s['latest.student.size'] > 20000) tags.push('Large University');
+    else if (s['latest.student.size'] < 3000) tags.push('Small College');
+    if (s['latest.aid.pell_grant_rate'] > 0.4) tags.push('High Aid');
+    if (s['latest.student.demographics.student_faculty_ratio'] && s['latest.student.demographics.student_faculty_ratio'] < 12) tags.push('Low Student:Faculty');
+
+    return `
+    <div class="school-card ${inCompare?'in-compare':''}" data-id="${s.id}" onclick="openModal('${s.id}')">
+      <div class="card-header">
+        <div class="card-logo">${initial}</div>
+        <div style="flex:1;min-width:0;">
+          <div class="card-name">${esc(name)}</div>
+          <div class="card-location">📍 ${esc(city)}, ${state}</div>
+        </div>
+        <div class="card-type-badge ${typeClass}">${typeLabel}</div>
+      </div>
+
+      <div class="card-metrics">
+        <div class="metric">
+          <div class="metric-val ${admitColor}">${admitPct != null ? admitPct+'%' : 'N/A'}</div>
+          <div class="metric-lbl">Accept Rate</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">${cost ? '$'+Math.round(cost/1000)+'k' : 'N/A'}</div>
+          <div class="metric-lbl">Avg Net Cost</div>
+        </div>
+        <div class="metric">
+          <div class="metric-val">${earn6 ? '$'+Math.round(earn6/1000)+'k' : 'N/A'}</div>
+          <div class="metric-lbl">Med. Earn. 6yr</div>
+        </div>
+      </div>
+
+      ${admitBar}
+
+      <div class="card-footer">
+        <div class="card-tags">
+          ${satRange ? `<span class="card-tag">SAT ${satRange}</span>` : ''}
+          ${size ? `<span class="card-tag">${size.toLocaleString()} students</span>` : ''}
+          ${grad ? `<span class="card-tag">${Math.round(grad*100)}% grad rate</span>` : ''}
+          ${tags.map(t=>`<span class="card-tag">${t}</span>`).join('')}
+        </div>
+        <button class="btn-add-compare ${inCompare?'added':''}"
+          onclick="toggleCompare(event,'${s.id}')"
+          title="${inCompare?'Remove from compare':'Add to compare'}">
+          ${inCompare?'✓ Added':'+ Compare'}
+        </button>
+      </div>
+    </div>`;
+  }
+
+  /* ── Compare logic ───────────────────────────────────── */
+  function toggleCompare(e, id) {
+    e.stopPropagation();
+    const school = allSchools.find(s => String(s.id) === String(id));
+    if (!school) return;
+    const idx = compareList.findIndex(c => String(c.id) === String(id));
+    if (idx >= 0) {
+      compareList.splice(idx, 1);
+    } else {
+      if (compareList.length >= 4) {
+        alert('You can compare up to 4 schools at once. Remove one first.');
+        return;
+      }
+      compareList.push(school);
+    }
+    updateCompareUI();
+    renderCards(); // re-render to update button states
+  }
+
+  function updateCompareUI() {
+    const count = compareList.length;
+    const badge = document.getElementById('compareBadge');
+    const btn = document.getElementById('btnCompareOpen');
+    const num = document.getElementById('compareCountNum');
+    num.textContent = count;
+    if (count > 0) { badge.classList.add('show'); btn.classList.add('show'); }
+    else { badge.classList.remove('show'); btn.classList.remove('show'); }
+    document.getElementById('drawerCount').textContent = count ? `(${count} schools)` : '';
+  }
+
+  function openDrawer() {
+    renderCompareTable();
+    document.getElementById('compareDrawer').classList.add('open');
+  }
+  function closeDrawer() {
+    document.getElementById('compareDrawer').classList.remove('open');
+  }
+
+  function renderCompareTable() {
+    if (!compareList.length) {
+      document.getElementById('compareTableWrap').innerHTML = '<p style="color:var(--g300);text-align:center;padding:2rem;">No schools selected yet. Click "+ Compare" on any school card.</p>';
+      return;
+    }
+
+    const schools = compareList;
+    const fmt = (v, type) => {
+      if (v == null || v === '') return '<span class="na">—</span>';
+      if (type === 'pct') return Math.round(v * 100) + '%';
+      if (type === 'money') return '$' + Math.round(v).toLocaleString();
+      if (type === 'kmoney') return '$' + Math.round(v/1000) + 'k';
+      if (type === 'num') return Math.round(v).toLocaleString();
+      if (type === 'ratio') return Math.round(v) + ':1';
+      return v;
+    };
+
+    const rows = [
+      { section: 'ADMISSIONS' },
+      { label: 'Acceptance Rate', key: 'latest.admissions.admission_rate.overall', type: 'pct', best: 'varies' },
+      { label: 'SAT Math 25th–75th', fn: s => {
+        const l = s['latest.admissions.sat_scores.25th_percentile.math'];
+        const h = s['latest.admissions.sat_scores.75th_percentile.math'];
+        return l && h ? `${l}–${h}` : null;
+      }},
+      { label: 'SAT Reading 25th–75th', fn: s => {
+        const l = s['latest.admissions.sat_scores.25th_percentile.critical_reading'];
+        const h = s['latest.admissions.sat_scores.75th_percentile.critical_reading'];
+        return l && h ? `${l}–${h}` : null;
+      }},
+      { label: 'ACT Composite 25th–75th', fn: s => {
+        const l = s['latest.admissions.act_scores.25th_percentile.cumulative'];
+        const h = s['latest.admissions.act_scores.75th_percentile.cumulative'];
+        return l && h ? `${l}–${h}` : null;
+      }},
+
+      { section: 'COST' },
+      { label: 'Avg Net Price / Year', key: 'latest.cost.avg_net_price.overall', type: 'money', best: 'low' },
+      { label: 'In-State Tuition', key: 'latest.cost.tuition.in_state', type: 'money' },
+      { label: 'Out-of-State Tuition', key: 'latest.cost.tuition.out_of_state', type: 'money' },
+      { label: 'Pell Grant Rate', key: 'latest.aid.pell_grant_rate', type: 'pct' },
+      { label: 'Federal Loan Rate', key: 'latest.aid.federal_loan_rate', type: 'pct' },
+      { label: 'Median Debt at Grad', key: 'latest.aid.median_debt.completers.overall', type: 'money', best: 'low' },
+
+      { section: 'OUTCOMES' },
+      { label: '4-Year Grad Rate (150%)', key: 'latest.completion.completion_rate_4yr_150nt', type: 'pct', best: 'high' },
+      { label: 'First-Year Retention', key: 'latest.student.retention_rate.four_year.full_time', type: 'pct', best: 'high' },
+      { label: 'Median Earnings (6yr)', key: 'latest.earnings.6_yrs_after_entry.median', type: 'money', best: 'high' },
+      { label: 'Median Earnings (10yr)', key: 'latest.earnings.10_yrs_after_entry.median', type: 'money', best: 'high' },
+
+      { section: 'CAMPUS' },
+      { label: 'Enrollment', key: 'latest.student.size', type: 'num' },
+      { label: 'Student:Faculty Ratio', key: 'latest.student.demographics.student_faculty_ratio', type: 'ratio', best: 'low' },
+      { label: 'Institution Type', fn: s => ({1:'Public',2:'Private Nonprofit',3:'For-Profit'}[s['school.ownership']] || '—') },
+      { label: 'State', fn: s => s['school.state'] || '—' },
+    ];
+
+    // Find best values per metric
+    const bestVals = {};
+    rows.forEach(r => {
+      if (r.best && r.key) {
+        const vals = schools.map(s => s[r.key]).filter(v => v != null);
+        if (vals.length > 1) {
+          bestVals[r.key] = r.best === 'high' ? Math.max(...vals) : r.best === 'low' ? Math.min(...vals) : null;
+        }
+      }
+    });
+
+    const thead = `<tr>
+      <th style="min-width:160px;"></th>
+      ${schools.map(s => `<th>
+        <div class="th-name">${esc(s['school.name'])}</div>
+        <div class="th-sub">${s['school.city']||''}, ${s['school.state']||''}</div>
+        <button class="btn-remove-col" onclick="removeFromCompare('${s.id}')">✕ Remove</button>
+      </th>`).join('')}
+    </tr>`;
+
+    const tbody = rows.map(r => {
+      if (r.section) {
+        return `<tr class="section-row"><td colspan="${schools.length + 1}">${r.section}</td></tr>`;
+      }
+      const cells = schools.map(s => {
+        let val;
+        if (r.fn) val = r.fn(s);
+        else val = s[r.key];
+        const formatted = val == null ? '<span class="na">—</span>' : r.type ? fmt(val, r.type) : (typeof val === 'number' ? val.toLocaleString() : val);
+        const isBest = r.best && r.key && bestVals[r.key] != null && s[r.key] === bestVals[r.key];
+        return `<td class="${isBest ? 'best' : ''}">${formatted}</td>`;
+      }).join('');
+      return `<tr><td>${r.label}</td>${cells}</tr>`;
+    }).join('');
+
+    document.getElementById('compareTableWrap').innerHTML = `
+      <table class="compare-table">
+        <thead>${thead}</thead>
+        <tbody>${tbody}</tbody>
+      </table>`;
+  }
+
+  function removeFromCompare(id) {
+    compareList = compareList.filter(c => String(c.id) !== String(id));
+    updateCompareUI();
+    renderCompareTable();
+    renderCards();
+    if (!compareList.length) closeDrawer();
+  }
+
+  /* ── School detail modal ─────────────────────────────── */
+  function openModal(id) {
+    const s = allSchools.find(sc => String(sc.id) === String(id));
+    if (!s) return;
+
+    const name = s['school.name'] || '';
+    const admit = s['latest.admissions.admission_rate.overall'];
+    const cost = s['latest.cost.avg_net_price.overall'];
+    const tuitionIn = s['latest.cost.tuition.in_state'];
+    const tuitionOut = s['latest.cost.tuition.out_of_state'];
+    const size = s['latest.student.size'];
+    const grad = s['latest.completion.completion_rate_4yr_150nt'];
+    const retain = s['latest.student.retention_rate.four_year.full_time'];
+    const earn6 = s['latest.earnings.6_yrs_after_entry.median'];
+    const earn10 = s['latest.earnings.10_yrs_after_entry.median'];
+    const debt = s['latest.aid.median_debt.completers.overall'];
+    const pell = s['latest.aid.pell_grant_rate'];
+    const loanRate = s['latest.aid.federal_loan_rate'];
+    const sfr = s['latest.student.demographics.student_faculty_ratio'];
+    const satM25 = s['latest.admissions.sat_scores.25th_percentile.math'];
+    const satM75 = s['latest.admissions.sat_scores.75th_percentile.math'];
+    const satR25 = s['latest.admissions.sat_scores.25th_percentile.critical_reading'];
+    const satR75 = s['latest.admissions.sat_scores.75th_percentile.critical_reading'];
+    const act25 = s['latest.admissions.act_scores.25th_percentile.cumulative'];
+    const act75 = s['latest.admissions.act_scores.75th_percentile.cumulative'];
+    const ownership = {1:'Public',2:'Private Nonprofit',3:'For-Profit'}[s['school.ownership']] || '';
+    const admitPct = admit != null ? Math.round(admit * 100) : null;
+
+    document.getElementById('modalName').textContent = name;
+    document.getElementById('modalMeta').innerHTML = `
+      <span style="color:var(--g300);font-size:0.82rem;">📍 ${s['school.city']||''}, ${s['school.state']||''}</span>
+      <span class="card-type-badge ${s['school.ownership']===1?'public':'private'}">${ownership}</span>
+      ${s['school.school_url'] ? `<a href="https://${s['school.school_url']}" target="_blank" rel="noopener" style="font-size:0.78rem;color:var(--emerald);text-decoration:underline;">${s['school.school_url']}</a>` : ''}
+    `;
+
+    // Generate Phortex expert insight
+    const insight = generateInsight(s);
+
+    document.getElementById('modalBody').innerHTML = `
+      <!-- Admissions -->
+      <div class="modal-section">
+        <div class="modal-section-title">🎯 Admissions</div>
+        <div class="detail-grid">
+          <div class="detail-card">
+            <div class="detail-val" style="color:${admitPct==null?'inherit':admitPct<15?'#F87171':admitPct<35?'#F59E0B':'var(--emerald)'}">${admitPct != null ? admitPct+'%' : '—'}</div>
+            <div class="detail-lbl">Acceptance Rate</div>
+            ${admitPct != null ? `<div class="detail-note">${admitPct < 15 ? 'Highly selective' : admitPct < 35 ? 'Selective' : admitPct < 65 ? 'Moderately selective' : 'Accessible'}</div>` : ''}
+          </div>
+          ${satM25 && satR25 ? `<div class="detail-card">
+            <div class="detail-val" style="font-size:1rem;">${satM25+satR25}–${satM75+satR75}</div>
+            <div class="detail-lbl">SAT Range (25th–75th %ile)</div>
+            <div class="detail-note">Math: ${satM25}–${satM75} / Reading: ${satR25}–${satR75}</div>
+          </div>` : ''}
+          ${act25 ? `<div class="detail-card">
+            <div class="detail-val" style="font-size:1rem;">${act25}–${act75}</div>
+            <div class="detail-lbl">ACT Composite Range</div>
+          </div>` : ''}
+        </div>
+      </div>
+
+      <!-- Cost -->
+      <div class="modal-section">
+        <div class="modal-section-title">💰 Cost & Financial Aid</div>
+        <div class="detail-grid">
+          ${cost ? `<div class="detail-card">
+            <div class="detail-val">$${Math.round(cost).toLocaleString()}</div>
+            <div class="detail-lbl">Avg Net Price / Year</div>
+            <div class="detail-note">After grants & scholarships</div>
+          </div>` : ''}
+          ${tuitionIn ? `<div class="detail-card">
+            <div class="detail-val">$${Math.round(tuitionIn).toLocaleString()}</div>
+            <div class="detail-lbl">In-State Tuition</div>
+          </div>` : ''}
+          ${tuitionOut ? `<div class="detail-card">
+            <div class="detail-val">$${Math.round(tuitionOut).toLocaleString()}</div>
+            <div class="detail-lbl">Out-of-State Tuition</div>
+          </div>` : ''}
+          ${debt ? `<div class="detail-card">
+            <div class="detail-val">$${Math.round(debt).toLocaleString()}</div>
+            <div class="detail-lbl">Median Debt at Graduation</div>
+          </div>` : ''}
+          ${pell ? `<div class="detail-card">
+            <div class="detail-val">${Math.round(pell*100)}%</div>
+            <div class="detail-lbl">Students Receiving Pell Grants</div>
+          </div>` : ''}
+          ${loanRate ? `<div class="detail-card">
+            <div class="detail-val">${Math.round(loanRate*100)}%</div>
+            <div class="detail-lbl">Federal Loan Recipients</div>
+          </div>` : ''}
+        </div>
+      </div>
+
+      <!-- Outcomes -->
+      <div class="modal-section">
+        <div class="modal-section-title">📈 Outcomes</div>
+        <div class="detail-grid">
+          ${grad ? `<div class="detail-card">
+            <div class="detail-val" style="color:${grad>0.7?'var(--emerald)':grad>0.5?'#F59E0B':'#F87171'}">${Math.round(grad*100)}%</div>
+            <div class="detail-lbl">6-Year Graduation Rate</div>
+          </div>` : ''}
+          ${retain ? `<div class="detail-card">
+            <div class="detail-val">${Math.round(retain*100)}%</div>
+            <div class="detail-lbl">First-Year Retention Rate</div>
+          </div>` : ''}
+          ${earn6 ? `<div class="detail-card">
+            <div class="detail-val">$${Math.round(earn6).toLocaleString()}</div>
+            <div class="detail-lbl">Median Earnings 6 Years After Entry</div>
+          </div>` : ''}
+          ${earn10 ? `<div class="detail-card">
+            <div class="detail-val">$${Math.round(earn10).toLocaleString()}</div>
+            <div class="detail-lbl">Median Earnings 10 Years After Entry</div>
+          </div>` : ''}
+        </div>
+      </div>
+
+      <!-- Campus -->
+      <div class="modal-section">
+        <div class="modal-section-title">🏛️ Campus</div>
+        <div class="detail-grid">
+          ${size ? `<div class="detail-card">
+            <div class="detail-val">${size.toLocaleString()}</div>
+            <div class="detail-lbl">Total Enrollment</div>
+          </div>` : ''}
+          ${sfr ? `<div class="detail-card">
+            <div class="detail-val">${Math.round(sfr)}:1</div>
+            <div class="detail-lbl">Student-to-Faculty Ratio</div>
+          </div>` : ''}
+          <div class="detail-card">
+            <div class="detail-val" style="font-size:1rem;">${ownership}</div>
+            <div class="detail-lbl">Institution Type</div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-val" style="font-size:1rem;">${s['school.state']||'—'}</div>
+            <div class="detail-lbl">State</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phortex Insight -->
+      ${insight ? `<div class="insight-box">
+        <div class="insight-label">🧠 Phortex Campus Insight</div>
+        <div class="insight-text">${insight}</div>
+      </div>` : ''}
+
+      <!-- CTA -->
+      <div class="modal-cta">
+        <div class="modal-cta-text">
+          <strong>Is ${esc(name.split(' ').slice(0,3).join(' '))} the right fit?</strong>
+          A Phortex Campus Strategy Session gives you personalized analysis of this school against your student's full profile — stats, essay positioning, and ED/EA strategy.
+        </div>
+        <a href="/campus/#strategy" class="btn-modal-counsel">Book a $150 Strategy Session →</a>
+      </div>
+
+      <div style="font-size:0.7rem;color:var(--g500);margin-top:1rem;text-align:center;">
+        Data source: U.S. Dept. of Education College Scorecard · Updated annually · Some values may be suppressed for privacy.
+      </div>
+    `;
+
+    document.getElementById('modalOverlay').classList.add('open');
+  }
+
+  function generateInsight(s) {
+    const admit = s['latest.admissions.admission_rate.overall'];
+    const cost = s['latest.cost.avg_net_price.overall'];
+    const earn6 = s['latest.earnings.6_yrs_after_entry.median'];
+    const grad = s['latest.completion.completion_rate_4yr_150nt'];
+    const debt = s['latest.aid.median_debt.completers.overall'];
+    const ownership = s['school.ownership'];
+    const satM25 = s['latest.admissions.sat_scores.25th_percentile.math'];
+    const satR25 = s['latest.admissions.sat_scores.25th_percentile.critical_reading'];
+    const retain = s['latest.student.retention_rate.four_year.full_time'];
+
+    const insights = [];
+
+    if (admit != null && earn6 != null) {
+      const admitPct = Math.round(admit * 100);
+      const earnK = Math.round(earn6 / 1000);
+      if (admitPct < 20 && earnK > 60) insights.push(`Strong ROI signal: high selectivity combined with $${earnK}k median earnings suggests strong alumni outcomes.`);
+      else if (admitPct > 60 && earnK > 55) insights.push(`Value opportunity: relatively accessible acceptance rate with $${earnK}k median earnings — worth a closer look for students who aren't targeting highly selective schools.`);
+      else if (admitPct < 30 && earnK < 45) insights.push(`Selectivity doesn't always predict earnings — $${earnK}k median earnings at ${admitPct}% acceptance suggests outcomes vary significantly by major. Look at field-of-study earnings data.`);
+    }
+
+    if (cost != null && debt != null && earn6 != null) {
+      const debtToEarn = debt / earn6;
+      if (debtToEarn > 1.2) insights.push(`Debt-to-earnings caution: median debt of $${Math.round(debt/1000)}k versus $${Math.round(earn6/1000)}k median earnings — this ratio warrants careful financial aid analysis before committing.`);
+      else if (debtToEarn < 0.4) insights.push(`Strong debt-to-earnings ratio: median debt is well below annual median earnings, suggesting graduates are in a manageable repayment position.`);
+    }
+
+    if (retain != null && retain < 0.7) insights.push(`Low retention rate (${Math.round(retain*100)}%) is a yellow flag — research why students leave after the first year. Campus culture and student support resources matter here.`);
+
+    if (grad != null && grad < 0.45) insights.push(`Below-average graduation rate (${Math.round(grad*100)}%) warrants investigation. Completion rates vary widely by major and financial aid access — dig into the data for your student's intended program.`);
+
+    if (ownership === 1 && cost != null && cost < 20000) insights.push(`Public institution with strong net price value — if in-state, this is worth comparing against private schools with similar outcomes.`);
+
+    if (!insights.length && admit != null) insights.push(`Use the Compare tool to evaluate this school side-by-side with others on your student's list. Acceptance rate alone doesn't tell the full story — net cost, earnings, and graduation rate together paint a clearer picture.`);
+
+    return insights.slice(0, 2).join(' ');
+  }
+
+  function closeModal(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModalBtn();
+  }
+  function closeModalBtn() {
+    document.getElementById('modalOverlay').classList.remove('open');
+  }
+
+  /* ── Pagination ──────────────────────────────────────── */
+  function renderPagination() {
+    const total = Math.ceil(totalResults / PER_PAGE);
+    if (total <= 1) { document.getElementById('pagination').innerHTML = ''; return; }
+
+    const pages = [];
+    const cur = currentPage;
+    const addPage = (n, label) => {
+      pages.push(`<button class="page-btn ${n===cur?'active':''}" onclick="fetchSchools(${n})" ${n===cur?'disabled':''}>${label||n}</button>`);
+    };
+
+    addPage(1);
+    if (cur > 3) pages.push('<span style="color:var(--g500);padding:0 0.25rem;">…</span>');
+    for (let i = Math.max(2, cur-1); i <= Math.min(total-1, cur+1); i++) addPage(i);
+    if (cur < total - 2) pages.push('<span style="color:var(--g500);padding:0 0.25rem;">…</span>');
+    if (total > 1) addPage(total);
+
+    const prev = `<button class="page-btn" onclick="fetchSchools(${cur-1})" ${cur===1?'disabled':''}>← Prev</button>`;
+    const next = `<button class="page-btn" onclick="fetchSchools(${cur+1})" ${cur===total?'disabled':''}>Next →</button>`;
+
+    document.getElementById('pagination').innerHTML = `${prev}${pages.join('')}${next}`;
+  }
+
+  /* ── Keyboard shortcuts ──────────────────────────────── */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeModalBtn();
+      closeDrawer();
+    }
+    if (e.key === 'Enter' && document.activeElement.id === 'searchInput') applyFilters();
+    if (e.key === 'Enter' && document.activeElement.id === 'apiKeyInput') submitApiKey();
+  });
+
+  /* ── Debounced search ────────────────────────────────── */
+  let searchTimer;
+  document.addEventListener('DOMContentLoaded', () => {
+    const si = document.getElementById('searchInput');
+    if (si) {
+      si.addEventListener('input', () => {
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(applyFilters, 500);
+      });
+    }
+  });
+
+  /* ── Utilities ───────────────────────────────────────── */
+  function esc(str) {
+    if (!str) return '';
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  /* ── Boot ────────────────────────────────────────────── */
+  init();
+</script>
+</body>
+</html>

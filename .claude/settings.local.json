@@ -4,7 +4,9 @@
       "Bash(powershell -Command:*)",
       "Bash(dir /s /b \"C:\\\\ClaudeCode\\\\Phortex\\\\phortex-website\\\\temp_extract\")",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: full site rebuild v2 — 5 pages, subfolder architecture\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: full site rebuild v2 — 5 pages, subfolder architecture\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: add College Comparison Tool\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ]
   }
 }
