@@ -951,6 +951,7 @@
 
     try {
       const url = `${BASE}?${params}`;
+      console.log('Fetching URL:', url);
       const res = await fetch(url);
       if (!res.ok) {
         let detail = `HTTP ${res.status}`;
