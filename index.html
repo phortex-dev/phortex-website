@@ -2,718 +2,578 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Phortex AI | Agentic Intelligence & Automation</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Phortex AI builds agentic AI solutions and automation platforms for businesses and teams." />
-
-  <style>
-    :root {
-      --bg: #05060a;
-      --bg-alt: #0a0c12;
-      --fg: #f7f7ff;
-      --muted: #a3a7c2;
-      --accent: #28f0ff;
-      --accent-soft: rgba(40, 240, 255, 0.18);
-      --border-soft: rgba(255, 255, 255, 0.08);
-      --card-bg: #0d1018;
-      --danger: #ff5c7b;
-      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.7);
-      --radius-lg: 18px;
-      --radius-pill: 999px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-main);
-      background: radial-gradient(circle at top, #13162a 0, #05060a 55%, #000 100%);
-      color: var(--fg);
-      min-height: 100vh;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .page {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 20px 18px 60px;
-    }
-
-    /* HEADER */
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 10px 6px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-      background: linear-gradient(to bottom, rgba(5, 6, 10, 0.9), rgba(5, 6, 10, 0.4), transparent);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo {
-      width: 38px;
-      height: 38px;
-      border-radius: 14px;
-      background: radial-gradient(circle at 20% 10%, #ffffff 0, #b1f7ff 12%, #2ef4ff 24%, #072a38 55%, #02040b 100%);
-      box-shadow: 0 0 22px rgba(40, 240, 255, 0.85);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .logo-inner {
-      position: absolute;
-      inset: 3px;
-      border-radius: 12px;
-      background: radial-gradient(circle at 15% 0, rgba(255, 255, 255, 0.7), transparent 55%);
-      mix-blend-mode: screen;
-      opacity: 0.7;
-    }
-
-    .logo svg {
-      position: relative;
-      z-index: 1;
-      width: 22px;
-      height: 22px;
-      filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .brand-name {
-      font-weight: 650;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-size: 0.92rem;
-    }
-
-    .brand-tagline {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 0.9rem;
-    }
-
-    nav a {
-      color: var(--muted);
-      padding: 4px 10px;
-      border-radius: 999px;
-      transition: 0.15s ease-out;
-    }
-
-    nav a:hover {
-      color: var(--fg);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .nav-cta {
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(40, 240, 255, 0.7);
-      padding: 7px 14px;
-      color: #0a0c12;
-      background: linear-gradient(120deg, #28f0ff, #72ffe1);
-      font-weight: 600;
-      box-shadow: 0 0 16px rgba(40, 240, 255, 0.7);
-    }
-
-    .nav-cta:hover {
-      filter: brightness(1.05);
-      transform: translateY(-1px);
-    }
-
-    /* HERO */
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
-      gap: 30px;
-      align-items: center;
-      padding: 26px 6px 40px;
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.78rem;
-      padding: 4px 10px 4px 4px;
-      border-radius: 999px;
-      border: 1px solid rgba(40, 240, 255, 0.4);
-      background: radial-gradient(circle at 0 0, rgba(40, 240, 255, 0.17), rgba(10, 10, 20, 0.7));
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .hero-kicker-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 10px rgba(40, 240, 255, 0.9);
-    }
-
-    .hero-title {
-      font-size: clamp(2rem, 3vw + 1rem, 3.1rem);
-      line-height: 1.1;
-      margin-bottom: 14px;
-    }
-
-    .hero-title span {
-      background: linear-gradient(120deg, #28f0ff, #d4f4ff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-subtitle {
-      font-size: 1rem;
-      color: var(--muted);
-      max-width: 32rem;
-      margin-bottom: 20px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    .btn-primary {
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(40, 240, 255, 0.82);
-      padding: 10px 18px;
-      background: linear-gradient(130deg, #28f0ff, #7af3d5);
-      color: #05060a;
-      font-weight: 600;
-      box-shadow: 0 18px 40px rgba(40, 240, 255, 0.35);
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-primary span.arrow {
-      font-size: 1.1rem;
-    }
-
-    .btn-secondary {
-      border-radius: var(--radius-pill);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      padding: 9px 16px;
-      background: rgba(9, 10, 20, 0.8);
-      color: var(--muted);
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hero-footnote {
-      font-size: 0.8rem;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .hero-footnote span.pill {
-      border-radius: 999px;
-      border: 1px solid rgba(40, 240, 255, 0.4);
-      padding: 3px 9px;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-    }
-
-    .hero-right {
-      background: radial-gradient(circle at 0 0, rgba(40, 240, 255, 0.25), rgba(5, 8, 18, 0.95));
-      border-radius: 22px;
-      border: 1px solid rgba(120, 225, 255, 0.32);
-      padding: 18px 18px 16px;
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 6px;
-    }
-
-    .hero-card {
-      background: rgba(6, 8, 18, 0.9);
-      border-radius: 16px;
-      padding: 12px 12px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      font-size: 0.8rem;
-    }
-
-    .hero-card-label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .hero-card-value {
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .hero-card-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-top: 5px;
-      font-size: 0.7rem;
-      color: var(--accent);
-      background: rgba(40, 240, 255, 0.08);
-      padding: 3px 7px;
-      border-radius: 999px;
-    }
-
-    .hero-orbit {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.18;
-      background:
-        radial-gradient(circle at 15% 20%, rgba(40, 240, 255, 0.5), transparent 60%),
-        radial-gradient(circle at 80% 80%, rgba(212, 244, 255, 0.35), transparent 55%);
-      mix-blend-mode: screen;
-    }
-
-    /* SECTIONS */
-
-    section {
-      padding: 18px 6px 10px;
-    }
-
-    .section-heading {
-      font-size: 1.25rem;
-      margin-bottom: 6px;
-    }
-
-    .section-subtitle {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 16px;
-      max-width: 36rem;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-soft);
-      padding: 14px 14px 12px;
-      font-size: 0.9rem;
-    }
-
-    .card-title {
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .card-body {
-      color: var(--muted);
-      font-size: 0.85rem;
-      line-height: 1.5;
-    }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 9px;
-    }
-
-    .chip {
-      font-size: 0.7rem;
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: var(--muted);
-    }
-
-    .chip-accent {
-      border-color: rgba(40, 240, 255, 0.7);
-      color: var(--accent);
-      background: var(--accent-soft);
-    }
-
-    .twocol {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    ul li {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 6px;
-      color: var(--muted);
-      font-size: 0.87rem;
-    }
-
-    ul li::before {
-      content: "•";
-      color: var(--accent);
-      margin-top: 1px;
-    }
-
-    /* CONTACT */
-
-    .contact-card {
-      margin-top: 12px;
-      padding: 16px 14px;
-      border-radius: 18px;
-      background: linear-gradient(120deg, rgba(40, 240, 255, 0.08), rgba(255, 255, 255, 0.02));
-      border: 1px solid rgba(40, 240, 255, 0.42);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .contact-email {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.9rem;
-      padding: 6px 9px;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, 0.4);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .contact-email span.badge {
-      font-size: 0.7rem;
-      padding: 2px 7px;
-      border-radius: 999px;
-      background: rgba(40, 240, 255, 0.22);
-      color: var(--accent);
-      border: 1px solid rgba(40, 240, 255, 0.6);
-    }
-
-    footer {
-      margin-top: 26px;
-      padding-top: 12px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      font-size: 0.78rem;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 840px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        width: 100%;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-      }
-
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-right {
-        order: -1;
-      }
-
-      .grid-3 {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .twocol {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    @media (max-width: 520px) {
-      .hero-title {
-        font-size: 1.9rem;
-      }
-
-      .hero-subtitle {
-        font-size: 0.95rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phortex — Cybersecurity · AI · College Guidance</title>
+  <meta name="description" content="Phortex delivers expert-level cybersecurity consulting, AI implementation strategy, and college admissions guidance — built on 25 years of hands-on technical depth and Wharton-trained business thinking." />
+  <meta property="og:title" content="Phortex — Where Security Strategy Meets Business Reality" />
+  <meta property="og:description" content="Expert cybersecurity, AI strategy, and college guidance from a 25-year practitioner. Doylestown, PA." />
+  <meta property="og:url" content="https://phortex.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@PhortexLLC" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://phortex.com/" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Phortex LLC",
+    "url": "https://phortex.com",
+    "description": "Cybersecurity consulting, AI implementation strategy, and college admissions guidance.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Doylestown", "addressRegion": "PA", "addressCountry": "US" },
+    "email": "contact@phortex.com",
+    "sameAs": ["https://linkedin.com/company/phortex-llc","https://x.com/PhortexLLC","https://youtube.com/@PhortexLLC"]
+  }
+  </script>
 </head>
+<body class="grid-bg">
+<script src="/js/components.js"></script>
 
-<body>
-  <div class="page">
-    <!-- HEADER -->
-    <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true">
-          <div class="logo-inner"></div>
-          <svg viewBox="0 0 32 32" aria-hidden="true">
-            <path
-              d="M9 7h8.2c4.1 0 7.3 3.1 7.3 7.4 0 4.2-3.2 7.6-7.5 7.6h-3.9L11 25.5c-.4.9-1.5 1.3-2.4.9-.9-.4-1.3-1.5-.9-2.4L9 7zm4 4-2.3 8h4.5c2 0 3.4-1.5 3.4-3.6 0-2-1.4-3.4-3.4-3.4H13z"
-              fill="#02030a" />
-          </svg>
+<!-- ══ HERO ════════════════════════════════════════════════ -->
+<header class="hero" id="top">
+  <div class="hero-bg">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-glow-3"></div>
+  </div>
+  <div class="container">
+    <div class="hero-two-col hero-content">
+
+      <!-- Left -->
+      <div class="hero-stagger">
+        <div class="eyebrow">Doylestown, PA &nbsp;·&nbsp; Est. 2024</div>
+        <h1 class="heading-xl" style="margin-bottom:1.25rem;">
+          Where Security<br>Strategy Meets<br>
+          <span class="text-accent-cyan">Business Reality</span>
+        </h1>
+        <p class="lead" style="margin-bottom:2.25rem;">
+          Expert-level cybersecurity, AI implementation strategy, and college admissions guidance — built on 25 years of hands-on technical depth and Wharton-trained business thinking.
+        </p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:3.5rem;">
+          <a href="#contact" class="btn btn-primary btn-lg btn-arrow">Book a Free Consultation</a>
+          <a href="#pillars" class="btn btn-ghost btn-lg">See Services</a>
         </div>
-        <div class="brand-text">
-          <div class="brand-name">Phortex AI</div>
-          <div class="brand-tagline">Agentic Intelligence & Automation</div>
+
+        <!-- Credential stats -->
+        <div class="stat-grid" style="max-width:420px;">
+          <div class="stat-item">
+            <div class="stat-num"><span data-count="25" data-suffix="+">25+</span></div>
+            <div class="stat-label">Years in Tech & Security</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" style="font-size:1.5rem;">2006</div>
+            <div class="stat-label">First PCI Level 1 Certified Fulfillment Co.</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" style="font-size:1.5rem;">CCSP</div>
+            <div class="stat-label">Active Cloud Security Certification</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" style="font-size:1.5rem;">Penn</div>
+            <div class="stat-label">Wharton / SEAS EMTM Graduate</div>
+          </div>
         </div>
       </div>
 
-      <nav>
-        <a href="#solutions">Solutions</a>
-        <a href="#use-cases">Use cases</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="nav-cta">Talk to us</a>
-      </nav>
-    </header>
-
-    <!-- HERO -->
-    <main>
-      <section class="hero">
-        <div>
-          <div class="hero-kicker">
-            <div class="hero-kicker-dot"></div>
-            Early-stage lab. Production-grade thinking.
-          </div>
-
-          <h1 class="hero-title">
-            Agentic AI systems<br />
-            that <span>work like teams</span>.
-          </h1>
-
-          <p class="hero-subtitle">
-            Phortex AI designs and builds intelligent agents that orchestrate tools, data, and workflows —
-            turning your scattered processes into reliable, end-to-end automations.
-          </p>
-
-          <div class="hero-actions">
-            <a href="mailto:dev@phortex.com?subject=Phortex%20AI%20Inquiry" class="btn-primary">
-              <span>Schedule a discovery call</span>
-              <span class="arrow">↗</span>
-            </a>
-            <a href="#solutions" class="btn-secondary">
-              <span>Explore what we build</span>
-            </a>
-          </div>
-
-          <div class="hero-footnote">
-            <span class="pill">Agentic AI • RAG • Automation</span>
-            <span>Built and tested on modern LLM + container stacks.</span>
-          </div>
-        </div>
-
-        <aside class="hero-right" aria-label="Phortex AI capability snapshot">
-          <div class="hero-orbit"></div>
-          <div style="position: relative; z-index: 1;">
-            <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);">
-              Capability snapshot
+      <!-- Right — visual card stack -->
+      <div class="hero-visual">
+        <div class="hero-cards">
+          <a href="/security/" class="hero-preview-card">
+            <div class="hpc-icon">🔐</div>
+            <div>
+              <div class="hpc-label">Phortex Secure</div>
+              <div class="hpc-sub">Security architecture, vCISO advisory, PCI/NIST/SOC2 compliance for SMBs</div>
             </div>
-            <div style="font-size: 1rem; margin-top: 4px; margin-bottom: 8px;">
-              From prototype lab to client-ready blueprints.
-            </div>
-
-            <div class="hero-grid">
-              <div class="hero-card">
-                <div class="hero-card-label">Agent frameworks</div>
-                <div class="hero-card-value">LangGraph · CrewAI</div>
-                <div class="hero-card-badge">Multi-agent orchestration</div>
-              </div>
-              <div class="hero-card">
-                <div class="hero-card-label">Knowledge</div>
-                <div class="hero-card-value">RAG on your data</div>
-                <div class="hero-card-badge">Qdrant · Postgres · APIs</div>
-              </div>
-              <div class="hero-card">
-                <div class="hero-card-label">Deployment</div>
-                <div class="hero-card-value">Containers & clouds</div>
-                <div class="hero-card-badge">From lab to production</div>
-              </div>
-              <div class="hero-card">
-                <div class="hero-card-label">Focus areas</div>
-                <div class="hero-card-value">IT · Security · Ops</div>
-                <div class="hero-card-badge">Enterprise-friendly patterns</div>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <!-- SOLUTIONS -->
-      <section id="solutions">
-        <h2 class="section-heading">What we build</h2>
-        <p class="section-subtitle">
-          Phortex AI focuses on practical, high-leverage agentic systems — starting with your
-          existing tools, data, and teams.
-        </p>
-
-        <div class="grid-3">
-          <div class="card">
-            <div class="card-title">Agentic copilots for teams</div>
-            <div class="card-body">
-              Custom copilots that understand your documents, tickets, and systems —
-              answering questions, drafting responses, and coordinating tasks across tools.
-            </div>
-            <div class="chip-row">
-              <span class="chip chip-accent">RAG over private data</span>
-              <span class="chip">Knowledge bases</span>
-              <span class="chip">Internal chat interfaces</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-title">End-to-end automation agents</div>
-            <div class="card-body">
-              Multi-step agents that watch events (email, webhooks, logs),
-              make decisions, call APIs, and open or update tickets —
-              with humans looped in where it matters.
-            </div>
-            <div class="chip-row">
-              <span class="chip chip-accent">n8n · HTTP APIs</span>
-              <span class="chip">Incident triage</span>
-              <span class="chip">Ops workflows</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-title">Evaluation & “agent arenas”</div>
-            <div class="card-body">
-              Harnesses that test different models, prompts, and agent graphs
-              on the same scenarios — so you can choose what actually performs best,
-              not just looks smart in a demo.
-            </div>
-            <div class="chip-row">
-              <span class="chip chip-accent">Quantitative evals</span>
-              <span class="chip">Model comparison</span>
-              <span class="chip">Dashboards</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- USE CASES -->
-      <section id="use-cases">
-        <h2 class="section-heading">Early use cases we love</h2>
-        <p class="section-subtitle">
-          These are the kinds of problems agentic systems are already strong at solving.
-          Phortex AI prototypes target real workflows instead of toy examples.
-        </p>
-
-        <div class="twocol">
-          <div class="card">
-            <div class="card-title">Operations & IT</div>
-            <ul>
-              <li>Transform inbound email into structured tickets with summaries and suggested responses.</li>
-              <li>Build “policy copilots” that answer questions from internal standards, PDFs, and runbooks.</li>
-              <li>Automate data enrichment and impact analysis when new incidents appear.</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <div class="card-title">Knowledge-driven work</div>
-            <ul>
-              <li>Let agents draft proposals, FAQs, and documentation from your existing sources.</li>
-              <li>Spin up temporary “project copilots” that live alongside current initiatives.</li>
-              <li>Benchmark local vs. cloud LLMs on your own tasks and constraints.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about">
-        <h2 class="section-heading">About Phortex AI</h2>
-        <p class="section-subtitle">
-          Phortex AI is an early-stage lab exploring how to turn high-quality reasoning
-          and orchestration into tangible, reliable systems — not just one-off prompts.
-          We care about clarity, observability, and deployable patterns.
-        </p>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact">
-        <h2 class="section-heading">Contact</h2>
-        <p class="section-subtitle">
-          If you’re interested in collaborating, piloting an agentic workflow, or just trading notes
-          on AI + automation strategy, we’d be happy to talk.
-        </p>
-
-        <div class="contact-card">
-          <div>Reach us directly:</div>
-          <a href="mailto:dev@phortex.com?subject=Phortex%20AI%20Inquiry" class="contact-email">
-            <span class="badge">Primary contact</span>
-            <span>dev@phortex.com</span>
           </a>
-          <div style="font-size: 0.8rem; color: var(--muted);">
-            Please include a brief description of your context (team size, tools you use today, and what you’d like
-            agents to handle).
+          <a href="/ai/" class="hero-preview-card">
+            <div class="hpc-icon">🤖</div>
+            <div>
+              <div class="hpc-label">Phortex AI</div>
+              <div class="hpc-sub">AI fluency, agentic workflows, and the only AI + security bundle in the market</div>
+            </div>
+          </a>
+          <a href="/campus/" class="hero-preview-card">
+            <div class="hpc-icon">🎓</div>
+            <div>
+              <div class="hpc-label">Phortex Campus</div>
+              <div class="hpc-sub">Data-backed college admissions guidance — no school affiliations, no conflicts</div>
+            </div>
+          </a>
+        </div>
+        <div class="hero-visual-badge">AI-Native Practice</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ PHILOSOPHY BANNER ═══════════════════════════════════ -->
+<div class="divider"></div>
+<section class="compact" style="background:var(--navy-1);">
+  <div class="container">
+    <div class="quote-block reveal" style="max-width:780px; margin:0 auto; text-align:center; border-left:none; border:1px solid rgba(0,212,240,0.2); border-radius:var(--r-lg); background:var(--cyan-subtle);">
+      "Most organizations treat security like a shopping problem. They buy more tools when they have a process problem. The breach doesn't care how much you spent — it cares whether your people followed the right process at 2am on a Saturday."
+      <div style="margin-top:1rem; font-style:normal; font-family:var(--font-mono); font-size:0.7rem; color:var(--cyan); letter-spacing:0.1em;">— THE PHORTEX PHILOSOPHY</div>
+    </div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<!-- ══ THREE PILLARS ════════════════════════════════════════ -->
+<section id="pillars">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Three Disciplines</div>
+      <h2 class="heading-lg">One Integrated <span class="text-accent-cyan">Expertise</span></h2>
+      <p class="lead">Three focused service lines — each with its own brand, audience, and content strategy — unified by the same founding philosophy: data-driven, process-first, business-aware.</p>
+    </div>
+
+    <div class="pillars-grid">
+      <!-- Security -->
+      <div class="pillar-card p-cyan reveal reveal-delay-1">
+        <div class="pillar-top-bar"></div>
+        <div class="pillar-icon">🔐</div>
+        <div class="pillar-channel">@PhortexSecure</div>
+        <div class="pillar-name">Phortex Secure</div>
+        <p class="pillar-desc">Cybersecurity consulting rooted in real operational experience — from PCI DSS compliance to enterprise security architecture, vCISO advisory, and risk management for SMBs who can't afford to be caught off-guard.</p>
+        <div class="pillar-tags">
+          <span class="tag">Security Architecture</span>
+          <span class="tag">PCI / NIST / SOC2</span>
+          <span class="tag">vCISO</span>
+          <span class="tag">Risk Management</span>
+        </div>
+        <a href="/security/" class="pillar-link" style="color:var(--cyan)">Explore Cybersecurity →</a>
+      </div>
+
+      <!-- AI -->
+      <div class="pillar-card p-violet reveal reveal-delay-2">
+        <div class="pillar-top-bar" style="background:var(--violet)"></div>
+        <div class="pillar-icon" style="background:var(--violet-subtle)">🤖</div>
+        <div class="pillar-channel" style="color:var(--violet)">@PhortexAI</div>
+        <div class="pillar-name">Phortex AI</div>
+        <p class="pillar-desc">AI strategy without the hype. We help individuals and organizations understand, implement, and secure AI tools — including the security implications most AI consultants skip entirely.</p>
+        <div class="pillar-tags">
+          <span class="tag">AI Fluency</span>
+          <span class="tag">Agentic Workflows</span>
+          <span class="tag">AI Implementation</span>
+          <span class="tag">AI Security</span>
+        </div>
+        <a href="/ai/" class="pillar-link" style="color:var(--violet)">Explore AI Services →</a>
+      </div>
+
+      <!-- Campus -->
+      <div class="pillar-card p-emerald reveal reveal-delay-3">
+        <div class="pillar-top-bar" style="background:var(--emerald)"></div>
+        <div class="pillar-icon" style="background:var(--emerald-subtle)">🎓</div>
+        <div class="pillar-channel" style="color:var(--emerald)">@PhortexCampus</div>
+        <div class="pillar-name">Phortex Campus</div>
+        <p class="pillar-desc">Data-backed college admissions strategy for students and families who want honest guidance, not a sales pitch. No school affiliations. No conflicts. Just the strategy that actually moves the needle.</p>
+        <div class="pillar-tags">
+          <span class="tag">Admissions Strategy</span>
+          <span class="tag">Essay Coaching</span>
+          <span class="tag">STEM Applications</span>
+          <span class="tag">Financial Aid</span>
+        </div>
+        <a href="/campus/" class="pillar-link" style="color:var(--emerald)">Explore College Guidance →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══════════════════════════════════════════════ -->
+<section style="background:var(--navy-1);" id="services">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Services & Pricing</div>
+      <h2 class="heading-lg">Expert Consulting, <span class="text-accent-cyan">Clear Pricing</span></h2>
+      <p class="lead">No bloated enterprise contracts. Transparent, right-sized engagements for businesses and individuals who want expert-level outcomes.</p>
+    </div>
+
+    <div class="tab-bar reveal">
+      <button class="tab-btn active" data-tab="tab-cyber">🔐 Cybersecurity</button>
+      <button class="tab-btn" data-tab="tab-ai">🤖 AI Services</button>
+      <button class="tab-btn" data-tab="tab-campus">🎓 College Guidance</button>
+    </div>
+
+    <div id="tab-cyber" class="tab-panel active">
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🩺</span>
+          <span class="service-price">$299–$499</span>
+        </div>
+        <div class="service-name">Personal Security Health Check</div>
+        <p class="service-desc">A comprehensive assessment of your personal digital security posture — accounts, devices, network, and identity exposure.</p>
+        <ul class="service-bullets">
+          <li>Password and MFA audit</li>
+          <li>Dark web exposure check</li>
+          <li>Home network assessment</li>
+          <li>Prioritized written action plan</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🏢</span>
+          <span class="service-price">$1,500–$4,000</span>
+        </div>
+        <div class="service-name">SMB Security Assessment & Roadmap</div>
+        <p class="service-desc">Full-scope security review of your business — identifying gaps, prioritizing risk, and delivering a concrete remediation roadmap.</p>
+        <ul class="service-bullets">
+          <li>Network and endpoint review</li>
+          <li>Policy and process audit</li>
+          <li>Compliance gap analysis</li>
+          <li>Executive-ready risk report</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🛡️</span>
+          <span class="service-price">$1,000–$3,500/mo</span>
+        </div>
+        <div class="service-name">Virtual CISO (vCISO)</div>
+        <p class="service-desc">Ongoing security leadership without the full-time hire. Strategic guidance, vendor oversight, policy management, and board-level reporting.</p>
+        <ul class="service-bullets">
+          <li>Monthly security review cadence</li>
+          <li>Security program management</li>
+          <li>Incident response leadership</li>
+          <li>Board & executive reporting</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">⏱️</span>
+          <span class="service-price">$150–$250/hr</span>
+        </div>
+        <div class="service-name">Security Consulting (Hourly)</div>
+        <p class="service-desc">Targeted expert consultation — architecture review, tool selection, compliance questions, or pre-audit prep. No minimum commitment.</p>
+        <ul class="service-bullets">
+          <li>Architecture and design review</li>
+          <li>Tool selection & vendor eval</li>
+          <li>Compliance questions</li>
+          <li>Written deliverables available</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started →</a>
+      </div>
+    </div>
+
+    <div id="tab-ai" class="tab-panel">
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🧠</span>
+          <span class="service-price" style="color:var(--violet);background:var(--violet-subtle);border-color:rgba(139,92,246,0.25)">$199–$299/person</span>
+        </div>
+        <div class="service-name">AI Fundamentals Workshop</div>
+        <p class="service-desc">A practical, hands-on session covering what AI tools actually are, how to use them effectively, and how to avoid the risks that expose businesses to harm.</p>
+        <ul class="service-bullets">
+          <li>Live demo of current AI tools</li>
+          <li>Prompt engineering fundamentals</li>
+          <li>Data privacy & security guidance</li>
+          <li>Use-case mapping for your business</li>
+        </ul>
+        <a href="#contact" class="btn btn-violet" style="width:100%;justify-content:center;">Book Workshop →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">⚙️</span>
+          <span class="service-price" style="color:var(--violet);background:var(--violet-subtle);border-color:rgba(139,92,246,0.25)">$500–$2,500</span>
+        </div>
+        <div class="service-name">AI Integration Consulting</div>
+        <p class="service-desc">Custom AI workflow design and implementation — identifying where AI creates real ROI in your specific business and building the systems to capture it safely.</p>
+        <ul class="service-bullets">
+          <li>Workflow analysis & opportunity mapping</li>
+          <li>Tool selection & vendor guidance</li>
+          <li>Agentic pipeline design</li>
+          <li>Team training & documentation</li>
+        </ul>
+        <a href="#contact" class="btn btn-violet" style="width:100%;justify-content:center;">Get Started →</a>
+      </div>
+      <div class="service-card" style="border-color:rgba(0,212,240,0.2);">
+        <div class="service-card-top">
+          <span class="service-icon">🔐🤖</span>
+          <span class="service-price">$3,000–$7,500</span>
+        </div>
+        <div class="service-name">AI + Security Bundle <span style="font-size:0.65rem;color:var(--cyan);font-family:var(--font-mono);letter-spacing:0.06em;">PHORTEX EXCLUSIVE</span></div>
+        <p class="service-desc">The only offering that integrates AI implementation strategy with AI-specific security risk management — built for businesses adopting AI at scale.</p>
+        <ul class="service-bullets">
+          <li>AI security posture assessment</li>
+          <li>Data governance framework</li>
+          <li>Shadow AI discovery & policy</li>
+          <li>Safe AI adoption roadmap</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started →</a>
+      </div>
+    </div>
+
+    <div id="tab-campus" class="tab-panel">
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🗺️</span>
+          <span class="service-price" style="color:var(--emerald);background:var(--emerald-subtle);border-color:rgba(16,217,138,0.25)">$150 flat</span>
+        </div>
+        <div class="service-name">Application Strategy Session</div>
+        <p class="service-desc">A focused 90-minute strategy session covering school list, positioning, timeline, and the highest-leverage moves for your student's specific profile.</p>
+        <ul class="service-bullets">
+          <li>School list analysis (fit, reach, safety)</li>
+          <li>ED/EA/SCREA strategy</li>
+          <li>Testing strategy advice</li>
+          <li>Written action plan</li>
+        </ul>
+        <a href="#contact" class="btn btn-emerald" style="width:100%;justify-content:center;">Book Session →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">✍️</span>
+          <span class="service-price" style="color:var(--emerald);background:var(--emerald-subtle);border-color:rgba(16,217,138,0.25)">$399–$699</span>
+        </div>
+        <div class="service-name">Essay Coaching Package</div>
+        <p class="service-desc">Guided development of the Common App essay and up to three supplemental essays — from brainstorm to final draft with rigorous feedback at each stage.</p>
+        <ul class="service-bullets">
+          <li>Topic ideation & selection</li>
+          <li>Structural & narrative coaching</li>
+          <li>Two revision rounds per essay</li>
+          <li>Final polish review</li>
+        </ul>
+        <a href="#contact" class="btn btn-emerald" style="width:100%;justify-content:center;">Book Coaching →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-top">
+          <span class="service-icon">🏆</span>
+          <span class="service-price" style="color:var(--emerald);background:var(--emerald-subtle);border-color:rgba(16,217,138,0.25)">$1,200–$2,000</span>
+        </div>
+        <div class="service-name">Full Admissions Support</div>
+        <p class="service-desc">End-to-end support from school list through final decisions — strategy, essays, activity list, interview prep, and financial aid navigation.</p>
+        <ul class="service-bullets">
+          <li>Comprehensive strategy & planning</li>
+          <li>All essays & supplements</li>
+          <li>Interview preparation</li>
+          <li>Financial aid & scholarship strategy</li>
+        </ul>
+        <a href="#contact" class="btn btn-emerald" style="width:100%;justify-content:center;">Get Full Support →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT STRIP ═══════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1.3fr; gap:5rem; align-items:start;">
+
+      <!-- Credentials -->
+      <div class="reveal">
+        <div class="eyebrow">Credentials</div>
+        <h2 class="heading-md" style="margin-bottom:1.5rem;">Built on Real <span class="text-accent-cyan">Experience</span></h2>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">2000</div>
+            <div class="tl-title">BS Computer Science — LaSalle University</div>
+            <div class="tl-body">C++, ASP.net, database-backed web systems, full network infrastructure</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">2005</div>
+            <div class="tl-title">CISSP Certified · Primary Security Engineer</div>
+            <div class="tl-body">Transitioned to cybersecurity; became primary security engineer/manager for a major direct mail company</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:var(--cyan);box-shadow:0 0 12px rgba(0,212,240,0.7)"></div>
+            <div class="tl-year">2006–2007</div>
+            <div class="tl-title">First PCI Level 1 Certified Fulfillment Company</div>
+            <div class="tl-body">Built PCI Level 1 compliance from the ground up when the PCI SSC was literally months old — a once-in-an-industry achievement</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:var(--violet)"></div>
+            <div class="tl-year">2009</div>
+            <div class="tl-title">MS Technology Management — Penn / Wharton EMTM</div>
+            <div class="tl-body">Joint Engineering (SEAS) + Business (Wharton) program — technology strategy, financial modeling, product leadership</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot" style="background:var(--emerald)"></div>
+            <div class="tl-year">Now</div>
+            <div class="tl-title">CCSP · Enterprise Security Architecture</div>
+            <div class="tl-body">Active cloud security cert. Security architecture across telecom and biopharma. Now: Phortex LLC.</div>
           </div>
         </div>
-      </section>
-    </main>
+        <div style="margin-top:2rem;">
+          <a href="/about/" class="btn btn-ghost btn-arrow">Full Founder Background</a>
+        </div>
+      </div>
 
-    <footer>
-      <div>© <span id="year"></span> Phortex AI. All rights reserved.</div>
-      <div>Built on modern LLM + container stacks, starting from a home lab.</div>
-    </footer>
+      <!-- Philosophy -->
+      <div class="reveal reveal-delay-2">
+        <div class="eyebrow">Philosophy</div>
+        <h2 class="heading-md" style="margin-bottom:1rem;">The Phortex <span class="text-accent-cyan">POV</span></h2>
+        <blockquote class="quote-block">
+          "Most organizations treat security like a shopping problem. They buy more tools when they have a process problem. The breach doesn't care how much you spent — it cares whether your people followed the right process at 2am on a Saturday."
+        </blockquote>
+        <p class="text-muted" style="font-size:0.875rem; margin-bottom:1.5rem;">This philosophy shapes every engagement. Security strategy must be justified in business terms. AI adoption must account for risk. College guidance must be data-driven and conflict-free.</p>
+        <div class="phil-grid">
+          <div class="phil-card">
+            <div class="phil-icon">⚙️</div>
+            <div class="phil-title">Process over Products</div>
+            <div class="phil-text">Security fails at the human and operational layer, not the technology layer.</div>
+          </div>
+          <div class="phil-card">
+            <div class="phil-icon">📊</div>
+            <div class="phil-title">Business Context First</div>
+            <div class="phil-text">Every security decision must be justified in business terms, not fear.</div>
+          </div>
+          <div class="phil-card">
+            <div class="phil-icon">🎯</div>
+            <div class="phil-title">Practical over Perfect</div>
+            <div class="phil-text">A 70% solution that gets adopted beats a 100% solution on a shelf.</div>
+          </div>
+          <div class="phil-card">
+            <div class="phil-icon">🔬</div>
+            <div class="phil-title">Experience as Evidence</div>
+            <div class="phil-text">25 years of hands-on work, not just frameworks and theory.</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <script>
-    // Set current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+<!-- ══ SOCIAL CHANNELS ══════════════════════════════════════ -->
+<section style="background:var(--navy-1);">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow">Follow Phortex</div>
+      <h2 class="heading-lg">Daily Intelligence Across <span class="text-accent-cyan">4 Platforms</span></h2>
+      <p class="lead">AI-native content production. Three channels. Real expertise behind every post.</p>
+    </div>
+    <div class="social-strip reveal reveal-delay-1" style="margin-top:2.5rem;">
+      <div class="social-card">
+        <div class="social-card-icon">💼</div>
+        <div class="social-card-name">LinkedIn</div>
+        <div class="social-card-handle">@PhortexLLC</div>
+        <div class="social-card-desc">Deep-dive posts, carousels, and professional insight across all three pillars. 5×/week.</div>
+      </div>
+      <div class="social-card">
+        <div class="social-card-icon">🎵</div>
+        <div class="social-card-name">TikTok</div>
+        <div class="social-card-handle">@PhortexSecure · @PhortexAI · @PhortexCampus</div>
+        <div class="social-card-desc">60-second expert videos — daily AI avatar content on security, AI, and college guidance.</div>
+      </div>
+      <div class="social-card">
+        <div class="social-card-icon">📺</div>
+        <div class="social-card-name">YouTube</div>
+        <div class="social-card-handle">@PhortexLLC</div>
+        <div class="social-card-desc">Long-form tutorials, workflow demos, and Shorts. The deepest content library.</div>
+      </div>
+      <div class="social-card">
+        <div class="social-card-icon">𝕏</div>
+        <div class="social-card-name">X / Twitter</div>
+        <div class="social-card-handle">@PhortexLLC</div>
+        <div class="social-card-desc">Hot takes, threads, and real-time reaction to breaking security and AI news.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ═════════════════════════════════════════════ -->
+<div class="cta-band reveal">
+  <div class="cta-band-glow"></div>
+  <div class="container" style="position:relative;">
+    <div class="eyebrow" style="justify-content:center;">Start Here</div>
+    <h2 class="heading-lg" style="margin-bottom:1rem;">
+      Ready to Secure, Automate,<br><span class="text-accent-cyan">or Get In?</span>
+    </h2>
+    <p class="lead" style="margin:0 auto 0; text-align:center;">
+      One conversation with a 25-year expert costs 30 minutes. It might save your business — or change where your kid goes to college.
+    </p>
+    <div class="cta-band-actions">
+      <a href="#contact" class="btn btn-primary btn-lg btn-arrow">Book a Free Consultation</a>
+      <a href="/security/" class="btn btn-ghost btn-lg">Explore Cybersecurity</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CONTACT ═══════════════════════════════════════════════ -->
+<section id="contact" style="background:var(--navy-1);">
+  <div class="container">
+    <div class="contact-layout">
+      <!-- Info -->
+      <div class="reveal">
+        <div class="eyebrow">Get in Touch</div>
+        <h2 class="heading-md" style="margin-bottom:1rem;">Start a <span class="text-accent-cyan">Conversation</span></h2>
+        <p class="text-muted" style="font-size:0.9rem; line-height:1.7; margin-bottom:2rem;">
+          Every engagement starts with a free 30-minute consultation. No sales pitch — just an honest conversation about whether Phortex is the right fit for your needs.
+        </p>
+        <div class="contact-detail"><span class="contact-detail-icon">📍</span>Doylestown, Pennsylvania</div>
+        <div class="contact-detail"><span class="contact-detail-icon">✉️</span>contact@phortex.com</div>
+        <div class="contact-detail"><span class="contact-detail-icon">🔐</span>Cybersecurity · AI · College Guidance</div>
+        <div class="contact-detail"><span class="contact-detail-icon">⏱️</span>Response within 24 business hours</div>
+        <div style="margin-top:2rem;">
+          <p style="font-family:var(--font-mono); font-size:0.68rem; color:var(--gray-500); letter-spacing:0.1em; margin-bottom:0.75rem;">// ALSO AVAILABLE ON</p>
+          <div style="display:flex; gap:0.65rem; flex-wrap:wrap;">
+            <a href="https://linkedin.com/company/phortex-llc" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">LinkedIn</a>
+            <a href="https://x.com/PhortexLLC" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">X / Twitter</a>
+            <a href="https://youtube.com/@PhortexLLC" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="reveal reveal-delay-2">
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="first-name">First Name</label>
+              <input class="form-input" type="text" id="first-name" name="first_name" placeholder="Jane" required autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last-name">Last Name</label>
+              <input class="form-input" type="text" id="last-name" name="last_name" placeholder="Smith" required autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="company">Company / Organization</label>
+            <input class="form-input" type="text" id="company" name="company" placeholder="Acme Corp (optional)" autocomplete="organization" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="service">I'm interested in</label>
+            <select class="form-select" id="service" name="service">
+              <option value="">Select a service area…</option>
+              <optgroup label="Cybersecurity">
+                <option>Personal Security Health Check</option>
+                <option>SMB Security Assessment</option>
+                <option>Virtual CISO (vCISO)</option>
+                <option>Security Consulting (Hourly)</option>
+              </optgroup>
+              <optgroup label="AI Services">
+                <option>AI Fundamentals Workshop</option>
+                <option>AI Integration Consulting</option>
+                <option>AI + Security Bundle</option>
+              </optgroup>
+              <optgroup label="College Guidance">
+                <option>Application Strategy Session</option>
+                <option>Essay Coaching Package</option>
+                <option>Full Admissions Support</option>
+              </optgroup>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Tell me a bit about what you're working on or trying to solve…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">
+            Send Message →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="/js/main.js"></script>
 </body>
 </html>

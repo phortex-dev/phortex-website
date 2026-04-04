@@ -1,0 +1,9 @@
+# Redirect old single-page anchors if anyone has them bookmarked
+/contact  /#contact  301
+/services /#services 301
+
+# Ensure trailing slashes for consistency
+/security /security/ 301
+/ai       /ai/       301
+/campus   /campus/   301
+/about    /about/    301
