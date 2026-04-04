@@ -818,10 +818,10 @@
   const BASE = 'https://api.data.gov/ed/collegescorecard/v1/schools';
   const PER_PAGE = 20;
 
-  // Core fields to fetch
+  // Core fields to fetch — verified against College Scorecard API data dictionary
   const FIELDS = [
     'id','school.name','school.city','school.state','school.ownership',
-    'school.school_url','school.degrees_awarded.predominant',
+    'school.degrees_awarded.predominant',
     'latest.admissions.admission_rate.overall',
     'latest.admissions.sat_scores.25th_percentile.math',
     'latest.admissions.sat_scores.75th_percentile.math',
@@ -832,7 +832,6 @@
     'latest.cost.avg_net_price.overall',
     'latest.cost.tuition.in_state',
     'latest.cost.tuition.out_of_state',
-    'latest.cost.attendance.academic_year',
     'latest.student.size',
     'latest.completion.completion_rate_4yr_150nt',
     'latest.student.retention_rate.four_year.full_time',
@@ -842,7 +841,6 @@
     'latest.aid.pell_grant_rate',
     'latest.aid.federal_loan_rate',
     'latest.student.demographics.student_faculty_ratio',
-    'school.carnegie_basic',
   ].join(',');
 
   let allSchools = [];
@@ -900,48 +898,67 @@
     document.getElementById('resultsCount').textContent = 'Loading…';
     document.getElementById('pagination').innerHTML = '';
 
+    // Build sort params — api.data.gov uses _sort=field and _order=asc|desc separately
+    const { sortField, sortOrder } = getSortParam();
     const params = new URLSearchParams({
       api_key: API_KEY,
       fields: FIELDS,
       per_page: PER_PAGE,
       page: page - 1,
-      _sort: getSortParam(),
+      _sort: sortField,
+      _order: sortOrder,
     });
 
-    // Apply filters to params
+    // Apply filters to params — only add range filters when user has actually set them
     const f = activeFilters;
     if (f.search) params.set('school.name', f.search);
     if (f.ownership) params.set('school.ownership', f.ownership);
     if (f.state) params.set('school.state', f.state);
     if (f.degree) params.set('school.degrees_awarded.predominant', f.degree);
 
-    // Only show schools with data for 4yr completion
-    params.set('latest.admissions.admission_rate.overall__range', `${(f.acceptMin||0)/100}..${(f.acceptMax||100)/100}`);
+    // Acceptance rate range — only filter when user has set non-default values
+    const acceptMin = f.acceptMin || 0;
+    const acceptMax = f.acceptMax != null ? f.acceptMax : 100;
+    if (acceptMin > 0 || acceptMax < 100) {
+      params.set('latest.admissions.admission_rate.overall__range',
+        `${acceptMin / 100}..${acceptMax / 100}`);
+    }
 
+    // Cost cap filter
     if (f.costMax && f.costMax < 80000) {
       params.set('latest.cost.avg_net_price.overall__range', `0..${f.costMax}`);
     }
 
-    if (f.satScore) {
-      // Filter to schools where SAT score is between 25th and 75th percentile combined
+    // SAT filter — find schools where student's score falls in the middle range
+    if (f.satScore && f.satScore > 400) {
+      // Split SAT into math/reading components and filter 25th pct below score
       const satMath = Math.round(f.satScore * 0.52);
       const satRead = Math.round(f.satScore * 0.48);
+      // 25th pct must be <= student score (student is above bottom quartile)
       params.set('latest.admissions.sat_scores.25th_percentile.math__range', `0..${satMath}`);
-      params.set('latest.admissions.sat_scores.75th_percentile.math__range', `${satMath}..800`);
+      // 75th pct must be >= student score (student is below top quartile)
+      params.set('latest.admissions.sat_scores.75th_percentile.math__range', `${Math.max(satMath - 50, satMath)}..800`);
     }
 
-    if (f.size === 'small') params.set('latest.student.size__range', '1..4999');
+    // Enrollment size
+    if (f.size === 'small')  params.set('latest.student.size__range', '1..4999');
     else if (f.size === 'medium') params.set('latest.student.size__range', '5000..19999');
-    else if (f.size === 'large') params.set('latest.student.size__range', '20000..200000');
+    else if (f.size === 'large')  params.set('latest.student.size__range', '20000..500000');
 
-    // Only 4-year and meaningful by default
-    if (!f.degree) params.set('school.degrees_awarded.predominant__range', '2..4');
+    // Default: only show 4-year degree-granting schools (predominant = 3)
+    // unless user has chosen a specific degree level
+    if (!f.degree) params.set('school.degrees_awarded.predominant', '3');
 
     try {
-      const res = await fetch(`${BASE}?${params}`);
+      const url = `${BASE}?${params}`;
+      const res = await fetch(url);
       if (!res.ok) {
-        if (res.status === 429) throw new Error('Rate limit hit — please wait a moment and try again, or use your own API key.');
-        throw new Error(`API error ${res.status}`);
+        let detail = `HTTP ${res.status}`;
+        try { const j = await res.json(); detail = j.errors?.[0]?.message || JSON.stringify(j); } catch {}
+        if (res.status === 429) throw new Error('Rate limit reached. Wait 60 seconds and try again, or get your own free API key at api.data.gov/signup');
+        if (res.status === 400) throw new Error(`Bad request — invalid filter combination (${detail}). Try resetting filters.`);
+        if (res.status === 403) throw new Error('Invalid API key. Please re-enter your key — it may have been saved incorrectly.');
+        throw new Error(`API error ${res.status}: ${detail}`);
       }
       const data = await res.json();
       allSchools = data.results || [];
@@ -952,7 +969,12 @@
       grid.innerHTML = `<div class="state-message" style="grid-column:1/-1">
         <div class="state-icon">⚠️</div>
         <div class="state-title">Error loading data</div>
-        <div class="state-sub">${err.message}</div>
+        <div class="state-sub" style="max-width:480px;">${err.message}</div>
+        <div style="margin-top:1.5rem;display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+          <button onclick="fetchSchools(${currentPage})" style="background:var(--emerald);color:var(--navy);font-weight:700;padding:0.5rem 1.25rem;border-radius:6px;font-size:0.82rem;">Retry</button>
+          <button onclick="resetFilters()" style="background:transparent;border:1px solid var(--g500);color:var(--g300);padding:0.5rem 1.25rem;border-radius:6px;font-size:0.82rem;">Reset Filters</button>
+          <button onclick="clearKey()" style="background:transparent;border:1px solid var(--g500);color:var(--g300);padding:0.5rem 1.25rem;border-radius:6px;font-size:0.82rem;">Change API Key</button>
+        </div>
       </div>`;
       document.getElementById('resultsCount').textContent = 'Error';
     }
@@ -962,15 +984,15 @@
   function getSortParam() {
     const sort = document.getElementById('sortSelect')?.value || 'name';
     const map = {
-      name: 'school.name',
-      accept_asc: 'latest.admissions.admission_rate.overall',
-      accept_desc: 'latest.admissions.admission_rate.overall:desc',
-      cost_asc: 'latest.cost.avg_net_price.overall',
-      cost_desc: 'latest.cost.avg_net_price.overall:desc',
-      earn_desc: 'latest.earnings.6_yrs_after_entry.median:desc',
-      size_desc: 'latest.student.size:desc',
+      name:         { sortField: 'school.name',                                       sortOrder: 'asc' },
+      accept_asc:   { sortField: 'latest.admissions.admission_rate.overall',          sortOrder: 'asc' },
+      accept_desc:  { sortField: 'latest.admissions.admission_rate.overall',          sortOrder: 'desc' },
+      cost_asc:     { sortField: 'latest.cost.avg_net_price.overall',                 sortOrder: 'asc' },
+      cost_desc:    { sortField: 'latest.cost.avg_net_price.overall',                 sortOrder: 'desc' },
+      earn_desc:    { sortField: 'latest.earnings.6_yrs_after_entry.median',          sortOrder: 'desc' },
+      size_desc:    { sortField: 'latest.student.size',                               sortOrder: 'desc' },
     };
-    return map[sort] || 'school.name';
+    return map[sort] || map.name;
   }
 
   /* ── Filters ─────────────────────────────────────────── */
@@ -1298,7 +1320,6 @@
     document.getElementById('modalMeta').innerHTML = `
       <span style="color:var(--g300);font-size:0.82rem;">📍 ${s['school.city']||''}, ${s['school.state']||''}</span>
       <span class="card-type-badge ${s['school.ownership']===1?'public':'private'}">${ownership}</span>
-      ${s['school.school_url'] ? `<a href="https://${s['school.school_url']}" target="_blank" rel="noopener" style="font-size:0.78rem;color:var(--emerald);text-decoration:underline;">${s['school.school_url']}</a>` : ''}
     `;
 
     // Generate Phortex expert insight
@@ -1518,6 +1539,14 @@
   });
 
   /* ── Utilities ───────────────────────────────────────── */
+  function clearKey() {
+    localStorage.removeItem('phortex_api_key');
+    API_KEY = '';
+    document.getElementById('appShell').style.display = 'none';
+    document.getElementById('apiGate').style.display = 'flex';
+    document.getElementById('apiKeyInput').value = '';
+  }
+
   function esc(str) {
     if (!str) return '';
     return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
