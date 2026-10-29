@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-29",
+  "items": [
+    {
+      "title": "SafePay ransomware has hit 600+ organizations",
+      "why": "A new FBI and CISA advisory says SafePay gets in through stolen or guessed passwords, VPN access and unpatched edge devices, then encrypts everything it can reach.",
+      "action": "Turn on MFA for every account, starting with VPN and remote access, and keep an offline backup you have actually restored from.",
+      "source_name": "Infosecurity Magazine",
+      "source_url": "https://www.infosecurity-magazine.com/news/safepay-compromised-critical/"
+    },
+    {
+      "title": "Critical flaw in Veeam Backup & Replication 13",
+      "why": "An unauthenticated attacker can bypass authorization checks in Veeam's backup server. Backups are the first thing ransomware crews go after.",
+      "action": "Update to 13.1.2 or 13.0.3 now. Version 12 is not affected.",
+      "source_name": "Cybersecurity News",
+      "source_url": "https://cybersecuritynews.com/veeam-patches-authorization-bypass-vulnerability/"
+    },
+    {
+      "title": "Microsoft ships emergency .NET security updates",
+      "why": "Out-of-band fixes for .NET 8, 9 and 10 close a memory flaw and cover fixes the October patch release missed.",
+      "action": "Update .NET on your servers, then rebuild any self-contained apps, since they carry their own copy.",
+      "source_name": "Security Magazine",
+      "source_url": "https://www.securitymagazine.com/articles/102699-microsoft-releases-emergency-net-patches"
+    }
+  ]
+}
