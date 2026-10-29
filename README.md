@@ -8,3 +8,7 @@ The homepage's Security TL;DR section is rebuilt every morning by a scheduled ta
 3. The task commits both files and pushes to `main`, which deploys through Cloudflare.
 
 To fix a published item by hand, edit `tldr/latest.json`, run the script, and push.
+
+## AI Security TL;DR page (/ai-security/)
+
+`ai-security/index.html` is generated; don't edit it by hand. A daily scheduled task researches AI-security news, conference talks and posts from the voices we track, then edits `intel/feed.json` (threat of the week, feed items, voices). `python3 scripts/build_intel.py` checks the data (https sources, length limits, no markup, no duplicates, a current `updated` date) and rebuilds the page; if a check fails, the live page stays as it was. Every summary is written by Phortex and links to its source; no articles or transcripts are copied.

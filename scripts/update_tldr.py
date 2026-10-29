@@ -85,7 +85,7 @@ def render(data: dict) -> str:
     <div class="threat-grid" style="grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));">
 {chr(10).join(cards)}
     </div>
-    <p class="threat-source" style="margin-top:1rem;">Updated daily. Summaries link to the original source; not legal or incident-response advice.</p>
+    <p class="threat-source" style="margin-top:1rem;">Updated daily. Summaries link to the original source; not legal or incident-response advice. <a href="/ai-security/">More in the AI Security TL;DR &rarr;</a></p>
   </div>
 </section>
 {END}"""

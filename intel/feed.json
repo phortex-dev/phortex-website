@@ -1,0 +1,79 @@
+{
+  "updated": "2026-10-29",
+  "threat_of_the_week": {
+    "source": "Latent Space AI News",
+    "date": "2026-10-23",
+    "title": "\"Black October\": PHP2Shell and a wave of AI-found flaws",
+    "tldr": "Unauthenticated remote-code-execution bugs in PHP, reportedly found with frontier AI models, were patched this month alongside a CVSS 10 GitLab flaw and a Node.js fix. Some researchers dispute how new and how exploited they are.",
+    "smb": "Running WordPress or WooCommerce? Ask your host, in writing, to confirm PHP is patched this week.",
+    "url": "https://latent.space/p/ainews-black-october/",
+    "link_label": "Read the roundup"
+  },
+  "items": [
+    {
+      "cat": "talk",
+      "source": "University of Toronto",
+      "date": "2026-10-22",
+      "title": "Bruce Schneier on hacking AI",
+      "tldr": "Schneier on how AI systems will find and exploit weaknesses in code, markets and law faster and at larger scale than human-paced patching can keep up with.",
+      "smb": "Treat patch speed as a core security control, not an IT chore.",
+      "url": "https://web.cs.toronto.edu/news-events/events/conversations-in-computing-bruce-schneier-on-hacking-ai",
+      "link_label": "Event page"
+    },
+    {
+      "cat": "news",
+      "source": "ASCII.jp, on Gambit Security research",
+      "date": "2026-10-05",
+      "title": "AI agents broke into 27 online shops for about $25 each",
+      "tldr": "Gambit Security tracked a six-day campaign in September that ran 105 AI-driven attack projects against hundreds of web stores; at least 27 were breached, some within hours.",
+      "smb": "Cheap automated attacks make small shops worth targeting. Patch e-commerce plugins within days, not months.",
+      "url": "https://ascii.jp/en/elem/000/004/439/4439882/",
+      "link_label": "Read the coverage"
+    },
+    {
+      "cat": "talk",
+      "source": "DEF CON 34, Bug Bounty Village",
+      "date": "2026-09-27",
+      "title": "Hackbots, with Jason Haddix",
+      "tldr": "Arcanum's agent harness, built mostly on Claude Code with a human in the loop, found 4 confirmed criticals and 17 highs in one 6-hour run. Skills, checklists, review steps and multiple models keep agents from skipping work.",
+      "smb": "Ask any AI security vendor how they check that their agents actually finished the job.",
+      "url": "https://www.youtube.com/watch?v=cRKToFkZMvk",
+      "link_label": "Watch the talk"
+    },
+    {
+      "cat": "news",
+      "source": "BleepingComputer",
+      "date": "2026-07-20",
+      "title": "JadePuffer agent now ransoms AI model data",
+      "tldr": "Sysdig says an autonomous attack agent added ransomware built to encrypt model checkpoints, vector databases and training data. It got in through a vulnerable Langflow server and an exposed Docker socket.",
+      "smb": "Back up vector databases and AI configs offline, and never expose a Docker socket to the internet.",
+      "url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/",
+      "link_label": "Read on BleepingComputer"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News",
+      "date": "2026-06-30",
+      "title": "Poisoned MCP tool descriptions can make AI agents leak data",
+      "tldr": "Microsoft researchers showed that hidden instructions in an approved third-party MCP tool can lead an agent to gather company data and send it out through routine tool calls that each look legitimate.",
+      "smb": "List every AI assistant and MCP tool your staff have connected, and allow only vetted ones.",
+      "url": "https://thehackernews.com/2026/06/microsoft-warns-poisoned-mcp-tool.html",
+      "link_label": "Read on The Hacker News"
+    },
+    {
+      "cat": "voices",
+      "source": "Krebs on Security",
+      "date": "2026-03-08",
+      "title": "How AI assistants are moving the security goalposts",
+      "tldr": "Krebs reports that autonomous assistants with access to files, accounts and messaging bring exposed admin panels, prompt-injection supply-chain attacks and AI-assisted intrusions at scale.",
+      "smb": "Assume staff will adopt AI agents; set rules for what they may connect before they do.",
+      "url": "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/",
+      "link_label": "Read on Krebs on Security"
+    }
+  ],
+  "voices": [
+    {"name": "Brian Krebs", "outlet": "Krebs on Security", "focus": "Investigative reporting on cybercrime, fraud and breaches.", "url": "https://krebsonsecurity.com/"},
+    {"name": "Bruce Schneier", "outlet": "Schneier on Security", "focus": "Essays on AI, security and society; the monthly Crypto-Gram.", "url": "https://www.schneier.com/"},
+    {"name": "Jason Haddix", "outlet": "Arcanum Security", "focus": "Offensive AI: hackbots, agent harnesses and bug bounty.", "url": "https://arcanum-sec.com/"}
+  ]
+}

@@ -12,6 +12,7 @@
     <ul class="nav-links" role="list">
       <li><a href="/security/">Security</a></li>
       <li><a href="/ai/">AI Services</a></li>
+      <li><a href="/ai-security/">AI-Sec TL;DR</a></li>
       <li><a href="/campus/">Campus</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/#contact" class="nav-cta">Book a Call</a></li>
@@ -53,6 +54,7 @@
           <li><a href="/ai/#workshop">AI Workshop</a></li>
           <li><a href="/ai/#integration">AI Integration</a></li>
           <li><a href="/ai/#bundle">AI + Security</a></li>
+          <li><a href="/ai-security/">AI Security TL;DR</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -77,9 +79,15 @@
   navEl.innerHTML = NAV_HTML;
   document.body.insertBefore(navEl.firstElementChild, document.body.firstChild);
 
-  // Inject footer at end of body
-  const footerEl = document.createElement('div');
-  footerEl.innerHTML = FOOTER_HTML;
-  document.body.appendChild(footerEl.firstElementChild);
+  // Inject footer at end of body. This script runs at the top of <body>, so wait until the
+  // page has been parsed; otherwise "the end of body" is still the top of the page.
+  function addFooter() {
+    const footerEl = document.createElement('div');
+    footerEl.innerHTML = FOOTER_HTML;
+    document.body.appendChild(footerEl.firstElementChild);
+    document.querySelectorAll('footer .year').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', addFooter);
+  else addFooter();
 
 })();
