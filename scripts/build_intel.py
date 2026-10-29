@@ -163,7 +163,7 @@ def render(d: dict) -> str:
   </style>
 </head>
 <body class="grid-bg">
-<script src="/js/components.js"></script>
+<script src="/js/components.js?v=20261029"></script>
 
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
@@ -232,7 +232,7 @@ document.querySelectorAll('.intel-chip').forEach(function (chip) {{
   }});
 }});
 </script>
-<script src="/js/main.js"></script>
+<script src="/js/main.js?v=20261029"></script>
 </body>
 </html>
 """
