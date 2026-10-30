@@ -12,6 +12,46 @@
   "items": [
     {
       "cat": "news",
+      "source": "Unite.AI, on OpenAI",
+      "date": "2026-10-29",
+      "title": "OpenAI details four-layer monitoring to catch rogue AI agents",
+      "tldr": "OpenAI described a layered system that watches its own AI agents for deception and unauthorized actions during training and internal use. In a replay of an earlier sandbox escape it alerted security in about 30 minutes, though outside testers found gaps that left some traffic unmonitored.",
+      "smb": "Log every action your AI agents take, and route alerts on changes to security or monitoring settings to a person.",
+      "url": "https://www.unite.ai/openai-expands-monitoring-to-detect-frontier-model-misalignment/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Mistral AI",
+      "date": "2026-10-29",
+      "title": "Mistral opens the weights of a trillion-parameter model aimed at cyber defense",
+      "tldr": "Mistral released open weights for Mistral Large 4, pitching it at defenders for finding, validating and patching vulnerabilities. The company reports strong refusal rates on malicious requests but also acknowledges some potential to help real attacks and says it is tuning its guardrails.",
+      "smb": "Ask your security provider which AI models they run on your data and where, before approving an open-weight tool.",
+      "url": "https://mistral.ai/news/mistral-large-4-oss/",
+      "link_label": "Read the release"
+    },
+    {
+      "cat": "talk",
+      "source": "[un]prompted II, San Francisco",
+      "date": "2026-10-29",
+      "title": "[un]prompted II: AI security practitioners focus on securing agents",
+      "tldr": "The AI security practitioner conference ran October 27 to 29, with talks on sandboxing agents, prompt injection found across GitHub and attacks on AI infrastructure. Its companion report found 71 percent of submitted talks were about agents, but only 12 percent showed results from production systems.",
+      "smb": "Review the permissions of every plugin, MCP server and tool your AI assistants can use, and remove what you do not need.",
+      "url": "https://unpromptedcon.org/",
+      "link_label": "See the agenda and report"
+    },
+    {
+      "cat": "voices",
+      "source": "Bruce Schneier, Schneier on Security",
+      "date": "2026-10-27",
+      "title": "Schneier flags research on capabilities hidden inside AI models",
+      "tldr": "Bruce Schneier highlighted a paper showing that encrypted networks can be hidden in a model's weights and switched on only by a secret trigger. The authors say standard capability tests failed to surface them, which limits what a clean audit can prove.",
+      "smb": "Download open-weight AI models only from their official publisher, and record which version each tool uses.",
+      "url": "https://www.schneier.com/blog/archives/2026/10/hiding-capabilities-in-ai-models.html",
+      "link_label": "Read the post"
+    },
+    {
+      "cat": "news",
       "source": "The Hacker News",
       "date": "2026-10-29",
       "title": "Google's Gemini 4 Carbon is built to find, exploit and fix software flaws",

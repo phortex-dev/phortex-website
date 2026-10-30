@@ -63,9 +63,30 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>9</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>7</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>13</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>9</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>1</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Unite.AI, on OpenAI &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">OpenAI details four-layer monitoring to catch rogue AI agents</h3>
+        <p class="intel-tldr">OpenAI described a layered system that watches its own AI agents for deception and unauthorized actions during training and internal use. In a replay of an earlier sandbox escape it alerted security in about 30 minutes, though outside testers found gaps that left some traffic unmonitored.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Log every action your AI agents take, and route alerts on changes to security or monitoring settings to a person.</div>
+        <a class="intel-link" href="https://www.unite.ai/openai-expands-monitoring-to-detect-frontier-model-misalignment/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Mistral AI &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Mistral opens the weights of a trillion-parameter model aimed at cyber defense</h3>
+        <p class="intel-tldr">Mistral released open weights for Mistral Large 4, pitching it at defenders for finding, validating and patching vulnerabilities. The company reports strong refusal rates on malicious requests but also acknowledges some potential to help real attacks and says it is tuning its guardrails.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask your security provider which AI models they run on your data and where, before approving an open-weight tool.</div>
+        <a class="intel-link" href="https://mistral.ai/news/mistral-large-4-oss/" target="_blank" rel="noopener noreferrer">Read the release &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="talk">
+        <div class="intel-meta"><span class="tag">Talks</span><span>[un]prompted II, San Francisco &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">[un]prompted II: AI security practitioners focus on securing agents</h3>
+        <p class="intel-tldr">The AI security practitioner conference ran October 27 to 29, with talks on sandboxing agents, prompt injection found across GitHub and attacks on AI infrastructure. Its companion report found 71 percent of submitted talks were about agents, but only 12 percent showed results from production systems.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Review the permissions of every plugin, MCP server and tool your AI assistants can use, and remove what you do not need.</div>
+        <a class="intel-link" href="https://unpromptedcon.org/" target="_blank" rel="noopener noreferrer">See the agenda and report &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Google&#x27;s Gemini 4 Carbon is built to find, exploit and fix software flaws</h3>
@@ -100,6 +121,13 @@
         <p class="intel-tldr">Cisco released Project Quarry, a free tool that reviews an AI agent&#x27;s full run of actions to catch attacks built from harmless-looking steps, such as reading a credentials file and then sending data out. It works with Claude Code, Codex and other MCP agents, but Cisco says it is not yet proven in a real incident.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Turn on full activity logging for any AI coding or business agent you use, so a suspicious sequence of actions can be reviewed later.</div>
         <a class="intel-link" href="https://securityboulevard.com/2026/10/cisco-debuts-open-source-tool-to-track-dangerous-ai-agent-behavior/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Bruce Schneier, Schneier on Security &middot; <time datetime="2026-10-27">Oct 27, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Schneier flags research on capabilities hidden inside AI models</h3>
+        <p class="intel-tldr">Bruce Schneier highlighted a paper showing that encrypted networks can be hidden in a model&#x27;s weights and switched on only by a secret trigger. The authors say standard capability tests failed to surface them, which limits what a clean audit can prove.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Download open-weight AI models only from their official publisher, and record which version each tool uses.</div>
+        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/10/hiding-capabilities-in-ai-models.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="talk">
         <div class="intel-meta"><span class="tag">Talks</span><span>University of Toronto &middot; <time datetime="2026-10-22">Oct 22, 2026</time></span></div>
