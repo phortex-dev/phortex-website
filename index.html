@@ -13,7 +13,7 @@
   <meta name="twitter:site" content="@PhortexLLC" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://phortex.com/" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style.css?v=20261030" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -28,7 +28,7 @@
   </script>
 </head>
 <body class="grid-bg">
-<script src="/js/components.js?v=20261029"></script>
+<script src="/js/components.js?v=20261030"></script>
 
 <!-- ══ HERO ════════════════════════════════════════════════ -->
 <header class="hero" id="top">
@@ -124,28 +124,43 @@
 <section class="compact" id="tldr" aria-labelledby="tldr-heading">
   <div class="container">
     <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-10-30">October 30, 2026</time></div>
-    <h2 class="heading-md" id="tldr-heading">What small businesses should know <span class="text-accent-cyan">today</span></h2>
-    <div class="threat-grid" style="grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));">
-      <article class="threat-card" style="display:flex; flex-direction:column; gap:0.6rem;">
-        <h3 class="threat-label" style="font-size:1rem; line-height:1.35;">Cisco firewall VPN flaw is being used to knock devices offline</h3>
-        <p class="text-muted" style="font-size:0.9rem; line-height:1.55; margin:0;">Cisco patched an actively exploited bug in ASA and FTD firewalls that lets an outside attacker crash the device when the SSL VPN uses secondary authentication.</p>
-        <p style="font-size:0.9rem; line-height:1.55; margin:0;"><strong class="text-accent-cyan">Do this:</strong> Update Cisco ASA or FTD firewalls to Cisco&#x27;s fixed release for your version, and check every VPN tunnel group, including the default one, for secondary authentication.</p>
-        <a class="threat-source" href="https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html" target="_blank" rel="noopener noreferrer" style="margin-top:auto;">Source: The Hacker News &rarr;</a>
-      </article>
-      <article class="threat-card" style="display:flex; flex-direction:column; gap:0.6rem;">
-        <h3 class="threat-label" style="font-size:1rem; line-height:1.35;">Ivanti ships more fixes for exploited Connect Secure VPN flaws</h3>
-        <p class="text-muted" style="font-size:0.9rem; line-height:1.55; margin:0;">On October 29 Ivanti released patches for the remaining flaws in a chain attackers used to get root on its VPN and steal Active Directory credentials.</p>
-        <p style="font-size:0.9rem; line-height:1.55; margin:0;"><strong class="text-accent-cyan">Do this:</strong> Upgrade Ivanti Connect Secure to 22.8R2.6 or 25.1.1.3, then reset the passwords of accounts the VPN uses to reach Active Directory.</p>
-        <a class="threat-source" href="https://gbhackers.com/hackers-exploit-ivanti-connect-secure-zero-day-vulnerabilities/" target="_blank" rel="noopener noreferrer" style="margin-top:auto;">Source: GBHackers &rarr;</a>
-      </article>
-      <article class="threat-card" style="display:flex; flex-direction:column; gap:0.6rem;">
-        <h3 class="threat-label" style="font-size:1rem; line-height:1.35;">319 Chrome extensions caught rerouting web searches</h3>
-        <p class="text-muted" style="font-size:0.9rem; line-height:1.55; margin:0;">Researchers found extensions posing as PDF converters, safe-search and AI tools, with 13.4 million installs, sending searches through servers that could redirect users to phishing pages.</p>
-        <p style="font-size:0.9rem; line-height:1.55; margin:0;"><strong class="text-accent-cyan">Do this:</strong> Review the Chrome extensions on work computers, remove PDF, search or security add-ons nobody needs, then run a full antivirus scan.</p>
-        <a class="threat-source" href="https://bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches" target="_blank" rel="noopener noreferrer" style="margin-top:auto;">Source: BleepingComputer &rarr;</a>
-      </article>
+    <h2 class="heading-md" id="tldr-heading">Today&rsquo;s top security stories, <span class="text-accent-cyan">ranked</span></h2>
+    <div class="tl-grid">
+<article class="tl-card tl-feature" data-cat="crypto">
+  <div class="tl-art tl-art-md" style="--c:#F7C948" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M20 16v16M20 16h6a4 4 0 0 1 0 8h-6M20 24h7a4 4 0 0 1 0 8h-7M23 13v3M23 32v3"/></svg></div>
+  <div class="tl-body">
+    <div class="tl-meta"><span class="tl-rank">#1</span><span class="tl-cat" style="--c:#F7C948">Crypto theft</span><span class="tl-heat" title="Heat 5 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Top story</span></div>
+    <h3 class="tl-title">Binance loses about $6.3 billion after an engineer&#x27;s laptop is compromised</h3>
+    <p class="tl-why">Attackers used access from a DevOps engineer&#x27;s hacked laptop to push unauthorized withdrawals on October 29. Binance says customers will be covered; analysts tie the theft to North Korea&#x27;s TraderTraitor group.</p>
+    <p class="tl-do"><strong>Do this:</strong> Give admin and engineering laptops your strongest protection: phishing-resistant MFA, endpoint protection, and no standing access to production or money-moving systems.</p>
+    <a class="tl-src" href="https://bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop" target="_blank" rel="noopener noreferrer">BleepingComputer &rarr;</a>
+  </div>
+</article>
+<article class="tl-card tl-feature" data-cat="vpn">
+  <div class="tl-art tl-art-md" style="--c:#00D4F0" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M17 24h14M17 18h14M17 30h14M24 18v6M20 24v6M28 24v6"/></svg></div>
+  <div class="tl-body">
+    <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#00D4F0">Firewall &amp; VPN</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <h3 class="tl-title">Cisco firewall VPN flaw is being used to knock devices offline</h3>
+    <p class="tl-why">Cisco patched an actively exploited bug in ASA and FTD firewalls that lets an outside attacker crash the device when the SSL VPN uses secondary authentication.</p>
+    <p class="tl-do"><strong>Do this:</strong> Update Cisco ASA or FTD firewalls to Cisco&#x27;s fixed release for your version, and check every VPN tunnel group, including the default one, for secondary authentication.</p>
+    <a class="tl-src" href="https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html" target="_blank" rel="noopener noreferrer">The Hacker News &rarr;</a>
+  </div>
+</article>
+<article class="tl-card tl-feature" data-cat="vpn">
+  <div class="tl-art tl-art-md" style="--c:#00D4F0" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M17 24h14M17 18h14M17 30h14M24 18v6M20 24v6M28 24v6"/></svg></div>
+  <div class="tl-body">
+    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#00D4F0">Firewall &amp; VPN</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <h3 class="tl-title">Ivanti ships more fixes for exploited Connect Secure VPN flaws</h3>
+    <p class="tl-why">On October 29 Ivanti released patches for the remaining flaws in a chain attackers used to get root on its VPN and steal Active Directory credentials.</p>
+    <p class="tl-do"><strong>Do this:</strong> Upgrade Ivanti Connect Secure to 22.8R2.6 or 25.1.1.3, then reset the passwords of accounts the VPN uses to reach Active Directory.</p>
+    <a class="tl-src" href="https://gbhackers.com/hackers-exploit-ivanti-connect-secure-zero-day-vulnerabilities/" target="_blank" rel="noopener noreferrer">GBHackers &rarr;</a>
+  </div>
+</article>
     </div>
-    <p class="threat-source" style="margin-top:1rem;">Updated daily. Summaries link to the original source; not legal or incident-response advice. <a href="/ai-security/">More in the AI Security TL;DR &rarr;</a></p>
+    <div class="tl-foot">
+      <a class="btn btn-ghost btn-arrow" href="/security-tldr/">See all 4 of today&rsquo;s stories and past days</a>
+      <p>Updated daily. Summaries link to the original source; not legal or incident-response advice. <a href="/ai-security/">AI Security TL;DR &rarr;</a></p>
+    </div>
   </div>
 </section>
 <!-- TLDR:END -->
@@ -567,6 +582,6 @@
   </div>
 </section>
 
-<script src="/js/main.js?v=20261029"></script>
+<script src="/js/main.js?v=20261030"></script>
 </body>
 </html>

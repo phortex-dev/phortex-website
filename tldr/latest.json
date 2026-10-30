@@ -2,25 +2,40 @@
   "date": "2026-10-30",
   "items": [
     {
+      "title": "Binance loses about $6.3 billion after an engineer's laptop is compromised",
+      "why": "Attackers used access from a DevOps engineer's hacked laptop to push unauthorized withdrawals on October 29. Binance says customers will be covered; analysts tie the theft to North Korea's TraderTraitor group.",
+      "action": "Give admin and engineering laptops your strongest protection: phishing-resistant MFA, endpoint protection, and no standing access to production or money-moving systems.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop",
+      "heat": 5,
+      "cat": "crypto"
+    },
+    {
       "title": "Cisco firewall VPN flaw is being used to knock devices offline",
       "why": "Cisco patched an actively exploited bug in ASA and FTD firewalls that lets an outside attacker crash the device when the SSL VPN uses secondary authentication.",
       "action": "Update Cisco ASA or FTD firewalls to Cisco's fixed release for your version, and check every VPN tunnel group, including the default one, for secondary authentication.",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html"
+      "source_url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
+      "heat": 4,
+      "cat": "vpn"
     },
     {
       "title": "Ivanti ships more fixes for exploited Connect Secure VPN flaws",
       "why": "On October 29 Ivanti released patches for the remaining flaws in a chain attackers used to get root on its VPN and steal Active Directory credentials.",
       "action": "Upgrade Ivanti Connect Secure to 22.8R2.6 or 25.1.1.3, then reset the passwords of accounts the VPN uses to reach Active Directory.",
       "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/hackers-exploit-ivanti-connect-secure-zero-day-vulnerabilities/"
+      "source_url": "https://gbhackers.com/hackers-exploit-ivanti-connect-secure-zero-day-vulnerabilities/",
+      "heat": 4,
+      "cat": "vpn"
     },
     {
       "title": "319 Chrome extensions caught rerouting web searches",
       "why": "Researchers found extensions posing as PDF converters, safe-search and AI tools, with 13.4 million installs, sending searches through servers that could redirect users to phishing pages.",
       "action": "Review the Chrome extensions on work computers, remove PDF, search or security add-ons nobody needs, then run a full antivirus scan.",
       "source_name": "BleepingComputer",
-      "source_url": "https://bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches"
+      "source_url": "https://bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches",
+      "heat": 3,
+      "cat": "browser"
     }
   ]
 }

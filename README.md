@@ -1,13 +1,13 @@
 # phortex-website
 ## Security TL;DR (updated daily)
 
-The homepage's Security TL;DR section is rebuilt every morning by a scheduled task:
+The homepage's Security TL;DR section and the full page at `/security-tldr/` are rebuilt every morning by a scheduled task:
 
-1. The task researches the last day or two of security news that matters to small businesses and writes up to three items to `tldr/latest.json`.
-2. `python3 scripts/update_tldr.py tldr/latest.json` checks the data (current date, 1 to 3 items, length limits, no markup, outside https sources) and rewrites only the block between `<!-- TLDR:START -->` and `<!-- TLDR:END -->` in `index.html`. If a check fails, the page is left as it was.
-3. The task commits both files and pushes to `main`, which deploys through Cloudflare.
+1. The task researches the last day or two of security news, ranks the biggest stories (up to six) and writes them to `tldr/latest.json`. Each story has a `heat` score (1 to 5, 5 = top story of the day), a `cat` that picks its illustration (`vpn`, `phishing`, `ransomware`, `patch`, `breach`, `crypto`, `browser`, `malware`, `cloud`, `ai`, `policy`), a plain summary, one "Do this" action for small businesses, and an outside https source.
+2. `python3 scripts/update_tldr.py tldr/latest.json` checks the data, replaces that day's stories in `tldr/feed.json` (so a rerun doesn't duplicate), keeps the last 60 days, and regenerates the homepage block between `<!-- TLDR:START -->` and `<!-- TLDR:END -->` (today's top 3) plus `security-tldr/index.html` (hottest this week, then every day, newest first). If a check fails, nothing is written.
+3. The task commits `index.html`, `security-tldr/index.html`, `tldr/latest.json` and `tldr/feed.json` and pushes to `main`, which deploys through Cloudflare.
 
-To fix a published item by hand, edit `tldr/latest.json`, run the script, and push.
+To fix a published story by hand, edit it in `tldr/feed.json` and run `python3 scripts/update_tldr.py --rebuild`.
 
 ## AI Security TL;DR page (/ai-security/)
 

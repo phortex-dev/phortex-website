@@ -12,6 +12,7 @@
     <ul class="nav-links" role="list">
       <li><a href="/security/">Security</a></li>
       <li><a href="/ai/">AI Services</a></li>
+      <li><a href="/security-tldr/">Sec TL;DR</a></li>
       <li><a href="/ai-security/">AI-Sec TL;DR</a></li>
       <li><a href="/campus/">Campus</a></li>
       <li><a href="/about/">About</a></li>
@@ -45,6 +46,7 @@
           <li><a href="/security/#smb">SMB Assessment</a></li>
           <li><a href="/security/#vciso">Virtual CISO</a></li>
           <li><a href="/security/#consulting">Consulting</a></li>
+          <li><a href="/security-tldr/">Security TL;DR</a></li>
         </ul>
       </div>
       <div class="footer-col">

@@ -1,0 +1,75 @@
+{
+  "updated": "2026-10-30",
+  "items": [
+    {
+      "date": "2026-10-30",
+      "title": "Binance loses about $6.3 billion after an engineer's laptop is compromised",
+      "why": "Attackers used access from a DevOps engineer's hacked laptop to push unauthorized withdrawals on October 29. Binance says customers will be covered; analysts tie the theft to North Korea's TraderTraitor group.",
+      "action": "Give admin and engineering laptops your strongest protection: phishing-resistant MFA, endpoint protection, and no standing access to production or money-moving systems.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop",
+      "heat": 5,
+      "cat": "crypto"
+    },
+    {
+      "date": "2026-10-30",
+      "title": "Cisco firewall VPN flaw is being used to knock devices offline",
+      "why": "Cisco patched an actively exploited bug in ASA and FTD firewalls that lets an outside attacker crash the device when the SSL VPN uses secondary authentication.",
+      "action": "Update Cisco ASA or FTD firewalls to Cisco's fixed release for your version, and check every VPN tunnel group, including the default one, for secondary authentication.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
+      "heat": 4,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-10-30",
+      "title": "Ivanti ships more fixes for exploited Connect Secure VPN flaws",
+      "why": "On October 29 Ivanti released patches for the remaining flaws in a chain attackers used to get root on its VPN and steal Active Directory credentials.",
+      "action": "Upgrade Ivanti Connect Secure to 22.8R2.6 or 25.1.1.3, then reset the passwords of accounts the VPN uses to reach Active Directory.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/hackers-exploit-ivanti-connect-secure-zero-day-vulnerabilities/",
+      "heat": 4,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-10-30",
+      "title": "319 Chrome extensions caught rerouting web searches",
+      "why": "Researchers found extensions posing as PDF converters, safe-search and AI tools, with 13.4 million installs, sending searches through servers that could redirect users to phishing pages.",
+      "action": "Review the Chrome extensions on work computers, remove PDF, search or security add-ons nobody needs, then run a full antivirus scan.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches",
+      "heat": 3,
+      "cat": "browser"
+    },
+    {
+      "date": "2026-10-29",
+      "title": "SafePay ransomware has hit 600+ organizations",
+      "why": "A new FBI and CISA advisory says SafePay gets in through stolen or guessed passwords, VPN access and unpatched edge devices, then encrypts everything it can reach.",
+      "action": "Turn on MFA for every account, starting with VPN and remote access, and keep an offline backup you have actually restored from.",
+      "source_name": "Infosecurity Magazine",
+      "source_url": "https://www.infosecurity-magazine.com/news/safepay-compromised-critical/",
+      "heat": 4,
+      "cat": "ransomware"
+    },
+    {
+      "date": "2026-10-29",
+      "title": "Critical flaw in Veeam Backup & Replication 13",
+      "why": "An unauthenticated attacker can bypass authorization checks in Veeam's backup server. Backups are the first thing ransomware crews go after.",
+      "action": "Update to 13.1.2 or 13.0.3 now. Version 12 is not affected.",
+      "source_name": "Cybersecurity News",
+      "source_url": "https://cybersecuritynews.com/veeam-patches-authorization-bypass-vulnerability/",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-10-29",
+      "title": "Microsoft ships emergency .NET security updates",
+      "why": "Out-of-band fixes for .NET 8, 9 and 10 close a memory flaw and cover fixes the October patch release missed.",
+      "action": "Update .NET on your servers, then rebuild any self-contained apps, since they carry their own copy.",
+      "source_name": "Security Magazine",
+      "source_url": "https://www.securitymagazine.com/articles/102699-microsoft-releases-emergency-net-patches",
+      "heat": 3,
+      "cat": "patch"
+    }
+  ]
+}
