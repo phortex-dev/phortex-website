@@ -39,7 +39,7 @@ START, END = "<!-- TLDR:START -->", "<!-- TLDR:END -->"
 LIMITS = {"title": 90, "why": 260, "action": 180, "source_name": 40}
 MAX_PER_DAY = 6
 KEEP_DAYS = 60
-ASSET_V = "20261030"
+ASSET_V = "20261030b"
 BANNED = re.compile(r"<|>|javascript:|\bclick here\b", re.I)
 
 # key: (label, accent color, svg path data drawn on a 48x48 grid, white strokes)

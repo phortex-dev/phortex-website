@@ -13,6 +13,12 @@ To fix a published story by hand, edit it in `tldr/feed.json` and run `python3 s
 
 `ai-security/index.html` is generated; don't edit it by hand. A daily scheduled task researches AI-security news, conference talks and posts from the voices we track, then edits `intel/feed.json` (threat of the week, feed items, voices). `python3 scripts/build_intel.py` checks the data (https sources, length limits, no markup, no duplicates, a current `updated` date) and rebuilds the page; if a check fails, the live page stays as it was. Every summary is written by Phortex and links to its source; no articles or transcripts are copied.
 
+## Learning Academy (/academy/)
+
+`academy/index.html` is generated; don't edit it by hand. The catalog lives in `academy/catalog.json`: five tracks (AI Skills; Cryptography & PQC, AI Security and Cybersecurity Hot Topics under Cybersecurity; Emerging Tech Deep Dives under Hot Topics), each with courses. A course's `status` is `soon`, `production` (shown under "Now in production") or `live` (needs a `url`). Run `python3 scripts/build_academy.py` after editing; it checks the data and rebuilds the page. The waitlist form posts to the same Formspree form as the contact form, with the subject "Learning Academy waitlist".
+
+The old Campus pages (/campus/, /campus/compare/) were removed on October 30, 2026; college guidance lives only on phortexcampus.com.
+
 ## Changing shared CSS or JS
 
 `_headers` tells browsers to cache `/css/*`, `/js/*` and `/assets/*` for a year without re-checking. After editing `js/components.js`, `js/main.js` or `css/style.css`, bump the `?v=` tag on its `<script>`/`<link>` in every page (and in `scripts/build_intel.py`), or returning visitors keep the old file.

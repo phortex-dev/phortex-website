@@ -14,7 +14,7 @@
       <li><a href="/ai/">AI Services</a></li>
       <li><a href="/security-tldr/">Sec TL;DR</a></li>
       <li><a href="/ai-security/">AI-Sec TL;DR</a></li>
-      <li><a href="/campus/">Campus</a></li>
+      <li><a href="/academy/">Learning Academy</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/#contact" class="nav-cta">Book a Call</a></li>
     </ul>
@@ -30,7 +30,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand-logo">PHORTEX<span style="color:var(--cyan)">.</span></div>
-        <p class="footer-tagline">Cybersecurity consulting, AI strategy, and college admissions guidance — built on 25 years of hands-on expertise and Wharton business thinking.</p>
+        <p class="footer-tagline">Cybersecurity consulting, AI strategy, and a learning academy — built on 25 years of hands-on expertise and Wharton business thinking.</p>
         <div class="footer-socials">
           <a href="https://linkedin.com/company/phortex-llc" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">in</a>
           <a href="https://x.com/PhortexLLC" target="_blank" rel="noopener" class="footer-social-btn" aria-label="X / Twitter">𝕏</a>
@@ -62,7 +62,7 @@
       <div class="footer-col">
         <h5>Company</h5>
         <ul>
-          <li><a href="/campus/">Phortex Campus</a></li>
+          <li><a href="/academy/">Learning Academy</a></li>
           <li><a href="/about/">About</a></li>
           <li><a href="/#contact">Contact</a></li>
           <li><a href="https://x.com/PhortexLLC" target="_blank" rel="noopener">@PhortexLLC</a></li>

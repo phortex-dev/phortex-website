@@ -9,7 +9,7 @@ phortex-website/
 ├── index.html              ← Homepage
 ├── security/index.html     ← Phortex Secure
 ├── ai/index.html           ← Phortex AI  
-├── campus/index.html       ← Phortex Campus
+├── academy/index.html      ← Learning Academy (built from academy/catalog.json)
 ├── about/index.html        ← About / Founder
 ├── css/style.css           ← Shared design system
 ├── js/main.js              ← Shared interactions

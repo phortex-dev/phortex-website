@@ -1,0 +1,432 @@
+{
+  "tracks": [
+    {
+      "id": "ai",
+      "group": "AI",
+      "name": "AI Skills",
+      "color": "#8B5CF6",
+      "icon": "ai",
+      "blurb": "Practical AI for people who run or work in a business: how the tools work, how to get real value from them, and how to automate safely.",
+      "courses": [
+        {
+          "title": "AI Foundations for Business Leaders",
+          "level": "Beginner",
+          "lessons": 6,
+          "minutes": 60,
+          "icon": "ai",
+          "desc": "How large language models work, what they are good and bad at, what they cost, and how to pick the first problems worth solving.",
+          "topics": [
+            "How LLMs work",
+            "Limits and costs",
+            "Choosing use cases"
+          ],
+          "status": "production"
+        },
+        {
+          "title": "Working Smarter with AI Assistants",
+          "level": "Beginner",
+          "lessons": 7,
+          "minutes": 75,
+          "icon": "chat",
+          "desc": "Prompt patterns, giving the model the right context, checking its output, and turning one-off chats into repeatable workflows.",
+          "topics": [
+            "Prompt patterns",
+            "Context and files",
+            "Checking output"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "AI Agents & Automation",
+          "level": "Intermediate",
+          "lessons": 8,
+          "minutes": 90,
+          "icon": "agent",
+          "desc": "What AI agents are, how they use tools and connectors like MCP, and how to design automations that keep a human in the loop.",
+          "topics": [
+            "Agents and tools",
+            "MCP connectors",
+            "Human in the loop"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Generative Coding in Practice",
+          "level": "Intermediate",
+          "lessons": 7,
+          "minutes": 80,
+          "icon": "code",
+          "desc": "Use AI coding assistants to build and fix software faster, with the reviews and tests that keep the results trustworthy.",
+          "topics": [
+            "AI pair programming",
+            "Testing AI code",
+            "When not to trust it"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Building with LLM APIs & RAG",
+          "level": "Advanced",
+          "lessons": 9,
+          "minutes": 110,
+          "icon": "workflow",
+          "desc": "Retrieval, embeddings, evaluation and cost control for teams building AI features into their own products.",
+          "topics": [
+            "Embeddings and retrieval",
+            "Evaluation",
+            "Cost control"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "AI Governance & Responsible Use",
+          "level": "Beginner",
+          "lessons": 5,
+          "minutes": 50,
+          "icon": "policy",
+          "desc": "Write an AI use policy people will follow, map it to the NIST AI Risk Management Framework, and handle data, vendors and disclosure.",
+          "topics": [
+            "AI use policy",
+            "NIST AI RMF",
+            "Vendor and data risk"
+          ],
+          "status": "soon"
+        }
+      ]
+    },
+    {
+      "id": "pqc",
+      "group": "Cybersecurity",
+      "name": "Cryptography & PQC",
+      "color": "#00D4F0",
+      "icon": "key",
+      "blurb": "How encryption actually protects your data, why quantum computers threaten it, and how to move to post-quantum cryptography (PQC) on a sensible timeline.",
+      "courses": [
+        {
+          "title": "Cryptography Essentials",
+          "level": "Beginner",
+          "lessons": 6,
+          "minutes": 60,
+          "icon": "key",
+          "desc": "Hashes, symmetric and public-key encryption, digital signatures and TLS, explained with everyday examples.",
+          "topics": [
+            "Hashing",
+            "Public-key crypto",
+            "How TLS works"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "The Quantum Threat to Encryption",
+          "level": "Beginner",
+          "lessons": 5,
+          "minutes": 45,
+          "icon": "atom",
+          "desc": "What Shor's and Grover's algorithms would break, what \"harvest now, decrypt later\" means, and realistic timelines.",
+          "topics": [
+            "Shor and Grover",
+            "Harvest now, decrypt later",
+            "Timelines"
+          ],
+          "status": "production"
+        },
+        {
+          "title": "Lattice-Based Cryptography Explained",
+          "level": "Intermediate",
+          "lessons": 6,
+          "minutes": 70,
+          "icon": "lattice",
+          "desc": "The idea behind the new NIST post-quantum standards ML-KEM and ML-DSA, taught visually and without a math degree.",
+          "topics": [
+            "Lattice problems",
+            "ML-KEM",
+            "ML-DSA"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Your Post-Quantum Migration Plan",
+          "level": "Intermediate",
+          "lessons": 7,
+          "minutes": 75,
+          "icon": "shield",
+          "desc": "Build a cryptography inventory, design for crypto-agility, test hybrid TLS, and ask vendors the right questions.",
+          "topics": [
+            "Crypto inventory",
+            "Crypto-agility",
+            "Vendor questions"
+          ],
+          "status": "soon"
+        }
+      ]
+    },
+    {
+      "id": "aisec",
+      "group": "Cybersecurity",
+      "name": "AI Security",
+      "color": "#FF8A3D",
+      "icon": "aishield",
+      "blurb": "The new risks that come with AI, from staff pasting data into chatbots to attackers hijacking AI agents, and the controls that work.",
+      "courses": [
+        {
+          "title": "Securing AI Use at Work",
+          "level": "Beginner",
+          "lessons": 6,
+          "minutes": 55,
+          "icon": "aishield",
+          "desc": "Shadow AI, data leaks, account and retention settings, and an AI policy your team will actually follow.",
+          "topics": [
+            "Shadow AI",
+            "Data leakage",
+            "Practical policy"
+          ],
+          "status": "production"
+        },
+        {
+          "title": "Prompt Injection & LLM Attacks",
+          "level": "Intermediate",
+          "lessons": 7,
+          "minutes": 80,
+          "icon": "inject",
+          "desc": "How attackers hijack AI apps with hidden instructions, mapped to the OWASP Top 10 for LLM Applications, and the defenses that hold up.",
+          "topics": [
+            "Prompt injection",
+            "OWASP LLM Top 10",
+            "Defenses"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Securing AI Agents & MCP",
+          "level": "Advanced",
+          "lessons": 7,
+          "minutes": 85,
+          "icon": "agent",
+          "desc": "Permissions, tool scoping, secrets and logging for AI agents that can take actions on your systems.",
+          "topics": [
+            "Least privilege",
+            "Tool scoping",
+            "Audit logging"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Deepfakes & AI-Powered Phishing",
+          "level": "Beginner",
+          "lessons": 5,
+          "minutes": 45,
+          "icon": "mask",
+          "desc": "Voice clones, fake video calls and AI-written lures, plus the verification habits that stop them.",
+          "topics": [
+            "Voice and video fakes",
+            "AI phishing",
+            "Verification habits"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "The AI Supply Chain",
+          "level": "Intermediate",
+          "lessons": 6,
+          "minutes": 65,
+          "icon": "chain",
+          "desc": "Models, datasets, plugins and leaked API keys: where AI risk enters your business and how to control it.",
+          "topics": [
+            "Model and plugin risk",
+            "API key hygiene",
+            "Vendor review"
+          ],
+          "status": "soon"
+        }
+      ]
+    },
+    {
+      "id": "cyberhot",
+      "group": "Cybersecurity",
+      "name": "Cybersecurity Hot Topics",
+      "color": "#F5A524",
+      "icon": "vpn",
+      "blurb": "Deep dives into one specific corner of security at a time, often built around a real attack that made the news.",
+      "courses": [
+        {
+          "title": "Anatomy of a VPN Zero-Day",
+          "level": "Intermediate",
+          "lessons": 6,
+          "minutes": 60,
+          "icon": "vpn",
+          "desc": "Why firewalls and VPN appliances are attackers' favorite door, traced step by step through recent real-world attack chains.",
+          "topics": [
+            "Edge devices",
+            "Exploit chains",
+            "Detection"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Inside a $6 Billion Crypto Heist",
+          "level": "Intermediate",
+          "lessons": 5,
+          "minutes": 50,
+          "icon": "crypto",
+          "desc": "How one engineer's compromised laptop led to the Binance theft, and what it teaches every business about privileged access.",
+          "topics": [
+            "Privileged access",
+            "Developer laptops",
+            "Fast response"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Passkeys & the End of Passwords",
+          "level": "Beginner",
+          "lessons": 5,
+          "minutes": 45,
+          "icon": "passkey",
+          "desc": "How FIDO2 passkeys stop phishing, and how to roll them out across a small team without locking anyone out.",
+          "topics": [
+            "How passkeys work",
+            "Phishing resistance",
+            "Rollout plan"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Browser Extensions: the Overlooked Attack Surface",
+          "level": "Beginner",
+          "lessons": 4,
+          "minutes": 35,
+          "icon": "browser",
+          "desc": "How harmless-looking add-ons hijack searches and data, and how to control them with browser policies.",
+          "topics": [
+            "Malicious add-ons",
+            "Browser policy",
+            "Audit checklist"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Ransomware Recovery: the First 72 Hours",
+          "level": "Intermediate",
+          "lessons": 7,
+          "minutes": 75,
+          "icon": "ransomware",
+          "desc": "Containment, backups, legal and insurance calls, communications, and the decision about whether to negotiate.",
+          "topics": [
+            "Containment",
+            "Restoring backups",
+            "Who to call"
+          ],
+          "status": "soon"
+        }
+      ]
+    },
+    {
+      "id": "emerging",
+      "group": "Hot Topics",
+      "name": "Emerging Tech Deep Dives",
+      "color": "#10D98A",
+      "icon": "atom",
+      "blurb": "The science behind the technology everyone is talking about, explained clearly enough to share at dinner.",
+      "courses": [
+        {
+          "title": "The Science of the Fold: Inside the iPhone Duo",
+          "level": "Beginner",
+          "lessons": 5,
+          "minutes": 45,
+          "icon": "fold",
+          "desc": "How a phone screen survives folding thousands of times: flexible OLED, ultra-thin cover layers, a hinge with more than 100 parts, and hiding the crease and the camera.",
+          "topics": [
+            "Flexible OLED",
+            "Hinge engineering",
+            "The crease problem"
+          ],
+          "status": "production"
+        },
+        {
+          "title": "Blockchain Beyond Bitcoin",
+          "level": "Beginner",
+          "lessons": 6,
+          "minutes": 55,
+          "icon": "blocks",
+          "desc": "How shared ledgers, consensus and smart contracts work, and where they are useful outside of cryptocurrency.",
+          "topics": [
+            "Ledgers and consensus",
+            "Smart contracts",
+            "Real-world uses"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "3D Printing: From Prototypes to Houses",
+          "level": "Beginner",
+          "lessons": 5,
+          "minutes": 45,
+          "icon": "printer",
+          "desc": "Plastic, resin, metal and concrete printing, and how additive manufacturing is changing factories and construction.",
+          "topics": [
+            "How printers work",
+            "Materials",
+            "Industry impact"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Quantum Computing for Non-Physicists",
+          "level": "Beginner",
+          "lessons": 6,
+          "minutes": 55,
+          "icon": "atom",
+          "desc": "Qubits, superposition, entanglement and error correction, and what quantum computers can and cannot do yet.",
+          "topics": [
+            "Qubits",
+            "Error correction",
+            "Real applications"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Sodium-Ion Batteries",
+          "level": "Beginner",
+          "lessons": 4,
+          "minutes": 35,
+          "icon": "battery",
+          "desc": "Why batteries made from cheap, common materials like salt could reshape electric vehicles and grid storage.",
+          "topics": [
+            "Battery chemistry",
+            "Sodium vs lithium",
+            "Where they fit"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Inside a Hyperscale AI Data Center",
+          "level": "Intermediate",
+          "lessons": 5,
+          "minutes": 50,
+          "icon": "server",
+          "desc": "The chips, networking, power and cooling behind the huge clusters that train and run AI models.",
+          "topics": [
+            "GPUs and networking",
+            "Power",
+            "Cooling"
+          ],
+          "status": "soon"
+        },
+        {
+          "title": "Next-Gen Nuclear & Small Modular Reactors",
+          "level": "Beginner",
+          "lessons": 5,
+          "minutes": 45,
+          "icon": "nuclear",
+          "desc": "New fuels, coolants and factory-built reactors, and why tech companies are signing up to buy their power.",
+          "topics": [
+            "Reactor designs",
+            "Safety",
+            "Why tech wants them"
+          ],
+          "status": "soon"
+        }
+      ]
+    }
+  ]
+}
