@@ -2,13 +2,22 @@
   "date": "2026-10-30",
   "items": [
     {
-      "title": "Binance loses about $6.3 billion after an engineer's laptop is compromised",
-      "why": "Attackers used access from a DevOps engineer's hacked laptop to push unauthorized withdrawals on October 29. Binance says customers will be covered; analysts tie the theft to North Korea's TraderTraitor group.",
+      "title": "Binance freezes about $3 billion of the $6.3 billion stolen in its hack",
+      "why": "Update: Binance says it has frozen just under half of the funds taken after a DevOps engineer's laptop was compromised. It will cover customer losses; Chainalysis and TRM Labs link the theft to North Korea.",
       "action": "Give admin and engineering laptops your strongest protection: phishing-resistant MFA, endpoint protection, and no standing access to production or money-moving systems.",
-      "source_name": "BleepingComputer",
-      "source_url": "https://bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/binance-hit-by-record-6-billion-crypto-hack",
       "heat": 5,
       "cat": "crypto"
+    },
+    {
+      "title": "PHP2Shell flaws now confirmed exploited, including on firewalls",
+      "why": "Researchers report successful attacks on the two PHP runtime flaws patched October 21, including 24 compromised firewalls, and CISA has added them to its exploited list. Any server running PHP, including WordPress hosts, is in scope.",
+      "action": "Update PHP to 8.5.12, 8.4.27, 8.3.36 or 8.2.35 or later (or ask your host to), restart the web server, and check internet-facing devices for web shells.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/php2shell-successful-exploitation-reports-emerge",
+      "heat": 4,
+      "cat": "patch"
     },
     {
       "title": "Cisco firewall VPN flaw is being used to knock devices offline",
@@ -27,6 +36,15 @@
       "source_url": "https://gbhackers.com/hackers-exploit-ivanti-connect-secure-zero-day-vulnerabilities/",
       "heat": 4,
       "cat": "vpn"
+    },
+    {
+      "title": "Polymarket users lose about $2.1 million through a compromised website add-on",
+      "why": "Polymarket says a third-party provider was breached; Hudson Rock found wallet-draining code in a DebugBear performance script embedded on the site. Polymarket removed the code and says affected traders will be repaid.",
+      "action": "List every third-party script on your website and checkout pages, remove ones you no longer use, and restrict the rest with a Content Security Policy.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/polymarket-confirms-cyberattack-third-party",
+      "heat": 3,
+      "cat": "crypto"
     },
     {
       "title": "319 Chrome extensions caught rerouting web searches",
