@@ -12,6 +12,26 @@
   "items": [
     {
       "cat": "news",
+      "source": "The Hacker News",
+      "date": "2026-10-29",
+      "title": "Google's Gemini 4 Carbon is built to find, exploit and fix software flaws",
+      "tldr": "Google released Gemini 4 Carbon, a frontier model it says leads benchmarks for finding, exploiting and patching vulnerabilities, and offered it first only to a group of cyber defenders. The scores are Google's own and unverified, but they show attack-grade skills spreading across AI vendors.",
+      "smb": "Shorten your patch window for internet-facing systems to days, not weeks, because finding and exploiting bugs is getting cheaper.",
+      "url": "https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Security Boulevard",
+      "date": "2026-10-28",
+      "title": "Cisco open-sources Project Quarry to spot risky AI agent behavior",
+      "tldr": "Cisco released Project Quarry, a free tool that reviews an AI agent's full run of actions to catch attacks built from harmless-looking steps, such as reading a credentials file and then sending data out. It works with Claude Code, Codex and other MCP agents, but Cisco says it is not yet proven in a real incident.",
+      "smb": "Turn on full activity logging for any AI coding or business agent you use, so a suspicious sequence of actions can be reviewed later.",
+      "url": "https://securityboulevard.com/2026/10/cisco-debuts-open-source-tool-to-track-dangerous-ai-agent-behavior/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
       "source": "The Hacker News, on Check Point Research",
       "date": "2026-10-29",
       "title": "Fake ChatGPT and Claude desktop apps hide a crypto miner",
