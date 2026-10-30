@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Oct 29, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Oct 30, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -63,9 +63,30 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>6</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>1</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>7</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>5</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Check Point Research &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Fake ChatGPT and Claude desktop apps hide a crypto miner</h3>
+        <p class="intel-tldr">Check Point found fake GitHub projects posing as new ChatGPT and Claude desktop apps, pushed up Google results through SEO poisoning. The downloads pair a real signed OpenAI or Anthropic installer with a rogue DLL that ends up running a cryptocurrency miner on Windows PCs.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Allow AI desktop apps only from the vendor&#x27;s official download page, and block installs from GitHub links found through search.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">26,400 working cloud and AI keys found in public Gitee code</h3>
+        <p class="intel-tldr">A researcher scanned 7.25 million public Gitee repositories and found 26,400 credentials that still worked, including thousands of keys for DeepSeek, Zhipu and OpenAI alongside Alibaba Cloud and Google keys. Vendors were notified, but the developers who leaked them were not contacted.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Revoke any AI or cloud key that ever sat in a code repository, then set spend limits on every AI provider account.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Anthropic says Claude wrote a root exploit for a Linux kernel flaw</h3>
+        <p class="intel-tldr">Anthropic reported a use-after-free bug in Linux TCP handling (CVE-2026-98432) and says its Claude model wrote a working root exploit after initial prompting. Debian, Oracle and Amazon Linux have fixes, while Ubuntu and Red Hat patches were still pending as of October 29.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask whoever runs your Linux servers to confirm the patched kernel is installed, and to track Ubuntu and Red Hat until their fixes ship.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="talk">
         <div class="intel-meta"><span class="tag">Talks</span><span>University of Toronto &middot; <time datetime="2026-10-22">Oct 22, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Bruce Schneier on hacking AI</h3>
@@ -93,20 +114,6 @@
         <p class="intel-tldr">Sysdig says an autonomous attack agent added ransomware built to encrypt model checkpoints, vector databases and training data. It got in through a vulnerable Langflow server and an exposed Docker socket.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Back up vector databases and AI configs offline, and never expose a Docker socket to the internet.</div>
         <a class="intel-link" href="https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/" target="_blank" rel="noopener noreferrer">Read on BleepingComputer &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News &middot; <time datetime="2026-06-30">Jun 30, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Poisoned MCP tool descriptions can make AI agents leak data</h3>
-        <p class="intel-tldr">Microsoft researchers showed that hidden instructions in an approved third-party MCP tool can lead an agent to gather company data and send it out through routine tool calls that each look legitimate.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>List every AI assistant and MCP tool your staff have connected, and allow only vetted ones.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/06/microsoft-warns-poisoned-mcp-tool.html" target="_blank" rel="noopener noreferrer">Read on The Hacker News &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>Krebs on Security &middot; <time datetime="2026-03-08">Mar 8, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">How AI assistants are moving the security goalposts</h3>
-        <p class="intel-tldr">Krebs reports that autonomous assistants with access to files, accounts and messaging bring exposed admin panels, prompt-injection supply-chain attacks and AI-assisted intrusions at scale.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Assume staff will adopt AI agents; set rules for what they may connect before they do.</div>
-        <a class="intel-link" href="https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/" target="_blank" rel="noopener noreferrer">Read on Krebs on Security &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>

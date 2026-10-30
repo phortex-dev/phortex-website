@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "threat_of_the_week": {
     "source": "Latent Space AI News",
     "date": "2026-10-23",
@@ -10,6 +10,36 @@
     "link_label": "Read the roundup"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Check Point Research",
+      "date": "2026-10-29",
+      "title": "Fake ChatGPT and Claude desktop apps hide a crypto miner",
+      "tldr": "Check Point found fake GitHub projects posing as new ChatGPT and Claude desktop apps, pushed up Google results through SEO poisoning. The downloads pair a real signed OpenAI or Anthropic installer with a rogue DLL that ends up running a cryptocurrency miner on Windows PCs.",
+      "smb": "Allow AI desktop apps only from the vendor's official download page, and block installs from GitHub links found through search.",
+      "url": "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News",
+      "date": "2026-10-29",
+      "title": "26,400 working cloud and AI keys found in public Gitee code",
+      "tldr": "A researcher scanned 7.25 million public Gitee repositories and found 26,400 credentials that still worked, including thousands of keys for DeepSeek, Zhipu and OpenAI alongside Alibaba Cloud and Google keys. Vendors were notified, but the developers who leaked them were not contacted.",
+      "smb": "Revoke any AI or cloud key that ever sat in a code repository, then set spend limits on every AI provider account.",
+      "url": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News",
+      "date": "2026-10-29",
+      "title": "Anthropic says Claude wrote a root exploit for a Linux kernel flaw",
+      "tldr": "Anthropic reported a use-after-free bug in Linux TCP handling (CVE-2026-98432) and says its Claude model wrote a working root exploit after initial prompting. Debian, Oracle and Amazon Linux have fixes, while Ubuntu and Red Hat patches were still pending as of October 29.",
+      "smb": "Ask whoever runs your Linux servers to confirm the patched kernel is installed, and to track Ubuntu and Red Hat until their fixes ship.",
+      "url": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
+      "link_label": "Read the story"
+    },
     {
       "cat": "talk",
       "source": "University of Toronto",
@@ -49,31 +79,26 @@
       "smb": "Back up vector databases and AI configs offline, and never expose a Docker socket to the internet.",
       "url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/",
       "link_label": "Read on BleepingComputer"
-    },
-    {
-      "cat": "news",
-      "source": "The Hacker News",
-      "date": "2026-06-30",
-      "title": "Poisoned MCP tool descriptions can make AI agents leak data",
-      "tldr": "Microsoft researchers showed that hidden instructions in an approved third-party MCP tool can lead an agent to gather company data and send it out through routine tool calls that each look legitimate.",
-      "smb": "List every AI assistant and MCP tool your staff have connected, and allow only vetted ones.",
-      "url": "https://thehackernews.com/2026/06/microsoft-warns-poisoned-mcp-tool.html",
-      "link_label": "Read on The Hacker News"
-    },
-    {
-      "cat": "voices",
-      "source": "Krebs on Security",
-      "date": "2026-03-08",
-      "title": "How AI assistants are moving the security goalposts",
-      "tldr": "Krebs reports that autonomous assistants with access to files, accounts and messaging bring exposed admin panels, prompt-injection supply-chain attacks and AI-assisted intrusions at scale.",
-      "smb": "Assume staff will adopt AI agents; set rules for what they may connect before they do.",
-      "url": "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/",
-      "link_label": "Read on Krebs on Security"
     }
   ],
   "voices": [
-    {"name": "Brian Krebs", "outlet": "Krebs on Security", "focus": "Investigative reporting on cybercrime, fraud and breaches.", "url": "https://krebsonsecurity.com/"},
-    {"name": "Bruce Schneier", "outlet": "Schneier on Security", "focus": "Essays on AI, security and society; the monthly Crypto-Gram.", "url": "https://www.schneier.com/"},
-    {"name": "Jason Haddix", "outlet": "Arcanum Security", "focus": "Offensive AI: hackbots, agent harnesses and bug bounty.", "url": "https://arcanum-sec.com/"}
+    {
+      "name": "Brian Krebs",
+      "outlet": "Krebs on Security",
+      "focus": "Investigative reporting on cybercrime, fraud and breaches.",
+      "url": "https://krebsonsecurity.com/"
+    },
+    {
+      "name": "Bruce Schneier",
+      "outlet": "Schneier on Security",
+      "focus": "Essays on AI, security and society; the monthly Crypto-Gram.",
+      "url": "https://www.schneier.com/"
+    },
+    {
+      "name": "Jason Haddix",
+      "outlet": "Arcanum Security",
+      "focus": "Offensive AI: hackbots, agent harnesses and bug bounty.",
+      "url": "https://arcanum-sec.com/"
+    }
   ]
 }
