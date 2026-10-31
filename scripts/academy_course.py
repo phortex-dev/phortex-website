@@ -53,7 +53,18 @@ def inline(text: str) -> str:
 
 def md(text: str) -> str:
     """Headings, paragraphs, lists, tick boxes, quotes, rules. Enough for scripts and checklists."""
-    html_out, para, lst = [], [], None
+    html_out, para, lst, quote = [], [], None, []
+
+    def flush_quote():
+        if quote:
+            paras, cur = [], []
+            for q in quote + [""]:
+                if q:
+                    cur.append(q)
+                elif cur:
+                    paras.append("<br />".join(inline(x) for x in cur)); cur = []
+            html_out.append("<blockquote>" + "".join(f"<p>{x}</p>" for x in paras) + "</blockquote>")
+            quote.clear()
 
     def flush_para():
         if para:
@@ -71,7 +82,7 @@ def md(text: str) -> str:
         line = raw.rstrip()
         s = line.strip()
         if not s:
-            flush_para(); flush_list(); continue
+            flush_para(); flush_list(); flush_quote(); continue
         m = re.match(r"^(#{1,4})\s+(.*)$", s)
         if m:
             flush_para(); flush_list()
@@ -82,8 +93,9 @@ def md(text: str) -> str:
             flush_para(); flush_list(); html_out.append("<hr />"); continue
         if s.startswith(">"):
             flush_para(); flush_list()
-            html_out.append(f"<blockquote><p>{inline(s.lstrip('> '))}</p></blockquote>")
+            quote.append(s[1:].strip())
             continue
+        flush_quote()
         m = re.match(r"^[-*]\s+\[( |x|X)\]\s+(.*)$", s)
         if m:
             flush_para()
@@ -104,7 +116,7 @@ def md(text: str) -> str:
             continue
         flush_list()
         para.append(s)
-    flush_para(); flush_list()
+    flush_para(); flush_list(); flush_quote()
     return "\n".join(html_out).replace('<ul class="lx-ticks">', '<ul class="lx-ticks">').replace(
         '</ul class="lx-ticks">', "</ul>")
 
