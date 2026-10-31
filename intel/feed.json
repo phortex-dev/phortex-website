@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "threat_of_the_week": {
     "source": "Latent Space AI News",
     "date": "2026-10-23",
@@ -10,6 +10,36 @@
     "link_label": "Read the roundup"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Cursor and OpenSourceMalware",
+      "date": "2026-10-30",
+      "title": "Fake Claude Code update on Cursor's marketplace planted an SSH backdoor",
+      "tldr": "For about 11 hours on October 29, Cursor's extension marketplace served a trojanized Claude Code update that added an attacker SSH key, set up persistence and sent host details out. Cursor says up to 5,000 users may have received it and has pulled it; the official 2.1.314 release is clean.",
+      "smb": "Check developer machines for an svc-telemetry key in authorized_keys, then rotate any credentials stored on affected laptops.",
+      "url": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on CrowdStrike",
+      "date": "2026-10-30",
+      "title": "China-linked group used the ARTEX AI framework against 200+ organizations",
+      "tldr": "CrowdStrike says a Chinese state-linked group used ARTEX, an AI agent framework running on DeepSeek and a commercial model, to hit more than 200 organizations from October 17, with nine confirmed intrusions. A human steered the agents, which exploited weak SAML setups, old unrotated keys and leaked VPN files.",
+      "smb": "Rotate signing keys and service passwords that have not changed in a year, and remove old VPN configs from shared mailboxes.",
+      "url": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Bruce Schneier",
+      "date": "2026-10-30",
+      "title": "Schneier: AI lets ordinary owners uncover spyware in cheap gadgets",
+      "tldr": "Schneier highlighted a car owner who used Claude to inspect a cheap aftermarket head unit and found preinstalled apps such as a call recorder and Baidu location services. His larger point is that AI now lets non-experts do this kind of reverse engineering, so expect many more such findings.",
+      "smb": "Keep low-cost smart devices, from dashcams to TV boxes, on a guest network separate from business systems.",
+      "url": "https://www.schneier.com/blog/archives/2026/10/bloatware-in-aftermarket-auto-parts.html",
+      "link_label": "Read the post"
+    },
     {
       "cat": "news",
       "source": "Unite.AI, on OpenAI",

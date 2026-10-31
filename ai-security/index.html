@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Oct 30, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Oct 31, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -63,9 +63,30 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>13</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>9</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>1</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>16</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>11</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>2</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Cursor and OpenSourceMalware &middot; <time datetime="2026-10-30">Oct 30, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Fake Claude Code update on Cursor&#x27;s marketplace planted an SSH backdoor</h3>
+        <p class="intel-tldr">For about 11 hours on October 29, Cursor&#x27;s extension marketplace served a trojanized Claude Code update that added an attacker SSH key, set up persistence and sent host details out. Cursor says up to 5,000 users may have received it and has pulled it; the official 2.1.314 release is clean.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Check developer machines for an svc-telemetry key in authorized_keys, then rotate any credentials stored on affected laptops.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on CrowdStrike &middot; <time datetime="2026-10-30">Oct 30, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">China-linked group used the ARTEX AI framework against 200+ organizations</h3>
+        <p class="intel-tldr">CrowdStrike says a Chinese state-linked group used ARTEX, an AI agent framework running on DeepSeek and a commercial model, to hit more than 200 organizations from October 17, with nine confirmed intrusions. A human steered the agents, which exploited weak SAML setups, old unrotated keys and leaked VPN files.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Rotate signing keys and service passwords that have not changed in a year, and remove old VPN configs from shared mailboxes.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Bruce Schneier &middot; <time datetime="2026-10-30">Oct 30, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Schneier: AI lets ordinary owners uncover spyware in cheap gadgets</h3>
+        <p class="intel-tldr">Schneier highlighted a car owner who used Claude to inspect a cheap aftermarket head unit and found preinstalled apps such as a call recorder and Baidu location services. His larger point is that AI now lets non-experts do this kind of reverse engineering, so expect many more such findings.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Keep low-cost smart devices, from dashcams to TV boxes, on a guest network separate from business systems.</div>
+        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/10/bloatware-in-aftermarket-auto-parts.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Unite.AI, on OpenAI &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
         <h3 class="heading-sm intel-title">OpenAI details four-layer monitoring to catch rogue AI agents</h3>
