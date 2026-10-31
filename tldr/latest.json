@@ -1,59 +1,59 @@
 {
-  "date": "2026-10-30",
+  "date": "2026-10-31",
   "items": [
     {
-      "title": "Binance freezes about $3 billion of the $6.3 billion stolen in its hack",
-      "why": "Update: Binance says it has frozen just under half of the funds taken after a DevOps engineer's laptop was compromised. It will cover customer losses; Chainalysis and TRM Labs link the theft to North Korea.",
-      "action": "Give admin and engineering laptops your strongest protection: phishing-resistant MFA, endpoint protection, and no standing access to production or money-moving systems.",
-      "source_name": "The Record",
-      "source_url": "https://therecord.media/binance-hit-by-record-6-billion-crypto-hack",
+      "title": "Binance finds more breach points and plans to restart withdrawals",
+      "why": "Update: Binance now says attackers got in through more than the one compromised laptop it first named. About $3 billion of the $6.3 billion is frozen, it has set aside funds to cover losses, and it expects withdrawals to resume in stages.",
+      "action": "Assume one compromised device is rarely the whole story: after any incident, check every account and system that device could reach before declaring it contained.",
+      "source_name": "The Boston Globe",
+      "source_url": "https://www.bostonglobe.com/2026/10/31/business/what-to-know-about-the-63b-hack-on-binance/",
       "heat": 5,
       "cat": "crypto"
     },
     {
-      "title": "PHP2Shell flaws now confirmed exploited, including on firewalls",
-      "why": "Researchers report successful attacks on the two PHP runtime flaws patched October 21, including 24 compromised firewalls, and CISA has added them to its exploited list. Any server running PHP, including WordPress hosts, is in scope.",
-      "action": "Update PHP to 8.5.12, 8.4.27, 8.3.36 or 8.2.35 or later (or ask your host to), restart the web server, and check internet-facing devices for web shells.",
-      "source_name": "The Record",
-      "source_url": "https://therecord.media/php2shell-successful-exploitation-reports-emerge",
+      "title": "Attackers are probing a new WordPress core flaw fixed in 7.1.4",
+      "why": "A bug in the WordPress updater can let an outside attacker run code during a core upgrade. Wordfence logged tens of thousands of attempts within a day of the October 28 fix. It affects versions 4.7 through 7.1.3.",
+      "action": "Update WordPress to 7.1.4 (or your branch's patched release) and confirm in the dashboard that the update installed rather than assuming auto-update ran.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/wordpress-7-1-4-fixes-22-security-vulnerabilities/",
       "heat": 4,
       "cat": "patch"
     },
     {
-      "title": "Cisco firewall VPN flaw is being used to knock devices offline",
-      "why": "Cisco patched an actively exploited bug in ASA and FTD firewalls that lets an outside attacker crash the device when the SSL VPN uses secondary authentication.",
-      "action": "Update Cisco ASA or FTD firewalls to Cisco's fixed release for your version, and check every VPN tunnel group, including the default one, for secondary authentication.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
-      "heat": 4,
-      "cat": "vpn"
-    },
-    {
-      "title": "Ivanti ships more fixes for exploited Connect Secure VPN flaws",
-      "why": "On October 29 Ivanti released patches for the remaining flaws in a chain attackers used to get root on its VPN and steal Active Directory credentials.",
-      "action": "Upgrade Ivanti Connect Secure to 22.8R2.6 or 25.1.1.3, then reset the passwords of accounts the VPN uses to reach Active Directory.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/hackers-exploit-ivanti-connect-secure-zero-day-vulnerabilities/",
-      "heat": 4,
-      "cat": "vpn"
-    },
-    {
-      "title": "Polymarket users lose about $2.1 million through a compromised website add-on",
-      "why": "Polymarket says a third-party provider was breached; Hudson Rock found wallet-draining code in a DebugBear performance script embedded on the site. Polymarket removed the code and says affected traders will be repaid.",
-      "action": "List every third-party script on your website and checkout pages, remove ones you no longer use, and restrict the rest with a Content Security Policy.",
-      "source_name": "The Record",
-      "source_url": "https://therecord.media/polymarket-confirms-cyberattack-third-party",
-      "heat": 3,
-      "cat": "crypto"
-    },
-    {
-      "title": "319 Chrome extensions caught rerouting web searches",
-      "why": "Researchers found extensions posing as PDF converters, safe-search and AI tools, with 13.4 million installs, sending searches through servers that could redirect users to phishing pages.",
-      "action": "Review the Chrome extensions on work computers, remove PDF, search or security add-ons nobody needs, then run a full antivirus scan.",
+      "title": "Maximum-severity GitLab flaw is now exploited, CISA warns",
+      "why": "CISA added a GitLab CI/CD flaw patched earlier this month to its exploited list on October 29. It can let an attacker run code on self-managed GitLab servers. Nearly 2,800 instances are exposed online.",
+      "action": "Upgrade self-managed GitLab to 19.4.2, 19.3.5 or 19.2.8 or later, and run GitLab's new threat detections to check for signs of compromise.",
       "source_name": "BleepingComputer",
-      "source_url": "https://bleepingcomputer.com/news/security/chrome-extensions-with-134-million-installs-caught-hijacking-searches",
+      "source_url": "https://bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "title": "Retailer Revolve says hackers took saved customer card numbers",
+      "why": "In an SEC filing, Revolve said attackers used automated means to obtain names, contact details, card numbers and expiry dates saved in customer accounts. Texas filings list about 127,000 affected residents.",
+      "action": "If you store customer cards, move to your payment processor's tokenized storage, and add login protections such as MFA and rate limiting to customer accounts.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards",
       "heat": 3,
-      "cat": "browser"
+      "cat": "breach"
+    },
+    {
+      "title": "Florida financial aid site breach exposes 4.9 million Social Security numbers",
+      "why": "Florida's Department of Education says names, addresses, birth dates and Social Security numbers of nearly 5 million aid applicants were exposed. The site is offline and the state has not said how attackers got in.",
+      "action": "Warn staff and families who applied for Florida aid to freeze their credit and watch for scam calls or emails that quote their personal details.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/florida-warns-5-million-affected-financial-aid-site-breach",
+      "heat": 3,
+      "cat": "breach"
+    },
+    {
+      "title": "Chainalysis confirms a breach carried out with AI agent techniques",
+      "why": "The blockchain investigation firm says an attacker used agentic techniques to reach its internal tools and took customer names, work emails and roles. It says no passwords, MFA secrets or case data were accessed.",
+      "action": "Treat leaked names, emails and job roles as phishing fuel: brief affected staff and require a call-back check before acting on unusual payment or login requests.",
+      "source_name": "Cyber Security News",
+      "source_url": "https://cybersecuritynews.com/chainalysis-confirms-cyberattack/",
+      "heat": 3,
+      "cat": "ai"
     }
   ]
 }

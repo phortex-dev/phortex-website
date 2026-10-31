@@ -1,6 +1,66 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "items": [
+    {
+      "date": "2026-10-31",
+      "title": "Binance finds more breach points and plans to restart withdrawals",
+      "why": "Update: Binance now says attackers got in through more than the one compromised laptop it first named. About $3 billion of the $6.3 billion is frozen, it has set aside funds to cover losses, and it expects withdrawals to resume in stages.",
+      "action": "Assume one compromised device is rarely the whole story: after any incident, check every account and system that device could reach before declaring it contained.",
+      "source_name": "The Boston Globe",
+      "source_url": "https://www.bostonglobe.com/2026/10/31/business/what-to-know-about-the-63b-hack-on-binance/",
+      "heat": 5,
+      "cat": "crypto"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Attackers are probing a new WordPress core flaw fixed in 7.1.4",
+      "why": "A bug in the WordPress updater can let an outside attacker run code during a core upgrade. Wordfence logged tens of thousands of attempts within a day of the October 28 fix. It affects versions 4.7 through 7.1.3.",
+      "action": "Update WordPress to 7.1.4 (or your branch's patched release) and confirm in the dashboard that the update installed rather than assuming auto-update ran.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/wordpress-7-1-4-fixes-22-security-vulnerabilities/",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Maximum-severity GitLab flaw is now exploited, CISA warns",
+      "why": "CISA added a GitLab CI/CD flaw patched earlier this month to its exploited list on October 29. It can let an attacker run code on self-managed GitLab servers. Nearly 2,800 instances are exposed online.",
+      "action": "Upgrade self-managed GitLab to 19.4.2, 19.3.5 or 19.2.8 or later, and run GitLab's new threat detections to check for signs of compromise.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Retailer Revolve says hackers took saved customer card numbers",
+      "why": "In an SEC filing, Revolve said attackers used automated means to obtain names, contact details, card numbers and expiry dates saved in customer accounts. Texas filings list about 127,000 affected residents.",
+      "action": "If you store customer cards, move to your payment processor's tokenized storage, and add login protections such as MFA and rate limiting to customer accounts.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/resolve-fashion-retailer-data-breach-payment-cards",
+      "heat": 3,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Florida financial aid site breach exposes 4.9 million Social Security numbers",
+      "why": "Florida's Department of Education says names, addresses, birth dates and Social Security numbers of nearly 5 million aid applicants were exposed. The site is offline and the state has not said how attackers got in.",
+      "action": "Warn staff and families who applied for Florida aid to freeze their credit and watch for scam calls or emails that quote their personal details.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/florida-warns-5-million-affected-financial-aid-site-breach",
+      "heat": 3,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Chainalysis confirms a breach carried out with AI agent techniques",
+      "why": "The blockchain investigation firm says an attacker used agentic techniques to reach its internal tools and took customer names, work emails and roles. It says no passwords, MFA secrets or case data were accessed.",
+      "action": "Treat leaked names, emails and job roles as phishing fuel: brief affected staff and require a call-back check before acting on unusual payment or login requests.",
+      "source_name": "Cyber Security News",
+      "source_url": "https://cybersecuritynews.com/chainalysis-confirms-cyberattack/",
+      "heat": 3,
+      "cat": "ai"
+    },
     {
       "date": "2026-10-30",
       "title": "Binance freezes about $3 billion of the $6.3 billion stolen in its hack",

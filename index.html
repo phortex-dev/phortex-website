@@ -123,37 +123,37 @@
 <!-- TLDR:START -->
 <section class="compact" id="tldr" aria-labelledby="tldr-heading">
   <div class="container">
-    <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-10-30">October 30, 2026</time></div>
+    <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-10-31">October 31, 2026</time></div>
     <h2 class="heading-md" id="tldr-heading">Today&rsquo;s top security stories, <span class="text-accent-cyan">ranked</span></h2>
     <div class="tl-grid">
 <article class="tl-card tl-feature" data-cat="crypto">
   <div class="tl-art tl-art-md" style="--c:#F7C948" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="16"/><path d="M20 16v16M20 16h6a4 4 0 0 1 0 8h-6M20 24h7a4 4 0 0 1 0 8h-7M23 13v3M23 32v3"/></svg></div>
   <div class="tl-body">
     <div class="tl-meta"><span class="tl-rank">#1</span><span class="tl-cat" style="--c:#F7C948">Crypto theft</span><span class="tl-heat" title="Heat 5 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Top story</span></div>
-    <h3 class="tl-title">Binance freezes about $3 billion of the $6.3 billion stolen in its hack</h3>
-    <p class="tl-why">Update: Binance says it has frozen just under half of the funds taken after a DevOps engineer&#x27;s laptop was compromised. It will cover customer losses; Chainalysis and TRM Labs link the theft to North Korea.</p>
-    <p class="tl-do"><strong>Do this:</strong> Give admin and engineering laptops your strongest protection: phishing-resistant MFA, endpoint protection, and no standing access to production or money-moving systems.</p>
-    <a class="tl-src" href="https://therecord.media/binance-hit-by-record-6-billion-crypto-hack" target="_blank" rel="noopener noreferrer">The Record &rarr;</a>
+    <h3 class="tl-title">Binance finds more breach points and plans to restart withdrawals</h3>
+    <p class="tl-why">Update: Binance now says attackers got in through more than the one compromised laptop it first named. About $3 billion of the $6.3 billion is frozen, it has set aside funds to cover losses, and it expects withdrawals to resume in stages.</p>
+    <p class="tl-do"><strong>Do this:</strong> Assume one compromised device is rarely the whole story: after any incident, check every account and system that device could reach before declaring it contained.</p>
+    <a class="tl-src" href="https://www.bostonglobe.com/2026/10/31/business/what-to-know-about-the-63b-hack-on-binance/" target="_blank" rel="noopener noreferrer">The Boston Globe &rarr;</a>
   </div>
 </article>
 <article class="tl-card tl-feature" data-cat="patch">
   <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
   <div class="tl-body">
     <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">PHP2Shell flaws now confirmed exploited, including on firewalls</h3>
-    <p class="tl-why">Researchers report successful attacks on the two PHP runtime flaws patched October 21, including 24 compromised firewalls, and CISA has added them to its exploited list. Any server running PHP, including WordPress hosts, is in scope.</p>
-    <p class="tl-do"><strong>Do this:</strong> Update PHP to 8.5.12, 8.4.27, 8.3.36 or 8.2.35 or later (or ask your host to), restart the web server, and check internet-facing devices for web shells.</p>
-    <a class="tl-src" href="https://therecord.media/php2shell-successful-exploitation-reports-emerge" target="_blank" rel="noopener noreferrer">The Record &rarr;</a>
+    <h3 class="tl-title">Attackers are probing a new WordPress core flaw fixed in 7.1.4</h3>
+    <p class="tl-why">A bug in the WordPress updater can let an outside attacker run code during a core upgrade. Wordfence logged tens of thousands of attempts within a day of the October 28 fix. It affects versions 4.7 through 7.1.3.</p>
+    <p class="tl-do"><strong>Do this:</strong> Update WordPress to 7.1.4 (or your branch&#x27;s patched release) and confirm in the dashboard that the update installed rather than assuming auto-update ran.</p>
+    <a class="tl-src" href="https://gbhackers.com/wordpress-7-1-4-fixes-22-security-vulnerabilities/" target="_blank" rel="noopener noreferrer">GBHackers &rarr;</a>
   </div>
 </article>
-<article class="tl-card tl-feature" data-cat="vpn">
-  <div class="tl-art tl-art-md" style="--c:#00D4F0" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M17 24h14M17 18h14M17 30h14M24 18v6M20 24v6M28 24v6"/></svg></div>
+<article class="tl-card tl-feature" data-cat="patch">
+  <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#00D4F0">Firewall &amp; VPN</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">Cisco firewall VPN flaw is being used to knock devices offline</h3>
-    <p class="tl-why">Cisco patched an actively exploited bug in ASA and FTD firewalls that lets an outside attacker crash the device when the SSL VPN uses secondary authentication.</p>
-    <p class="tl-do"><strong>Do this:</strong> Update Cisco ASA or FTD firewalls to Cisco&#x27;s fixed release for your version, and check every VPN tunnel group, including the default one, for secondary authentication.</p>
-    <a class="tl-src" href="https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html" target="_blank" rel="noopener noreferrer">The Hacker News &rarr;</a>
+    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <h3 class="tl-title">Maximum-severity GitLab flaw is now exploited, CISA warns</h3>
+    <p class="tl-why">CISA added a GitLab CI/CD flaw patched earlier this month to its exploited list on October 29. It can let an attacker run code on self-managed GitLab servers. Nearly 2,800 instances are exposed online.</p>
+    <p class="tl-do"><strong>Do this:</strong> Upgrade self-managed GitLab to 19.4.2, 19.3.5 or 19.2.8 or later, and run GitLab&#x27;s new threat detections to check for signs of compromise.</p>
+    <a class="tl-src" href="https://bleepingcomputer.com/news/security/hackers-now-exploiting-max-severity-gitlab-flaw-in-attacks" target="_blank" rel="noopener noreferrer">BleepingComputer &rarr;</a>
   </div>
 </article>
     </div>
