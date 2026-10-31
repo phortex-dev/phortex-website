@@ -174,41 +174,17 @@
           "lessons": 6,
           "minutes": 55,
           "icon": "aishield",
-          "desc": "Shadow AI, data leaks, account and retention settings, and an AI policy your team will actually follow.",
+          "desc": "Shadow AI, data leaks, the account and retention settings that matter, and one page of AI rules your team will actually follow.",
           "topics": [
             "Shadow AI",
             "Data leakage",
-            "Practical policy"
+            "Acceptable-use rules"
           ],
-          "status": "production"
-        },
-        {
-          "title": "Prompt Injection & LLM Attacks",
-          "level": "Intermediate",
-          "lessons": 7,
-          "minutes": 80,
-          "icon": "inject",
-          "desc": "How attackers hijack AI apps with hidden instructions, mapped to the OWASP Top 10 for LLM Applications, and the defenses that hold up.",
-          "topics": [
-            "Prompt injection",
-            "OWASP LLM Top 10",
-            "Defenses"
-          ],
-          "status": "soon"
-        },
-        {
-          "title": "Securing AI Agents & MCP",
-          "level": "Advanced",
-          "lessons": 7,
-          "minutes": 85,
-          "icon": "agent",
-          "desc": "Permissions, tool scoping, secrets and logging for AI agents that can take actions on your systems.",
-          "topics": [
-            "Least privilege",
-            "Tool scoping",
-            "Audit logging"
-          ],
-          "status": "soon"
+          "status": "production",
+          "related": [
+            "ai-governance-and-responsible-use",
+            "deepfakes-and-ai-powered-phishing"
+          ]
         },
         {
           "title": "Deepfakes & AI-Powered Phishing",
@@ -225,6 +201,20 @@
           "status": "soon"
         },
         {
+          "title": "Prompt Injection & LLM Attacks",
+          "level": "Intermediate",
+          "lessons": 7,
+          "minutes": 80,
+          "icon": "inject",
+          "desc": "How attackers hijack AI apps with hidden instructions, mapped to the OWASP Top 10 for LLM Applications (2025), and the defenses that hold up.",
+          "topics": [
+            "Prompt injection",
+            "OWASP LLM Top 10",
+            "Defenses"
+          ],
+          "status": "soon"
+        },
+        {
           "title": "The AI Supply Chain",
           "level": "Intermediate",
           "lessons": 6,
@@ -237,6 +227,23 @@
             "Vendor review"
           ],
           "status": "soon"
+        },
+        {
+          "title": "Securing AI Agents & MCP",
+          "level": "Advanced",
+          "lessons": 7,
+          "minutes": 85,
+          "icon": "agent",
+          "desc": "Permissions, tool scoping, secrets and logging for AI agents that can take actions on your systems.",
+          "topics": [
+            "Least privilege",
+            "Tool scoping",
+            "Audit logging"
+          ],
+          "status": "soon",
+          "related": [
+            "ai-agents-and-automation"
+          ]
         }
       ]
     },
@@ -322,7 +329,7 @@
     },
     {
       "id": "emerging",
-      "group": "Hot Topics",
+      "group": "Emerging Tech",
       "name": "Emerging Tech Deep Dives",
       "color": "#10D98A",
       "icon": "atom",
