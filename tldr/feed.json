@@ -3,11 +3,11 @@
   "items": [
     {
       "date": "2026-11-01",
-      "title": "Binance reopens withdrawals in phases, starting with bitcoin",
-      "why": "New today: Binance began restarting withdrawals for bitcoin, ether, USDT, USDC, BNB and XRP and says it has replaced about 95% of the $6.3 billion stolen. Analysts tie the hack to North Korea's TraderTraitor group.",
-      "action": "Move crypto you hold for the business to a wallet you control, and keep exchange balances to what you need for day-to-day trading.",
-      "source_name": "CoinDesk",
-      "source_url": "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
+      "title": "FBI confirms North Korea's TraderTraitor behind the $6.4 billion Binance hack",
+      "why": "New tonight: the FBI formally blamed North Korea's TraderTraitor group, put the theft at $6.43 billion and published the thieves' wallets. About $2.85 billion is frozen; Binance began reopening withdrawals today.",
+      "action": "If your business takes crypto payments, check incoming wallets against the FBI's published list, and keep exchange balances to what you need day to day.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
       "heat": 5,
       "cat": "crypto"
     },
@@ -43,21 +43,21 @@
     },
     {
       "date": "2026-11-01",
-      "title": "Fake Claude Code extension on Cursor tried to plant a backdoor",
-      "why": "For about 11 hours on October 29, two tampered versions of the Claude Code extension on Cursor's marketplace tried to add an attacker's SSH key and a startup task on developer machines.",
-      "action": "Check developer machines for Claude Code extension versions 2.1.312 or 2.1.313 from Cursor; if found, remove unknown SSH keys and startup entries.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/hackers-distribute-malicious-claude-code-extension/",
-      "heat": 3,
-      "cat": "ai"
-    },
-    {
-      "date": "2026-11-01",
       "title": "MDaemon mail servers hacked through a booby-trapped attachment",
       "why": "ESET found attackers emailing a malicious RAR file to MDaemon servers; the built-in virus scanner opened it and planted malware with no one clicking anything. MDaemon 26.0.4 fixes it.",
       "action": "Update MDaemon to 26.0.4 or later, and confirm its bundled antivirus engine is current.",
       "source_name": "GBHackers",
       "source_url": "https://gbhackers.com/mdaemon-mail-server-flaw/",
+      "heat": 3,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "Hidden text message can crash Android phones and block calls",
+      "why": "A researcher showed a single invisible SMS can crash the phone app on Pixel and Samsung devices running Android 12 to 17, cutting off calls including 911. No attacks seen yet; Google has a fix.",
+      "action": "Check company Android phones for the October 2026 security patch or later, and plan to replace phones stuck on Android 12 or 13 that no longer get updates.",
+      "source_name": "Security Affairs",
+      "source_url": "https://securityaffairs.com/202184/security/sms-of-death-android-under-attack-an-invisible-sms-can-block-calls-and-emergency-services.html",
       "heat": 3,
       "cat": "patch"
     },
