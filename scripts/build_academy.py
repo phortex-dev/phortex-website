@@ -1,22 +1,34 @@
 #!/usr/bin/env python3
 """Build /academy/ (Phortex Learning Academy catalog) from academy/catalog.json.
 
-    python3 scripts/build_academy.py            # check, then write academy/index.html
+    python3 scripts/build_academy.py            # check, then write academy/index.html + course pages
     python3 scripts/build_academy.py --check    # check only
+    python3 scripts/build_academy.py --preview  # also build unrecorded lessons into _preview/ (git-ignored)
 
-To launch a course, set its "status" to "live" and add "url" (an https link or a /path on this
-site). Statuses: "live", "production" (being made), "soon" (planned).
+Course pages come from the private phortex-academy repo (../phortex-academy, or set PHORTEX_ACADEMY).
+A course gets a page once its outline.md exists; a lesson gets a page once it has a script and a
+YouTube video ID. Without the course source, only the catalog page is rebuilt.
+
+To launch a course, set its "status" to "live" (its url defaults to /academy/<slug>/).
+Statuses: "live", "production" (being made), "soon" (planned).
 """
 import html
 import json
+import os
 import re
+import shutil
 import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import academy_course  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "academy" / "catalog.json"
 PAGE = ROOT / "academy" / "index.html"
-ASSET_V = "20261030b"
+SITEMAP = ROOT / "sitemap.xml"
+CONTENT = Path(os.environ.get("PHORTEX_ACADEMY", ROOT.parent / "phortex-academy"))
+ASSET_V = academy_course.ASSET_V
 FORM = "https://formspree.io/f/mreoodbz"
 BANNED = re.compile(r"<|>|javascript:", re.I)
 LEVELS = ("Beginner", "Intermediate", "Advanced")
@@ -56,6 +68,10 @@ class Invalid(Exception):
     pass
 
 
+def slugify(title: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", title.lower().replace("&", "and")).strip("-")
+
+
 def e(s) -> str:
     return html.escape(str(s).strip(), quote=True)
 
@@ -83,11 +99,23 @@ def check(data: dict) -> dict:
                 raise Invalid(f"{where}: bad level, status or icon")
             if not all(isinstance(c.get(k), int) and c[k] > 0 for k in ("lessons", "minutes")):
                 raise Invalid(f"{where}: lessons and minutes must be positive whole numbers")
-            if c["status"] == "live" and not re.match(r"^(https://|/)", c.get("url", "")):
+            c["slug"] = c.get("slug") or slugify(c["title"])
+            if not re.fullmatch(r"[a-z0-9-]+", c["slug"]):
+                raise Invalid(f"{where}: bad slug '{c['slug']}'")
+            c.setdefault("url", f"/academy/{c['slug']}/")
+            if c["status"] == "live" and not re.match(r"^(https://|/)", c["url"]):
                 raise Invalid(f"{where}: a live course needs a url")
             for tp in c.get("topics", []):
                 if BANNED.search(tp) or len(tp) > 30:
                     raise Invalid(f"{where}: topic '{tp}' too long or has markup")
+    slugs = [c["slug"] for t in tracks for c in t["courses"]]
+    if len(slugs) != len(set(slugs)):
+        raise Invalid("two courses share a slug")
+    for t in tracks:
+        for c in t["courses"]:
+            for r in c.get("related", []):
+                if r not in slugs:
+                    raise Invalid(f"{c['title']}: related course '{r}' is not in the catalog")
     return data
 
 
@@ -104,8 +132,12 @@ def mins(n: int) -> str:
 def course(c: dict, color: str) -> str:
     st = c["status"]
     topics = "".join(f"<li>{e(x)}</li>" for x in c.get("topics", []))
-    cta = (f'<a class="ac-cta" href="{e(c["url"])}">Start the course &rarr;</a>' if st == "live"
-           else '<a class="ac-cta" href="#waitlist">Get notified &rarr;</a>')
+    if st == "live":
+        cta = f'<a class="ac-cta" href="{e(c["url"])}">Start the course &rarr;</a>'
+    elif (ROOT / "academy" / c["slug"] / "index.html").exists():
+        cta = f'<a class="ac-cta" href="/academy/{c["slug"]}/">See the course outline &rarr;</a>'
+    else:
+        cta = '<a class="ac-cta" href="#waitlist">Get notified &rarr;</a>'
     return f"""<article class="ac-course" style="--c:{color}">
           <div class="ac-course-top">{art(c['icon'], color)}<span class="ac-status ac-{st}">{STATUS[st]}</span></div>
           <h4 class="ac-title">{e(c['title'])}</h4>
@@ -178,7 +210,7 @@ def render(data: dict) -> str:
       <div><strong>Hands-on exercises</strong><span>Try it on real tools</span></div>
       <div><strong>Quick knowledge checks</strong><span>Know what stuck</span></div>
       <div><strong>A checklist to keep</strong><span>Put it to work Monday</span></div>
-      <div><strong>Certificate</strong><span>For every course you finish</span></div>
+      <div><strong>Certificate of completion</strong><span>Self-issued when you finish</span></div>
     </div>
     <p class="ac-note">Planned format. Lesson counts and times are estimates until each course is published.</p>
   </div>
@@ -262,8 +294,41 @@ def main():
     if "--check" in sys.argv:
         print("Academy catalog is valid.")
         return
-    PAGE.write_text(render(data), encoding="utf-8")
-    print(f"Academy page built: {sum(len(t['courses']) for t in data['tracks'])} courses in {len(data['tracks'])} tracks.")
+    preview = "--preview" in sys.argv
+    note = ""
+    if (CONTENT / "courses").is_dir():
+        try:
+            if preview:
+                out = ROOT / "_preview" / "academy"
+                shutil.rmtree(ROOT / "_preview", ignore_errors=True)
+                urls = academy_course.build(CONTENT, data, out, "/_preview", True)
+                (out / "index.html").write_text(render(data), encoding="utf-8")
+                note = f" Preview: {len(urls)} pages in _preview/academy/ (open /_preview/academy/<slug>/)."
+            else:
+                urls = academy_course.build(CONTENT, data, ROOT / "academy", "", False)
+                update_sitemap(urls)
+                note = f" Course pages: {len(urls)}."
+        except (academy_course.CourseError, ValueError, OSError) as err:
+            sys.exit(f"Academy not updated: {err}")
+    else:
+        note = f" (No course source at {CONTENT}; course pages left as they are.)"
+    if not preview:
+        PAGE.write_text(render(data), encoding="utf-8")
+    print(f"Academy page built: {sum(len(t['courses']) for t in data['tracks'])} courses in {len(data['tracks'])} tracks.{note}")
+
+
+def update_sitemap(urls):
+    """Keep one <url> per generated academy page, after the /academy/ entry."""
+    if not SITEMAP.exists():
+        return
+    text = SITEMAP.read_text(encoding="utf-8")
+    text = re.sub(r"  <url><loc>https://phortex\.com/academy/[a-z0-9-]+/[^<]*</loc>[^\n]*\n", "", text)
+    lines = "".join(f"  <url><loc>https://phortex.com{u}</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>\n"
+                    for u in urls if not u.endswith(("/checklist/",)))
+    anchor = re.search(r"  <url><loc>https://phortex\.com/academy/</loc>[^\n]*\n", text)
+    if anchor and lines:
+        text = text[:anchor.end()] + lines + text[anchor.end():]
+    SITEMAP.write_text(text, encoding="utf-8")
 
 
 if __name__ == "__main__":
