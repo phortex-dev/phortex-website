@@ -12,6 +12,36 @@
   "items": [
     {
       "cat": "news",
+      "source": "Help Net Security",
+      "date": "2026-10-29",
+      "title": "Built-in browsers in AI coding assistants let web pages reach the developer's machine",
+      "tldr": "Forever Security showed that the embedded browsers in Cursor, GitHub Copilot, OpenAI Codex, VS Code and Claude Desktop could be abused to run commands, fake a sign-in page or read files such as SSH keys and .env secrets. Cursor and Copilot have fixed their issues; Codex and VS Code were still unpatched at publication.",
+      "smb": "Tell developers not to click links or setup buttons their AI assistant opens from unfamiliar projects, and keep API keys out of plain .env files on laptops.",
+      "url": "https://www.helpnetsecurity.com/2026/10/29/research-ai-assistant-browser-vulnerabilities/",
+      "link_label": "Read the report"
+    },
+    {
+      "cat": "news",
+      "source": "BleepingComputer",
+      "date": "2026-10-29",
+      "title": "Hugging Face cryptominer campaign returns days after takedown",
+      "tldr": "Pluto Security tracked 31 fake Qwen2 test models on Hugging Face that install a cryptominer, and sometimes a reverse shell, when loaded with trust_remote_code enabled. A second wave appeared under new accounts days after the first takedown, and its main model passed platform scans while reaching over 28,000 downloads.",
+      "smb": "Turn off trust_remote_code by default and only load models from publishers you have vetted on GPU servers.",
+      "url": "https://bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Resultsense",
+      "date": "2026-10-29",
+      "title": "Web host 123 Reg says an AI-driven attack read customer contact data",
+      "tldr": "UK web host 123 Reg disclosed that a September intruder read customer names, phone numbers, VAT numbers and account details, and AI attack tooling was found on the attacker's servers. It suspects a China-linked group tied to the ARTEX agentic hacking framework; that link is not independently confirmed.",
+      "smb": "Warn staff that scammers may now know which hosting products you buy, and turn on two-step verification at your domain and hosting provider.",
+      "url": "https://www.resultsense.com/news/2026-10-29-123-reg-ai-cyberattack-china-nexus/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
       "source": "Wiz Research",
       "date": "2026-10-30",
       "title": "Wiz: nine AI developer platforms breached in October, stolen AI keys resold",
