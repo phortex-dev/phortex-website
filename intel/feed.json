@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "threat_of_the_week": {
     "source": "Latent Space AI News",
     "date": "2026-10-23",
@@ -10,6 +10,36 @@
     "link_label": "Read the roundup"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "Wiz Research",
+      "date": "2026-10-30",
+      "title": "Wiz: nine AI developer platforms breached in October, stolen AI keys resold",
+      "tldr": "Wiz tied a month of breaches at AI developer platforms, including Fireworks AI, Railway, Warp and Northflank, to attackers taking customers' stored environment variables. Stolen AI keys were tested within about 30 minutes and later ran up more than 2.5 million Bedrock calls through resale pools.",
+      "smb": "Rotate any AI or cloud keys stored on a hosting or AI platform at the issuer, and set budget alerts on each provider account.",
+      "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+      "link_label": "Read the research"
+    },
+    {
+      "cat": "news",
+      "source": "Wiz Research",
+      "date": "2026-10-29",
+      "title": "Seven telltale signs that an AI agent, not a person, is running an intrusion",
+      "tldr": "Wiz described patterns it now sees in real attacks where AI agents do the hands-on work, such as machine-paced retries, plain-language plans left in tools and trying many paths at once. It says these attacks are noisy rather than stealthy, which gives defenders a chance to spot them.",
+      "smb": "Ask your IT or MSP whether alerts would catch a burst of rapid, repeated login or command attempts, and test it once.",
+      "url": "https://www.wiz.io/blog/the-rise-of-agentic-attacks",
+      "link_label": "Read the research"
+    },
+    {
+      "cat": "news",
+      "source": "Wiz survey",
+      "date": "2026-10-30",
+      "title": "Survey: most firms run AI agents, few keep a full list of their AI tools",
+      "tldr": "A Wiz survey of 100 IT and security leaders found 55 percent deploy autonomous AI agents but only 17 percent keep a complete inventory of their AI systems. About half found unapproved AI apps in use over the past year.",
+      "smb": "List every AI tool and agent your staff use, who owns each one and what data it can reach, and review it each quarter.",
+      "url": "https://www.wiz.io/blog/ai-threat-readiness-survey-report-2026",
+      "link_label": "Read the survey"
+    },
     {
       "cat": "news",
       "source": "The Hacker News, on Parameter research",
