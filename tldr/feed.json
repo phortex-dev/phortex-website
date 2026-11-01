@@ -1,6 +1,66 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "items": [
+    {
+      "date": "2026-11-01",
+      "title": "Binance reopens withdrawals in phases, starting with bitcoin",
+      "why": "New today: Binance began restarting withdrawals for bitcoin, ether, USDT, USDC, BNB and XRP and says it has replaced about 95% of the $6.3 billion stolen. Analysts tie the hack to North Korea's TraderTraitor group.",
+      "action": "Move crypto you hold for the business to a wallet you control, and keep exchange balances to what you need for day-to-day trading.",
+      "source_name": "CoinDesk",
+      "source_url": "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
+      "heat": 5,
+      "cat": "crypto"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "Drupal Commerce flaw is being exploited against online stores",
+      "why": "Drupal says attackers are abusing a missing-permission bug in Commerce Core, the module behind carts and checkout, and warns it can cost store owners money. Fixed releases are out.",
+      "action": "Update Drupal Commerce Core to 3.3.13 (or 8.x-2.41 on older sites) today, then review recent orders and refunds for anything odd.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "Fake IT help desk on Microsoft Teams led to full domain takeover",
+      "why": "Microsoft says attackers posing as IT support on Teams talked staff into opening Quick Assist, then abused weak certificate settings to take over admin accounts and copy files out.",
+      "action": "Block or limit Teams chats from outside companies, and tell staff IT will never ask them to start Quick Assist on an unexpected call.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/hackers-impersonate-it-help-desk-microsoft-teams/",
+      "heat": 4,
+      "cat": "phishing"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "CISA adds two more Ivanti VPN flaws to its exploited list",
+      "why": "Update: CISA now lists two more Ivanti Connect Secure bugs used in the same attack chain as known exploited, with a federal fix deadline of November 2.",
+      "action": "Upgrade Ivanti Connect Secure to 25.1.1.3 or 22.8R2.6 now and check the appliance for signs of earlier compromise.",
+      "source_name": "Security Affairs",
+      "source_url": "https://securityaffairs.com/202175/security/u-s-cisa-adds-ivanti-connect-secure-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
+      "heat": 3,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "Fake Claude Code extension on Cursor tried to plant a backdoor",
+      "why": "For about 11 hours on October 29, two tampered versions of the Claude Code extension on Cursor's marketplace tried to add an attacker's SSH key and a startup task on developer machines.",
+      "action": "Check developer machines for Claude Code extension versions 2.1.312 or 2.1.313 from Cursor; if found, remove unknown SSH keys and startup entries.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/hackers-distribute-malicious-claude-code-extension/",
+      "heat": 3,
+      "cat": "ai"
+    },
+    {
+      "date": "2026-11-01",
+      "title": "MDaemon mail servers hacked through a booby-trapped attachment",
+      "why": "ESET found attackers emailing a malicious RAR file to MDaemon servers; the built-in virus scanner opened it and planted malware with no one clicking anything. MDaemon 26.0.4 fixes it.",
+      "action": "Update MDaemon to 26.0.4 or later, and confirm its bundled antivirus engine is current.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/mdaemon-mail-server-flaw/",
+      "heat": 3,
+      "cat": "patch"
+    },
     {
       "date": "2026-10-31",
       "title": "Binance plans staged withdrawal restart on Sunday as FBI investigates",
