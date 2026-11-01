@@ -2,11 +2,11 @@
   "date": "2026-10-31",
   "items": [
     {
-      "title": "Binance finds more breach points and plans to restart withdrawals",
-      "why": "Update: Binance now says attackers got in through more than the one compromised laptop it first named. About $3 billion of the $6.3 billion is frozen, it has set aside funds to cover losses, and it expects withdrawals to resume in stages.",
+      "title": "Binance plans staged withdrawal restart on Sunday as FBI investigates",
+      "why": "Update: Binance says it has set aside $6.34 billion to cover the $6.3 billion theft and plans to restart withdrawals in stages on November 1 after security checks. The FBI and Secret Service are investigating; about $3 billion is frozen.",
       "action": "Assume one compromised device is rarely the whole story: after any incident, check every account and system that device could reach before declaring it contained.",
-      "source_name": "The Boston Globe",
-      "source_url": "https://www.bostonglobe.com/2026/10/31/business/what-to-know-about-the-63b-hack-on-binance/",
+      "source_name": "Analytics Insight",
+      "source_url": "https://www.analyticsinsight.net/news/binance-to-resume-withdrawals-sunday-after-usd-63b-hack-as-fbi-investigates",
       "heat": 5,
       "cat": "crypto"
     },
@@ -29,6 +29,15 @@
       "cat": "patch"
     },
     {
+      "title": "TeamViewer fixes a flaw that lets a hostile host attack the person connecting",
+      "why": "A bug in TeamViewer before 15.83 lets a malicious or compromised computer crash, and on Windows possibly take over, the viewer that connects to it for remote support. No attacks are known yet.",
+      "action": "Update TeamViewer on every support and admin machine, including Portable and Android, to 15.83 or later, and update Host installs too since the same release fixes them.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html",
+      "heat": 3,
+      "cat": "patch"
+    },
+    {
       "title": "Retailer Revolve says hackers took saved customer card numbers",
       "why": "In an SEC filing, Revolve said attackers used automated means to obtain names, contact details, card numbers and expiry dates saved in customer accounts. Texas filings list about 127,000 affected residents.",
       "action": "If you store customer cards, move to your payment processor's tokenized storage, and add login protections such as MFA and rate limiting to customer accounts.",
@@ -45,15 +54,6 @@
       "source_url": "https://therecord.media/florida-warns-5-million-affected-financial-aid-site-breach",
       "heat": 3,
       "cat": "breach"
-    },
-    {
-      "title": "Chainalysis confirms a breach carried out with AI agent techniques",
-      "why": "The blockchain investigation firm says an attacker used agentic techniques to reach its internal tools and took customer names, work emails and roles. It says no passwords, MFA secrets or case data were accessed.",
-      "action": "Treat leaked names, emails and job roles as phishing fuel: brief affected staff and require a call-back check before acting on unusual payment or login requests.",
-      "source_name": "Cyber Security News",
-      "source_url": "https://cybersecuritynews.com/chainalysis-confirms-cyberattack/",
-      "heat": 3,
-      "cat": "ai"
     }
   ]
 }
