@@ -63,9 +63,37 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>28</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>21</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>4</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>32</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>24</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>5</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Northflank status page &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Northflank breach: customers&#x27; stored AI API keys used by attackers</h3>
+        <p class="intel-tldr">Cloud hosting platform Northflank says an attacker reached secrets held in its control plane on October 30, and several customers then saw their AI provider keys used without permission. The company told every customer to treat all stored environment variables as stolen and to rotate them.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Rotate any AI, cloud and payment keys stored with a hosting platform, set spending caps with your AI providers, and check their usage logs for charges you don&#x27;t recognise.</div>
+        <a class="intel-link" href="https://status.northflank.com/cmvv0rn5a092f14rutwccodpp" target="_blank" rel="noopener noreferrer">Read the incident update &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Sophos research &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Ransomware group had AI coding agents do most of its hands-on hacking</h3>
+        <p class="intel-tldr">Sophos found that the GOLD OGRE group, behind Aur0ra ransomware, gave AI coding agents stolen VPN logins and let them map networks, hunt for passwords and move between machines with little human input. The attackers passed off the work as authorised red-team testing, and three victims later appeared on its leak site.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Put phishing-resistant MFA on your VPN and remote access, patch internet-facing devices first, and make sure someone acts on endpoint security alerts within hours.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/02/aur0ra-ransomware-ai-agents/" target="_blank" rel="noopener noreferrer">Read the article &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Cisco Talos research &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">VOLTA infostealer sends stolen data to an AI model to rank what is worth selling</h3>
+        <p class="intel-tldr">Cisco Talos found a Windows password stealer, VOLTA-AUTODOXER, that builds a profile of each victim and asks AI models through OpenRouter to rank their accounts and wallets by resale value. If one model refuses, it falls back to others, and buyers order custom copies that report back over Telegram.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Turn on MFA for email and finance accounts, stop staff saving work passwords in browsers on shared or personal PCs, and use a password manager instead.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/02/ai-powered-infostealer-volta-victim-profiling/" target="_blank" rel="noopener noreferrer">Read the article &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Bruce Schneier &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Schneier: AI is finding critical bugs faster than ever recorded</h3>
+        <p class="intel-tldr">Bruce Schneier pointed to an estimate that about 3 percent of all critical software flaws ever logged were found in the past month, a pace that could add roughly a quarter to the all-time total this year. He agreed that AI-driven bug finding has changed the landscape.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Expect more patches, more often: turn on automatic updates where you can and set a weekly slot to apply the rest.</div>
+        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-vulnerability-finding-2.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Unit 42: likely AI-written scripts used to spy on government Linux servers</h3>
