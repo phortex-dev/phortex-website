@@ -29,6 +29,15 @@
       "cat": "malware"
     },
     {
+      "title": "Northflank tells customers to rotate all secrets after AI API keys were abused",
+      "why": "The cloud hosting platform says attackers may have read environment variables across workloads, secret groups and settings, and some customers' AI API keys were then used without permission. It ties the activity to a wider wave of AI credential theft.",
+      "action": "If you deploy on Northflank, revoke and reissue every key, password and token stored there, then check your AI provider bills and usage logs for charges you don't recognize.",
+      "heat": 3,
+      "cat": "cloud",
+      "source_name": "Cyber Security News",
+      "source_url": "https://cybersecuritynews.com/northflank-security-breach/"
+    },
+    {
       "title": "Chainalysis confirms hackers got into its internal tools",
       "why": "The blockchain analysis firm says an intruder using AI-driven tooling reached internal systems and saw customer users' names, emails and role labels. It says investigation data, passwords and session tokens were not accessed.",
       "action": "If you use Chainalysis, warn the named users to expect targeted phishing that uses their name and role, and confirm any unusual request by phone.",
@@ -45,15 +54,6 @@
       "source_url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
       "heat": 2,
       "cat": "crypto"
-    },
-    {
-      "title": "OpenAI fixed a ChatGPT flaw that let a shared link read private chats",
-      "why": "Researchers showed a booby-trapped ChatGPT share link could run code in the viewer's session and act on their account. OpenAI fixed it within eight days and no real-world use was found.",
-      "action": "Remind staff to treat shared AI chat links from unknown senders like any other unexpected link; no update is needed on your side.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
-      "heat": 2,
-      "cat": "ai"
     }
   ]
 }
