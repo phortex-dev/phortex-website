@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "items": [
+    {
+      "date": "2026-11-02",
+      "title": "C3RB3R ransomware is encrypting Synology NAS boxes running old DSM versions",
+      "why": "Synology warns attackers are exploiting a flaw it patched in December 2024 to encrypt files on outdated NAS devices and demand payment. Victims report paying thousands of dollars; over 380,000 Synology devices face the internet.",
+      "action": "Update DSM to the latest build (7.2.2-72806-1 or later on 7.2.2), turn on automatic updates, and block the NAS admin page from the internet.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
+      "heat": 4,
+      "cat": "ransomware"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Public exploit released for already-exploited BeyondTrust Remote Support flaw",
+      "why": "Rapid7 published a working attack module for the BeyondTrust Remote Support bug CISA flagged as exploited in October, and new probes have been seen against exposed appliances. Hosted customers were patched; self-hosted ones must act.",
+      "action": "Apply BeyondTrust patch BT26-05-RS to self-hosted Remote Support now, limit who can reach the appliance, and check it for unknown PHP files or sessions.",
+      "source_name": "Cybersecurity News",
+      "source_url": "https://cybersecuritynews.com/critical-beyondtrust-vulnerability/",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Fake Claude Code extension on Cursor's marketplace planted SSH backdoors",
+      "why": "Two tampered versions of the Claude Code extension were live on Cursor's marketplace for about 11 hours on October 29 and tried to add an attacker's SSH key and a hidden tunnel on Windows and Mac machines. Cursor says uninstalling alone is not enough.",
+      "action": "Ask developers who use Cursor whether they installed Claude Code 2.1.312 or 2.1.313; if so, run Cursor's cleanup script, remove unknown SSH keys and rotate their credentials.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/malicious-claude-code-extensions-in-cursor-marketplace/",
+      "heat": 3,
+      "cat": "malware"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Chainalysis confirms hackers got into its internal tools",
+      "why": "The blockchain analysis firm says an intruder using AI-driven tooling reached internal systems and saw customer users' names, emails and role labels. It says investigation data, passwords and session tokens were not accessed.",
+      "action": "If you use Chainalysis, warn the named users to expect targeted phishing that uses their name and role, and confirm any unusual request by phone.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+      "heat": 3,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Polymarket theft traced to a hijacked page-speed script; refunds reach $2.7 million",
+      "why": "New details: attackers took over the domain records of DebugBear, a monitoring vendor, and swapped its script on Polymarket's site to drain signed-in traders. Polymarket is refunding about $2.7 million to 726 wallets.",
+      "action": "List the outside scripts on your login and checkout pages, remove ones you don't need, and pin the rest with Subresource Integrity so changed files are refused.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+      "heat": 2,
+      "cat": "crypto"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "OpenAI fixed a ChatGPT flaw that let a shared link read private chats",
+      "why": "Researchers showed a booby-trapped ChatGPT share link could run code in the viewer's session and act on their account. OpenAI fixed it within eight days and no real-world use was found.",
+      "action": "Remind staff to treat shared AI chat links from unknown senders like any other unexpected link; no update is needed on your side.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
+      "heat": 2,
+      "cat": "ai"
+    },
     {
       "date": "2026-11-01",
       "title": "FBI confirms North Korea's TraderTraitor behind the $6.4 billion Binance hack",

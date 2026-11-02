@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-01",
+  "date": "2026-11-02",
   "items": [
     {
-      "title": "FBI confirms North Korea's TraderTraitor behind the $6.4 billion Binance hack",
-      "why": "New tonight: the FBI formally blamed North Korea's TraderTraitor group, put the theft at $6.43 billion and published the thieves' wallets. About $2.85 billion is frozen; Binance began reopening withdrawals today.",
-      "action": "If your business takes crypto payments, check incoming wallets against the FBI's published list, and keep exchange balances to what you need day to day.",
+      "title": "C3RB3R ransomware is encrypting Synology NAS boxes running old DSM versions",
+      "why": "Synology warns attackers are exploiting a flaw it patched in December 2024 to encrypt files on outdated NAS devices and demand payment. Victims report paying thousands of dollars; over 380,000 Synology devices face the internet.",
+      "action": "Update DSM to the latest build (7.2.2-72806-1 or later on 7.2.2), turn on automatic updates, and block the NAS admin page from the internet.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
+      "heat": 4,
+      "cat": "ransomware"
+    },
+    {
+      "title": "Public exploit released for already-exploited BeyondTrust Remote Support flaw",
+      "why": "Rapid7 published a working attack module for the BeyondTrust Remote Support bug CISA flagged as exploited in October, and new probes have been seen against exposed appliances. Hosted customers were patched; self-hosted ones must act.",
+      "action": "Apply BeyondTrust patch BT26-05-RS to self-hosted Remote Support now, limit who can reach the appliance, and check it for unknown PHP files or sessions.",
+      "source_name": "Cybersecurity News",
+      "source_url": "https://cybersecuritynews.com/critical-beyondtrust-vulnerability/",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "title": "Fake Claude Code extension on Cursor's marketplace planted SSH backdoors",
+      "why": "Two tampered versions of the Claude Code extension were live on Cursor's marketplace for about 11 hours on October 29 and tried to add an attacker's SSH key and a hidden tunnel on Windows and Mac machines. Cursor says uninstalling alone is not enough.",
+      "action": "Ask developers who use Cursor whether they installed Claude Code 2.1.312 or 2.1.313; if so, run Cursor's cleanup script, remove unknown SSH keys and rotate their credentials.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/malicious-claude-code-extensions-in-cursor-marketplace/",
+      "heat": 3,
+      "cat": "malware"
+    },
+    {
+      "title": "Chainalysis confirms hackers got into its internal tools",
+      "why": "The blockchain analysis firm says an intruder using AI-driven tooling reached internal systems and saw customer users' names, emails and role labels. It says investigation data, passwords and session tokens were not accessed.",
+      "action": "If you use Chainalysis, warn the named users to expect targeted phishing that uses their name and role, and confirm any unusual request by phone.",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
-      "heat": 5,
+      "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+      "heat": 3,
+      "cat": "breach"
+    },
+    {
+      "title": "Polymarket theft traced to a hijacked page-speed script; refunds reach $2.7 million",
+      "why": "New details: attackers took over the domain records of DebugBear, a monitoring vendor, and swapped its script on Polymarket's site to drain signed-in traders. Polymarket is refunding about $2.7 million to 726 wallets.",
+      "action": "List the outside scripts on your login and checkout pages, remove ones you don't need, and pin the rest with Subresource Integrity so changed files are refused.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+      "heat": 2,
       "cat": "crypto"
     },
     {
-      "title": "Drupal Commerce flaw is being exploited against online stores",
-      "why": "Drupal says attackers are abusing a missing-permission bug in Commerce Core, the module behind carts and checkout, and warns it can cost store owners money. Fixed releases are out.",
-      "action": "Update Drupal Commerce Core to 3.3.13 (or 8.x-2.41 on older sites) today, then review recent orders and refunds for anything odd.",
+      "title": "OpenAI fixed a ChatGPT flaw that let a shared link read private chats",
+      "why": "Researchers showed a booby-trapped ChatGPT share link could run code in the viewer's session and act on their account. OpenAI fixed it within eight days and no real-world use was found.",
+      "action": "Remind staff to treat shared AI chat links from unknown senders like any other unexpected link; no update is needed on your side.",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/10/hackers-actively-exploit-highly.html",
-      "heat": 4,
-      "cat": "patch"
-    },
-    {
-      "title": "Fake IT help desk on Microsoft Teams led to full domain takeover",
-      "why": "Microsoft says attackers posing as IT support on Teams talked staff into opening Quick Assist, then abused weak certificate settings to take over admin accounts and copy files out.",
-      "action": "Block or limit Teams chats from outside companies, and tell staff IT will never ask them to start Quick Assist on an unexpected call.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/hackers-impersonate-it-help-desk-microsoft-teams/",
-      "heat": 4,
-      "cat": "phishing"
-    },
-    {
-      "title": "CISA adds two more Ivanti VPN flaws to its exploited list",
-      "why": "Update: CISA now lists two more Ivanti Connect Secure bugs used in the same attack chain as known exploited, with a federal fix deadline of November 2.",
-      "action": "Upgrade Ivanti Connect Secure to 25.1.1.3 or 22.8R2.6 now and check the appliance for signs of earlier compromise.",
-      "source_name": "Security Affairs",
-      "source_url": "https://securityaffairs.com/202175/security/u-s-cisa-adds-ivanti-connect-secure-flaws-to-its-known-exploited-vulnerabilities-catalog.html",
-      "heat": 3,
-      "cat": "vpn"
-    },
-    {
-      "title": "MDaemon mail servers hacked through a booby-trapped attachment",
-      "why": "ESET found attackers emailing a malicious RAR file to MDaemon servers; the built-in virus scanner opened it and planted malware with no one clicking anything. MDaemon 26.0.4 fixes it.",
-      "action": "Update MDaemon to 26.0.4 or later, and confirm its bundled antivirus engine is current.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/mdaemon-mail-server-flaw/",
-      "heat": 3,
-      "cat": "patch"
-    },
-    {
-      "title": "Hidden text message can crash Android phones and block calls",
-      "why": "A researcher showed a single invisible SMS can crash the phone app on Pixel and Samsung devices running Android 12 to 17, cutting off calls including 911. No attacks seen yet; Google has a fix.",
-      "action": "Check company Android phones for the October 2026 security patch or later, and plan to replace phones stuck on Android 12 or 13 that no longer get updates.",
-      "source_name": "Security Affairs",
-      "source_url": "https://securityaffairs.com/202184/security/sms-of-death-android-under-attack-an-invisible-sms-can-block-calls-and-emergency-services.html",
-      "heat": 3,
-      "cat": "patch"
+      "source_url": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
+      "heat": 2,
+      "cat": "ai"
     }
   ]
 }
