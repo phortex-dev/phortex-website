@@ -1,15 +1,45 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "threat_of_the_week": {
-    "source": "Latent Space AI News",
-    "date": "2026-10-23",
-    "title": "\"Black October\": PHP2Shell and a wave of AI-found flaws",
-    "tldr": "Unauthenticated remote-code-execution bugs in PHP, reportedly found with frontier AI models, were patched this month alongside a CVSS 10 GitLab flaw and a Node.js fix. Some researchers dispute how new and how exploited they are.",
-    "smb": "Running WordPress or WooCommerce? Ask your host, in writing, to confirm PHP is patched this week.",
-    "url": "https://latent.space/p/ainews-black-october/",
-    "link_label": "Read the roundup"
+    "source": "Security Boulevard",
+    "date": "2026-11-02",
+    "title": "One attacker's AI agents broke into about 100 company websites",
+    "tldr": "NorForge researcher Snorre Fagerland found exposed panels showing a Chinese-speaking operator steering Claude Code and DeepSeek agents through the open-source Cairn platform to break into company sites. Reuters named Deere, SharkNinja and Cummins among about 100 victims, at roughly 50 dollars in AI tokens per success.",
+    "smb": "Turn on automatic updates for your website platform and plugins, and rotate the admin and hosting passwords for any site you have not touched in months.",
+    "url": "https://securityboulevard.com/2026/11/chinese-speaking-hacker-successfully-charged-ai-agents-to-break-into-around-100-websites",
+    "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "The Hacker News",
+      "date": "2026-11-02",
+      "title": "Unit 42: likely AI-written scripts used to spy on government Linux servers",
+      "tldr": "Palo Alto Networks Unit 42 tracked an unidentified group, CL-UNK-1211, that used web shells, a Go-based trojan called SysGoRAT and password-stealing tricks against government-linked Linux servers. Many of its scripts read like chatbot answers, which suggests AI wrote or ran them.",
+      "smb": "Check your Linux servers for unexpected PHP files in web folders and changes to .bashrc, and move any passwords stored in config files into a secrets manager.",
+      "url": "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html",
+      "link_label": "Read the report"
+    },
+    {
+      "cat": "voices",
+      "source": "Daniel Miessler",
+      "date": "2026-11-01",
+      "title": "Miessler: attackers have the AI edge for now, so cover the basics fast",
+      "tldr": "Daniel Miessler argues that AI currently helps attackers more than defenders, because they can turn a new technique into an attack within hours while most companies take weeks. His answer is a short list of cheap basics: know every system you run, hide what does not need to be public, and plan for a vendor breach.",
+      "smb": "Write down every website, app, API and database you expose to the internet, then put anything that does not need to be public behind a private network or tunnel.",
+      "url": "https://danielmiessler.com/blog/post-ai-security-floor",
+      "link_label": "Read the post"
+    },
+    {
+      "cat": "voices",
+      "source": "Simon Willison",
+      "date": "2026-11-01",
+      "title": "Willison highlights Kingsbury's warning that AI makes software maturity easy to fake",
+      "tldr": "Simon Willison shared a passage from Kyle Kingsbury's Jepsen report on ParticleDB arguing that LLMs erode trust in documentation and the companies behind software. Polished docs and tidy repos used to signal a mature project, and now they can be generated in minutes.",
+      "smb": "Before adopting a new open-source tool or vendor, check its release history, issue tracker and real users rather than trusting polished docs alone.",
+      "url": "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
+      "link_label": "Read the post"
+    },
     {
       "cat": "news",
       "source": "Help Net Security",
@@ -279,6 +309,18 @@
       "outlet": "Arcanum Security",
       "focus": "Offensive AI: hackbots, agent harnesses and bug bounty.",
       "url": "https://arcanum-sec.com/"
+    },
+    {
+      "name": "Daniel Miessler",
+      "outlet": "Unsupervised Learning",
+      "focus": "Security and AI strategy, with practical takes on how AI shifts the balance between attackers and defenders.",
+      "url": "https://danielmiessler.com/"
+    },
+    {
+      "name": "Simon Willison",
+      "outlet": "simonwillison.net",
+      "focus": "Hands-on writing about LLMs, prompt injection and the risks of AI agents.",
+      "url": "https://simonwillison.net/"
     }
   ]
 }

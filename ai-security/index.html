@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 1, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 2, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -49,11 +49,11 @@
   <div class="container">
     <div class="eyebrow">Threat of the week</div>
     <article class="card intel-threat" style="margin-top:1.25rem; max-width:860px;">
-      <div class="intel-meta"><span>Latent Space AI News &middot; <time datetime="2026-10-23">Oct 23, 2026</time></span></div>
-      <h2 class="heading-md intel-title">&quot;Black October&quot;: PHP2Shell and a wave of AI-found flaws</h2>
-      <p class="intel-tldr">Unauthenticated remote-code-execution bugs in PHP, reportedly found with frontier AI models, were patched this month alongside a CVSS 10 GitLab flaw and a Node.js fix. Some researchers dispute how new and how exploited they are.</p>
-      <div class="intel-smb"><span>SMB takeaway</span>Running WordPress or WooCommerce? Ask your host, in writing, to confirm PHP is patched this week.</div>
-      <a class="intel-link" href="https://latent.space/p/ainews-black-october/" target="_blank" rel="noopener noreferrer">Read the roundup &rarr;</a>
+      <div class="intel-meta"><span>Security Boulevard &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
+      <h2 class="heading-md intel-title">One attacker&#x27;s AI agents broke into about 100 company websites</h2>
+      <p class="intel-tldr">NorForge researcher Snorre Fagerland found exposed panels showing a Chinese-speaking operator steering Claude Code and DeepSeek agents through the open-source Cairn platform to break into company sites. Reuters named Deere, SharkNinja and Cummins among about 100 victims, at roughly 50 dollars in AI tokens per success.</p>
+      <div class="intel-smb"><span>SMB takeaway</span>Turn on automatic updates for your website platform and plugins, and rotate the admin and hosting passwords for any site you have not touched in months.</div>
+      <a class="intel-link" href="https://securityboulevard.com/2026/11/chinese-speaking-hacker-successfully-charged-ai-agents-to-break-into-around-100-websites" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
     </article>
   </div>
 </section>
@@ -63,9 +63,30 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>25</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>20</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>2</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>28</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>21</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>4</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Unit 42: likely AI-written scripts used to spy on government Linux servers</h3>
+        <p class="intel-tldr">Palo Alto Networks Unit 42 tracked an unidentified group, CL-UNK-1211, that used web shells, a Go-based trojan called SysGoRAT and password-stealing tricks against government-linked Linux servers. Many of its scripts read like chatbot answers, which suggests AI wrote or ran them.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Check your Linux servers for unexpected PHP files in web folders and changes to .bashrc, and move any passwords stored in config files into a secrets manager.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html" target="_blank" rel="noopener noreferrer">Read the report &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Daniel Miessler &middot; <time datetime="2026-11-01">Nov 1, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Miessler: attackers have the AI edge for now, so cover the basics fast</h3>
+        <p class="intel-tldr">Daniel Miessler argues that AI currently helps attackers more than defenders, because they can turn a new technique into an attack within hours while most companies take weeks. His answer is a short list of cheap basics: know every system you run, hide what does not need to be public, and plan for a vendor breach.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Write down every website, app, API and database you expose to the internet, then put anything that does not need to be public behind a private network or tunnel.</div>
+        <a class="intel-link" href="https://danielmiessler.com/blog/post-ai-security-floor" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Simon Willison &middot; <time datetime="2026-11-01">Nov 1, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Willison highlights Kingsbury&#x27;s warning that AI makes software maturity easy to fake</h3>
+        <p class="intel-tldr">Simon Willison shared a passage from Kyle Kingsbury&#x27;s Jepsen report on ParticleDB arguing that LLMs erode trust in documentation and the companies behind software. Polished docs and tidy repos used to signal a mature project, and now they can be generated in minutes.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Before adopting a new open-source tool or vendor, check its release history, issue tracker and real users rather than trusting polished docs alone.</div>
+        <a class="intel-link" href="https://simonwillison.net/2026/Nov/1/kyle-kingsbury/" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Parameter research &middot; <time datetime="2026-10-31">Oct 31, 2026</time></span></div>
         <h3 class="heading-sm intel-title">A shared ChatGPT link could run attacker code and read private chats</h3>
@@ -265,6 +286,16 @@
         <div class="intel-voice-name">Jason Haddix</div>
         <div class="intel-voice-outlet">Arcanum Security</div>
         <p>Offensive AI: hackbots, agent harnesses and bug bounty.</p>
+      </a>
+      <a class="card intel-voice" href="https://danielmiessler.com/" target="_blank" rel="noopener noreferrer">
+        <div class="intel-voice-name">Daniel Miessler</div>
+        <div class="intel-voice-outlet">Unsupervised Learning</div>
+        <p>Security and AI strategy, with practical takes on how AI shifts the balance between attackers and defenders.</p>
+      </a>
+      <a class="card intel-voice" href="https://simonwillison.net/" target="_blank" rel="noopener noreferrer">
+        <div class="intel-voice-name">Simon Willison</div>
+        <div class="intel-voice-outlet">simonwillison.net</div>
+        <p>Hands-on writing about LLMs, prompt injection and the risks of AI agents.</p>
       </a>
     </div>
   </div>
