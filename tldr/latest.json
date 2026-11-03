@@ -11,6 +11,24 @@
       "cat": "patch"
     },
     {
+      "title": "Password manager mSecure tells all users to change their stored passwords",
+      "why": "Maker mSeven Software emailed customers on November 3 about suspicious activity tied to the app and urged them to protect everything stored in it. It has not said what was accessed or whether vaults were exposed.",
+      "action": "If anyone on your team uses mSecure, change the passwords it holds starting with banking and email, reset two-factor and passkeys, and consider moving to another manager.",
+      "heat": 4,
+      "cat": "breach",
+      "source_name": "The Register",
+      "source_url": "https://www.theregister.com/security/2026/11/03/password-manager-msecure-tells-users-to-change-passwords-wont-say-why/5307296"
+    },
+    {
+      "title": "CISA confirms attacks on the WordPress core update flaw fixed in 7.1.4",
+      "why": "CISA added the WordPress core flaw that lets attackers run code during the brief window a site is updating to its exploited list on November 3. Versions 4.7 through 7.1.3 are affected; fixes cover every supported branch.",
+      "action": "Check each WordPress site's version on the Updates screen, update to 7.1.4 or your branch's fixed release, and confirm agency- or host-managed sites were updated too.",
+      "heat": 4,
+      "cat": "patch",
+      "source_name": "WindowsForum",
+      "source_url": "https://windowsforum.com/news/cisa-flags-wordpress-cve-2026-119977-as-actively-exploited-update-to-block-upgrade-window-rce.450815"
+    },
+    {
       "title": "Brazil's largest crypto exchange halts withdrawals after about $46 million drained",
       "why": "Mercado Bitcoin, with about 4.5 million customers, froze deposits and withdrawals after a cyberattack on November 2, days after the Binance theft. It says customers were not harmed; outside analysts say some customer wallets were emptied.",
       "action": "Keep business crypto in wallets you control or spread it across providers, require hardware-key sign-in on exchange accounts, and set withdrawal address allowlists.",
@@ -29,31 +47,13 @@
       "cat": "malware"
     },
     {
-      "title": "Sign-in provider WorkOS says hackers got into its internal sales app",
-      "why": "WorkOS reported on October 30 that an attacker using AI-assisted tooling accessed customer contact details, account histories and summaries of sales, support and Slack conversations. It says its login product and production systems were not touched.",
-      "action": "If you use WorkOS, warn your team that convincing requests may cite real support chats, and confirm any unusual request through a known contact before acting.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/hackers-use-ai-powered-attack-framework-to-breach-workos/",
+      "title": "Attackers drain hot wallets on older BTCPay Server installs",
+      "why": "BTCPay Server says thieves are emptying Bitcoin and Litecoin hot wallets on merchant servers, with reports since November 1. Version 2.4.1 and earlier are at risk; the latest release, 2.4.7, has no credible drain reports.",
+      "action": "If you take crypto through BTCPay, update to 2.4.7; on 2.4.1 or older, move to a fresh server and new wallet, and keep only operating funds in the hot wallet.",
       "heat": 3,
-      "cat": "breach"
-    },
-    {
-      "title": "Fake ChatGPT Plus billing emails steal card numbers and one-time codes",
-      "why": "A phishing kit sends 'payment failed' emails for ChatGPT Plus and leads to fake checkout pages that take card details, then live-prompt for the bank's text code. The pages keep reappearing on new subdomains after takedowns.",
-      "action": "Tell staff who pay for AI tools to check billing only by typing the site address themselves, never from an email link, and to call the bank at once if they entered a card.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/chatgpt-phishing-kit/",
-      "heat": 3,
-      "cat": "phishing"
-    },
-    {
-      "title": "Attackers target an abandoned WordPress crypto payment plugin with no fix",
-      "why": "Exploit attempts are hitting the CryptoPayment Gateway plugin, whose flaw lets anyone delete files, rewrite payment settings and read stored wallet credentials. The plugin was pulled from WordPress.org in August and has no patch.",
-      "action": "Check your WordPress plugins for CryptoPayment Gateway; if present, remove it, move funds and rotate the wallet keys it stored, and review recent payment settings changes.",
+      "cat": "crypto",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
-      "heat": 2,
-      "cat": "patch"
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-btcpay-server-flaw-to.html"
     }
   ]
 }
