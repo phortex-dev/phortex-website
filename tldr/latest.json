@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-02",
+  "date": "2026-11-03",
   "items": [
     {
-      "title": "C3RB3R ransomware is encrypting Synology NAS boxes running old DSM versions",
-      "why": "Synology warns attackers are exploiting a flaw it patched in December 2024 to encrypt files on outdated NAS devices and demand payment. Victims report paying thousands of dollars; over 380,000 Synology devices face the internet.",
-      "action": "Update DSM to the latest build (7.2.2-72806-1 or later on 7.2.2), turn on automatic updates, and block the NAS admin page from the internet.",
-      "source_name": "BleepingComputer",
-      "source_url": "https://www.bleepingcomputer.com/news/security/synology-warns-customers-of-ongoing-c3rb3r-ransomware-attacks/",
-      "heat": 4,
-      "cat": "ransomware"
-    },
-    {
-      "title": "Public exploit released for already-exploited BeyondTrust Remote Support flaw",
-      "why": "Rapid7 published a working attack module for the BeyondTrust Remote Support bug CISA flagged as exploited in October, and new probes have been seen against exposed appliances. Hosted customers were patched; self-hosted ones must act.",
-      "action": "Apply BeyondTrust patch BT26-05-RS to self-hosted Remote Support now, limit who can reach the appliance, and check it for unknown PHP files or sessions.",
-      "source_name": "Cybersecurity News",
-      "source_url": "https://cybersecuritynews.com/critical-beyondtrust-vulnerability/",
+      "title": "Second wave of hacks turns up supermarket freezers across Europe",
+      "why": "Attackers reached internet-exposed refrigeration controllers on November 2 and set freezers to about 50°C in more than 50 Belgian stores plus shops in five other countries, spoiling stock. Many units were older models that no longer get updates.",
+      "action": "List building controllers you own (HVAC, fridges, alarms, cameras), take any reachable from the internet offline or behind a VPN, and replace unsupported units.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/cyberattack-grocery-freezers-europe",
       "heat": 4,
       "cat": "patch"
     },
     {
-      "title": "Fake Claude Code extension on Cursor's marketplace planted SSH backdoors",
-      "why": "Two tampered versions of the Claude Code extension were live on Cursor's marketplace for about 11 hours on October 29 and tried to add an attacker's SSH key and a hidden tunnel on Windows and Mac machines. Cursor says uninstalling alone is not enough.",
-      "action": "Ask developers who use Cursor whether they installed Claude Code 2.1.312 or 2.1.313; if so, run Cursor's cleanup script, remove unknown SSH keys and rotate their credentials.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/malicious-claude-code-extensions-in-cursor-marketplace/",
+      "title": "Brazil's largest crypto exchange halts withdrawals after about $46 million drained",
+      "why": "Mercado Bitcoin, with about 4.5 million customers, froze deposits and withdrawals after a cyberattack on November 2, days after the Binance theft. It says customers were not harmed; outside analysts say some customer wallets were emptied.",
+      "action": "Keep business crypto in wallets you control or spread it across providers, require hardware-key sign-in on exchange accounts, and set withdrawal address allowlists.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist",
+      "heat": 4,
+      "cat": "crypto"
+    },
+    {
+      "title": "Google takes down a 1.3 million-device botnet built into cheap Android TV boxes",
+      "why": "Google says maker Videostrong deliberately shipped the x.cpe backdoor on set-top boxes, signage players and similar devices, including MECOOL-branded ones, and sold access for ad fraud and proxies. The backdoor survives restarts.",
+      "action": "Find off-brand Android TV boxes and signage players on your network, check them against Synthient's model list, replace matches, and keep smart devices on a guest network.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/google-disrupts-13-million-device.html",
       "heat": 3,
       "cat": "malware"
     },
     {
-      "title": "Northflank tells customers to rotate all secrets after AI API keys were abused",
-      "why": "The cloud hosting platform says attackers may have read environment variables across workloads, secret groups and settings, and some customers' AI API keys were then used without permission. It ties the activity to a wider wave of AI credential theft.",
-      "action": "If you deploy on Northflank, revoke and reissue every key, password and token stored there, then check your AI provider bills and usage logs for charges you don't recognize.",
-      "heat": 3,
-      "cat": "cloud",
-      "source_name": "Cyber Security News",
-      "source_url": "https://cybersecuritynews.com/northflank-security-breach/"
-    },
-    {
-      "title": "Chainalysis confirms hackers got into its internal tools",
-      "why": "The blockchain analysis firm says an intruder using AI-driven tooling reached internal systems and saw customer users' names, emails and role labels. It says investigation data, passwords and session tokens were not accessed.",
-      "action": "If you use Chainalysis, warn the named users to expect targeted phishing that uses their name and role, and confirm any unusual request by phone.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
+      "title": "Sign-in provider WorkOS says hackers got into its internal sales app",
+      "why": "WorkOS reported on October 30 that an attacker using AI-assisted tooling accessed customer contact details, account histories and summaries of sales, support and Slack conversations. It says its login product and production systems were not touched.",
+      "action": "If you use WorkOS, warn your team that convincing requests may cite real support chats, and confirm any unusual request through a known contact before acting.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/hackers-use-ai-powered-attack-framework-to-breach-workos/",
       "heat": 3,
       "cat": "breach"
     },
     {
-      "title": "Polymarket theft traced to a hijacked page-speed script; refunds reach $2.7 million",
-      "why": "New details: attackers took over the domain records of DebugBear, a monitoring vendor, and swapped its script on Polymarket's site to drain signed-in traders. Polymarket is refunding about $2.7 million to 726 wallets.",
-      "action": "List the outside scripts on your login and checkout pages, remove ones you don't need, and pin the rest with Subresource Integrity so changed files are refused.",
+      "title": "Fake ChatGPT Plus billing emails steal card numbers and one-time codes",
+      "why": "A phishing kit sends 'payment failed' emails for ChatGPT Plus and leads to fake checkout pages that take card details, then live-prompt for the bank's text code. The pages keep reappearing on new subdomains after takedowns.",
+      "action": "Tell staff who pay for AI tools to check billing only by typing the site address themselves, never from an email link, and to call the bank at once if they entered a card.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/chatgpt-phishing-kit/",
+      "heat": 3,
+      "cat": "phishing"
+    },
+    {
+      "title": "Attackers target an abandoned WordPress crypto payment plugin with no fix",
+      "why": "Exploit attempts are hitting the CryptoPayment Gateway plugin, whose flaw lets anyone delete files, rewrite payment settings and read stored wallet credentials. The plugin was pulled from WordPress.org in August and has no patch.",
+      "action": "Check your WordPress plugins for CryptoPayment Gateway; if present, remove it, move funds and rotate the wallet keys it stored, and review recent payment settings changes.",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+      "source_url": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
       "heat": 2,
-      "cat": "crypto"
+      "cat": "patch"
     }
   ]
 }
