@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "threat_of_the_week": {
     "source": "Security Boulevard",
     "date": "2026-11-02",
@@ -10,6 +10,36 @@
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "UK National Cyber Security Centre",
+      "date": "2026-11-03",
+      "title": "UK cyber agency: AI will speed up ransomware and phishing within two years",
+      "tldr": "The UK's NCSC said hostile groups will very likely use AI within two years to scale up ransomware, phishing and attacks on known flaws, with AI-powered ransomware likely to hit UK critical infrastructure by 2028. Its chief said the danger is old weaknesses that AI now finds faster.",
+      "smb": "Take any system off the internet that does not need to be online, and treat patching and multi-factor login as the starting point, not the finish line.",
+      "url": "https://ncsc.gov.uk/news/cyber-chief-uk-facing-ai-powered-attacks-on-critical-infrastructure-in-two-years",
+      "link_label": "Read the NCSC statement"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Google and Mandiant research",
+      "date": "2026-11-03",
+      "title": "Stolen AI access is leaving companies with cloud bills of up to 1 million dollars",
+      "tldr": "Google Threat Intelligence and Mandiant describe criminals breaking into company cloud accounts and reselling the AI model access through cheap underground subscriptions. In one case a stolen key made over 500,000 model calls in under eight hours, and some victims saw charges above 100,000 dollars in a single day.",
+      "smb": "Set billing alerts and spending caps on every cloud and AI account, and get an alert whenever an AI service is switched on or re-enabled.",
+      "url": "https://www.helpnetsecurity.com/2026/11/03/llmjacking-stolen-ai-access-cloud-bills/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Jason Haddix, via CYBR.SEC.Media",
+      "date": "2026-11-02",
+      "title": "Haddix releases SpikeStrip, decoys that trip up AI pentesting agents",
+      "tldr": "Jason Haddix of Arcanum released SpikeStrip, an experimental open-source project that hides fake vulnerability leads, prompt injection decoys and reasoning traps in a website's code comments. The aim is to waste the time and compute of AI hacking agents that scan a site, without changing how the site works.",
+      "smb": "Assume AI agents are scanning your public website, and review its page source for comments that reveal internal paths, software versions or credentials.",
+      "url": "https://www.cybrsecmedia.com/spikestrip-jason-haddix-targets-ai-pentesting-with-prompt-injection/",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "Northflank status page",
