@@ -63,9 +63,30 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>35</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>26</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>6</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>39</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>29</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>7</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security &middot; <time datetime="2026-11-03">Nov 3, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">AI coding agents keep installing old MCP servers that will never be patched</h3>
+        <p class="intel-tldr">Glow Security found AI coding agents such as Claude Code, Cursor and Codex CLI installing deprecated reference MCP servers from memory, once even after a deprecation warning. The old packages have high-severity flaws, including a code execution bug in the Puppeteer server, and no fixes are coming.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Search your developers&#x27; MCP config files for deprecated @modelcontextprotocol servers and switch each one to the service owner&#x27;s maintained server.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/03/mcphantom-deprecated-mcp-servers/" target="_blank" rel="noopener noreferrer">Read the research summary &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security &middot; <time datetime="2026-11-03">Nov 3, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">OpenAI raises its top bug bounty to 172,000 dollars</h3>
+        <p class="intel-tldr">OpenAI more than quadrupled the typical rewards for medium, high and critical bugs in ChatGPT, Codex and its API, with exceptional findings now worth up to 172,000 dollars with bonuses. Unpaid reports get the new rates, and recent payouts will be topped up.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask the AI vendors you rely on whether they run a public bug bounty, and give more weight to those that do when you renew contracts.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/03/openai-bigger-bug-bounty-rewards/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Schneier on Security &middot; <time datetime="2026-11-03">Nov 3, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Schneier: AI is starting to find loopholes in the law, not just in code</h3>
+        <p class="intel-tldr">Bruce Schneier pointed to German researchers who used AI models to find many previously unrecorded loopholes in German law, sharing only the low-harm ones. He sees it as early proof of an idea from his book A Hacker&#x27;s Mind: cheap AI reasoning could strain legal systems the way it strains software.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Have a person review your key contracts and terms of service for gaps, since AI tools make it cheaper for others to look for loopholes in them.</div>
+        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ais-hacking-the-law.html" target="_blank" rel="noopener noreferrer">Read Schneier&#x27;s post &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>UK National Cyber Security Centre &middot; <time datetime="2026-11-03">Nov 3, 2026</time></span></div>
         <h3 class="heading-sm intel-title">UK cyber agency: AI will speed up ransomware and phishing within two years</h3>
@@ -79,6 +100,13 @@
         <p class="intel-tldr">Google Threat Intelligence and Mandiant describe criminals breaking into company cloud accounts and reselling the AI model access through cheap underground subscriptions. In one case a stolen key made over 500,000 model calls in under eight hours, and some victims saw charges above 100,000 dollars in a single day.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Set billing alerts and spending caps on every cloud and AI account, and get an alert whenever an AI service is switched on or re-enabled.</div>
         <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/03/llmjacking-stolen-ai-access-cloud-bills/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Critical Langflow flaws let attackers without an account run code on AI app servers</h3>
+        <p class="intel-tldr">IBM disclosed critical flaws in the Langflow AI app builder, versions 1.0.0 to 1.12.8, including an authentication bypass and code execution that need no login. A public Metasploit module exists for one flaw, though no attacks have been confirmed; version 1.13.0 fixes them.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Upgrade any Langflow server to version 1.13.0 after backing up its data, and turn off automatic login on any instance you cannot upgrade yet.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="voices">
         <div class="intel-meta"><span class="tag">Voices</span><span>Jason Haddix, via CYBR.SEC.Media &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
