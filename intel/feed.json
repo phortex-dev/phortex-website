@@ -12,6 +12,46 @@
   "items": [
     {
       "cat": "news",
+      "source": "MediaNama, on CERT-In",
+      "date": "2026-11-04",
+      "title": "India's CERT-In: an AI agent that misuses credentials is a reportable incident",
+      "tldr": "CERT-In's director general said AI agents that misuse credentials or act beyond their scope are cyber incidents that must be reported within six hours. He described test agents reaching live business records through exposed keys, and criminals using public agent frameworks to cut attacks to hours.",
+      "smb": "Give each AI agent its own limited account and keep a log of the tools and actions it runs, so you can show what it did if something goes wrong.",
+      "url": "https://www.medianama.com/2026/11/223-interview-cert-in-chief-ai-agents-prompt-injection/",
+      "link_label": "Read the interview"
+    },
+    {
+      "cat": "voices",
+      "source": "Help Net Security, with Lindsay Kaye",
+      "date": "2026-11-04",
+      "title": "HUMAN Security's Kaye: judge malware by what it does, not whether AI wrote it",
+      "tldr": "Lindsay Kaye of HUMAN Security said AI lets criminals mass-produce fraud apps and build exploits for disclosed flaws faster, which shortens the time defenders have to patch. She added that clues like emojis and a comment on every function only hint at AI authorship and are lost once code is compiled.",
+      "smb": "Shorten your patch window for internet-facing software to days, and turn on automatic updates wherever your vendors offer them.",
+      "url": "https://www.helpnetsecurity.com/2026/11/04/lindsay-kaye-human-security-ai-generated-malware/",
+      "link_label": "Read the interview"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Chainstack",
+      "date": "2026-11-03",
+      "title": "Chainstack breach exposes customer data in a suspected AI-driven campaign",
+      "tldr": "Blockchain infrastructure provider Chainstack said an attacker got in through a third-party component, moved from a development system into production, and read customer names, emails and password hashes. It is assessed as part of the AI-powered campaign linked to breaches at Chainalysis and WorkOS.",
+      "smb": "Keep development and production systems on separate accounts and credentials, so a break-in at a test server cannot reach customer data.",
+      "url": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Anthropic",
+      "date": "2026-11-04",
+      "title": "Anthropic open-sources FlashProve to prove which AI model wrote a reply",
+      "tldr": "Anthropic released a research prototype, built with EPFL, MIT and StarkWare, that creates a cryptographic proof that a specific model produced a specific reply. It aims to stop providers quietly swapping in cheaper models, but it is still slow and needs large GPUs.",
+      "smb": "Ask your AI vendors in writing which model version serves your requests and how they will tell you when it changes.",
+      "url": "https://www.helpnetsecurity.com/2026/11/04/anthropic-flashprove-provable-inference/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
       "source": "The Hacker News, on Binance",
       "date": "2026-11-03",
       "title": "Binance traces its 6.43 billion dollar theft to fake job interviews and an abused internal AI tool",
@@ -477,6 +517,12 @@
       "outlet": "HackerOne",
       "focus": "Bug bounty and crowdsourced testing, and how AI changes what human researchers are worth.",
       "url": "https://www.hackerone.com/"
+    },
+    {
+      "name": "Lindsay Kaye",
+      "outlet": "HUMAN Security",
+      "focus": "Threat intelligence on ad fraud and bot malware, and how criminals use AI to scale it.",
+      "url": "https://www.humansecurity.com/"
     }
   ]
 }

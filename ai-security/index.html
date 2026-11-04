@@ -63,15 +63,43 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>43</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>32</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>47</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>35</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>MediaNama, on CERT-In &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">India&#x27;s CERT-In: an AI agent that misuses credentials is a reportable incident</h3>
+        <p class="intel-tldr">CERT-In&#x27;s director general said AI agents that misuse credentials or act beyond their scope are cyber incidents that must be reported within six hours. He described test agents reaching live business records through exposed keys, and criminals using public agent frameworks to cut attacks to hours.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Give each AI agent its own limited account and keep a log of the tools and actions it runs, so you can show what it did if something goes wrong.</div>
+        <a class="intel-link" href="https://www.medianama.com/2026/11/223-interview-cert-in-chief-ai-agents-prompt-injection/" target="_blank" rel="noopener noreferrer">Read the interview &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Help Net Security, with Lindsay Kaye &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">HUMAN Security&#x27;s Kaye: judge malware by what it does, not whether AI wrote it</h3>
+        <p class="intel-tldr">Lindsay Kaye of HUMAN Security said AI lets criminals mass-produce fraud apps and build exploits for disclosed flaws faster, which shortens the time defenders have to patch. She added that clues like emojis and a comment on every function only hint at AI authorship and are lost once code is compiled.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Shorten your patch window for internet-facing software to days, and turn on automatic updates wherever your vendors offer them.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/04/lindsay-kaye-human-security-ai-generated-malware/" target="_blank" rel="noopener noreferrer">Read the interview &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Anthropic &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Anthropic open-sources FlashProve to prove which AI model wrote a reply</h3>
+        <p class="intel-tldr">Anthropic released a research prototype, built with EPFL, MIT and StarkWare, that creates a cryptographic proof that a specific model produced a specific reply. It aims to stop providers quietly swapping in cheaper models, but it is still slow and needs large GPUs.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask your AI vendors in writing which model version serves your requests and how they will tell you when it changes.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/04/anthropic-flashprove-provable-inference/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on NIST &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
         <h3 class="heading-sm intel-title">NIST publishes a security guide for one-person businesses, with advice on AI tools</h3>
         <p class="intel-tldr">NIST released a plain-language guide for freelancers and owner-only firms, which make up most US small businesses. Besides MFA, passkeys, updates and tested backups, it says to check how an AI provider stores and trains on your data, and to review AI output before relying on it.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Read your AI tools&#x27; data settings, turn off training on your inputs where you can, and keep client data out of any tool that will not say how it stores it.</div>
         <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/04/nist-small-business-cybersecurity-guide/" target="_blank" rel="noopener noreferrer">Read the summary &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Chainstack &middot; <time datetime="2026-11-03">Nov 3, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Chainstack breach exposes customer data in a suspected AI-driven campaign</h3>
+        <p class="intel-tldr">Blockchain infrastructure provider Chainstack said an attacker got in through a third-party component, moved from a development system into production, and read customer names, emails and password hashes. It is assessed as part of the AI-powered campaign linked to breaches at Chainalysis and WorkOS.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Keep development and production systems on separate accounts and credentials, so a break-in at a test server cannot reach customer data.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/chainstack-reports-production-systems.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Binance &middot; <time datetime="2026-11-03">Nov 3, 2026</time></span></div>
@@ -406,6 +434,11 @@
         <div class="intel-voice-name">Kara Sprague</div>
         <div class="intel-voice-outlet">HackerOne</div>
         <p>Bug bounty and crowdsourced testing, and how AI changes what human researchers are worth.</p>
+      </a>
+      <a class="card intel-voice" href="https://www.humansecurity.com/" target="_blank" rel="noopener noreferrer">
+        <div class="intel-voice-name">Lindsay Kaye</div>
+        <div class="intel-voice-outlet">HUMAN Security</div>
+        <p>Threat intelligence on ad fraud and bot malware, and how criminals use AI to scale it.</p>
       </a>
     </div>
   </div>
