@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "threat_of_the_week": {
     "source": "Security Boulevard",
     "date": "2026-11-02",
@@ -10,6 +10,46 @@
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Binance",
+      "date": "2026-11-03",
+      "title": "Binance traces its 6.43 billion dollar theft to fake job interviews and an abused internal AI tool",
+      "tldr": "Binance said attackers infected one engineer through a fake job interview assignment and another through a trojanized AI tool installer, then abused an internal AI tool to reach colleagues' machines. From there they used a deployment token to reach the wallet signing service.",
+      "smb": "Tell staff never to run job interview assignments or newly downloaded AI tools on work computers, and install AI tools only from the vendor's official site.",
+      "url": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Kaspersky research",
+      "date": "2026-11-03",
+      "title": "AI agent framework took attackers from a school server to domain admin in days",
+      "tldr": "Kaspersky saw attackers use the open-source CyberStrikeAI framework against schools and universities in Africa and Latin America, with an AI model on their own server picking each next step. After a manual break-in through SQL Server, the agent mapped the network in hours and reached domain admin in three to four days.",
+      "smb": "Close internet access to database servers such as SQL Server and set alerts for credential dumping and Kerberoasting, which AI-driven attacks still rely on.",
+      "url": "https://www.helpnetsecurity.com/2026/11/03/ai-powered-cyberattacks-artex-cyberstrikeai/",
+      "link_label": "Read the research summary"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on NIST",
+      "date": "2026-11-04",
+      "title": "NIST publishes a security guide for one-person businesses, with advice on AI tools",
+      "tldr": "NIST released a plain-language guide for freelancers and owner-only firms, which make up most US small businesses. Besides MFA, passkeys, updates and tested backups, it says to check how an AI provider stores and trains on your data, and to review AI output before relying on it.",
+      "smb": "Read your AI tools' data settings, turn off training on your inputs where you can, and keep client data out of any tool that will not say how it stores it.",
+      "url": "https://www.helpnetsecurity.com/2026/11/04/nist-small-business-cybersecurity-guide/",
+      "link_label": "Read the summary"
+    },
+    {
+      "cat": "voices",
+      "source": "Kara Sprague, HackerOne, via Help Net Security",
+      "date": "2026-11-03",
+      "title": "HackerOne's CEO: AI finds common bugs at scale, people still win on business logic",
+      "tldr": "Kara Sprague told Help Net Security that AI is good at finding familiar bug types in volume, while humans remain better at business-logic flaws, chaining bugs and judging real business impact. She said bug reports have nearly tripled since early 2025 and the real bottleneck is fixing what gets found.",
+      "smb": "Name one person who decides which reported security flaws get fixed first, and give critical ones a fixed deadline so business priorities cannot push them back.",
+      "url": "https://www.helpnetsecurity.com/2026/11/03/kara-sprague-hackerone-ai-bug-bounty/",
+      "link_label": "Read the interview"
+    },
     {
       "cat": "news",
       "source": "Help Net Security",
@@ -431,6 +471,12 @@
       "outlet": "simonwillison.net",
       "focus": "Hands-on writing about LLMs, prompt injection and the risks of AI agents.",
       "url": "https://simonwillison.net/"
+    },
+    {
+      "name": "Kara Sprague",
+      "outlet": "HackerOne",
+      "focus": "Bug bounty and crowdsourced testing, and how AI changes what human researchers are worth.",
+      "url": "https://www.hackerone.com/"
     }
   ]
 }
