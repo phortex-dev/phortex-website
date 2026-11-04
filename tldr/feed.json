@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "items": [
+    {
+      "date": "2026-11-04",
+      "title": "Freezer attacks spread to France's national blood service",
+      "why": "Attackers changed freezer setpoints from about -30°C to 110°C at a contractor serving France's blood service overnight on November 1-2, affecting plasma for transfusions. Staff caught it in time; how they got in is not yet known.",
+      "action": "Ask whoever services your fridges, HVAC or alarms how they connect remotely, require a VPN and unique passwords, and turn on temperature alerts that go to your phone.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/hackers-target-french-blood-service/",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-04",
+      "title": "Hijacked cPGuard update planted a backdoor on Linux web servers",
+      "why": "An attacker used stolen credentials to push a malicious cPGuard update on November 2 that installed a backdoor and copied password hashes, SSH keys and database settings. Servers that installed versions 5.88.12 to 5.88.19 are affected.",
+      "action": "If your host or IT team runs cPGuard, update to 5.88.25 or later, check the install log for 5.88.12-5.88.19, and if found reset root and database passwords and replace SSH keys.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html",
+      "heat": 4,
+      "cat": "malware"
+    },
+    {
+      "date": "2026-11-04",
+      "title": "SolarWinds fixes a 9.9-rated flaw in Dameware remote support",
+      "why": "A command injection bug in Dameware 2026.3 and earlier lets any logged-in user, even a low-privilege one, take over the computers it manages. SolarWinds released 2026.3.1 on November 3; no attacks are reported yet.",
+      "action": "Upgrade every Dameware install to 2026.3.1, limit access to it to your internal network or VPN, and remove Dameware accounts people no longer need.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/critical-solarwinds-dameware-vulnerability/",
+      "heat": 3,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-04",
+      "title": "Barracuda email gateway flaws can be chained to gain root access",
+      "why": "Two flaws, one rated 9.3, let an attacker who can reach the admin interface skip login and run commands as root on Email Security Gateway and several other Barracuda appliances. Exploitation has not been reported.",
+      "action": "Make sure Barracuda admin pages are not reachable from the internet, confirm each appliance is on the latest firmware, and apply several updates in order if it is behind.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
+      "heat": 3,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-04",
+      "title": "Android's November update fixes 23 critical flaws",
+      "why": "Google's November bulletin patches 216 bugs, including a critical remote code execution flaw in Android 14 through 17 and the crafted-text bug that can drop calls. Google reports no attacks yet; makers ship fixes on their own schedules.",
+      "action": "Have staff check About phone in Settings for a security patch level of 2026-11-05 or later, install it when offered, and replace work phones that no longer get updates.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html",
+      "heat": 3,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-04",
+      "title": "Stolen AI API keys are running up cloud bills as high as $1 million",
+      "why": "Google says criminals are stealing AI API keys and cloud tokens and reselling access to models, with some victims seeing over $100,000 in charges in a single day before the access was cut off.",
+      "action": "Set spending caps and billing alerts on every AI and cloud account, keep API keys out of code and shared files, and rotate any key you cannot account for.",
+      "source_name": "Infosecurity Magazine",
+      "source_url": "https://www.infosecurity-magazine.com/news/llmjacking-cost-business-1m-warns/",
+      "heat": 2,
+      "cat": "ai"
+    },
     {
       "date": "2026-11-03",
       "title": "Second wave of hacks turns up supermarket freezers across Europe",

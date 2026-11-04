@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-04",
   "items": [
     {
-      "title": "Second wave of hacks turns up supermarket freezers across Europe",
-      "why": "Attackers reached internet-exposed refrigeration controllers on November 2 and set freezers to about 50°C in more than 50 Belgian stores plus shops in five other countries, spoiling stock. Many units were older models that no longer get updates.",
-      "action": "List building controllers you own (HVAC, fridges, alarms, cameras), take any reachable from the internet offline or behind a VPN, and replace unsupported units.",
-      "source_name": "The Record",
-      "source_url": "https://therecord.media/cyberattack-grocery-freezers-europe",
-      "heat": 4,
-      "cat": "patch"
-    },
-    {
-      "title": "Password manager mSecure tells all users to change their stored passwords",
-      "why": "Maker mSeven Software emailed customers on November 3 about suspicious activity tied to the app and urged them to protect everything stored in it. It has not said what was accessed or whether vaults were exposed.",
-      "action": "If anyone on your team uses mSecure, change the passwords it holds starting with banking and email, reset two-factor and passkeys, and consider moving to another manager.",
-      "heat": 4,
-      "cat": "breach",
-      "source_name": "The Register",
-      "source_url": "https://www.theregister.com/security/2026/11/03/password-manager-msecure-tells-users-to-change-passwords-wont-say-why/5307296"
-    },
-    {
-      "title": "CISA confirms attacks on the WordPress core update flaw fixed in 7.1.4",
-      "why": "CISA added the WordPress core flaw that lets attackers run code during the brief window a site is updating to its exploited list on November 3. Versions 4.7 through 7.1.3 are affected; fixes cover every supported branch.",
-      "action": "Check each WordPress site's version on the Updates screen, update to 7.1.4 or your branch's fixed release, and confirm agency- or host-managed sites were updated too.",
+      "title": "Freezer attacks spread to France's national blood service",
+      "why": "Attackers changed freezer setpoints from about -30°C to 110°C at a contractor serving France's blood service overnight on November 1-2, affecting plasma for transfusions. Staff caught it in time; how they got in is not yet known.",
+      "action": "Ask whoever services your fridges, HVAC or alarms how they connect remotely, require a VPN and unique passwords, and turn on temperature alerts that go to your phone.",
       "heat": 4,
       "cat": "patch",
-      "source_name": "WindowsForum",
-      "source_url": "https://windowsforum.com/news/cisa-flags-wordpress-cve-2026-119977-as-actively-exploited-update-to-block-upgrade-window-rce.450815"
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/hackers-target-french-blood-service/"
     },
     {
-      "title": "Brazil's largest crypto exchange halts withdrawals after about $46 million drained",
-      "why": "Mercado Bitcoin, with about 4.5 million customers, froze deposits and withdrawals after a cyberattack on November 2, days after the Binance theft. It says customers were not harmed; outside analysts say some customer wallets were emptied.",
-      "action": "Keep business crypto in wallets you control or spread it across providers, require hardware-key sign-in on exchange accounts, and set withdrawal address allowlists.",
-      "source_name": "The Record",
-      "source_url": "https://therecord.media/mercado-bitcoin-brazil-cryptocurrency-heist",
+      "title": "Hijacked cPGuard update planted a backdoor on Linux web servers",
+      "why": "An attacker used stolen credentials to push a malicious cPGuard update on November 2 that installed a backdoor and copied password hashes, SSH keys and database settings. Servers that installed versions 5.88.12 to 5.88.19 are affected.",
+      "action": "If your host or IT team runs cPGuard, update to 5.88.25 or later, check the install log for 5.88.12-5.88.19, and if found reset root and database passwords and replace SSH keys.",
       "heat": 4,
-      "cat": "crypto"
+      "cat": "malware",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html"
     },
     {
-      "title": "Google takes down a 1.3 million-device botnet built into cheap Android TV boxes",
-      "why": "Google says maker Videostrong deliberately shipped the x.cpe backdoor on set-top boxes, signage players and similar devices, including MECOOL-branded ones, and sold access for ad fraud and proxies. The backdoor survives restarts.",
-      "action": "Find off-brand Android TV boxes and signage players on your network, check them against Synthient's model list, replace matches, and keep smart devices on a guest network.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/google-disrupts-13-million-device.html",
+      "title": "SolarWinds fixes a 9.9-rated flaw in Dameware remote support",
+      "why": "A command injection bug in Dameware 2026.3 and earlier lets any logged-in user, even a low-privilege one, take over the computers it manages. SolarWinds released 2026.3.1 on November 3; no attacks are reported yet.",
+      "action": "Upgrade every Dameware install to 2026.3.1, limit access to it to your internal network or VPN, and remove Dameware accounts people no longer need.",
       "heat": 3,
-      "cat": "malware"
+      "cat": "patch",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/critical-solarwinds-dameware-vulnerability/"
     },
     {
-      "title": "Attackers drain hot wallets on older BTCPay Server installs",
-      "why": "BTCPay Server says thieves are emptying Bitcoin and Litecoin hot wallets on merchant servers, with reports since November 1. Version 2.4.1 and earlier are at risk; the latest release, 2.4.7, has no credible drain reports.",
-      "action": "If you take crypto through BTCPay, update to 2.4.7; on 2.4.1 or older, move to a fresh server and new wallet, and keep only operating funds in the hot wallet.",
+      "title": "Barracuda email gateway flaws can be chained to gain root access",
+      "why": "Two flaws, one rated 9.3, let an attacker who can reach the admin interface skip login and run commands as root on Email Security Gateway and several other Barracuda appliances. Exploitation has not been reported.",
+      "action": "Make sure Barracuda admin pages are not reachable from the internet, confirm each appliance is on the latest firmware, and apply several updates in order if it is behind.",
       "heat": 3,
-      "cat": "crypto",
+      "cat": "patch",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-btcpay-server-flaw-to.html"
+      "source_url": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html"
+    },
+    {
+      "title": "Android's November update fixes 23 critical flaws",
+      "why": "Google's November bulletin patches 216 bugs, including a critical remote code execution flaw in Android 14 through 17 and the crafted-text bug that can drop calls. Google reports no attacks yet; makers ship fixes on their own schedules.",
+      "action": "Have staff check About phone in Settings for a security patch level of 2026-11-05 or later, install it when offered, and replace work phones that no longer get updates.",
+      "heat": 3,
+      "cat": "patch",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html"
+    },
+    {
+      "title": "Stolen AI API keys are running up cloud bills as high as $1 million",
+      "why": "Google says criminals are stealing AI API keys and cloud tokens and reselling access to models, with some victims seeing over $100,000 in charges in a single day before the access was cut off.",
+      "action": "Set spending caps and billing alerts on every AI and cloud account, keep API keys out of code and shared files, and rotate any key you cannot account for.",
+      "heat": 2,
+      "cat": "ai",
+      "source_name": "Infosecurity Magazine",
+      "source_url": "https://www.infosecurity-magazine.com/news/llmjacking-cost-business-1m-warns/"
     }
   ]
 }
