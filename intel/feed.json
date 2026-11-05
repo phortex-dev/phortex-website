@@ -12,6 +12,26 @@
   "items": [
     {
       "cat": "news",
+      "source": "Check Point Research",
+      "date": "2026-11-05",
+      "title": "ChatGPT's Lockdown Mode could be bypassed to steal chats and push fake updates",
+      "tldr": "Check Point showed that page previews in ChatGPT code blocks could open popups outside their sandbox, getting around Lockdown Mode. A malicious shared chat or custom GPT could use this to phish logins, offer fake app updates or quietly send chat history to an attacker; OpenAI fixed it in September.",
+      "smb": "Tell staff not to open shared ChatGPT links or custom GPTs from unknown senders, and keep client data out of chats until your AI tools are reviewed.",
+      "url": "https://research.checkpoint.com/2026/chatgpt-lockdown-mode-bypass-phishing-malware-delivery-and-silent-data-exfiltration/",
+      "link_label": "Read the research"
+    },
+    {
+      "cat": "news",
+      "source": "Microsoft Security Blog",
+      "date": "2026-11-05",
+      "title": "Microsoft Defender can now find AI agents and MCP servers running on staff laptops",
+      "tldr": "Microsoft made local AI agent discovery generally available in Defender, spotting more than 50 agent tools and their MCP connections on Windows and macOS. It also released Execution Containers, a Windows layer that limits which files, networks and processes an AI agent can reach.",
+      "smb": "Check your Defender or endpoint console for AI agents already installed on work devices, and decide which ones are allowed before staff connect them to company data.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/11/05/whats-new-in-microsoft-security-november-2026/",
+      "link_label": "Read the post"
+    },
+    {
+      "cat": "news",
       "source": "The Hacker News, on OpenAI research",
       "date": "2026-11-05",
       "title": "OpenAI's upcoming cyber model built 948 working Linux root exploits in one 30-hour run",
