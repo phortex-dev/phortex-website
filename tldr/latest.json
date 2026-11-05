@@ -1,59 +1,35 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "items": [
-    {
-      "title": "Zyxel fixes a switch zero-day that attackers used to hack nearly 1,000 devices",
-      "why": "A flaw in the web admin page of Zyxel GS1900 switches let attackers run commands without logging in; 996 switches in 48 countries were hacked and their configs and password hashes taken. It bypassed June's patch.",
-      "action": "Install Zyxel's October 22 or later firmware on every GS1900 switch, keep its admin page off the internet, and change the admin password if it was exposed.",
-      "source_name": "BleepingComputer",
-      "source_url": "https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/",
-      "heat": 4,
-      "cat": "patch"
-    },
-    {
-      "title": "DreamHost confirms breach exposed FTP logins and some webmail accounts",
-      "why": "An attacker broke into DreamHost's web File Manager through third-party software and took FTP/SFTP logins used there from about August to October 23, plus some webmail logins. DreamHost says under 10% of accounts were affected.",
-      "action": "If your site is on DreamHost, change FTP, SFTP and email passwords and any reused elsewhere, check site files for changes, and review webmail forwarding rules.",
-      "source_name": "DreamHost",
-      "source_url": "https://www.dreamhost.com/news/announcements/october-security-incident/",
-      "heat": 4,
-      "cat": "breach"
-    },
-    {
-      "title": "Freezer attacks spread to France's national blood service",
-      "why": "Attackers changed freezer setpoints from about -30°C to 110°C at a contractor serving France's blood service overnight on November 1-2, affecting plasma for transfusions. Staff caught it in time; how they got in is not yet known.",
-      "action": "Ask whoever services your fridges, HVAC or alarms how they connect remotely, require a VPN and unique passwords, and turn on temperature alerts that go to your phone.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/hackers-target-french-blood-service/",
-      "heat": 4,
-      "cat": "patch"
-    },
-    {
-      "title": "Hijacked cPGuard update planted a backdoor on Linux web servers",
-      "why": "An attacker used stolen credentials to push a malicious cPGuard update on November 2 that installed a backdoor and copied password hashes, SSH keys and database settings. Servers that installed versions 5.88.12 to 5.88.19 are affected.",
-      "action": "If your host or IT team runs cPGuard, update to 5.88.25 or later, check the install log for 5.88.12-5.88.19, and if found reset root and database passwords and replace SSH keys.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html",
-      "heat": 4,
-      "cat": "malware"
-    },
-    {
-      "title": "Barracuda email gateway flaws can be chained to gain root access",
-      "why": "Two flaws, one rated 9.3, let an attacker who can reach the admin interface skip login and run commands as root on Email Security Gateway and several other Barracuda appliances. Exploitation has not been reported.",
-      "action": "Make sure Barracuda admin pages are not reachable from the internet, confirm each appliance is on the latest firmware, and apply several updates in order if it is behind.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
-      "heat": 3,
-      "cat": "patch"
-    },
-    {
-      "title": "SolarWinds fixes a 9.9-rated flaw in Dameware remote support",
-      "why": "A command injection bug in Dameware 2026.3 and earlier lets any logged-in user, even a low-privilege one, take over the computers it manages. SolarWinds released 2026.3.1 on November 3; no attacks are reported yet.",
-      "action": "Upgrade every Dameware install to 2026.3.1, limit access to it to your internal network or VPN, and remove Dameware accounts people no longer need.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/critical-solarwinds-dameware-vulnerability/",
-      "heat": 3,
-      "cat": "patch"
-    }
+    {"title": "French bank Crédit Mutuel Arkéa confirms a cyber heist estimated at $133 million",
+     "why": "Attackers got into the bank's own account through a third-party supplier's platform, sent transfers out over several days and converted the money to crypto. The bank says customer accounts and assets were not affected.",
+     "action": "Review which vendors can reach your bank or payment systems, require a second person to approve large or new-payee transfers, and set daily transfer limits with your bank.",
+     "heat": 4, "cat": "breach",
+     "source_name": "The Record", "source_url": "https://therecord.media/french-bank-confirms-cyber-heist"},
+    {"title": "CISA warns an old Apple flaw is being used to steal data from iPhones and Macs",
+     "why": "CISA added a 2024 Apple flaw to its exploited list after it was chained with a WebKit bug in zero-click attacks from hacked or fake websites that steal browser cookies and device data. The activity is linked to Russia's APT29.",
+     "action": "Update every company iPhone, iPad and Mac to the latest iOS, iPadOS and macOS, and retire devices that can no longer get updates.",
+     "heat": 4, "cat": "patch",
+     "source_name": "The Hacker News", "source_url": "https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html"},
+    {"title": "SonicWall will not patch two flaws in its retired GMS management server",
+     "why": "GMS 9.5.2 and earlier is end-of-life. One flaw, rated 9.1, lets anyone with network access read internal files without logging in; the other allows database changes after login. SonicWall says no fixes are coming.",
+     "action": "Move off SonicWall GMS to Network Security Manager, and until then keep the GMS server off the internet and reachable only from your admin network.",
+     "heat": 3, "cat": "vpn",
+     "source_name": "The Hacker News", "source_url": "https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html"},
+    {"title": "Debian and Ubuntu fix an APT flaw that can swap in a malicious package",
+     "why": "An attacker who can tamper with package downloads, for example through a bad mirror or proxy, can replace a verified package and run code as root. It affects Debian 12 and Ubuntu 22.04 and newer by default. No attacks are reported.",
+     "action": "Update the apt package on every Debian and Ubuntu server today, and use only trusted mirrors and networks for updates.",
+     "heat": 3, "cat": "patch",
+     "source_name": "The Hacker News", "source_url": "https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html"},
+    {"title": "Chrome 157 fixes 213 security flaws, seven of them critical",
+     "why": "Google's latest Chrome release patches 213 vulnerabilities, including critical memory bugs in its graphics components. Google has not reported any of them as exploited.",
+     "action": "Update Chrome to version 157 on all company computers and relaunch the browser, or push the update through your management console.",
+     "heat": 3, "cat": "browser",
+     "source_name": "SecurityWeek", "source_url": "https://www.securityweek.com/chrome-157-rolls-out-with-213-security-fixes-seven-rated-critical/"},
+    {"title": "Ransomware gang used AI-assisted attacks to encrypt a UK school group's computers",
+     "why": "A 3AM ransomware affiliate took admin passwords stored on the backup system, stole financial files and encrypted 37 of 50 machines. Researchers say some commands appear to have been written by an AI model.",
+     "action": "Keep admin passwords out of backup systems, use separate admin accounts for each domain, and make sure every machine runs your endpoint security agent.",
+     "heat": 3, "cat": "ransomware",
+     "source_name": "Infosecurity Magazine", "source_url": "https://www.infosecurity-magazine.com/news/3am-ransomware-hybrid-ai-uk-school/"}
   ]
 }

@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "items": [
+    {
+      "date": "2026-11-05",
+      "title": "French bank Crédit Mutuel Arkéa confirms a cyber heist estimated at $133 million",
+      "why": "Attackers got into the bank's own account through a third-party supplier's platform, sent transfers out over several days and converted the money to crypto. The bank says customer accounts and assets were not affected.",
+      "action": "Review which vendors can reach your bank or payment systems, require a second person to approve large or new-payee transfers, and set daily transfer limits with your bank.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/french-bank-confirms-cyber-heist",
+      "heat": 4,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "CISA warns an old Apple flaw is being used to steal data from iPhones and Macs",
+      "why": "CISA added a 2024 Apple flaw to its exploited list after it was chained with a WebKit bug in zero-click attacks from hacked or fake websites that steal browser cookies and device data. The activity is linked to Russia's APT29.",
+      "action": "Update every company iPhone, iPad and Mac to the latest iOS, iPadOS and macOS, and retire devices that can no longer get updates.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "SonicWall will not patch two flaws in its retired GMS management server",
+      "why": "GMS 9.5.2 and earlier is end-of-life. One flaw, rated 9.1, lets anyone with network access read internal files without logging in; the other allows database changes after login. SonicWall says no fixes are coming.",
+      "action": "Move off SonicWall GMS to Network Security Manager, and until then keep the GMS server off the internet and reachable only from your admin network.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html",
+      "heat": 3,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Debian and Ubuntu fix an APT flaw that can swap in a malicious package",
+      "why": "An attacker who can tamper with package downloads, for example through a bad mirror or proxy, can replace a verified package and run code as root. It affects Debian 12 and Ubuntu 22.04 and newer by default. No attacks are reported.",
+      "action": "Update the apt package on every Debian and Ubuntu server today, and use only trusted mirrors and networks for updates.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html",
+      "heat": 3,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Chrome 157 fixes 213 security flaws, seven of them critical",
+      "why": "Google's latest Chrome release patches 213 vulnerabilities, including critical memory bugs in its graphics components. Google has not reported any of them as exploited.",
+      "action": "Update Chrome to version 157 on all company computers and relaunch the browser, or push the update through your management console.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/chrome-157-rolls-out-with-213-security-fixes-seven-rated-critical/",
+      "heat": 3,
+      "cat": "browser"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Ransomware gang used AI-assisted attacks to encrypt a UK school group's computers",
+      "why": "A 3AM ransomware affiliate took admin passwords stored on the backup system, stole financial files and encrypted 37 of 50 machines. Researchers say some commands appear to have been written by an AI model.",
+      "action": "Keep admin passwords out of backup systems, use separate admin accounts for each domain, and make sure every machine runs your endpoint security agent.",
+      "source_name": "Infosecurity Magazine",
+      "source_url": "https://www.infosecurity-magazine.com/news/3am-ransomware-hybrid-ai-uk-school/",
+      "heat": 3,
+      "cat": "ransomware"
+    },
     {
       "date": "2026-11-04",
       "title": "Zyxel fixes a switch zero-day that attackers used to hack nearly 1,000 devices",
