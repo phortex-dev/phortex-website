@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "threat_of_the_week": {
     "source": "Security Boulevard",
     "date": "2026-11-02",
@@ -10,6 +10,46 @@
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "The Hacker News, on OpenAI research",
+      "date": "2026-11-05",
+      "title": "OpenAI's upcoming cyber model built 948 working Linux root exploits in one 30-hour run",
+      "tldr": "OpenAI said an agent pipeline using an unreleased security model reproduced 1,724 Linux kernel bugs and built 948 working privilege-escalation exploits for about 1,279 dollars each. OpenAI says a low-privilege account on an unpatched server should now be treated as close to root.",
+      "smb": "Apply Linux kernel updates on servers within days rather than months, and remove shell accounts that staff or contractors no longer need.",
+      "url": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek",
+      "date": "2026-11-04",
+      "title": "At least a dozen AI developer platforms breached in a month as attackers hunt stored AI keys",
+      "tldr": "WorkOS, Trigger.dev, CommandCode, Northflank and Chainstack are among at least twelve AI developer platforms that disclosed breaches over the past month. Wiz says stolen AI access tokens resell easily, and in two cases attackers used customer keys within 30 minutes of the vendor breach.",
+      "smb": "List every outside platform that holds your AI provider keys, rotate those keys now, and set spending alerts on each AI account.",
+      "url": "https://www.securityweek.com/ai-linked-breaches-mount-as-workos-northflank-trigger-dev-disclose-hacks/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Google Cloud",
+      "date": "2026-11-05",
+      "title": "Google Cloud adds limits and credential vaults for AI agents that hunt threats and fix code",
+      "tldr": "Google Cloud announced controls that make its CodeMender tool ask a person before writing files or running commands, plus a managed vault for agent credentials and agent sign-in without long-lived API keys. Most features are in preview and aim at companies running AI agents on Google Cloud.",
+      "smb": "Require a human to approve any AI agent action that writes files, runs commands or changes cloud settings, whatever platform you use.",
+      "url": "https://www.helpnetsecurity.com/2026/11/05/google-cloud-ai-agents-security-controls/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Help Net Security interview",
+      "date": "2026-11-05",
+      "title": "Resemble AI's Ahmed: find the AI agents already in your company before setting rules",
+      "tldr": "Zohaib Ahmed, CEO of Resemble AI, said many AI agents now pass as human visitors, and location or IP checks will soon stop telling them apart. He suggested starting with sign-in consent logs, API token records and outbound traffic to AI services to see which agents staff have already connected.",
+      "smb": "Review which third-party apps employees have granted full email or file access in your Microsoft 365 or Google admin console, and revoke the ones nobody owns.",
+      "url": "https://www.helpnetsecurity.com/2026/11/05/zohaib-ahmed-resemble-ai-detecting-ai-agent-traffic/",
+      "link_label": "Read the interview"
+    },
     {
       "cat": "news",
       "source": "MediaNama, on CERT-In",
@@ -523,6 +563,12 @@
       "outlet": "HUMAN Security",
       "focus": "Threat intelligence on ad fraud and bot malware, and how criminals use AI to scale it.",
       "url": "https://www.humansecurity.com/"
+    },
+    {
+      "name": "Zohaib Ahmed",
+      "outlet": "Resemble AI",
+      "focus": "Detecting AI agents and deepfakes in web and voice traffic.",
+      "url": "https://www.resemble.ai/"
     }
   ]
 }

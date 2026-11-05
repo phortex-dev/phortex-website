@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 4, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 5, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -63,9 +63,37 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>47</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>35</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>38</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>10</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on OpenAI research &middot; <time datetime="2026-11-05">Nov 5, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">OpenAI&#x27;s upcoming cyber model built 948 working Linux root exploits in one 30-hour run</h3>
+        <p class="intel-tldr">OpenAI said an agent pipeline using an unreleased security model reproduced 1,724 Linux kernel bugs and built 948 working privilege-escalation exploits for about 1,279 dollars each. OpenAI says a low-privilege account on an unpatched server should now be treated as close to root.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Apply Linux kernel updates on servers within days rather than months, and remove shell accounts that staff or contractors no longer need.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Google Cloud &middot; <time datetime="2026-11-05">Nov 5, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Google Cloud adds limits and credential vaults for AI agents that hunt threats and fix code</h3>
+        <p class="intel-tldr">Google Cloud announced controls that make its CodeMender tool ask a person before writing files or running commands, plus a managed vault for agent credentials and agent sign-in without long-lived API keys. Most features are in preview and aim at companies running AI agents on Google Cloud.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Require a human to approve any AI agent action that writes files, runs commands or changes cloud settings, whatever platform you use.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/05/google-cloud-ai-agents-security-controls/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Help Net Security interview &middot; <time datetime="2026-11-05">Nov 5, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Resemble AI&#x27;s Ahmed: find the AI agents already in your company before setting rules</h3>
+        <p class="intel-tldr">Zohaib Ahmed, CEO of Resemble AI, said many AI agents now pass as human visitors, and location or IP checks will soon stop telling them apart. He suggested starting with sign-in consent logs, API token records and outbound traffic to AI services to see which agents staff have already connected.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Review which third-party apps employees have granted full email or file access in your Microsoft 365 or Google admin console, and revoke the ones nobody owns.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/05/zohaib-ahmed-resemble-ai-detecting-ai-agent-traffic/" target="_blank" rel="noopener noreferrer">Read the interview &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">At least a dozen AI developer platforms breached in a month as attackers hunt stored AI keys</h3>
+        <p class="intel-tldr">WorkOS, Trigger.dev, CommandCode, Northflank and Chainstack are among at least twelve AI developer platforms that disclosed breaches over the past month. Wiz says stolen AI access tokens resell easily, and in two cases attackers used customer keys within 30 minutes of the vendor breach.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>List every outside platform that holds your AI provider keys, rotate those keys now, and set spending alerts on each AI account.</div>
+        <a class="intel-link" href="https://www.securityweek.com/ai-linked-breaches-mount-as-workos-northflank-trigger-dev-disclose-hacks/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>MediaNama, on CERT-In &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
         <h3 class="heading-sm intel-title">India&#x27;s CERT-In: an AI agent that misuses credentials is a reportable incident</h3>
@@ -439,6 +467,11 @@
         <div class="intel-voice-name">Lindsay Kaye</div>
         <div class="intel-voice-outlet">HUMAN Security</div>
         <p>Threat intelligence on ad fraud and bot malware, and how criminals use AI to scale it.</p>
+      </a>
+      <a class="card intel-voice" href="https://www.resemble.ai/" target="_blank" rel="noopener noreferrer">
+        <div class="intel-voice-name">Zohaib Ahmed</div>
+        <div class="intel-voice-outlet">Resemble AI</div>
+        <p>Detecting AI agents and deepfakes in web and voice traffic.</p>
       </a>
     </div>
   </div>
