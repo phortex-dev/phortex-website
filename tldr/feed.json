@@ -13,6 +13,16 @@
     },
     {
       "date": "2026-11-06",
+      "title": "Updating WordPress to fix the exploited core flaw can briefly expose sites",
+      "why": "New today: researchers say the 7.1.4 fix is installed by the old, flawed updater, leaving a seconds-long window to run code on the server. CISA lists the flaw as exploited and exploit code is now public on GitHub.",
+      "action": "Block web access to wp-content/upgrade and confirm it returns 403, then update to WordPress 7.1.4 or your branch's fix and check for unknown admins and plugins.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-06",
       "title": "Three charged over AI-voiced fake CEO and lawyer calls that stole $129 million",
       "why": "US prosecutors say the group emailed accounting staff as their CEO, then used AI to mimic the CEO's voice on calls and posed as law firm attorneys to direct wire transfers. Victims included hospitals, a bank and a pet food company.",
       "action": "Require a call-back to a known number and a second approver for any urgent or confidential wire request, even when the voice sounds right.",
@@ -40,16 +50,6 @@
       "source_url": "https://therecord.media/cyberattacks-refrigeration-cisa-fbi",
       "heat": 4,
       "cat": "policy"
-    },
-    {
-      "date": "2026-11-06",
-      "title": "Russia-linked hackers used poisoned websites to steal data from outdated phones",
-      "why": "Sekoia says APT29 planted code on real and spoofed sites to hit iPhones on older iOS and Android phones with old Chrome, taking cookies, messages and passwords. Every flaw used was already patched.",
-      "action": "Make sure company iPhones and Android phones, including Chrome, are on the latest updates, and flag devices that can no longer be updated for replacement.",
-      "source_name": "The Record",
-      "source_url": "https://therecord.media/russia-hackers-smartphone-cyberattacks",
-      "heat": 3,
-      "cat": "browser"
     },
     {
       "date": "2026-11-06",
