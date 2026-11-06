@@ -12,6 +12,46 @@
   "items": [
     {
       "cat": "news",
+      "source": "SecurityWeek, via the Associated Press",
+      "date": "2026-11-05",
+      "title": "Three charged over AI voice and video calls that posed as CEOs and lawyers to steal 129 million dollars",
+      "tldr": "US prosecutors in New York charged three people who allegedly emailed finance staff as their CEO, then used AI to fake the CEO's voice and sometimes face on calls before a fake lawyer gave wiring instructions. Named victims include hospital systems, a Rhode Island bank, a mutual fund company and a pet food maker.",
+      "smb": "Require a call-back to a number you already have, plus a second approver, before anyone wires money because a boss or lawyer asked on email, phone or video.",
+      "url": "https://www.securityweek.com/3-charged-in-scheme-to-use-ai-to-impersonate-ceos-and-attorneys-to-steal-129-million/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on BlueFlag Security research",
+      "date": "2026-11-06",
+      "title": "Report: 99% of code repository tokens never expire, and most AI coding agents run with admin rights",
+      "tldr": "BlueFlag Security's developer risk report found that 99% of the repository access tokens it measured had no expiry and nearly half had sat unused for over 90 days. Unapproved AI coding agents showed up in 83% of organizations, often working through accounts with administrator rights.",
+      "smb": "List the AI coding tools your developers use, give each its own limited account, and set expiry dates on every repository access token.",
+      "url": "https://www.helpnetsecurity.com/2026/11/06/blueflag-ai-agents-access-risks-report/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Check Point Research",
+      "date": "2026-11-04",
+      "title": "Codex jailbreak bundle quietly rewrote agent settings to show ads for its author's AI gateway",
+      "tldr": "Check Point found that Haiou, a popular free jailbreak bundle for OpenAI's Codex coding agent, changed the agent's global instruction files so simple greetings triggered ads for a paid AI gateway. Anyone who installed it, or the Codex-X tool that bundled it, let a stranger's instructions into their agent.",
+      "smb": "Review the instruction files, skills and add-ons your AI coding agents load, and remove any you did not write or approve.",
+      "url": "https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Avanade research",
+      "date": "2026-11-06",
+      "title": "Survey: 87% of large firms say they need better ways to approve and watch their AI",
+      "tldr": "A Vanson Bourne survey for Avanade of 3,600 decision-makers at large companies found more than half already let AI act or finish whole processes without routine human review. Among firms that rolled AI out fast, 46% reported security, privacy or compliance problems.",
+      "smb": "Name one person who approves new AI tools and decides which tasks still need a human sign-off before the AI acts.",
+      "url": "https://www.helpnetsecurity.com/2026/11/06/autonomous-ai-oversight-governance/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
       "source": "Help Net Security, on OpenAI",
       "date": "2026-11-06",
       "title": "OpenAI releases GPT-6 Cyber after it found 81 high-severity Firefox flaws",
