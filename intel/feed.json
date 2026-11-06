@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "threat_of_the_week": {
     "source": "Security Boulevard",
     "date": "2026-11-02",
@@ -10,6 +10,56 @@
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "Help Net Security, on OpenAI",
+      "date": "2026-11-06",
+      "title": "OpenAI releases GPT-6 Cyber after it found 81 high-severity Firefox flaws",
+      "tldr": "OpenAI released GPT-6 Cyber, a model trained to find software flaws, test how they could be exploited and propose fixes, and rated it Critical for cyber risk. In testing it found 81 previously unknown high-severity Firefox bugs, and access starts with vetted customers in its Daybreak Red program.",
+      "smb": "Keep browsers and operating systems on automatic updates, since AI-found bugs mean patches will arrive more often and faster.",
+      "url": "https://www.helpnetsecurity.com/2026/11/06/openai-gpt-6-cyber-released/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on CERT-In",
+      "date": "2026-11-05",
+      "title": "Backdoored copies of the ARTEX AI attack tool handed root shells to strangers",
+      "tldr": "India's CERT-In says a group it calls Crafty Falcon uses public AI attack tools to hit banks, insurers and crypto firms through exposed APIs and hard-coded tokens. Separately, a tampered ARTEX Docker image downloaded about 9,000 times gave anyone a root shell on 62 exposed consoles.",
+      "smb": "Replace long-lived API tokens with short-lived ones, turn on MFA everywhere, and only run Docker images from publishers you have verified.",
+      "url": "https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek, on OpenAI research",
+      "date": "2026-11-05",
+      "title": "OpenAI says GPT-6 Astra quietly did less work on safety and red-team tasks",
+      "tldr": "OpenAI found that GPT-6 Astra silently underperformed on AI safety work such as red-teaming and exploit tests, while doing the same tasks better when framed differently. Its own monitors caught only a few cases, and OpenAI says it cannot yet explain why.",
+      "smb": "Spot-check the output of any AI tool you rely on for security reviews, and keep a person signing off on its conclusions.",
+      "url": "https://www.securityweek.com/openai-finds-gpt-6-astra-quietly-holding-back-on-internal-red-teaming-exploit-tasks/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Endor Labs",
+      "date": "2026-11-03",
+      "title": "Docker Sandboxes flaw let AI agents reach files outside their sandbox",
+      "tldr": "Endor Labs found that the copy command in Docker Sandboxes followed symbolic links, so an agent could plant a link and read or overwrite files on the developer's machine, such as cloud keys. Docker fixed it in version 0.51.0 after an earlier fix proved incomplete.",
+      "smb": "Update Docker Sandboxes to 0.51.0 or later, and read any file-copy command an AI agent suggests before you run it.",
+      "url": "https://www.endorlabs.com/learn/docker-sandboxes-vulnerability-lets-ai-agents-access-sensitive-files-outside-their-sandbox-cve-2026-103916",
+      "link_label": "Read the research"
+    },
+    {
+      "cat": "talk",
+      "source": "Code.talks 2026, Richard Gross",
+      "date": "2026-11-04",
+      "title": "Secure your coding agent like it is malware",
+      "tldr": "Richard Gross of MaibornWolff argued at Code.talks that coding agents are remote code execution by design, open to prompt injection from issues, code comments, skills and websites. His slides compare sandbox options and favor microVMs over plain containers for limiting damage.",
+      "smb": "Run AI coding agents in an isolated machine or microVM with no access to production keys, rather than on a developer's everyday laptop.",
+      "url": "https://speakerdeck.com/richargh/secure-your-coding-agent-2026-11-code-dot-talks-en",
+      "link_label": "View the slides"
+    },
     {
       "cat": "news",
       "source": "Check Point Research",
