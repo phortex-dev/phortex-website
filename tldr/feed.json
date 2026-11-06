@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "items": [
+    {
+      "date": "2026-11-06",
+      "title": "Chainalysis says password hashes and live tokens for all users were exposed",
+      "why": "New today: the blockchain analysis firm widened its breach, saying names, usernames, password hashes and live tokens for every user were exposed. KYT, Reactor and its login page are offline while access is restored by IP allowlist.",
+      "action": "Reset Chainalysis passwords through its login page rather than email links, rotate API keys, and change any reused passwords elsewhere.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/chainalysis-all-users-hit-by-agentic-cyberattack",
+      "heat": 4,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Three charged over AI-voiced fake CEO and lawyer calls that stole $129 million",
+      "why": "US prosecutors say the group emailed accounting staff as their CEO, then used AI to mimic the CEO's voice on calls and posed as law firm attorneys to direct wire transfers. Victims included hospitals, a bank and a pet food company.",
+      "action": "Require a call-back to a known number and a second approver for any urgent or confidential wire request, even when the voice sounds right.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/3-charged-in-scheme-to-use-ai-to-impersonate-ceos-and-attorneys-to-steal-129-million/",
+      "heat": 4,
+      "cat": "phishing"
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Node2Shell compression flaw now confirmed in 19 Cisco products and Splunk",
+      "why": "Cisco updated its advisory for the actively exploited Brotli decoder flaw, first found in Node.js, listing 19 affected products with dozens more under review. Nearly a dozen Splunk products are also affected.",
+      "action": "Check Cisco and Splunk advisories for your products, apply fixes and restart services, and block Brotli-compressed requests at the proxy until patched.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/cisco-watchguard-release-patches-sonicwall-wont-fix-gms-flaws/",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-06",
+      "title": "CISA and FBI tell operators to lock down refrigeration controls after freezer attacks",
+      "why": "After hackers remotely warmed freezers at hundreds of European supermarkets and French blood banks, US agencies warned that exposed or unpatched cooling controllers can be forced into heating cycles. Food, healthcare and chemical firms are most at risk.",
+      "action": "Find any refrigeration or building controller reachable from the internet, remove it or put it behind a VPN, change default logins and update firmware.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/cyberattacks-refrigeration-cisa-fbi",
+      "heat": 4,
+      "cat": "policy"
+    },
+    {
+      "date": "2026-11-06",
+      "title": "Russia-linked hackers used poisoned websites to steal data from outdated phones",
+      "why": "Sekoia says APT29 planted code on real and spoofed sites to hit iPhones on older iOS and Android phones with old Chrome, taking cookies, messages and passwords. Every flaw used was already patched.",
+      "action": "Make sure company iPhones and Android phones, including Chrome, are on the latest updates, and flag devices that can no longer be updated for replacement.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/russia-hackers-smartphone-cyberattacks",
+      "heat": 3,
+      "cat": "browser"
+    },
+    {
+      "date": "2026-11-06",
+      "title": "SonicWall will not fix a 9.1-rated flaw in its retired GMS management platform",
+      "why": "GMS 9.5.2 and earlier has an unauthenticated file read flaw and a SQL injection bug, and SonicWall says no update will be released because the product reached end of life. No attacks are reported yet.",
+      "action": "Move off SonicWall GMS to Network Security Manager, and until then keep GMS off the internet and limit access to admin networks.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html",
+      "heat": 3,
+      "cat": "vpn"
+    },
     {
       "date": "2026-11-05",
       "title": "French bank Crédit Mutuel Arkéa confirms a cyber heist estimated at $133 million",

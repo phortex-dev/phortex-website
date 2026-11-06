@@ -1,59 +1,29 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "items": [
-    {
-      "title": "French bank Crédit Mutuel Arkéa confirms a cyber heist estimated at $133 million",
-      "why": "Attackers got into the bank's own account through a third-party supplier's platform, sent transfers out over several days and converted the money to crypto. The bank says customer accounts and assets were not affected.",
-      "action": "Review which vendors can reach your bank or payment systems, require a second person to approve large or new-payee transfers, and set daily transfer limits with your bank.",
-      "source_name": "The Record",
-      "source_url": "https://therecord.media/french-bank-confirms-cyber-heist",
-      "heat": 4,
-      "cat": "breach"
-    },
-    {
-      "title": "CISA warns an old Apple flaw is being used to steal data from iPhones and Macs",
-      "why": "CISA added a 2024 Apple flaw to its exploited list after it was chained with a WebKit bug in zero-click attacks from hacked or fake websites that steal browser cookies and device data. The activity is linked to Russia's APT29.",
-      "action": "Update every company iPhone, iPad and Mac to the latest iOS, iPadOS and macOS, and retire devices that can no longer get updates.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html",
-      "heat": 4,
-      "cat": "patch"
-    },
-    {
-      "title": "Phishing sites copy 189 US banks to steal business banking logins",
-      "why": "Researchers at Kela found more than 300 fake bank sites, mostly posing as mid-sized regional banks and aimed at business and treasury logins. Sites show a fake suspended page to repeat visitors, so they look taken down when they are not.",
-      "action": "Reach your bank only from a saved bookmark or typed address, never from an email or search ad link, and turn on your bank's strongest login and payment approval options.",
-      "heat": 3,
-      "cat": "phishing",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/bank-phishing-sites-show-fake-suspended-pages-to-evade-takedowns/"
-    },
-    {
-      "title": "Stolen Microsoft 365 app secrets used to raid about 27 organizations through IT providers",
-      "why": "Todyl says one attacker used stolen Entra ID app credentials to log in as trusted apps, spread within MSP customer groups, and took SharePoint files and mail, including password lists, VPN profiles and backup keys.",
-      "action": "Ask your IT provider to review app registrations and service sign-ins in Entra ID, remove unused apps, rotate app secrets, and keep passwords and keys out of SharePoint files.",
-      "heat": 3,
-      "cat": "cloud",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/hackers-use-stolen-microsoft-entra-id-app-credentials/"
-    },
-    {
-      "title": "Zyxel's earlier switch patch missed the flaw attackers used; a newer fix is out",
-      "why": "Update to yesterday's story: Binarly found the earlier GS1900 fix did not stop the exploit used to hack nearly 1,000 switches, which allows root commands without a login. Ten GS1900 models are affected; firmware 2.90 Patch 3 fixes it.",
-      "action": "Update every Zyxel GS1900 switch to firmware 2.90 Patch 3, change any default admin passwords, and keep switch management off the internet.",
-      "heat": 3,
-      "cat": "patch",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html"
-    },
-    {
-      "title": "Chrome 157 fixes 213 security flaws, seven of them critical",
-      "why": "Google's latest Chrome release patches 213 vulnerabilities, including critical memory bugs in its graphics components. Google has not reported any of them as exploited.",
-      "action": "Update Chrome to version 157 on all company computers and relaunch the browser, or push the update through your management console.",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/chrome-157-rolls-out-with-213-security-fixes-seven-rated-critical/",
-      "heat": 3,
-      "cat": "browser"
-    }
+    {"title": "Chainalysis says password hashes and live tokens for all users were exposed",
+     "why": "New today: the blockchain analysis firm widened its breach, saying names, usernames, password hashes and live tokens for every user were exposed. KYT, Reactor and its login page are offline while access is restored by IP allowlist.",
+     "action": "Reset Chainalysis passwords through its login page rather than email links, rotate API keys, and change any reused passwords elsewhere.",
+     "heat": 4, "cat": "breach", "source_name": "The Record", "source_url": "https://therecord.media/chainalysis-all-users-hit-by-agentic-cyberattack"},
+    {"title": "Three charged over AI-voiced fake CEO and lawyer calls that stole $129 million",
+     "why": "US prosecutors say the group emailed accounting staff as their CEO, then used AI to mimic the CEO's voice on calls and posed as law firm attorneys to direct wire transfers. Victims included hospitals, a bank and a pet food company.",
+     "action": "Require a call-back to a known number and a second approver for any urgent or confidential wire request, even when the voice sounds right.",
+     "heat": 4, "cat": "phishing", "source_name": "SecurityWeek", "source_url": "https://www.securityweek.com/3-charged-in-scheme-to-use-ai-to-impersonate-ceos-and-attorneys-to-steal-129-million/"},
+    {"title": "Node2Shell compression flaw now confirmed in 19 Cisco products and Splunk",
+     "why": "Cisco updated its advisory for the actively exploited Brotli decoder flaw, first found in Node.js, listing 19 affected products with dozens more under review. Nearly a dozen Splunk products are also affected.",
+     "action": "Check Cisco and Splunk advisories for your products, apply fixes and restart services, and block Brotli-compressed requests at the proxy until patched.",
+     "heat": 4, "cat": "patch", "source_name": "SecurityWeek", "source_url": "https://www.securityweek.com/cisco-watchguard-release-patches-sonicwall-wont-fix-gms-flaws/"},
+    {"title": "CISA and FBI tell operators to lock down refrigeration controls after freezer attacks",
+     "why": "After hackers remotely warmed freezers at hundreds of European supermarkets and French blood banks, US agencies warned that exposed or unpatched cooling controllers can be forced into heating cycles. Food, healthcare and chemical firms are most at risk.",
+     "action": "Find any refrigeration or building controller reachable from the internet, remove it or put it behind a VPN, change default logins and update firmware.",
+     "heat": 4, "cat": "policy", "source_name": "The Record", "source_url": "https://therecord.media/cyberattacks-refrigeration-cisa-fbi"},
+    {"title": "Russia-linked hackers used poisoned websites to steal data from outdated phones",
+     "why": "Sekoia says APT29 planted code on real and spoofed sites to hit iPhones on older iOS and Android phones with old Chrome, taking cookies, messages and passwords. Every flaw used was already patched.",
+     "action": "Make sure company iPhones and Android phones, including Chrome, are on the latest updates, and flag devices that can no longer be updated for replacement.",
+     "heat": 3, "cat": "browser", "source_name": "The Record", "source_url": "https://therecord.media/russia-hackers-smartphone-cyberattacks"},
+    {"title": "SonicWall will not fix a 9.1-rated flaw in its retired GMS management platform",
+     "why": "GMS 9.5.2 and earlier has an unauthenticated file read flaw and a SQL injection bug, and SonicWall says no update will be released because the product reached end of life. No attacks are reported yet.",
+     "action": "Move off SonicWall GMS to Network Security Manager, and until then keep GMS off the internet and limit access to admin networks.",
+     "heat": 3, "cat": "vpn", "source_name": "The Hacker News", "source_url": "https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html"}
   ]
 }
