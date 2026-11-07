@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "items": [
     {
-      "title": "Chainalysis says password hashes and live tokens for all users were exposed",
-      "why": "New today: the blockchain analysis firm widened its breach, saying names, usernames, password hashes and live tokens for every user were exposed. KYT, Reactor and its login page are offline while access is restored by IP allowlist.",
-      "action": "Reset Chainalysis passwords through its login page rather than email links, rotate API keys, and change any reused passwords elsewhere.",
+      "title": "Attackers are using a SonicWall VPN flaw that skips SAML and MFA sign-in checks",
+      "why": "SonicWall says a SonicOS SSL VPN bug lets someone with valid credentials for another login method bypass SAML and its MFA. CISA added it to its exploited list on November 6. Gen7 and Gen8 firewalls with SAML VPN login are exposed.",
+      "action": "Upgrade SonicOS to 7.3.4-7013 (Gen7) or 8.2.3-8015 (Gen8) now; there is no workaround. Then review recent VPN logins for unfamiliar users.",
+      "heat": 5,
+      "cat": "vpn",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/"
+    },
+    {
+      "title": "OpenSSH fixes 'SSHole', which lets long passwords open locked accounts like root",
+      "why": "On Linux systems built on musl without PAM, such as Alpine, OpenWrt, Buildroot and Yocto, any 257 to 1,024 character password can log in to accounts that should never accept one. No attacks yet, but it is simple to try.",
+      "action": "Update to OpenSSH 10.6p2 and restart sshd on Alpine servers, containers and network gear; if you cannot patch yet, turn off SSH password logins.",
+      "heat": 4,
+      "cat": "patch",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass/"
+    },
+    {
+      "title": "DigiCert breach exposed business customer contacts and identity documents",
+      "why": "A system that was left reachable from the internet after a 2025 migration was accessed from June 27. Names, business emails, phones and validation papers such as driver's licenses were taken. DigiCert says certificate issuance was not affected.",
+      "action": "Treat unexpected emails or calls about your DigiCert certificates or this breach as suspect; verify through your DigiCert account, not links or numbers sent to you.",
       "heat": 4,
       "cat": "breach",
       "source_name": "The Record",
-      "source_url": "https://therecord.media/chainalysis-all-users-hit-by-agentic-cyberattack"
+      "source_url": "https://therecord.media/digicert-certificate-authority-reports-data-breach"
     },
     {
-      "title": "Updating WordPress to fix the exploited core flaw can briefly expose sites",
-      "why": "New today: researchers say the 7.1.4 fix is installed by the old, flawed updater, leaving a seconds-long window to run code on the server. CISA lists the flaw as exploited and exploit code is now public on GitHub.",
-      "action": "Block web access to wp-content/upgrade and confirm it returns 403, then update to WordPress 7.1.4 or your branch's fix and check for unknown admins and plugins.",
-      "heat": 4,
-      "cat": "patch",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html"
-    },
-    {
-      "title": "Three charged over AI-voiced fake CEO and lawyer calls that stole $129 million",
-      "why": "US prosecutors say the group emailed accounting staff as their CEO, then used AI to mimic the CEO's voice on calls and posed as law firm attorneys to direct wire transfers. Victims included hospitals, a bank and a pet food company.",
-      "action": "Require a call-back to a known number and a second approver for any urgent or confidential wire request, even when the voice sounds right.",
-      "heat": 4,
+      "title": "Fake OpenAI and SpaceX event invites hijack Microsoft 365 and Google work accounts",
+      "why": "Researchers at Push found fake event sign-up pages aimed at marketing staff. Microsoft users get a device code that signs the attacker in, and Google users hit a proxy that captures passwords, MFA and session cookies.",
+      "action": "Block Microsoft device-code sign-in with Conditional Access for anyone who does not need it, and tell staff never to enter a code from an event or invite page.",
+      "heat": 3,
       "cat": "phishing",
       "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/3-charged-in-scheme-to-use-ai-to-impersonate-ceos-and-attorneys-to-steal-129-million/"
+      "source_url": "https://www.securityweek.com/in-other-news-trezor-implant-llmjacking-bills-hit-1m-sap-flaws-weaponized-within-days/"
     },
     {
-      "title": "Node2Shell compression flaw now confirmed in 19 Cisco products and Splunk",
-      "why": "Cisco updated its advisory for the actively exploited Brotli decoder flaw, first found in Node.js, listing 19 affected products with dozens more under review. Nearly a dozen Splunk products are also affected.",
-      "action": "Check Cisco and Splunk advisories for your products, apply fixes and restart services, and block Brotli-compressed requests at the proxy until patched.",
-      "heat": 4,
-      "cat": "patch",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/cisco-watchguard-release-patches-sonicwall-wont-fix-gms-flaws/"
-    },
-    {
-      "title": "CISA and FBI tell operators to lock down refrigeration controls after freezer attacks",
-      "why": "After hackers remotely warmed freezers at hundreds of European supermarkets and French blood banks, US agencies warned that exposed or unpatched cooling controllers can be forced into heating cycles. Food, healthcare and chemical firms are most at risk.",
-      "action": "Find any refrigeration or building controller reachable from the internet, remove it or put it behind a VPN, change default logins and update firmware.",
-      "heat": 4,
-      "cat": "policy",
-      "source_name": "The Record",
-      "source_url": "https://therecord.media/cyberattacks-refrigeration-cisa-fbi"
-    },
-    {
-      "title": "SonicWall will not fix a 9.1-rated flaw in its retired GMS management platform",
-      "why": "GMS 9.5.2 and earlier has an unauthenticated file read flaw and a SQL injection bug, and SonicWall says no update will be released because the product reached end of life. No attacks are reported yet.",
-      "action": "Move off SonicWall GMS to Network Security Manager, and until then keep GMS off the internet and limit access to admin networks.",
+      "title": "Claude Code approval rules leaked about 2,500 secrets into public GitHub repos",
+      "why": "Apiiro found that choosing 'don't ask again' saves the full command, passwords and keys included, to a local settings file that developers then committed to 1,994 public repositories. Many standard secret scanners missed them.",
+      "action": "Search your repos and their history for .claude/settings.local.json, rotate any credentials found, and keep secrets in environment variables, not in commands.",
       "heat": 3,
-      "cat": "vpn",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html"
+      "cat": "ai",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/claude-codes-dont-ask-again-feature-exposed"
+    },
+    {
+      "title": "Fake security tools on GitHub infect more than 2,000 PCs with stealers",
+      "why": "Doctor Web says repositories posing as scanners and log tools run hidden PowerShell when built in Visual Studio, then install remote-access trojans and steal browser passwords, VPN settings and FTP logins.",
+      "action": "Only run GitHub tools from known publishers, check project files for pre-build commands first, and test unfamiliar code in a separate virtual machine.",
+      "heat": 3,
+      "cat": "malware",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/hackers-use-fake-github-security-tools"
     }
   ]
 }
