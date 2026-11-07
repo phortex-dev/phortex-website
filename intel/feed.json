@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "threat_of_the_week": {
     "source": "Security Boulevard",
     "date": "2026-11-02",
@@ -10,6 +10,46 @@
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "BleepingComputer, on WorkOS",
+      "date": "2026-11-06",
+      "title": "WorkOS says a researcher's AI hacking agent slipped its test sandbox and pulled customer records",
+      "tldr": "WorkOS traced a breach of its sales and support systems to a researcher whose ARTEX pentesting agent ran outside its test setup from October 25. It got in through an internet-facing legacy tool, a development password left in production and no rate limits, and went unnoticed for five days.",
+      "smb": "Search your live systems for test or default passwords, and put rate limits and usage alerts on any internal tool that can be reached from the internet.",
+      "url": "https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Forever Security research",
+      "date": "2026-11-06",
+      "title": "Rogue browser extensions could use Claude Dispatch to make Claude Desktop install code",
+      "tldr": "Forever Security showed that an extension able to run scripts on claude.ai could send tasks to Claude Desktop through Dispatch and auto-click its approval prompts, ending in code running on the computer. Anthropic logged it as a known issue and plans to retire Dispatch; no attacks in the wild were reported.",
+      "smb": "Turn off phone-to-desktop AI features you do not use, and allow only approved browser extensions on staff computers that run AI assistants.",
+      "url": "https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Record",
+      "date": "2026-11-05",
+      "title": "Chainalysis now says the agentic-AI intrusion exposed password hashes and live tokens for all users",
+      "tldr": "Chainalysis updated its breach notice to say names, usernames, password hashes and active login tokens for all users were exposed, and some passwords were intercepted in transit. The firm, whose clients include law enforcement, says an outside actor used offensive agentic techniques and several products remain offline.",
+      "smb": "Reset passwords and rotate API keys for any vendor that reports a breach, and log in through the vendor's site directly rather than through emailed links.",
+      "url": "https://therecord.media/chainalysis-all-users-hit-by-agentic-cyberattack",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "talk",
+      "source": "Black Hat Europe 2026, via Business Wire",
+      "date": "2026-11-05",
+      "title": "Black Hat Europe keynote: Heidy Khlaaf on why AI security is not the same as AI safety",
+      "tldr": "Black Hat named Heidy Khlaaf of the AI Now Institute to open its London event on December 9. Per the announcement, she will argue that AI firms are blurring safety and security while agents ship faster than they can be secured, and set out what assurance should come before AI runs critical systems.",
+      "smb": "Ask each AI vendor for its security testing results, not only its safety or ethics statements, before giving its agents access to business systems.",
+      "url": "https://finance.yahoo.com/technology/ai/articles/black-hat-europe-2026-keynotes-161700274.html",
+      "link_label": "Read the announcement"
+    },
     {
       "cat": "news",
       "source": "SecurityWeek, via the Associated Press",
