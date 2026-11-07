@@ -50,10 +50,10 @@
   <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
   <div class="tl-body">
     <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">OpenSSH fixes &#x27;SSHole&#x27;, which lets long passwords open locked accounts like root</h3>
-    <p class="tl-why">On Linux systems built on musl without PAM, such as Alpine, OpenWrt, Buildroot and Yocto, any 257 to 1,024 character password can log in to accounts that should never accept one. No attacks yet, but it is simple to try.</p>
-    <p class="tl-do"><strong>Do this:</strong> Update to OpenSSH 10.6p2 and restart sshd on Alpine servers, containers and network gear; if you cannot patch yet, turn off SSH password logins.</p>
-    <a class="tl-src" href="https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass/" target="_blank" rel="noopener noreferrer">SecurityWeek &middot; <time datetime="2026-11-07">Nov 7</time> &rarr;</a>
+    <h3 class="tl-title">QNAP says attackers are breaking into NAS devices through old Plex Media Server installs</h3>
+    <p class="tl-why">New today: QNAP says some customers&#x27; NAS boxes were compromised through the Plex2Shell flaws in Plex Media Server, exploited since mid-October. QNAP&#x27;s own operating system is not affected, but an exposed, unpatched Plex server puts the whole NAS at risk.</p>
+    <p class="tl-do"><strong>Do this:</strong> Update Plex to 1.43.3.10861 or later from the App Center and stop forwarding port 32400. If Plex was exposed while unpatched, reinstall QTS and reset Plex and NAS passwords.</p>
+    <a class="tl-src" href="https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/" target="_blank" rel="noopener noreferrer">BleepingComputer &middot; <time datetime="2026-11-07">Nov 7</time> &rarr;</a>
   </div>
 </article>
     </div>
@@ -65,7 +65,7 @@
     <div class="eyebrow">Daily briefings</div>
     <h2 class="heading-lg">Newest first</h2>
     <div class="tl-filters" role="group" aria-label="Filter by topic">
-      <button type="button" class="tl-filter" aria-pressed="true" data-filter="all">All <span>57</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="vpn">Firewall &amp; VPN <span>5</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="phishing">Phishing <span>4</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="ransomware">Ransomware <span>2</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="patch">Patch now <span>21</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="breach">Data breach <span>8</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="crypto">Crypto theft <span>7</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="browser">Browser &amp; apps <span>2</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="malware">Malware <span>4</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="cloud">Cloud &amp; accounts <span>2</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="ai">AI <span>1</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="policy">Policy &amp; law <span>1</span></button>
+      <button type="button" class="tl-filter" aria-pressed="true" data-filter="all">All <span>57</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="vpn">Firewall &amp; VPN <span>5</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="phishing">Phishing <span>4</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="ransomware">Ransomware <span>2</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="patch">Patch now <span>23</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="breach">Data breach <span>8</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="crypto">Crypto theft <span>7</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="browser">Browser &amp; apps <span>2</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="malware">Malware <span>3</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="cloud">Cloud &amp; accounts <span>2</span></button><button type="button" class="tl-filter" aria-pressed="false" data-filter="policy">Policy &amp; law <span>1</span></button>
     </div>
     <section class="tl-day" aria-labelledby="d-2026-11-07">
       <h2 class="tl-day-h" id="d-2026-11-07"><time datetime="2026-11-07">Saturday, November 7</time><span>6 stories</span></h2>
@@ -84,6 +84,16 @@
   <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
   <div class="tl-body">
     <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <h3 class="tl-title">QNAP says attackers are breaking into NAS devices through old Plex Media Server installs</h3>
+    <p class="tl-why">New today: QNAP says some customers&#x27; NAS boxes were compromised through the Plex2Shell flaws in Plex Media Server, exploited since mid-October. QNAP&#x27;s own operating system is not affected, but an exposed, unpatched Plex server puts the whole NAS at risk.</p>
+    <p class="tl-do"><strong>Do this:</strong> Update Plex to 1.43.3.10861 or later from the App Center and stop forwarding port 32400. If Plex was exposed while unpatched, reinstall QTS and reset Plex and NAS passwords.</p>
+    <a class="tl-src" href="https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/" target="_blank" rel="noopener noreferrer">BleepingComputer &rarr;</a>
+  </div>
+</article>
+<article class="tl-card" data-cat="patch">
+  <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
+  <div class="tl-body">
+    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
     <h3 class="tl-title">OpenSSH fixes &#x27;SSHole&#x27;, which lets long passwords open locked accounts like root</h3>
     <p class="tl-why">On Linux systems built on musl without PAM, such as Alpine, OpenWrt, Buildroot and Yocto, any 257 to 1,024 character password can log in to accounts that should never accept one. No attacks yet, but it is simple to try.</p>
     <p class="tl-do"><strong>Do this:</strong> Update to OpenSSH 10.6p2 and restart sshd on Alpine servers, containers and network gear; if you cannot patch yet, turn off SSH password logins.</p>
@@ -93,7 +103,7 @@
 <article class="tl-card" data-cat="breach">
   <div class="tl-art tl-art-md" style="--c:#8B5CF6" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="12" rx="13" ry="5"/><path d="M11 12v12c0 3 6 5 13 5s13-2 13-5V12"/><path d="M11 24v10c0 3 6 5 13 5"/><path d="M33 31l6 6M39 31l-6 6"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#8B5CF6">Data breach</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <div class="tl-meta"><span class="tl-rank">#4</span><span class="tl-cat" style="--c:#8B5CF6">Data breach</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
     <h3 class="tl-title">DigiCert breach exposed business customer contacts and identity documents</h3>
     <p class="tl-why">A system that was left reachable from the internet after a 2025 migration was accessed from June 27. Names, business emails, phones and validation papers such as driver&#x27;s licenses were taken. DigiCert says certificate issuance was not affected.</p>
     <p class="tl-do"><strong>Do this:</strong> Treat unexpected emails or calls about your DigiCert certificates or this breach as suspect; verify through your DigiCert account, not links or numbers sent to you.</p>
@@ -103,31 +113,21 @@
 <article class="tl-card" data-cat="phishing">
   <div class="tl-art tl-art-md" style="--c:#F5A524" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="12" width="34" height="24" rx="3"/><path d="M7 15l17 12 17-12"/><path d="M33 30v6a4 4 0 0 1-8 0"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#4</span><span class="tl-cat" style="--c:#F5A524">Phishing</span><span class="tl-heat" title="Heat 3 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span>Notable</span></div>
+    <div class="tl-meta"><span class="tl-rank">#5</span><span class="tl-cat" style="--c:#F5A524">Phishing</span><span class="tl-heat" title="Heat 3 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span>Notable</span></div>
     <h3 class="tl-title">Fake OpenAI and SpaceX event invites hijack Microsoft 365 and Google work accounts</h3>
     <p class="tl-why">Researchers at Push found fake event sign-up pages aimed at marketing staff. Microsoft users get a device code that signs the attacker in, and Google users hit a proxy that captures passwords, MFA and session cookies.</p>
     <p class="tl-do"><strong>Do this:</strong> Block Microsoft device-code sign-in with Conditional Access for anyone who does not need it, and tell staff never to enter a code from an event or invite page.</p>
     <a class="tl-src" href="https://www.securityweek.com/in-other-news-trezor-implant-llmjacking-bills-hit-1m-sap-flaws-weaponized-within-days/" target="_blank" rel="noopener noreferrer">SecurityWeek &rarr;</a>
   </div>
 </article>
-<article class="tl-card" data-cat="ai">
-  <div class="tl-art tl-art-md" style="--c:#C084FC" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="13" width="22" height="22" rx="4"/><path d="M19 8v5M29 8v5M19 35v5M29 35v5M8 19h5M8 29h5M35 19h5M35 29h5"/><path d="M20 28l4-9 4 9M21.5 25h5"/></svg></div>
+<article class="tl-card" data-cat="patch">
+  <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#5</span><span class="tl-cat" style="--c:#C084FC">AI</span><span class="tl-heat" title="Heat 3 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span>Notable</span></div>
-    <h3 class="tl-title">Claude Code approval rules leaked about 2,500 secrets into public GitHub repos</h3>
-    <p class="tl-why">Apiiro found that choosing &#x27;don&#x27;t ask again&#x27; saves the full command, passwords and keys included, to a local settings file that developers then committed to 1,994 public repositories. Many standard secret scanners missed them.</p>
-    <p class="tl-do"><strong>Do this:</strong> Search your repos and their history for .claude/settings.local.json, rotate any credentials found, and keep secrets in environment variables, not in commands.</p>
-    <a class="tl-src" href="https://gbhackers.com/claude-codes-dont-ask-again-feature-exposed" target="_blank" rel="noopener noreferrer">GBHackers &rarr;</a>
-  </div>
-</article>
-<article class="tl-card" data-cat="malware">
-  <div class="tl-art tl-art-md" style="--c:#FF8A3D" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="27" rx="8" ry="11"/><path d="M24 16v22M18 12l3 4M30 12l-3 4M8 22h8M32 22h8M8 32h8M32 32h8"/></svg></div>
-  <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#6</span><span class="tl-cat" style="--c:#FF8A3D">Malware</span><span class="tl-heat" title="Heat 3 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span>Notable</span></div>
-    <h3 class="tl-title">Fake security tools on GitHub infect more than 2,000 PCs with stealers</h3>
-    <p class="tl-why">Doctor Web says repositories posing as scanners and log tools run hidden PowerShell when built in Visual Studio, then install remote-access trojans and steal browser passwords, VPN settings and FTP logins.</p>
-    <p class="tl-do"><strong>Do this:</strong> Only run GitHub tools from known publishers, check project files for pre-build commands first, and test unfamiliar code in a separate virtual machine.</p>
-    <a class="tl-src" href="https://gbhackers.com/hackers-use-fake-github-security-tools" target="_blank" rel="noopener noreferrer">GBHackers &rarr;</a>
+    <div class="tl-meta"><span class="tl-rank">#6</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 3 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span>Notable</span></div>
+    <h3 class="tl-title">Veeam ships fixes for a critical Linux kernel flaw inside its backup appliances</h3>
+    <p class="tl-why">New today: a 9.8-rated bug in Linux&#x27;s TCP code affects Veeam Software and Infrastructure Appliances, Linux helpers and cloud plug-ins. Crash exploits are circulating, though no break-ins are confirmed. Backups are a top ransomware target.</p>
+    <p class="tl-do"><strong>Do this:</strong> Install the kernel update from Veeam Host Management and apply Veeam&#x27;s private fix for Backup &amp; Replication 13.1.2.57. On AMD EPYC hosts, watch the appliance reboot.</p>
+    <a class="tl-src" href="https://securityonline.info/veeam-software-appliance-cve-2026-98432-patched/" target="_blank" rel="noopener noreferrer">Daily CyberSecurity &rarr;</a>
   </div>
 </article>
       </div>

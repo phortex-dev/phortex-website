@@ -13,6 +13,16 @@
     },
     {
       "date": "2026-11-07",
+      "title": "QNAP says attackers are breaking into NAS devices through old Plex Media Server installs",
+      "why": "New today: QNAP says some customers' NAS boxes were compromised through the Plex2Shell flaws in Plex Media Server, exploited since mid-October. QNAP's own operating system is not affected, but an exposed, unpatched Plex server puts the whole NAS at risk.",
+      "action": "Update Plex to 1.43.3.10861 or later from the App Center and stop forwarding port 32400. If Plex was exposed while unpatched, reinstall QTS and reset Plex and NAS passwords.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-07",
       "title": "OpenSSH fixes 'SSHole', which lets long passwords open locked accounts like root",
       "why": "On Linux systems built on musl without PAM, such as Alpine, OpenWrt, Buildroot and Yocto, any 257 to 1,024 character password can log in to accounts that should never accept one. No attacks yet, but it is simple to try.",
       "action": "Update to OpenSSH 10.6p2 and restart sshd on Alpine servers, containers and network gear; if you cannot patch yet, turn off SSH password logins.",
@@ -43,23 +53,13 @@
     },
     {
       "date": "2026-11-07",
-      "title": "Claude Code approval rules leaked about 2,500 secrets into public GitHub repos",
-      "why": "Apiiro found that choosing 'don't ask again' saves the full command, passwords and keys included, to a local settings file that developers then committed to 1,994 public repositories. Many standard secret scanners missed them.",
-      "action": "Search your repos and their history for .claude/settings.local.json, rotate any credentials found, and keep secrets in environment variables, not in commands.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/claude-codes-dont-ask-again-feature-exposed",
+      "title": "Veeam ships fixes for a critical Linux kernel flaw inside its backup appliances",
+      "why": "New today: a 9.8-rated bug in Linux's TCP code affects Veeam Software and Infrastructure Appliances, Linux helpers and cloud plug-ins. Crash exploits are circulating, though no break-ins are confirmed. Backups are a top ransomware target.",
+      "action": "Install the kernel update from Veeam Host Management and apply Veeam's private fix for Backup & Replication 13.1.2.57. On AMD EPYC hosts, watch the appliance reboot.",
+      "source_name": "Daily CyberSecurity",
+      "source_url": "https://securityonline.info/veeam-software-appliance-cve-2026-98432-patched/",
       "heat": 3,
-      "cat": "ai"
-    },
-    {
-      "date": "2026-11-07",
-      "title": "Fake security tools on GitHub infect more than 2,000 PCs with stealers",
-      "why": "Doctor Web says repositories posing as scanners and log tools run hidden PowerShell when built in Visual Studio, then install remote-access trojans and steal browser passwords, VPN settings and FTP logins.",
-      "action": "Only run GitHub tools from known publishers, check project files for pre-build commands first, and test unfamiliar code in a separate virtual machine.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/hackers-use-fake-github-security-tools",
-      "heat": 3,
-      "cat": "malware"
+      "cat": "patch"
     },
     {
       "date": "2026-11-06",
