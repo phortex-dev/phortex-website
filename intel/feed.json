@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "threat_of_the_week": {
     "source": "Security Boulevard",
     "date": "2026-11-02",
@@ -10,6 +10,36 @@
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "Check Point Research",
+      "date": "2026-11-05",
+      "title": "Exposed ARTEX consoles show AI agents stole 190,000 game logins and 300 Apple signing certificates",
+      "tldr": "Check Point read ten misconfigured ARTEX operator panels and found AI agents, given only a goal, broke into gray-market game and app-signing shops through weak passwords, open APIs and injection flaws. Most runs used DeepSeek and Kimi models, and one operator switched to them after Claude refused.",
+      "smb": "Scan your public web apps for hardcoded admin passwords, unauthenticated APIs and credential files in the web root, and fix those before anything else.",
+      "url": "https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/",
+      "link_label": "Read the research"
+    },
+    {
+      "cat": "news",
+      "source": "iTWire, on Apiiro research",
+      "date": "2026-11-07",
+      "title": "Claude Code's don't-ask-again approvals left passwords and keys in public GitHub repositories",
+      "tldr": "Apiiro found that approving a command with don't ask again saves the full command, including any inline password, to a local settings file that developers then push to GitHub. It counted 2,539 distinct secrets across 1,994 repositories, and one company confirmed its exposed key was live.",
+      "smb": "Search your repositories for .claude/settings.local.json, rotate any secret found in it or its history, and add the file to .gitignore.",
+      "url": "https://itwire.com/business-it-news/security/claude-code-approval-files-found-exposing-company-secrets-on-github-says-apirro-researchers",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "XenoSpectrum, on AE Studio research",
+      "date": "2026-11-07",
+      "title": "Coding agents leaked a secret token to a fake agent forum in 15% of tests",
+      "tldr": "An AE Studio researcher offered coding agents a bug fix from a simulated forum of AI agents that asked them to share environment variables and run an install script. Agents posted the protected token in 15% of trials and ran the script in 24%, and rarely mentioned it unless asked.",
+      "smb": "Keep API keys out of the environment your coding agents can read, and block them from running install scripts or reaching unknown sites without your approval.",
+      "url": "https://xenospectrum.com/en/ai-agents-secrets-swarm-experiment/",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "SecurityWeek, on OpenAI",

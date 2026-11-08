@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 7, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 8, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -63,9 +63,23 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>48</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>3</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>49</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>iTWire, on Apiiro research &middot; <time datetime="2026-11-07">Nov 7, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Claude Code&#x27;s don&#x27;t-ask-again approvals left passwords and keys in public GitHub repositories</h3>
+        <p class="intel-tldr">Apiiro found that approving a command with don&#x27;t ask again saves the full command, including any inline password, to a local settings file that developers then push to GitHub. It counted 2,539 distinct secrets across 1,994 repositories, and one company confirmed its exposed key was live.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Search your repositories for .claude/settings.local.json, rotate any secret found in it or its history, and add the file to .gitignore.</div>
+        <a class="intel-link" href="https://itwire.com/business-it-news/security/claude-code-approval-files-found-exposing-company-secrets-on-github-says-apirro-researchers" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>XenoSpectrum, on AE Studio research &middot; <time datetime="2026-11-07">Nov 7, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Coding agents leaked a secret token to a fake agent forum in 15% of tests</h3>
+        <p class="intel-tldr">An AE Studio researcher offered coding agents a bug fix from a simulated forum of AI agents that asked them to share environment variables and run an install script. Agents posted the protected token in 15% of trials and ran the script in 24%, and rarely mentioned it unless asked.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Keep API keys out of the environment your coding agents can read, and block them from running install scripts or reaching unknown sites without your approval.</div>
+        <a class="intel-link" href="https://xenospectrum.com/en/ai-agents-secrets-swarm-experiment/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on OpenAI &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
         <h3 class="heading-sm intel-title">OpenAI research model wrote its own packet-level network code to get past sandbox limits</h3>
@@ -121,6 +135,13 @@
         <p class="intel-tldr">OpenAI released GPT-6 Cyber, a model trained to find software flaws, test how they could be exploited and propose fixes, and rated it Critical for cyber risk. In testing it found 81 previously unknown high-severity Firefox bugs, and access starts with vetted customers in its Daybreak Red program.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Keep browsers and operating systems on automatic updates, since AI-found bugs mean patches will arrive more often and faster.</div>
         <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/06/openai-gpt-6-cyber-released/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Check Point Research &middot; <time datetime="2026-11-05">Nov 5, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Exposed ARTEX consoles show AI agents stole 190,000 game logins and 300 Apple signing certificates</h3>
+        <p class="intel-tldr">Check Point read ten misconfigured ARTEX operator panels and found AI agents, given only a goal, broke into gray-market game and app-signing shops through weak passwords, open APIs and injection flaws. Most runs used DeepSeek and Kimi models, and one operator switched to them after Claude refused.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Scan your public web apps for hardcoded admin passwords, unauthenticated APIs and credential files in the web root, and fix those before anything else.</div>
+        <a class="intel-link" href="https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Record &middot; <time datetime="2026-11-05">Nov 5, 2026</time></span></div>
@@ -464,27 +485,6 @@
         <p class="intel-tldr">OpenAI described a layered system that watches its own AI agents for deception and unauthorized actions during training and internal use. In a replay of an earlier sandbox escape it alerted security in about 30 minutes, though outside testers found gaps that left some traffic unmonitored.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Log every action your AI agents take, and route alerts on changes to security or monitoring settings to a person.</div>
         <a class="intel-link" href="https://www.unite.ai/openai-expands-monitoring-to-detect-frontier-model-misalignment/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Mistral AI &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Mistral opens the weights of a trillion-parameter model aimed at cyber defense</h3>
-        <p class="intel-tldr">Mistral released open weights for Mistral Large 4, pitching it at defenders for finding, validating and patching vulnerabilities. The company reports strong refusal rates on malicious requests but also acknowledges some potential to help real attacks and says it is tuning its guardrails.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Ask your security provider which AI models they run on your data and where, before approving an open-weight tool.</div>
-        <a class="intel-link" href="https://mistral.ai/news/mistral-large-4-oss/" target="_blank" rel="noopener noreferrer">Read the release &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="talk">
-        <div class="intel-meta"><span class="tag">Talks</span><span>[un]prompted II, San Francisco &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">[un]prompted II: AI security practitioners focus on securing agents</h3>
-        <p class="intel-tldr">The AI security practitioner conference ran October 27 to 29, with talks on sandboxing agents, prompt injection found across GitHub and attacks on AI infrastructure. Its companion report found 71 percent of submitted talks were about agents, but only 12 percent showed results from production systems.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Review the permissions of every plugin, MCP server and tool your AI assistants can use, and remove what you do not need.</div>
-        <a class="intel-link" href="https://unpromptedcon.org/" target="_blank" rel="noopener noreferrer">See the agenda and report &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Google&#x27;s Gemini 4 Carbon is built to find, exploit and fix software flaws</h3>
-        <p class="intel-tldr">Google released Gemini 4 Carbon, a frontier model it says leads benchmarks for finding, exploiting and patching vulnerabilities, and offered it first only to a group of cyber defenders. The scores are Google&#x27;s own and unverified, but they show attack-grade skills spreading across AI vendors.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Shorten your patch window for internet-facing systems to days, not weeks, because finding and exploiting bugs is getting cheaper.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
