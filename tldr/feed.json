@@ -53,13 +53,13 @@
     },
     {
       "date": "2026-11-08",
-      "title": "Ahold Delhaize expects its October cyberattack to cut up to $280 million in sales",
-      "why": "The Dutch-Belgian grocery group says the attack disrupted its US and Benelux online services and Benelux supply chain, and it lowered its 2026 outlook. It has not said what kind of attack it was.",
-      "action": "Write down how you would take orders, pay staff and ship goods for two weeks with key systems offline, and keep that plan on paper.",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/grocery-giant-ahold-delhaize-estimates-financial-toll-of-october-cyberattack/",
-      "heat": 2,
-      "cat": "breach"
+      "title": "D-Link warns of unpatched flaws in DGS-3130 switches and lists stopgap fixes",
+      "why": "D-Link says bugs in its Discovery Protocol on DGS-3130 managed switches can leak device data and SNMP strings, change settings or force resets. There is no firmware fix yet and no attacks reported.",
+      "action": "Turn off D-Link Discovery Protocol, remove default SNMP community strings, limit SSH, web and SNMP access to a management network, and back up switch configs offline.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches",
+      "heat": 3,
+      "cat": "vpn"
     },
     {
       "date": "2026-11-07",
