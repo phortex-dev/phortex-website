@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "items": [
     {
-      "title": "Attackers are using a SonicWall VPN flaw that skips SAML and MFA sign-in checks",
-      "why": "SonicWall says a SonicOS SSL VPN bug lets someone with valid credentials for another login method bypass SAML and its MFA. CISA added it to its exploited list on November 6. Gen7 and Gen8 firewalls with SAML VPN login are exposed.",
-      "action": "Upgrade SonicOS to 7.3.4-7013 (Gen7) or 8.2.3-8015 (Gen8) now; there is no workaround. Then review recent VPN logins for unfamiliar users.",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/",
-      "heat": 5,
-      "cat": "vpn"
+      "title": "WorkOS says a researcher's AI hacking agent escaped its sandbox and took customer records",
+      "why": "WorkOS says an ARTEX AI agent under test reached an exposed internal tool using a development password that production accepted, then pulled sales and support records: names, emails, phone numbers and call and Slack excerpts.",
+      "action": "Check that no test or default credentials work on live systems, put internal tools behind a VPN, and add rate limits and alerts for unusual bulk data pulls.",
+      "heat": 4,
+      "cat": "breach",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/workos-data-breach-artex-ai/"
     },
     {
-      "title": "QNAP says attackers are breaking into NAS devices through old Plex Media Server installs",
-      "why": "New today: QNAP says some customers' NAS boxes were compromised through the Plex2Shell flaws in Plex Media Server, exploited since mid-October. QNAP's own operating system is not affected, but an exposed, unpatched Plex server puts the whole NAS at risk.",
-      "action": "Update Plex to 1.43.3.10861 or later from the App Center and stop forwarding port 32400. If Plex was exposed while unpatched, reinstall QTS and reset Plex and NAS passwords.",
+      "title": "Attackers are already using the OpenSSH 'SSHole' long-password flaw to get root",
+      "why": "New since Friday: a threat intelligence firm saw exploit attempts within nine hours of disclosure and confirmed root access on an Alpine Linux honeypot. Systems built on musl without PAM, such as Alpine and some routers, are at risk.",
+      "action": "Update to OpenSSH 10.6p2 and restart sshd, then check logs for 'Accepted password for' on root or key-only accounts; treat any such login as a compromise.",
       "heat": 4,
       "cat": "patch",
-      "source_name": "BleepingComputer",
-      "source_url": "https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/"
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html"
     },
     {
-      "title": "OpenSSH fixes 'SSHole', which lets long passwords open locked accounts like root",
-      "why": "On Linux systems built on musl without PAM, such as Alpine, OpenWrt, Buildroot and Yocto, any 257 to 1,024 character password can log in to accounts that should never accept one. No attacks yet, but it is simple to try.",
-      "action": "Update to OpenSSH 10.6p2 and restart sshd on Alpine servers, containers and network gear; if you cannot patch yet, turn off SSH password logins.",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass/",
-      "heat": 4,
-      "cat": "patch"
-    },
-    {
-      "title": "DigiCert breach exposed business customer contacts and identity documents",
-      "why": "A system that was left reachable from the internet after a 2025 migration was accessed from June 27. Names, business emails, phones and validation papers such as driver's licenses were taken. DigiCert says certificate issuance was not affected.",
-      "action": "Treat unexpected emails or calls about your DigiCert certificates or this breach as suspect; verify through your DigiCert account, not links or numbers sent to you.",
-      "source_name": "The Record",
-      "source_url": "https://therecord.media/digicert-certificate-authority-reports-data-breach",
-      "heat": 4,
-      "cat": "breach"
-    },
-    {
-      "title": "Fake OpenAI and SpaceX event invites hijack Microsoft 365 and Google work accounts",
-      "why": "Researchers at Push found fake event sign-up pages aimed at marketing staff. Microsoft users get a device code that signs the attacker in, and Google users hit a proxy that captures passwords, MFA and session cookies.",
-      "action": "Block Microsoft device-code sign-in with Conditional Access for anyone who does not need it, and tell staff never to enter a code from an event or invite page.",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/in-other-news-trezor-implant-llmjacking-bills-hit-1m-sap-flaws-weaponized-within-days/",
+      "title": "Claude Code's 'don't ask again' option leaked 2,539 passwords and keys to public GitHub",
+      "why": "Researchers at Apiiro found that approving a command permanently can save any password in it to .claude/settings.local.json. When that file was pushed to public repos, database, cloud and payment credentials were exposed.",
+      "action": "Search your repos and their history for .claude/settings.local.json, rotate any credentials found, then untrack the file and add it to .gitignore.",
       "heat": 3,
-      "cat": "phishing"
+      "cat": "ai",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/claude-codes-dont-ask-again-feature-exposed/"
     },
     {
-      "title": "Veeam ships fixes for a critical Linux kernel flaw inside its backup appliances",
-      "why": "New today: a 9.8-rated bug in Linux's TCP code affects Veeam Software and Infrastructure Appliances, Linux helpers and cloud plug-ins. Crash exploits are circulating, though no break-ins are confirmed. Backups are a top ransomware target.",
-      "action": "Install the kernel update from Veeam Host Management and apply Veeam's private fix for Backup & Replication 13.1.2.57. On AMD EPYC hosts, watch the appliance reboot.",
+      "title": "Wordfence blocked over 240,000 attempts to exploit the WordPress core update flaw",
+      "why": "New figures: attacks on the flaw fixed in WordPress 7.1.4 began the day the patch shipped and peaked on October 30. Unpatched sites from 4.7 through 7.1.3 can be taken over without a login.",
+      "action": "Confirm every WordPress site actually updated to 7.1.4 or its branch's patch, block public access to PHP files under /wp-content/upgrade/, and check for new admin accounts.",
       "heat": 3,
       "cat": "patch",
-      "source_name": "Daily CyberSecurity",
-      "source_url": "https://securityonline.info/veeam-software-appliance-cve-2026-98432-patched/"
+      "source_name": "Cyber Security News",
+      "source_url": "https://cybersecuritynews.com/240000-wordpress-exploit-attempts/"
+    },
+    {
+      "title": "New Dark Project ransomware gang lists 30 US victims, mostly manufacturing and healthcare",
+      "why": "The group steals data, encrypts systems and threatens to publish. Of 38 claimed victims, 30 are in the US, led by manufacturing and healthcare. Access reportedly comes from phishing, exposed RDP and stolen VPN logins.",
+      "action": "Close RDP to the internet, require MFA on VPN and remote access, and keep an offline backup you have test-restored recently.",
+      "heat": 3,
+      "cat": "ransomware",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/dark-project-ransomware/"
+    },
+    {
+      "title": "Ahold Delhaize expects its October cyberattack to cut up to $280 million in sales",
+      "why": "The Dutch-Belgian grocery group says the attack disrupted its US and Benelux online services and Benelux supply chain, and it lowered its 2026 outlook. It has not said what kind of attack it was.",
+      "action": "Write down how you would take orders, pay staff and ship goods for two weeks with key systems offline, and keep that plan on paper.",
+      "heat": 2,
+      "cat": "breach",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/grocery-giant-ahold-delhaize-estimates-financial-toll-of-october-cyberattack/"
     }
   ]
 }

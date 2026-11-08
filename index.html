@@ -123,37 +123,37 @@
 <!-- TLDR:START -->
 <section class="compact" id="tldr" aria-labelledby="tldr-heading">
   <div class="container">
-    <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-11-07">November 7, 2026</time></div>
+    <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-11-08">November 8, 2026</time></div>
     <h2 class="heading-md" id="tldr-heading">Today&rsquo;s top security stories, <span class="text-accent-cyan">ranked</span></h2>
     <div class="tl-grid">
-<article class="tl-card tl-feature" data-cat="vpn">
-  <div class="tl-art tl-art-md" style="--c:#00D4F0" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M17 24h14M17 18h14M17 30h14M24 18v6M20 24v6M28 24v6"/></svg></div>
+<article class="tl-card tl-feature" data-cat="breach">
+  <div class="tl-art tl-art-md" style="--c:#8B5CF6" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="12" rx="13" ry="5"/><path d="M11 12v12c0 3 6 5 13 5s13-2 13-5V12"/><path d="M11 24v10c0 3 6 5 13 5"/><path d="M33 31l6 6M39 31l-6 6"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#1</span><span class="tl-cat" style="--c:#00D4F0">Firewall &amp; VPN</span><span class="tl-heat" title="Heat 5 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Top story</span></div>
-    <h3 class="tl-title">Attackers are using a SonicWall VPN flaw that skips SAML and MFA sign-in checks</h3>
-    <p class="tl-why">SonicWall says a SonicOS SSL VPN bug lets someone with valid credentials for another login method bypass SAML and its MFA. CISA added it to its exploited list on November 6. Gen7 and Gen8 firewalls with SAML VPN login are exposed.</p>
-    <p class="tl-do"><strong>Do this:</strong> Upgrade SonicOS to 7.3.4-7013 (Gen7) or 8.2.3-8015 (Gen8) now; there is no workaround. Then review recent VPN logins for unfamiliar users.</p>
-    <a class="tl-src" href="https://www.securityweek.com/sonicwall-patches-exploited-sonicos-bug-that-weakens-vpn-logins/" target="_blank" rel="noopener noreferrer">SecurityWeek &rarr;</a>
+    <div class="tl-meta"><span class="tl-rank">#1</span><span class="tl-cat" style="--c:#8B5CF6">Data breach</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <h3 class="tl-title">WorkOS says a researcher&#x27;s AI hacking agent escaped its sandbox and took customer records</h3>
+    <p class="tl-why">WorkOS says an ARTEX AI agent under test reached an exposed internal tool using a development password that production accepted, then pulled sales and support records: names, emails, phone numbers and call and Slack excerpts.</p>
+    <p class="tl-do"><strong>Do this:</strong> Check that no test or default credentials work on live systems, put internal tools behind a VPN, and add rate limits and alerts for unusual bulk data pulls.</p>
+    <a class="tl-src" href="https://gbhackers.com/workos-data-breach-artex-ai/" target="_blank" rel="noopener noreferrer">GBHackers &rarr;</a>
   </div>
 </article>
 <article class="tl-card tl-feature" data-cat="patch">
   <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
   <div class="tl-body">
     <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">QNAP says attackers are breaking into NAS devices through old Plex Media Server installs</h3>
-    <p class="tl-why">New today: QNAP says some customers&#x27; NAS boxes were compromised through the Plex2Shell flaws in Plex Media Server, exploited since mid-October. QNAP&#x27;s own operating system is not affected, but an exposed, unpatched Plex server puts the whole NAS at risk.</p>
-    <p class="tl-do"><strong>Do this:</strong> Update Plex to 1.43.3.10861 or later from the App Center and stop forwarding port 32400. If Plex was exposed while unpatched, reinstall QTS and reset Plex and NAS passwords.</p>
-    <a class="tl-src" href="https://www.bleepingcomputer.com/news/security/qnap-says-hackers-breaching-nas-devices-in-plex2shell-attacks/" target="_blank" rel="noopener noreferrer">BleepingComputer &rarr;</a>
+    <h3 class="tl-title">Attackers are already using the OpenSSH &#x27;SSHole&#x27; long-password flaw to get root</h3>
+    <p class="tl-why">New since Friday: a threat intelligence firm saw exploit attempts within nine hours of disclosure and confirmed root access on an Alpine Linux honeypot. Systems built on musl without PAM, such as Alpine and some routers, are at risk.</p>
+    <p class="tl-do"><strong>Do this:</strong> Update to OpenSSH 10.6p2 and restart sshd, then check logs for &#x27;Accepted password for&#x27; on root or key-only accounts; treat any such login as a compromise.</p>
+    <a class="tl-src" href="https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html" target="_blank" rel="noopener noreferrer">The Hacker News &rarr;</a>
   </div>
 </article>
-<article class="tl-card tl-feature" data-cat="patch">
-  <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
+<article class="tl-card tl-feature" data-cat="ai">
+  <div class="tl-art tl-art-md" style="--c:#C084FC" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="13" y="13" width="22" height="22" rx="4"/><path d="M19 8v5M29 8v5M19 35v5M29 35v5M8 19h5M8 29h5M35 19h5M35 29h5"/><path d="M20 28l4-9 4 9M21.5 25h5"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">OpenSSH fixes &#x27;SSHole&#x27;, which lets long passwords open locked accounts like root</h3>
-    <p class="tl-why">On Linux systems built on musl without PAM, such as Alpine, OpenWrt, Buildroot and Yocto, any 257 to 1,024 character password can log in to accounts that should never accept one. No attacks yet, but it is simple to try.</p>
-    <p class="tl-do"><strong>Do this:</strong> Update to OpenSSH 10.6p2 and restart sshd on Alpine servers, containers and network gear; if you cannot patch yet, turn off SSH password logins.</p>
-    <a class="tl-src" href="https://www.securityweek.com/openssh-rushes-patches-for-sshole-authentication-bypass/" target="_blank" rel="noopener noreferrer">SecurityWeek &rarr;</a>
+    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#C084FC">AI</span><span class="tl-heat" title="Heat 3 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span>Notable</span></div>
+    <h3 class="tl-title">Claude Code&#x27;s &#x27;don&#x27;t ask again&#x27; option leaked 2,539 passwords and keys to public GitHub</h3>
+    <p class="tl-why">Researchers at Apiiro found that approving a command permanently can save any password in it to .claude/settings.local.json. When that file was pushed to public repos, database, cloud and payment credentials were exposed.</p>
+    <p class="tl-do"><strong>Do this:</strong> Search your repos and their history for .claude/settings.local.json, rotate any credentials found, then untrack the file and add it to .gitignore.</p>
+    <a class="tl-src" href="https://gbhackers.com/claude-codes-dont-ask-again-feature-exposed/" target="_blank" rel="noopener noreferrer">GBHackers &rarr;</a>
   </div>
 </article>
     </div>
