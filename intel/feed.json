@@ -12,6 +12,26 @@
   "items": [
     {
       "cat": "news",
+      "source": "Unite.AI, on OpenAI",
+      "date": "2026-11-06",
+      "title": "OpenAI brings in Hacktron, the team that broke into it, to test how its services connect",
+      "tldr": "OpenAI said on November 6 that Hacktron, whose researchers chained flaws in July to reach its internal code, will help test how its systems link to outside services. Hacktron also gets wider access to OpenAI's restricted cyber models through the Daybreak Red program.",
+      "smb": "List every outside service your business apps sign in to or share data with, and test those links, not only each app on its own.",
+      "url": "https://www.unite.ai/?p=507050",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Cybersecurity Insiders, Merium Khalid",
+      "date": "2026-11-07",
+      "title": "Barracuda's Khalid: phishing emails now carry hidden orders for the AI assistant that reads them",
+      "tldr": "Merium Khalid of Barracuda describes a recruiting-style email with hidden text telling an email assistant to forward it to colleagues and send crypto-related mail to an outside Gmail address. She argues that assistants able to act, not just summarize, give such emails reach into calendars, files and business apps.",
+      "smb": "Block AI email assistants from forwarding mail outside the company or to group lists, and require a person to approve payments and vendor changes.",
+      "url": "https://www.cybersecurity-insiders.com/phishing-has-a-new-target-the-ai-assistant-reading-your-email/",
+      "link_label": "Read the post"
+    },
+    {
+      "cat": "news",
       "source": "Check Point Research",
       "date": "2026-11-05",
       "title": "Exposed ARTEX consoles show AI agents stole 190,000 game logins and 300 Apple signing certificates",
@@ -779,6 +799,12 @@
       "outlet": "Resemble AI",
       "focus": "Detecting AI agents and deepfakes in web and voice traffic.",
       "url": "https://www.resemble.ai/"
+    },
+    {
+      "name": "Merium Khalid",
+      "outlet": "Barracuda",
+      "focus": "AI and automation in email security, including prompt injection aimed at AI assistants",
+      "url": "https://www.barracuda.com/"
     }
   ]
 }

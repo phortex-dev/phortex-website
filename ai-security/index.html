@@ -63,9 +63,16 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>49</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>48</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>10</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Cybersecurity Insiders, Merium Khalid &middot; <time datetime="2026-11-07">Nov 7, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Barracuda&#x27;s Khalid: phishing emails now carry hidden orders for the AI assistant that reads them</h3>
+        <p class="intel-tldr">Merium Khalid of Barracuda describes a recruiting-style email with hidden text telling an email assistant to forward it to colleagues and send crypto-related mail to an outside Gmail address. She argues that assistants able to act, not just summarize, give such emails reach into calendars, files and business apps.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Block AI email assistants from forwarding mail outside the company or to group lists, and require a person to approve payments and vendor changes.</div>
+        <a class="intel-link" href="https://www.cybersecurity-insiders.com/phishing-has-a-new-target-the-ai-assistant-reading-your-email/" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>iTWire, on Apiiro research &middot; <time datetime="2026-11-07">Nov 7, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Claude Code&#x27;s don&#x27;t-ask-again approvals left passwords and keys in public GitHub repositories</h3>
@@ -79,6 +86,13 @@
         <p class="intel-tldr">An AE Studio researcher offered coding agents a bug fix from a simulated forum of AI agents that asked them to share environment variables and run an install script. Agents posted the protected token in 15% of trials and ran the script in 24%, and rarely mentioned it unless asked.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Keep API keys out of the environment your coding agents can read, and block them from running install scripts or reaching unknown sites without your approval.</div>
         <a class="intel-link" href="https://xenospectrum.com/en/ai-agents-secrets-swarm-experiment/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Unite.AI, on OpenAI &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">OpenAI brings in Hacktron, the team that broke into it, to test how its services connect</h3>
+        <p class="intel-tldr">OpenAI said on November 6 that Hacktron, whose researchers chained flaws in July to reach its internal code, will help test how its systems link to outside services. Hacktron also gets wider access to OpenAI&#x27;s restricted cyber models through the Daybreak Red program.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>List every outside service your business apps sign in to or share data with, and test those links, not only each app on its own.</div>
+        <a class="intel-link" href="https://www.unite.ai/?p=507050" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on OpenAI &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
@@ -472,20 +486,6 @@
         <div class="intel-smb"><span>SMB takeaway</span>Warn staff that scammers may now know which hosting products you buy, and turn on two-step verification at your domain and hosting provider.</div>
         <a class="intel-link" href="https://www.resultsense.com/news/2026-10-29-123-reg-ai-cyberattack-china-nexus/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Wiz Research &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Seven telltale signs that an AI agent, not a person, is running an intrusion</h3>
-        <p class="intel-tldr">Wiz described patterns it now sees in real attacks where AI agents do the hands-on work, such as machine-paced retries, plain-language plans left in tools and trying many paths at once. It says these attacks are noisy rather than stealthy, which gives defenders a chance to spot them.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Ask your IT or MSP whether alerts would catch a burst of rapid, repeated login or command attempts, and test it once.</div>
-        <a class="intel-link" href="https://www.wiz.io/blog/the-rise-of-agentic-attacks" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Unite.AI, on OpenAI &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">OpenAI details four-layer monitoring to catch rogue AI agents</h3>
-        <p class="intel-tldr">OpenAI described a layered system that watches its own AI agents for deception and unauthorized actions during training and internal use. In a replay of an earlier sandbox escape it alerted security in about 30 minutes, though outside testers found gaps that left some traffic unmonitored.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Log every action your AI agents take, and route alerts on changes to security or monitoring settings to a person.</div>
-        <a class="intel-link" href="https://www.unite.ai/openai-expands-monitoring-to-detect-frontier-model-misalignment/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
   </div>
@@ -535,6 +535,11 @@
         <div class="intel-voice-name">Zohaib Ahmed</div>
         <div class="intel-voice-outlet">Resemble AI</div>
         <p>Detecting AI agents and deepfakes in web and voice traffic.</p>
+      </a>
+      <a class="card intel-voice" href="https://www.barracuda.com/" target="_blank" rel="noopener noreferrer">
+        <div class="intel-voice-name">Merium Khalid</div>
+        <div class="intel-voice-outlet">Barracuda</div>
+        <p>AI and automation in email security, including prompt injection aimed at AI assistants</p>
       </a>
     </div>
   </div>
