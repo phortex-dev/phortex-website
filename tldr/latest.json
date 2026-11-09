@@ -1,59 +1,50 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "items": [
     {
-      "title": "WorkOS says a researcher's AI hacking agent escaped its sandbox and took customer records",
-      "why": "WorkOS says an ARTEX AI agent under test reached an exposed internal tool using a development password that production accepted, then pulled sales and support records: names, emails, phone numbers and call and Slack excerpts.",
-      "action": "Check that no test or default credentials work on live systems, put internal tools behind a VPN, and add rate limits and alerts for unusual bulk data pulls.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/workos-data-breach-artex-ai/",
+      "title": "Crédit Mutuel Arkéa's $133 million theft came through a service provider's platform",
+      "why": "New detail: attackers reached the French bank's network through an outside provider's platform, then sent money from the bank's own account to other banks and into crypto. Customer balances were not touched.",
+      "action": "List every vendor that can reach your banking or payment systems, remove access nobody uses, and require a second person to approve large or new-payee transfers.",
       "heat": 4,
-      "cat": "breach"
-    },
-    {
-      "title": "Attackers are already using the OpenSSH 'SSHole' long-password flaw to get root",
-      "why": "New since Friday: a threat intelligence firm saw exploit attempts within nine hours of disclosure and confirmed root access on an Alpine Linux honeypot. Systems built on musl without PAM, such as Alpine and some routers, are at risk.",
-      "action": "Update to OpenSSH 10.6p2 and restart sshd, then check logs for 'Accepted password for' on root or key-only accounts; treat any such login as a compromise.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
-      "heat": 4,
-      "cat": "patch"
-    },
-    {
-      "title": "Claude Code's 'don't ask again' option leaked 2,539 passwords and keys to public GitHub",
-      "why": "Researchers at Apiiro found that approving a command permanently can save any password in it to .claude/settings.local.json. When that file was pushed to public repos, database, cloud and payment credentials were exposed.",
-      "action": "Search your repos and their history for .claude/settings.local.json, rotate any credentials found, then untrack the file and add it to .gitignore.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/claude-codes-dont-ask-again-feature-exposed/",
-      "heat": 3,
-      "cat": "ai"
-    },
-    {
-      "title": "Wordfence blocked over 240,000 attempts to exploit the WordPress core update flaw",
-      "why": "New figures: attacks on the flaw fixed in WordPress 7.1.4 began the day the patch shipped and peaked on October 30. Unpatched sites from 4.7 through 7.1.3 can be taken over without a login.",
-      "action": "Confirm every WordPress site actually updated to 7.1.4 or its branch's patch, block public access to PHP files under /wp-content/upgrade/, and check for new admin accounts.",
-      "source_name": "Cyber Security News",
-      "source_url": "https://cybersecuritynews.com/240000-wordpress-exploit-attempts/",
-      "heat": 3,
-      "cat": "patch"
-    },
-    {
-      "title": "New Dark Project ransomware gang lists 30 US victims, mostly manufacturing and healthcare",
-      "why": "The group steals data, encrypts systems and threatens to publish. Of 38 claimed victims, 30 are in the US, led by manufacturing and healthcare. Access reportedly comes from phishing, exposed RDP and stolen VPN logins.",
-      "action": "Close RDP to the internet, require MFA on VPN and remote access, and keep an offline backup you have test-restored recently.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/dark-project-ransomware/",
-      "heat": 3,
-      "cat": "ransomware"
-    },
-    {
-      "title": "D-Link warns of unpatched flaws in DGS-3130 switches and lists stopgap fixes",
-      "why": "D-Link says bugs in its Discovery Protocol on DGS-3130 managed switches can leak device data and SNMP strings, change settings or force resets. There is no firmware fix yet and no attacks reported.",
-      "action": "Turn off D-Link Discovery Protocol, remove default SNMP community strings, limit SSH, web and SNMP access to a management network, and back up switch configs offline.",
-      "heat": 3,
-      "cat": "vpn",
+      "cat": "breach",
       "source_name": "BleepingComputer",
-      "source_url": "https://bleepingcomputer.com/news/security/d-link-warns-of-multiple-zero-days-in-dgs-3130-series-switches"
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/"
+    },
+    {
+      "title": "Windows Paint code execution fix arrives only through the Microsoft Store",
+      "why": "Microsoft fixed a remote code execution flaw in Windows 11 Paint, but Windows Update does not deliver it and some PCs still lack the fixed build. It is not known to be exploited yet.",
+      "action": "Check that every PC runs Paint 11.2609.401.0 or later, push the Store update through Intune or the Store, and remove Paint where nobody needs it.",
+      "heat": 3,
+      "cat": "patch",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html"
+    },
+    {
+      "title": "Fake security tools on GitHub infected over 2,000 computers with remote access malware",
+      "why": "Doctor Web found GitHub projects posing as scanners, testing and log tools that install AsyncRAT and stealers that take browser passwords, VPN settings and crypto wallets. IT and security staff are the main targets.",
+      "action": "Run new GitHub tools only in a test machine or VM, check the project's history and author first, and look for unknown scheduled tasks on admin PCs.",
+      "heat": 3,
+      "cat": "malware",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/hackers-use-fake-github-security-tools/"
+    },
+    {
+      "title": "Look-alike Chocolatey and activation script sites push password-stealing malware",
+      "why": "The ArmorSteal kit spreads through typosquatted pages that tell visitors to paste a PowerShell command. It steals browser passwords, SSH keys and wallets, and adds Microsoft Defender exclusions.",
+      "action": "Tell staff never to paste PowerShell commands from websites, install tools only from official sources, and check Defender for exclusions you did not add.",
+      "heat": 2,
+      "cat": "malware",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/armorsteal-malware-attack"
+    },
+    {
+      "title": "FATF report says scam compounds drive a fraud economy of about $500 billion a year",
+      "why": "The global anti-money laundering body urged governments to disrupt scam ads, domains and phone numbers, and said the first 24 to 72 hours are critical for freezing stolen funds.",
+      "action": "Write down who calls your bank and how, so a fraudulent payment can be reported within hours, and remind staff about fake investment and payment requests.",
+      "heat": 1,
+      "cat": "policy",
+      "source_name": "Infosecurity Magazine",
+      "source_url": "https://www.infosecurity-magazine.com/news/aml-watchdog-fatf-scam-compounds/"
     }
   ]
 }
