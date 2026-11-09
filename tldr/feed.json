@@ -3,6 +3,16 @@
   "items": [
     {
       "date": "2026-11-09",
+      "title": "N-able shuts down N-central after a researcher posts 30-plus flaws with exploit code",
+      "why": "Proof-of-concept exploits for N-able's N-central remote management tool went public on November 8. N-able took hosted N-central offline and told on-premises customers to shut servers down. It says no attacks seen so far.",
+      "action": "Ask your IT provider whether they use N-central. If you run it yourself, keep the server off until N-able's hotfix is out, then patch and review admin accounts.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/",
+      "heat": 5,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-09",
       "title": "Crédit Mutuel Arkéa's $133 million theft came through a service provider's platform",
       "why": "New detail: attackers reached the French bank's network through an outside provider's platform, then sent money from the bank's own account to other banks and into crypto. Customer balances were not touched.",
       "action": "List every vendor that can reach your banking or payment systems, remove access nobody uses, and require a second person to approve large or new-payee transfers.",
@@ -43,13 +53,13 @@
     },
     {
       "date": "2026-11-09",
-      "title": "FATF report says scam compounds drive a fraud economy of about $500 billion a year",
-      "why": "The global anti-money laundering body urged governments to disrupt scam ads, domains and phone numbers, and said the first 24 to 72 hours are critical for freezing stolen funds.",
-      "action": "Write down who calls your bank and how, so a fraudulent payment can be reported within hours, and remind staff about fake investment and payment requests.",
-      "source_name": "Infosecurity Magazine",
-      "source_url": "https://www.infosecurity-magazine.com/news/aml-watchdog-fatf-scam-compounds/",
-      "heat": 1,
-      "cat": "policy"
+      "title": "Anubis ransomware crew used AnyDesk and driver tricks to kill security tools at a US firm",
+      "why": "Symantec says attackers planted a new backdoor on two SQL servers, used flawed signed drivers to switch off security software and set AnyDesk to run in Safe Mode. Security software stopped the encryption.",
+      "action": "Remove remote access tools you don't use, alert on new AnyDesk installs, enable Microsoft's vulnerable driver blocklist and limit who has admin rights on servers.",
+      "source_name": "Cyber Security News",
+      "source_url": "https://cybersecuritynews.com/anubis-ransomware-lindnor-backdoor/",
+      "heat": 2,
+      "cat": "ransomware"
     },
     {
       "date": "2026-11-08",

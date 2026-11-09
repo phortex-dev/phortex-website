@@ -2,49 +2,58 @@
   "date": "2026-11-09",
   "items": [
     {
+      "title": "N-able shuts down N-central after a researcher posts 30-plus flaws with exploit code",
+      "why": "Proof-of-concept exploits for N-able's N-central remote management tool went public on November 8. N-able took hosted N-central offline and told on-premises customers to shut servers down. It says no attacks seen so far.",
+      "action": "Ask your IT provider whether they use N-central. If you run it yourself, keep the server off until N-able's hotfix is out, then patch and review admin accounts.",
+      "heat": 5,
+      "cat": "patch",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/n-able-takes-cloud-platform-offline-after-30-plus-zero-days-published/"
+    },
+    {
       "title": "Crédit Mutuel Arkéa's $133 million theft came through a service provider's platform",
       "why": "New detail: attackers reached the French bank's network through an outside provider's platform, then sent money from the bank's own account to other banks and into crypto. Customer balances were not touched.",
       "action": "List every vendor that can reach your banking or payment systems, remove access nobody uses, and require a second person to approve large or new-payee transfers.",
-      "heat": 4,
-      "cat": "breach",
       "source_name": "BleepingComputer",
-      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/"
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-pull-off-133-million-french-bank-heist-via-service-provider/",
+      "heat": 4,
+      "cat": "breach"
     },
     {
       "title": "Windows Paint code execution fix arrives only through the Microsoft Store",
       "why": "Microsoft fixed a remote code execution flaw in Windows 11 Paint, but Windows Update does not deliver it and some PCs still lack the fixed build. It is not known to be exploited yet.",
       "action": "Check that every PC runs Paint 11.2609.401.0 or later, push the Store update through Intune or the Store, and remove Paint where nobody needs it.",
-      "heat": 3,
-      "cat": "patch",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html"
+      "source_url": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
+      "heat": 3,
+      "cat": "patch"
     },
     {
       "title": "Fake security tools on GitHub infected over 2,000 computers with remote access malware",
       "why": "Doctor Web found GitHub projects posing as scanners, testing and log tools that install AsyncRAT and stealers that take browser passwords, VPN settings and crypto wallets. IT and security staff are the main targets.",
       "action": "Run new GitHub tools only in a test machine or VM, check the project's history and author first, and look for unknown scheduled tasks on admin PCs.",
-      "heat": 3,
-      "cat": "malware",
       "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/hackers-use-fake-github-security-tools/"
+      "source_url": "https://gbhackers.com/hackers-use-fake-github-security-tools/",
+      "heat": 3,
+      "cat": "malware"
     },
     {
       "title": "Look-alike Chocolatey and activation script sites push password-stealing malware",
       "why": "The ArmorSteal kit spreads through typosquatted pages that tell visitors to paste a PowerShell command. It steals browser passwords, SSH keys and wallets, and adds Microsoft Defender exclusions.",
       "action": "Tell staff never to paste PowerShell commands from websites, install tools only from official sources, and check Defender for exclusions you did not add.",
-      "heat": 2,
-      "cat": "malware",
       "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/armorsteal-malware-attack"
+      "source_url": "https://gbhackers.com/armorsteal-malware-attack",
+      "heat": 2,
+      "cat": "malware"
     },
     {
-      "title": "FATF report says scam compounds drive a fraud economy of about $500 billion a year",
-      "why": "The global anti-money laundering body urged governments to disrupt scam ads, domains and phone numbers, and said the first 24 to 72 hours are critical for freezing stolen funds.",
-      "action": "Write down who calls your bank and how, so a fraudulent payment can be reported within hours, and remind staff about fake investment and payment requests.",
-      "heat": 1,
-      "cat": "policy",
-      "source_name": "Infosecurity Magazine",
-      "source_url": "https://www.infosecurity-magazine.com/news/aml-watchdog-fatf-scam-compounds/"
+      "title": "Anubis ransomware crew used AnyDesk and driver tricks to kill security tools at a US firm",
+      "why": "Symantec says attackers planted a new backdoor on two SQL servers, used flawed signed drivers to switch off security software and set AnyDesk to run in Safe Mode. Security software stopped the encryption.",
+      "action": "Remove remote access tools you don't use, alert on new AnyDesk installs, enable Microsoft's vulnerable driver blocklist and limit who has admin rights on servers.",
+      "heat": 2,
+      "cat": "ransomware",
+      "source_name": "Cyber Security News",
+      "source_url": "https://cybersecuritynews.com/anubis-ransomware-lindnor-backdoor/"
     }
   ]
 }
