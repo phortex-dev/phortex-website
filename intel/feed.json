@@ -11,6 +11,46 @@
   },
   "items": [
     {
+      "cat": "news",
+      "source": "The Record",
+      "date": "2026-11-09",
+      "title": "German web host Mittwald says attackers used its AI assistant connector to reach 56 customer projects",
+      "tldr": "Hosting provider Mittwald says attackers abused a flaw in the MCP server that lets customers connect AI assistants to its management platform, and stayed inside for eight days. The company says the logs moved at machine speed, suspects AI tooling, and plans a full write-up next week.",
+      "smb": "List every AI connector or MCP endpoint your vendors and your own systems expose, switch off the ones nobody uses, and ask hosting providers how theirs are patched.",
+      "url": "https://therecord.media/cyberattack-germany-ai-mittwald",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Malbear Labs",
+      "date": "2026-11-08",
+      "title": "Exposed server shows a jailbroken DeepSeek agent breaking into a telecom and the firms it hosted",
+      "tldr": "Malbear Labs found an open directory holding two weeks of logs from an AI agent that a Chinese-speaking operator pointed at a European telecom and 13 organizations on its network. The agent found its own way in, wrote new tools when blocked, and used default database passwords to reach a large patient records system.",
+      "smb": "Change every default password on databases and admin tools, including old systems, and ask your hosting or IT provider how they keep customers separated from each other.",
+      "url": "https://malbearlabs.com/posts/operation-snowball-inside-an-autonomous-ai-intrusion-campaign",
+      "link_label": "Read the research"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Elastic",
+      "date": "2026-11-09",
+      "title": "Elastic: intruders used Claude Code and ChatGPT already on victims' machines to move around",
+      "tldr": "Elastic reviewed 27 infostealer cases and found attackers used stolen logins about eight minutes after infection. In two cases, intruders who already had access ran commands through AI assistants installed on the victim's computer, one to build tools and one to open a saved password store.",
+      "smb": "Treat AI coding and desktop assistants as powerful admin tools: limit who has them, keep them off machines that hold sensitive passwords, and log what they run.",
+      "url": "https://www.helpnetsecurity.com/2026/11/09/elastic-businesses-remote-access-attacks-report/",
+      "link_label": "Read the report summary"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security",
+      "date": "2026-11-09",
+      "title": "Wirken, a free gateway that assumes your chat-connected AI agent will be turned against you",
+      "tldr": "Wirken is a new open-source gateway that sits between apps like Slack, Teams or WhatsApp and an AI agent. It keeps credentials out of the agent's reach, runs shell commands in a sandbox with no network, asks for approval before risky actions, and keeps a tamper-evident log, though its authors list gaps.",
+      "smb": "Before connecting an AI agent to company chat, put an approval step in front of any action that deletes, installs or touches passwords, whatever tool you use.",
+      "url": "https://www.helpnetsecurity.com/2026/11/09/wirken-open-source-ai-agent-gateway/",
+      "link_label": "Read about the tool"
+    },
+    {
       "cat": "voices",
       "source": "Schneier on Security",
       "date": "2026-11-09",

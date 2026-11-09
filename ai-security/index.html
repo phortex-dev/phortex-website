@@ -66,12 +66,40 @@
       <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>48</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>10</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Record &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">German web host Mittwald says attackers used its AI assistant connector to reach 56 customer projects</h3>
+        <p class="intel-tldr">Hosting provider Mittwald says attackers abused a flaw in the MCP server that lets customers connect AI assistants to its management platform, and stayed inside for eight days. The company says the logs moved at machine speed, suspects AI tooling, and plans a full write-up next week.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>List every AI connector or MCP endpoint your vendors and your own systems expose, switch off the ones nobody uses, and ask hosting providers how theirs are patched.</div>
+        <a class="intel-link" href="https://therecord.media/cyberattack-germany-ai-mittwald" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Elastic &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Elastic: intruders used Claude Code and ChatGPT already on victims&#x27; machines to move around</h3>
+        <p class="intel-tldr">Elastic reviewed 27 infostealer cases and found attackers used stolen logins about eight minutes after infection. In two cases, intruders who already had access ran commands through AI assistants installed on the victim&#x27;s computer, one to build tools and one to open a saved password store.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Treat AI coding and desktop assistants as powerful admin tools: limit who has them, keep them off machines that hold sensitive passwords, and log what they run.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/09/elastic-businesses-remote-access-attacks-report/" target="_blank" rel="noopener noreferrer">Read the report summary &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Wirken, a free gateway that assumes your chat-connected AI agent will be turned against you</h3>
+        <p class="intel-tldr">Wirken is a new open-source gateway that sits between apps like Slack, Teams or WhatsApp and an AI agent. It keeps credentials out of the agent&#x27;s reach, runs shell commands in a sandbox with no network, asks for approval before risky actions, and keeps a tamper-evident log, though its authors list gaps.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Before connecting an AI agent to company chat, put an approval step in front of any action that deletes, installs or touches passwords, whatever tool you use.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/09/wirken-open-source-ai-agent-gateway/" target="_blank" rel="noopener noreferrer">Read about the tool &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="voices">
         <div class="intel-meta"><span class="tag">Voices</span><span>Schneier on Security &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Schneier: split AI security into security of AI, with AI and from AI</h3>
         <p class="intel-tldr">Back from the [un]prompted conference in San Francisco, Bruce Schneier sorted AI security into three areas: protecting AI systems, using AI for defense, and defending against AI-enabled threats. He argues researchers should know which area their work serves and that the field needs all three.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Sort your AI security to-do list into those three buckets and give each one an owner and at least one next step.</div>
         <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-security.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Malbear Labs &middot; <time datetime="2026-11-08">Nov 8, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Exposed server shows a jailbroken DeepSeek agent breaking into a telecom and the firms it hosted</h3>
+        <p class="intel-tldr">Malbear Labs found an open directory holding two weeks of logs from an AI agent that a Chinese-speaking operator pointed at a European telecom and 13 organizations on its network. The agent found its own way in, wrote new tools when blocked, and used default database passwords to reach a large patient records system.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Change every default password on databases and admin tools, including old systems, and ask your hosting or IT provider how they keep customers separated from each other.</div>
+        <a class="intel-link" href="https://malbearlabs.com/posts/operation-snowball-inside-an-autonomous-ai-intrusion-campaign" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="voices">
         <div class="intel-meta"><span class="tag">Voices</span><span>Cybersecurity Insiders, Merium Khalid &middot; <time datetime="2026-11-07">Nov 7, 2026</time></span></div>
@@ -457,34 +485,6 @@
         <p class="intel-tldr">Wiz tied a month of breaches at AI developer platforms, including Fireworks AI, Railway, Warp and Northflank, to attackers taking customers&#x27; stored environment variables. Stolen AI keys were tested within about 30 minutes and later ran up more than 2.5 million Bedrock calls through resale pools.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Rotate any AI or cloud keys stored on a hosting or AI platform at the issuer, and set budget alerts on each provider account.</div>
         <a class="intel-link" href="https://www.wiz.io/blog/black-october-for-ai-developer-platforms" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Wiz survey &middot; <time datetime="2026-10-30">Oct 30, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Survey: most firms run AI agents, few keep a full list of their AI tools</h3>
-        <p class="intel-tldr">A Wiz survey of 100 IT and security leaders found 55 percent deploy autonomous AI agents but only 17 percent keep a complete inventory of their AI systems. About half found unapproved AI apps in use over the past year.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>List every AI tool and agent your staff use, who owns each one and what data it can reach, and review it each quarter.</div>
-        <a class="intel-link" href="https://www.wiz.io/blog/ai-threat-readiness-survey-report-2026" target="_blank" rel="noopener noreferrer">Read the survey &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Record &middot; <time datetime="2026-10-30">Oct 30, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">DOJ asks for a privacy watchdog before Character.AI chat logs can be sold</h3>
-        <p class="intel-tldr">The Justice Department asked a bankruptcy court to appoint a consumer privacy ombudsman because Character.AI&#x27;s privacy policy may allow users&#x27; chat histories to be sold to a buyer. The DOJ says that conflicts with what the chatbot tells its roughly 12 million monthly users.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Review what your AI vendors&#x27; terms say happens to your prompts and files if they are sold or go bankrupt, and keep sensitive data out of tools that are unclear.</div>
-        <a class="intel-link" href="https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Cursor and OpenSourceMalware &middot; <time datetime="2026-10-30">Oct 30, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Fake Claude Code update on Cursor&#x27;s marketplace planted an SSH backdoor</h3>
-        <p class="intel-tldr">For about 11 hours on October 29, Cursor&#x27;s extension marketplace served a trojanized Claude Code update that added an attacker SSH key, set up persistence and sent host details out. Cursor says up to 5,000 users may have received it and has pulled it; the official 2.1.314 release is clean.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Check developer machines for an svc-telemetry key in authorized_keys, then rotate any credentials stored on affected laptops.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on CrowdStrike &middot; <time datetime="2026-10-30">Oct 30, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">China-linked group used the ARTEX AI framework against 200+ organizations</h3>
-        <p class="intel-tldr">CrowdStrike says a Chinese state-linked group used ARTEX, an AI agent framework running on DeepSeek and a commercial model, to hit more than 200 organizations from October 17, with nine confirmed intrusions. A human steered the agents, which exploited weak SAML setups, old unrotated keys and leaked VPN files.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Rotate signing keys and service passwords that have not changed in a year, and remove old VPN configs from shared mailboxes.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
