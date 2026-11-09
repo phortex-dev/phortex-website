@@ -1,15 +1,45 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "threat_of_the_week": {
-    "source": "Security Boulevard",
-    "date": "2026-11-02",
-    "title": "One attacker's AI agents broke into about 100 company websites",
-    "tldr": "NorForge researcher Snorre Fagerland found exposed panels showing a Chinese-speaking operator steering Claude Code and DeepSeek agents through the open-source Cairn platform to break into company sites. Reuters named Deere, SharkNinja and Cummins among about 100 victims, at roughly 50 dollars in AI tokens per success.",
-    "smb": "Turn on automatic updates for your website platform and plugins, and rotate the admin and hosting passwords for any site you have not touched in months.",
-    "url": "https://securityboulevard.com/2026/11/chinese-speaking-hacker-successfully-charged-ai-agents-to-break-into-around-100-websites",
+    "source": "Cyber Security News, on Microsoft and Todyl",
+    "date": "2026-11-09",
+    "title": "AI attack agents went from a GitHub leak to Azure Key Vault secrets in five minutes",
+    "tldr": "Microsoft and Todyl say attackers ran ARTEX AI agents that searched public GitHub code for leaked cloud and AI keys, then used them to sign in to Azure from late October. About 27 organizations were reached, including MSP clients, and one agent pulled Key Vault secrets five minutes after its first search.",
+    "smb": "Turn on secret scanning for your code, rotate any key that was ever public even if you deleted it, and check cloud sign-in logs back to October 28.",
+    "url": "https://cybersecuritynews.com/artex-ai-azure-key-vault-secrets/",
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "voices",
+      "source": "Schneier on Security",
+      "date": "2026-11-09",
+      "title": "Schneier: split AI security into security of AI, with AI and from AI",
+      "tldr": "Back from the [un]prompted conference in San Francisco, Bruce Schneier sorted AI security into three areas: protecting AI systems, using AI for defense, and defending against AI-enabled threats. He argues researchers should know which area their work serves and that the field needs all three.",
+      "smb": "Sort your AI security to-do list into those three buckets and give each one an owner and at least one next step.",
+      "url": "https://www.schneier.com/blog/archives/2026/11/ai-security.html",
+      "link_label": "Read the post"
+    },
+    {
+      "cat": "news",
+      "source": "Wired",
+      "date": "2026-11-06",
+      "title": "Tests show a free Chinese AI model nearly matches OpenAI's restricted model at network hacking",
+      "tldr": "Testing firm Vals found DeepSeek completed 73% of multi-step hacks on mock company networks, against 81% for OpenAI's partner-only Daybreak model. A DeepSeek attack run cost about 2 to 3 dollars in tokens, so capable attack agents are now cheap and open to anyone.",
+      "smb": "Assume attackers can probe your network cheaply and often, and close exposed admin pages, old VPNs and default passwords first.",
+      "url": "https://www.wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Acronis Threat Research Unit",
+      "date": "2026-11-04",
+      "title": "One operator ran 12 AI agents against hundreds of targets, including Taipei's fire service",
+      "tldr": "Acronis traced a campaign across 11 countries to one person in Taiwan who coordinated AI agents running on open models with their safety limits removed. The agents took medical and dispatch data from a Taipei fire-department platform and phone records in Mexico, though they also made many errors.",
+      "smb": "Remove default passwords and require sign-in on every API and database you expose, since the agents failed wherever authentication was enforced.",
+      "url": "https://www.acronis.com/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services",
+      "link_label": "Read the report"
+    },
     {
       "cat": "news",
       "source": "Unite.AI, on OpenAI",
@@ -749,6 +779,16 @@
       "smb": "Back up vector databases and AI configs offline, and never expose a Docker socket to the internet.",
       "url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/",
       "link_label": "Read on BleepingComputer"
+    },
+    {
+      "cat": "news",
+      "source": "Security Boulevard",
+      "date": "2026-11-02",
+      "title": "One attacker's AI agents broke into about 100 company websites",
+      "tldr": "NorForge researcher Snorre Fagerland found exposed panels showing a Chinese-speaking operator steering Claude Code and DeepSeek agents through the open-source Cairn platform to break into company sites. Reuters named Deere, SharkNinja and Cummins among about 100 victims, at roughly 50 dollars in AI tokens per success.",
+      "smb": "Turn on automatic updates for your website platform and plugins, and rotate the admin and hosting passwords for any site you have not touched in months.",
+      "url": "https://securityboulevard.com/2026/11/chinese-speaking-hacker-successfully-charged-ai-agents-to-break-into-around-100-websites",
+      "link_label": "Read the story"
     }
   ],
   "voices": [

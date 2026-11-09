@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 8, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 9, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -49,11 +49,11 @@
   <div class="container">
     <div class="eyebrow">Threat of the week</div>
     <article class="card intel-threat" style="margin-top:1.25rem; max-width:860px;">
-      <div class="intel-meta"><span>Security Boulevard &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
-      <h2 class="heading-md intel-title">One attacker&#x27;s AI agents broke into about 100 company websites</h2>
-      <p class="intel-tldr">NorForge researcher Snorre Fagerland found exposed panels showing a Chinese-speaking operator steering Claude Code and DeepSeek agents through the open-source Cairn platform to break into company sites. Reuters named Deere, SharkNinja and Cummins among about 100 victims, at roughly 50 dollars in AI tokens per success.</p>
-      <div class="intel-smb"><span>SMB takeaway</span>Turn on automatic updates for your website platform and plugins, and rotate the admin and hosting passwords for any site you have not touched in months.</div>
-      <a class="intel-link" href="https://securityboulevard.com/2026/11/chinese-speaking-hacker-successfully-charged-ai-agents-to-break-into-around-100-websites" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      <div class="intel-meta"><span>Cyber Security News, on Microsoft and Todyl &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
+      <h2 class="heading-md intel-title">AI attack agents went from a GitHub leak to Azure Key Vault secrets in five minutes</h2>
+      <p class="intel-tldr">Microsoft and Todyl say attackers ran ARTEX AI agents that searched public GitHub code for leaked cloud and AI keys, then used them to sign in to Azure from late October. About 27 organizations were reached, including MSP clients, and one agent pulled Key Vault secrets five minutes after its first search.</p>
+      <div class="intel-smb"><span>SMB takeaway</span>Turn on secret scanning for your code, rotate any key that was ever public even if you deleted it, and check cloud sign-in logs back to October 28.</div>
+      <a class="intel-link" href="https://cybersecuritynews.com/artex-ai-azure-key-vault-secrets/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
     </article>
   </div>
 </section>
@@ -66,6 +66,13 @@
       <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>48</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>10</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Schneier on Security &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Schneier: split AI security into security of AI, with AI and from AI</h3>
+        <p class="intel-tldr">Back from the [un]prompted conference in San Francisco, Bruce Schneier sorted AI security into three areas: protecting AI systems, using AI for defense, and defending against AI-enabled threats. He argues researchers should know which area their work serves and that the field needs all three.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Sort your AI security to-do list into those three buckets and give each one an owner and at least one next step.</div>
+        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-security.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="voices">
         <div class="intel-meta"><span class="tag">Voices</span><span>Cybersecurity Insiders, Merium Khalid &middot; <time datetime="2026-11-07">Nov 7, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Barracuda&#x27;s Khalid: phishing emails now carry hidden orders for the AI assistant that reads them</h3>
@@ -86,6 +93,13 @@
         <p class="intel-tldr">An AE Studio researcher offered coding agents a bug fix from a simulated forum of AI agents that asked them to share environment variables and run an install script. Agents posted the protected token in 15% of trials and ran the script in 24%, and rarely mentioned it unless asked.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Keep API keys out of the environment your coding agents can read, and block them from running install scripts or reaching unknown sites without your approval.</div>
         <a class="intel-link" href="https://xenospectrum.com/en/ai-agents-secrets-swarm-experiment/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Wired &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Tests show a free Chinese AI model nearly matches OpenAI&#x27;s restricted model at network hacking</h3>
+        <p class="intel-tldr">Testing firm Vals found DeepSeek completed 73% of multi-step hacks on mock company networks, against 81% for OpenAI&#x27;s partner-only Daybreak model. A DeepSeek attack run cost about 2 to 3 dollars in tokens, so capable attack agents are now cheap and open to anyone.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Assume attackers can probe your network cheaply and often, and close exposed admin pages, old VPNs and default passwords first.</div>
+        <a class="intel-link" href="https://www.wired.com/story/free-chinese-ai-models-are-getting-scary-good-at-hacking/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Unite.AI, on OpenAI &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
@@ -226,6 +240,13 @@
         <p class="intel-tldr">Zohaib Ahmed, CEO of Resemble AI, said many AI agents now pass as human visitors, and location or IP checks will soon stop telling them apart. He suggested starting with sign-in consent logs, API token records and outbound traffic to AI services to see which agents staff have already connected.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Review which third-party apps employees have granted full email or file access in your Microsoft 365 or Google admin console, and revoke the ones nobody owns.</div>
         <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/05/zohaib-ahmed-resemble-ai-detecting-ai-agent-traffic/" target="_blank" rel="noopener noreferrer">Read the interview &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Acronis Threat Research Unit &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">One operator ran 12 AI agents against hundreds of targets, including Taipei&#x27;s fire service</h3>
+        <p class="intel-tldr">Acronis traced a campaign across 11 countries to one person in Taiwan who coordinated AI agents running on open models with their safety limits removed. The agents took medical and dispatch data from a Taipei fire-department platform and phone records in Mexico, though they also made many errors.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Remove default passwords and require sign-in on every API and database you expose, since the agents failed wherever authentication was enforced.</div>
+        <a class="intel-link" href="https://www.acronis.com/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services" target="_blank" rel="noopener noreferrer">Read the report &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Check Point Research &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
@@ -395,6 +416,13 @@
         <div class="intel-smb"><span>SMB takeaway</span>Check your Linux servers for unexpected PHP files in web folders and changes to .bashrc, and move any passwords stored in config files into a secrets manager.</div>
         <a class="intel-link" href="https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html" target="_blank" rel="noopener noreferrer">Read the report &rarr;</a>
       </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Security Boulevard &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">One attacker&#x27;s AI agents broke into about 100 company websites</h3>
+        <p class="intel-tldr">NorForge researcher Snorre Fagerland found exposed panels showing a Chinese-speaking operator steering Claude Code and DeepSeek agents through the open-source Cairn platform to break into company sites. Reuters named Deere, SharkNinja and Cummins among about 100 victims, at roughly 50 dollars in AI tokens per success.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Turn on automatic updates for your website platform and plugins, and rotate the admin and hosting passwords for any site you have not touched in months.</div>
+        <a class="intel-link" href="https://securityboulevard.com/2026/11/chinese-speaking-hacker-successfully-charged-ai-agents-to-break-into-around-100-websites" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="voices">
         <div class="intel-meta"><span class="tag">Voices</span><span>Daniel Miessler &middot; <time datetime="2026-11-01">Nov 1, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Miessler: attackers have the AI edge for now, so cover the basics fast</h3>
@@ -457,34 +485,6 @@
         <p class="intel-tldr">CrowdStrike says a Chinese state-linked group used ARTEX, an AI agent framework running on DeepSeek and a commercial model, to hit more than 200 organizations from October 17, with nine confirmed intrusions. A human steered the agents, which exploited weak SAML setups, old unrotated keys and leaked VPN files.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Rotate signing keys and service passwords that have not changed in a year, and remove old VPN configs from shared mailboxes.</div>
         <a class="intel-link" href="https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>Bruce Schneier &middot; <time datetime="2026-10-30">Oct 30, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Schneier: AI lets ordinary owners uncover spyware in cheap gadgets</h3>
-        <p class="intel-tldr">Schneier highlighted a car owner who used Claude to inspect a cheap aftermarket head unit and found preinstalled apps such as a call recorder and Baidu location services. His larger point is that AI now lets non-experts do this kind of reverse engineering, so expect many more such findings.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Keep low-cost smart devices, from dashcams to TV boxes, on a guest network separate from business systems.</div>
-        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/10/bloatware-in-aftermarket-auto-parts.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Built-in browsers in AI coding assistants let web pages reach the developer&#x27;s machine</h3>
-        <p class="intel-tldr">Forever Security showed that the embedded browsers in Cursor, GitHub Copilot, OpenAI Codex, VS Code and Claude Desktop could be abused to run commands, fake a sign-in page or read files such as SSH keys and .env secrets. Cursor and Copilot have fixed their issues; Codex and VS Code were still unpatched at publication.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Tell developers not to click links or setup buttons their AI assistant opens from unfamiliar projects, and keep API keys out of plain .env files on laptops.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/10/29/research-ai-assistant-browser-vulnerabilities/" target="_blank" rel="noopener noreferrer">Read the report &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>BleepingComputer &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Hugging Face cryptominer campaign returns days after takedown</h3>
-        <p class="intel-tldr">Pluto Security tracked 31 fake Qwen2 test models on Hugging Face that install a cryptominer, and sometimes a reverse shell, when loaded with trust_remote_code enabled. A second wave appeared under new accounts days after the first takedown, and its main model passed platform scans while reaching over 28,000 downloads.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Turn off trust_remote_code by default and only load models from publishers you have vetted on GPU servers.</div>
-        <a class="intel-link" href="https://bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Resultsense &middot; <time datetime="2026-10-29">Oct 29, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Web host 123 Reg says an AI-driven attack read customer contact data</h3>
-        <p class="intel-tldr">UK web host 123 Reg disclosed that a September intruder read customer names, phone numbers, VAT numbers and account details, and AI attack tooling was found on the attacker&#x27;s servers. It suspects a China-linked group tied to the ARTEX agentic hacking framework; that link is not independently confirmed.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Warn staff that scammers may now know which hosting products you buy, and turn on two-step verification at your domain and hosting provider.</div>
-        <a class="intel-link" href="https://www.resultsense.com/news/2026-10-29-123-reg-ai-cyberattack-china-nexus/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
