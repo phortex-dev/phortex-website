@@ -63,9 +63,23 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>49</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>50</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Record, on Microsoft Patch Tuesday &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">November Patch Tuesday tops 1,000 bugs again, and the one exploited Outlook flaw was found with Claude</h3>
+        <p class="intel-tldr">Microsoft fixed 1,093 vulnerabilities this month, the second month in a row above 1,000, with 63 rated critical. The only flaw already used in attacks, an Outlook bug where a crafted message file can expose sign-in data, was found by a researcher using Anthropic&#x27;s Claude, and CISA has added it to its exploited list.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Apply this month&#x27;s Microsoft updates to Outlook and Windows within days, not weeks, and warn staff not to open unexpected message file attachments.</div>
+        <a class="intel-link" href="https://therecord.media/patch-tuesday-microsoft-1000-bugs-again" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Record, on Fireworks AI &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Fireworks AI says October intruders took customer secrets, billing data and datasets</h3>
+        <p class="intel-tldr">AI model host Fireworks says a criminal group stole account and billing details, stored secrets, datasets and internal data, then got back in weeks later through a third-party cloud provider. Notion was among the customers told, and it cut ties, had its data deleted and paused a feature built on the service.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>List every AI provider that holds your API keys or data, rotate those keys after any vendor breach, and set spending alerts on each account.</div>
+        <a class="intel-link" href="https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Acronis research &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Acronis finds more than 575 booby-trapped OpenClaw skills that installed malware</h3>
@@ -93,6 +107,13 @@
         <p class="intel-tldr">GitGuardian CEO Eric Fourrier says AI coding tools and agents put secrets in the hands of staff without engineering habits, and move credentials through more systems where they can escape. He argues companies should watch personal accounts and side projects too, and measure how fast a reported key gets revoked.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Publish a simple way for outsiders to report a leaked company key, name who reads those reports, and revoke the key before cleaning up the code.</div>
         <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/10/eric-fourrier-gitguardian-leaked-credentials/" target="_blank" rel="noopener noreferrer">Read the interview &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on Google DeepMind &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Google DeepMind&#x27;s AI agents cut the cost of attacking old 1024-bit RSA keys</h3>
+        <p class="intel-tldr">Google DeepMind and university cryptographers had AI agents find cheaper ways to forge signatures and factor legacy 1024-bit RSA keys, cutting one known attack from about 1,380 to 391 CPU core-years. DeepMind says 2048-bit and larger keys remain safe, but the agents did most of the work in under four days.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Inventory certificates, VPNs, signing devices and old appliances still using 1024-bit RSA keys, and plan to replace them with 2048-bit or stronger keys.</div>
+        <a class="intel-link" href="https://www.securityweek.com/google-deepminds-ai-agents-make-1024-bit-rsa-keys-cheaper-to-attack/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Help Net Security &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
@@ -464,27 +485,6 @@
         <p class="intel-tldr">Cisco Talos found a Windows password stealer, VOLTA-AUTODOXER, that builds a profile of each victim and asks AI models through OpenRouter to rank their accounts and wallets by resale value. If one model refuses, it falls back to others, and buyers order custom copies that report back over Telegram.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Turn on MFA for email and finance accounts, stop staff saving work passwords in browsers on shared or personal PCs, and use a password manager instead.</div>
         <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/02/ai-powered-infostealer-volta-victim-profiling/" target="_blank" rel="noopener noreferrer">Read the article &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>Bruce Schneier &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Schneier: AI is finding critical bugs faster than ever recorded</h3>
-        <p class="intel-tldr">Bruce Schneier pointed to an estimate that about 3 percent of all critical software flaws ever logged were found in the past month, a pace that could add roughly a quarter to the all-time total this year. He agreed that AI-driven bug finding has changed the landscape.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Expect more patches, more often: turn on automatic updates where you can and set a weekly slot to apply the rest.</div>
-        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-vulnerability-finding-2.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Unit 42: likely AI-written scripts used to spy on government Linux servers</h3>
-        <p class="intel-tldr">Palo Alto Networks Unit 42 tracked an unidentified group, CL-UNK-1211, that used web shells, a Go-based trojan called SysGoRAT and password-stealing tricks against government-linked Linux servers. Many of its scripts read like chatbot answers, which suggests AI wrote or ran them.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Check your Linux servers for unexpected PHP files in web folders and changes to .bashrc, and move any passwords stored in config files into a secrets manager.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html" target="_blank" rel="noopener noreferrer">Read the report &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Security Boulevard &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">One attacker&#x27;s AI agents broke into about 100 company websites</h3>
-        <p class="intel-tldr">NorForge researcher Snorre Fagerland found exposed panels showing a Chinese-speaking operator steering Claude Code and DeepSeek agents through the open-source Cairn platform to break into company sites. Reuters named Deere, SharkNinja and Cummins among about 100 victims, at roughly 50 dollars in AI tokens per success.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Turn on automatic updates for your website platform and plugins, and rotate the admin and hosting passwords for any site you have not touched in months.</div>
-        <a class="intel-link" href="https://securityboulevard.com/2026/11/chinese-speaking-hacker-successfully-charged-ai-agents-to-break-into-around-100-websites" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>

@@ -12,6 +12,36 @@
   "items": [
     {
       "cat": "news",
+      "source": "The Record, on Microsoft Patch Tuesday",
+      "date": "2026-11-10",
+      "title": "November Patch Tuesday tops 1,000 bugs again, and the one exploited Outlook flaw was found with Claude",
+      "tldr": "Microsoft fixed 1,093 vulnerabilities this month, the second month in a row above 1,000, with 63 rated critical. The only flaw already used in attacks, an Outlook bug where a crafted message file can expose sign-in data, was found by a researcher using Anthropic's Claude, and CISA has added it to its exploited list.",
+      "smb": "Apply this month's Microsoft updates to Outlook and Windows within days, not weeks, and warn staff not to open unexpected message file attachments.",
+      "url": "https://therecord.media/patch-tuesday-microsoft-1000-bugs-again",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Record, on Fireworks AI",
+      "date": "2026-11-10",
+      "title": "Fireworks AI says October intruders took customer secrets, billing data and datasets",
+      "tldr": "AI model host Fireworks says a criminal group stole account and billing details, stored secrets, datasets and internal data, then got back in weeks later through a third-party cloud provider. Notion was among the customers told, and it cut ties, had its data deleted and paused a feature built on the service.",
+      "smb": "List every AI provider that holds your API keys or data, rotate those keys after any vendor breach, and set spending alerts on each account.",
+      "url": "https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek, on Google DeepMind",
+      "date": "2026-11-09",
+      "title": "Google DeepMind's AI agents cut the cost of attacking old 1024-bit RSA keys",
+      "tldr": "Google DeepMind and university cryptographers had AI agents find cheaper ways to forge signatures and factor legacy 1024-bit RSA keys, cutting one known attack from about 1,380 to 391 CPU core-years. DeepMind says 2048-bit and larger keys remain safe, but the agents did most of the work in under four days.",
+      "smb": "Inventory certificates, VPNs, signing devices and old appliances still using 1024-bit RSA keys, and plan to replace them with 2048-bit or stronger keys.",
+      "url": "https://www.securityweek.com/google-deepminds-ai-agents-make-1024-bit-rsa-keys-cheaper-to-attack/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
       "source": "Help Net Security, on Acronis research",
       "date": "2026-11-10",
       "title": "Acronis finds more than 575 booby-trapped OpenClaw skills that installed malware",
