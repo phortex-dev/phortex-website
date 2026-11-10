@@ -126,34 +126,34 @@
     <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-11-10">November 10, 2026</time></div>
     <h2 class="heading-md" id="tldr-heading">Today&rsquo;s top security stories, <span class="text-accent-cyan">ranked</span></h2>
     <div class="tl-grid">
+<article class="tl-card tl-feature" data-cat="patch">
+  <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
+  <div class="tl-body">
+    <div class="tl-meta"><span class="tl-rank">#1</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 5 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Top story</span></div>
+    <h3 class="tl-title">Microsoft fixes an exploited Outlook zero-day among 1,000-plus Patch Tuesday flaws</h3>
+    <p class="tl-why">Attackers are using an Outlook flaw that leaks a user&#x27;s Windows password hash when a crafted Office file is opened, letting them pose as that user. November&#x27;s update also fixes critical Exchange, Active Directory and Windows flaws.</p>
+    <p class="tl-do"><strong>Do this:</strong> Install November&#x27;s Windows and Office updates on every PC this week, patch Exchange and domain controllers first, and block outbound SMB (port 445) at the firewall.</p>
+    <a class="tl-src" href="https://www.tenable.com/blog/microsoft-november-2026-patch-tuesday-addresses-1093-cves-cve-2026-124194" target="_blank" rel="noopener noreferrer">Tenable &rarr;</a>
+  </div>
+</article>
 <article class="tl-card tl-feature" data-cat="browser">
   <div class="tl-art tl-art-md" style="--c:#4FA3FF" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="36" height="30" rx="3"/><path d="M6 17h36M11 13h.01M15 13h.01"/><circle cx="22" cy="28" r="5"/><path d="M26 32l5 5"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#1</span><span class="tl-cat" style="--c:#4FA3FF">Browser &amp; apps</span><span class="tl-heat" title="Heat 5 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Top story</span></div>
+    <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#4FA3FF">Browser &amp; apps</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
     <h3 class="tl-title">Google patches a Chrome zero-day that attackers are already exploiting</h3>
     <p class="tl-why">A use-after-free flaw in Chrome&#x27;s XML component is being used in attacks, Google says; it is the eighth exploited Chrome zero-day this year. The update fixes nine flaws and affects every Windows, Mac and Linux user.</p>
     <p class="tl-do"><strong>Do this:</strong> Update Chrome to 157.0.8103.50 or later on every computer, then restart the browser; update Edge and other Chromium browsers as their fixes arrive.</p>
     <a class="tl-src" href="https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year/" target="_blank" rel="noopener noreferrer">SecurityWeek &rarr;</a>
   </div>
 </article>
-<article class="tl-card tl-feature" data-cat="cloud">
-  <div class="tl-art tl-art-md" style="--c:#38E1C6" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34a8 8 0 0 1 0-16 11 11 0 0 1 21-2 8 8 0 0 1-1 18z"/><circle cx="24" cy="25" r="3"/><path d="M24 28v4"/></svg></div>
+<article class="tl-card tl-feature" data-cat="vpn">
+  <div class="tl-art tl-art-md" style="--c:#00D4F0" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M17 24h14M17 18h14M17 30h14M24 18v6M20 24v6M28 24v6"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#38E1C6">Cloud &amp; accounts</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">Attackers used Qubole&#x27;s trusted AWS access to raid customer accounts and copy data</h3>
-    <p class="tl-why">Wiz says an attacker used the AWS account Qubole uses to reach customers, assumed their roles, hunted for stored secrets and copied S3 data in October. Former customers whose old Qubole roles still exist were hit too.</p>
-    <p class="tl-do"><strong>Do this:</strong> Delete unused vendor roles in AWS, check CloudTrail since October 1 for AssumeRole calls from Qubole&#x27;s account, and rotate any secrets those roles could reach.</p>
-    <a class="tl-src" href="https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html" target="_blank" rel="noopener noreferrer">The Hacker News &rarr;</a>
-  </div>
-</article>
-<article class="tl-card tl-feature" data-cat="policy">
-  <div class="tl-art tl-art-md" style="--c:#9AA8C7" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 8v32M14 40h20M10 14h28"/><path d="M10 14l-5 12a5 5 0 0 0 10 0zM38 14l-5 12a5 5 0 0 0 10 0z"/></svg></div>
-  <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#9AA8C7">Policy &amp; law</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">France blames Iran for refrigeration attacks that caused at least 15 store fires</h3>
-    <p class="tl-why">New: France says an Iranian Revolutionary Guard unit, which US agencies link to CyberAv3ngers, sabotaged refrigeration at about 700 grocery stores and food businesses in October. The same group has hit US water utilities before.</p>
-    <p class="tl-do"><strong>Do this:</strong> Take refrigeration and building controllers off the open internet, change their default passwords, and allow remote access only through a VPN with MFA.</p>
-    <a class="tl-src" href="https://therecord.media/france-blames-iran-for-fridge-cyberattacks" target="_blank" rel="noopener noreferrer">The Record &rarr;</a>
+    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#00D4F0">Firewall &amp; VPN</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <h3 class="tl-title">Fortinet details eight critical FortiOS and FortiManager flaws, most needing no login</h3>
+    <p class="tl-why">Fortinet published details of critical flaws in FortiGate firewalls, FortiManager and FortiAnalyzer, three weeks after quietly shipping fixes. No attacks are confirmed yet, but full details make exploits easier to build.</p>
+    <p class="tl-do"><strong>Do this:</strong> Update FortiOS to 7.2.14, 7.4.13, 7.6.8 or 8.0.2 and patch FortiManager and FortiAnalyzer; keep their management, OFTP and FGFM ports off the internet.</p>
+    <a class="tl-src" href="https://securityonline.info/fortinet-critical-vulnerabilities-november-2026/" target="_blank" rel="noopener noreferrer">SecurityOnline &rarr;</a>
   </div>
 </article>
     </div>

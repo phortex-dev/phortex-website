@@ -1,35 +1,59 @@
 {
   "date": "2026-11-10",
   "items": [
-    {"title": "Google patches a Chrome zero-day that attackers are already exploiting",
-     "why": "A use-after-free flaw in Chrome's XML component is being used in attacks, Google says; it is the eighth exploited Chrome zero-day this year. The update fixes nine flaws and affects every Windows, Mac and Linux user.",
-     "action": "Update Chrome to 157.0.8103.50 or later on every computer, then restart the browser; update Edge and other Chromium browsers as their fixes arrive.",
-     "heat": 5, "cat": "browser",
-     "source_name": "SecurityWeek", "source_url": "https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year/"},
-    {"title": "Attackers used Qubole's trusted AWS access to raid customer accounts and copy data",
-     "why": "Wiz says an attacker used the AWS account Qubole uses to reach customers, assumed their roles, hunted for stored secrets and copied S3 data in October. Former customers whose old Qubole roles still exist were hit too.",
-     "action": "Delete unused vendor roles in AWS, check CloudTrail since October 1 for AssumeRole calls from Qubole's account, and rotate any secrets those roles could reach.",
-     "heat": 4, "cat": "cloud",
-     "source_name": "The Hacker News", "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html"},
-    {"title": "France blames Iran for refrigeration attacks that caused at least 15 store fires",
-     "why": "New: France says an Iranian Revolutionary Guard unit, which US agencies link to CyberAv3ngers, sabotaged refrigeration at about 700 grocery stores and food businesses in October. The same group has hit US water utilities before.",
-     "action": "Take refrigeration and building controllers off the open internet, change their default passwords, and allow remote access only through a VPN with MFA.",
-     "heat": 4, "cat": "policy",
-     "source_name": "The Record", "source_url": "https://therecord.media/france-blames-iran-for-fridge-cyberattacks"},
-    {"title": "Frontline Education breach now counts over 3 million school staff and students",
-     "why": "The K-12 software maker says attackers got in through a flaw in an unnamed third-party product in August and took names, Social Security numbers, ID and health insurance details from two of its products.",
-     "action": "Ask your key software vendors how quickly they patch the third-party products they run, and enroll affected staff in the free credit monitoring offered.",
-     "heat": 3, "cat": "breach",
-     "source_name": "SecurityWeek", "source_url": "https://www.securityweek.com/3-million-people-hit-by-frontline-education-data-breach/"},
-    {"title": "German web host Mittwald breached through its AI assistant connector",
-     "why": "An attacker exploited a flaw in the host's MCP server, which lets customers connect AI assistants to their hosting accounts, and compromised 56 customer projects over eight days before being found.",
-     "action": "Review which AI assistants and MCP connectors can reach your hosting, email and cloud accounts, and remove any you don't use.",
-     "heat": 3, "cat": "ai",
-     "source_name": "The Record", "source_url": "https://therecord.media/cyberattack-germany-ai-mittwald"},
-    {"title": "Revolve raises its card-data breach count to 1.5 million customers",
-     "why": "New: the fashion retailer told Indiana regulators that 1,515,073 people were affected, far more than earlier state filings showed. Names, addresses and saved card numbers with expiration dates were taken.",
-     "action": "If you or company cards shopped at Revolve with a saved card, replace the card and watch statements; avoid storing cards on retail sites.",
-     "heat": 2, "cat": "breach",
-     "source_name": "SecurityWeek", "source_url": "https://www.securityweek.com/revolve-puts-data-breach-victim-count-at-1-5-million/"}
+    {
+      "title": "Microsoft fixes an exploited Outlook zero-day among 1,000-plus Patch Tuesday flaws",
+      "why": "Attackers are using an Outlook flaw that leaks a user's Windows password hash when a crafted Office file is opened, letting them pose as that user. November's update also fixes critical Exchange, Active Directory and Windows flaws.",
+      "action": "Install November's Windows and Office updates on every PC this week, patch Exchange and domain controllers first, and block outbound SMB (port 445) at the firewall.",
+      "heat": 5,
+      "cat": "patch",
+      "source_name": "Tenable",
+      "source_url": "https://www.tenable.com/blog/microsoft-november-2026-patch-tuesday-addresses-1093-cves-cve-2026-124194"
+    },
+    {
+      "title": "Google patches a Chrome zero-day that attackers are already exploiting",
+      "why": "A use-after-free flaw in Chrome's XML component is being used in attacks, Google says; it is the eighth exploited Chrome zero-day this year. The update fixes nine flaws and affects every Windows, Mac and Linux user.",
+      "action": "Update Chrome to 157.0.8103.50 or later on every computer, then restart the browser; update Edge and other Chromium browsers as their fixes arrive.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year/",
+      "heat": 4,
+      "cat": "browser"
+    },
+    {
+      "title": "Fortinet details eight critical FortiOS and FortiManager flaws, most needing no login",
+      "why": "Fortinet published details of critical flaws in FortiGate firewalls, FortiManager and FortiAnalyzer, three weeks after quietly shipping fixes. No attacks are confirmed yet, but full details make exploits easier to build.",
+      "action": "Update FortiOS to 7.2.14, 7.4.13, 7.6.8 or 8.0.2 and patch FortiManager and FortiAnalyzer; keep their management, OFTP and FGFM ports off the internet.",
+      "heat": 4,
+      "cat": "vpn",
+      "source_name": "SecurityOnline",
+      "source_url": "https://securityonline.info/fortinet-critical-vulnerabilities-november-2026/"
+    },
+    {
+      "title": "Attackers used Qubole's trusted AWS access to raid customer accounts and copy data",
+      "why": "Wiz says an attacker used the AWS account Qubole uses to reach customers, assumed their roles, hunted for stored secrets and copied S3 data in October. Former customers whose old Qubole roles still exist were hit too.",
+      "action": "Delete unused vendor roles in AWS, check CloudTrail since October 1 for AssumeRole calls from Qubole's account, and rotate any secrets those roles could reach.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
+      "heat": 4,
+      "cat": "cloud"
+    },
+    {
+      "title": "France blames Iran for refrigeration attacks that caused at least 15 store fires",
+      "why": "New: France says an Iranian Revolutionary Guard unit, which US agencies link to CyberAv3ngers, sabotaged refrigeration at about 700 grocery stores and food businesses in October. The same group has hit US water utilities before.",
+      "action": "Take refrigeration and building controllers off the open internet, change their default passwords, and allow remote access only through a VPN with MFA.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/france-blames-iran-for-fridge-cyberattacks",
+      "heat": 4,
+      "cat": "policy"
+    },
+    {
+      "title": "Ivanti patches a critical Endpoint Manager flaw that allows takeover without a login",
+      "why": "Ivanti fixed 13 flaws, including a critical SQL injection in Endpoint Manager that can run code without credentials and a critical missing-login bug in Cloud Services Application. Ivanti says none are being exploited yet.",
+      "action": "Update Ivanti Endpoint Manager to 2024 SU8 and Cloud Services Application to 5.0.8.1 first, then patch EPMM, Sentry and User Workspace Manager.",
+      "heat": 3,
+      "cat": "patch",
+      "source_name": "SecurityOnline",
+      "source_url": "https://securityonline.info/ivanti-security-advisories-november-2026/"
+    }
   ]
 }
