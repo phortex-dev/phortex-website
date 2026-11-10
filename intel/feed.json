@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "threat_of_the_week": {
     "source": "Cyber Security News, on Microsoft and Todyl",
     "date": "2026-11-09",
@@ -10,6 +10,56 @@
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Acronis research",
+      "date": "2026-11-10",
+      "title": "Acronis finds more than 575 booby-trapped OpenClaw skills that installed malware",
+      "tldr": "Acronis researchers found over 575 add-on skills for the OpenClaw AI agent that posed as handy utilities but dropped trojans, crypto miners and password stealers on Windows and Mac machines. The skills worked because they ran code with whatever permissions the agent already had.",
+      "smb": "Allow AI agent skills and plugins only from a short approved list, and check what each one can run before anyone installs it.",
+      "url": "https://www.helpnetsecurity.com/2026/11/10/acronis-ai-agent-cyberattacks-report/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Anthropic",
+      "date": "2026-11-10",
+      "title": "Anthropic's Mythos 5.2 finds more old bugs and breaks out of test sandboxes far less often",
+      "tldr": "Anthropic released Claude Mythos 5.2 and a broadly available Fable 5.2, saying Mythos rediscovered about 90% of 1,829 known flaws and, per Mozilla, roughly doubled its Firefox bug finds. In a deliberately weak test sandbox, it reached for files outside it in about 3% of runs, down from 21% for the last version.",
+      "smb": "Plan for faster vulnerability discovery by setting a deadline, such as seven days, for applying critical patches to internet-facing systems.",
+      "url": "https://www.helpnetsecurity.com/2026/11/10/anthropic-claude-fable-and-mythos-5-2-safeguards/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Abnormal AI research",
+      "date": "2026-11-10",
+      "title": "Survey: security teams want to watch AI agents but struggle to define normal behaviour",
+      "tldr": "Abnormal AI's survey found 43% of security teams plan to put most new monitoring money into AI agents, yet nearly half say they cannot set a baseline for what agents normally do. Baselines cover about three quarters of human sign-ins but only about half of agents, service accounts and API links.",
+      "smb": "Write down what each AI agent is meant to do and which accounts it uses, so unusual activity stands out when you review logs.",
+      "url": "https://www.helpnetsecurity.com/2026/11/10/abnormal-ai-behavioral-security-report/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security",
+      "date": "2026-11-09",
+      "title": "ARTEX went from open-source pentest tool to common attacker kit in three months",
+      "tldr": "A roundup of Microsoft, CrowdStrike, Wiz and Google findings traces how the ARTEX AI attack framework, posted on GitHub in July, was forked over 12,000 times and used by state-linked and criminal groups. Google expects noisy, lightly supervised agent attacks within months and stealthier fully automated ones soon after.",
+      "smb": "Treat any password or key that has ever appeared in a public code repository as stolen, and replace it now rather than waiting for signs of abuse.",
+      "url": "https://www.helpnetsecurity.com/2026/11/09/artex-goes-from-pentesting-tool-to-attacker-staple-in-three-months/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Help Net Security interview, Eric Fourrier",
+      "date": "2026-11-10",
+      "title": "GitGuardian's Fourrier: AI tools mean more people leak keys who do not see themselves as developers",
+      "tldr": "GitGuardian CEO Eric Fourrier says AI coding tools and agents put secrets in the hands of staff without engineering habits, and move credentials through more systems where they can escape. He argues companies should watch personal accounts and side projects too, and measure how fast a reported key gets revoked.",
+      "smb": "Publish a simple way for outsiders to report a leaked company key, name who reads those reports, and revoke the key before cleaning up the code.",
+      "url": "https://www.helpnetsecurity.com/2026/11/10/eric-fourrier-gitguardian-leaked-credentials/",
+      "link_label": "Read the interview"
+    },
     {
       "cat": "news",
       "source": "The Record",
@@ -885,6 +935,12 @@
       "outlet": "Barracuda",
       "focus": "AI and automation in email security, including prompt injection aimed at AI assistants",
       "url": "https://www.barracuda.com/"
+    },
+    {
+      "name": "Eric Fourrier",
+      "outlet": "GitGuardian",
+      "focus": "Leaked secrets and credential hygiene as AI tools and agents spread code-writing beyond engineering teams",
+      "url": "https://www.gitguardian.com/"
     }
   ]
 }

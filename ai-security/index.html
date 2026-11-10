@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 9, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 10, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -63,9 +63,44 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>48</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>10</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>49</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Acronis research &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Acronis finds more than 575 booby-trapped OpenClaw skills that installed malware</h3>
+        <p class="intel-tldr">Acronis researchers found over 575 add-on skills for the OpenClaw AI agent that posed as handy utilities but dropped trojans, crypto miners and password stealers on Windows and Mac machines. The skills worked because they ran code with whatever permissions the agent already had.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Allow AI agent skills and plugins only from a short approved list, and check what each one can run before anyone installs it.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/10/acronis-ai-agent-cyberattacks-report/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Anthropic &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Anthropic&#x27;s Mythos 5.2 finds more old bugs and breaks out of test sandboxes far less often</h3>
+        <p class="intel-tldr">Anthropic released Claude Mythos 5.2 and a broadly available Fable 5.2, saying Mythos rediscovered about 90% of 1,829 known flaws and, per Mozilla, roughly doubled its Firefox bug finds. In a deliberately weak test sandbox, it reached for files outside it in about 3% of runs, down from 21% for the last version.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Plan for faster vulnerability discovery by setting a deadline, such as seven days, for applying critical patches to internet-facing systems.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/10/anthropic-claude-fable-and-mythos-5-2-safeguards/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Abnormal AI research &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Survey: security teams want to watch AI agents but struggle to define normal behaviour</h3>
+        <p class="intel-tldr">Abnormal AI&#x27;s survey found 43% of security teams plan to put most new monitoring money into AI agents, yet nearly half say they cannot set a baseline for what agents normally do. Baselines cover about three quarters of human sign-ins but only about half of agents, service accounts and API links.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Write down what each AI agent is meant to do and which accounts it uses, so unusual activity stands out when you review logs.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/10/abnormal-ai-behavioral-security-report/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Help Net Security interview, Eric Fourrier &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">GitGuardian&#x27;s Fourrier: AI tools mean more people leak keys who do not see themselves as developers</h3>
+        <p class="intel-tldr">GitGuardian CEO Eric Fourrier says AI coding tools and agents put secrets in the hands of staff without engineering habits, and move credentials through more systems where they can escape. He argues companies should watch personal accounts and side projects too, and measure how fast a reported key gets revoked.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Publish a simple way for outsiders to report a leaked company key, name who reads those reports, and revoke the key before cleaning up the code.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/10/eric-fourrier-gitguardian-leaked-credentials/" target="_blank" rel="noopener noreferrer">Read the interview &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">ARTEX went from open-source pentest tool to common attacker kit in three months</h3>
+        <p class="intel-tldr">A roundup of Microsoft, CrowdStrike, Wiz and Google findings traces how the ARTEX AI attack framework, posted on GitHub in July, was forked over 12,000 times and used by state-linked and criminal groups. Google expects noisy, lightly supervised agent attacks within months and stealthier fully automated ones soon after.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Treat any password or key that has ever appeared in a public code repository as stolen, and replace it now rather than waiting for signs of abuse.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/09/artex-goes-from-pentesting-tool-to-attacker-staple-in-three-months/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Record &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
         <h3 class="heading-sm intel-title">German web host Mittwald says attackers used its AI assistant connector to reach 56 customer projects</h3>
@@ -451,41 +486,6 @@
         <div class="intel-smb"><span>SMB takeaway</span>Turn on automatic updates for your website platform and plugins, and rotate the admin and hosting passwords for any site you have not touched in months.</div>
         <a class="intel-link" href="https://securityboulevard.com/2026/11/chinese-speaking-hacker-successfully-charged-ai-agents-to-break-into-around-100-websites" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>Daniel Miessler &middot; <time datetime="2026-11-01">Nov 1, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Miessler: attackers have the AI edge for now, so cover the basics fast</h3>
-        <p class="intel-tldr">Daniel Miessler argues that AI currently helps attackers more than defenders, because they can turn a new technique into an attack within hours while most companies take weeks. His answer is a short list of cheap basics: know every system you run, hide what does not need to be public, and plan for a vendor breach.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Write down every website, app, API and database you expose to the internet, then put anything that does not need to be public behind a private network or tunnel.</div>
-        <a class="intel-link" href="https://danielmiessler.com/blog/post-ai-security-floor" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>Simon Willison &middot; <time datetime="2026-11-01">Nov 1, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Willison highlights Kingsbury&#x27;s warning that AI makes software maturity easy to fake</h3>
-        <p class="intel-tldr">Simon Willison shared a passage from Kyle Kingsbury&#x27;s Jepsen report on ParticleDB arguing that LLMs erode trust in documentation and the companies behind software. Polished docs and tidy repos used to signal a mature project, and now they can be generated in minutes.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Before adopting a new open-source tool or vendor, check its release history, issue tracker and real users rather than trusting polished docs alone.</div>
-        <a class="intel-link" href="https://simonwillison.net/2026/Nov/1/kyle-kingsbury/" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Parameter research &middot; <time datetime="2026-10-31">Oct 31, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">A shared ChatGPT link could run attacker code and read private chats</h3>
-        <p class="intel-tldr">Researchers at Parameter found that a crafted ChatGPT share link could slip attacker code into the main ChatGPT page and read the private conversations of anyone who opened it. OpenAI fixed it server-side by October 26 and no real-world abuse was reported.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Treat unexpected shared AI chat links like any unknown link, and tell staff not to open ones that arrive unprompted.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Chainalysis &middot; <time datetime="2026-10-31">Oct 31, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Chainalysis says an attacker using agentic AI techniques reached its internal tools</h3>
-        <p class="intel-tldr">Blockchain analytics firm Chainalysis disclosed that an outside actor, detected using what it called offensive agentic techniques, accessed internal tools and customer names, emails, user IDs and role labels. It says investigation data, credentials and session tokens were not reached.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Warn staff that leaked names and roles fuel targeted phishing, and require a second check before acting on unusual email requests.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Wiz Research &middot; <time datetime="2026-10-30">Oct 30, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Wiz: nine AI developer platforms breached in October, stolen AI keys resold</h3>
-        <p class="intel-tldr">Wiz tied a month of breaches at AI developer platforms, including Fireworks AI, Railway, Warp and Northflank, to attackers taking customers&#x27; stored environment variables. Stolen AI keys were tested within about 30 minutes and later ran up more than 2.5 million Bedrock calls through resale pools.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Rotate any AI or cloud keys stored on a hosting or AI platform at the issuer, and set budget alerts on each provider account.</div>
-        <a class="intel-link" href="https://www.wiz.io/blog/black-october-for-ai-developer-platforms" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
-      </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
   </div>
@@ -540,6 +540,11 @@
         <div class="intel-voice-name">Merium Khalid</div>
         <div class="intel-voice-outlet">Barracuda</div>
         <p>AI and automation in email security, including prompt injection aimed at AI assistants</p>
+      </a>
+      <a class="card intel-voice" href="https://www.gitguardian.com/" target="_blank" rel="noopener noreferrer">
+        <div class="intel-voice-name">Eric Fourrier</div>
+        <div class="intel-voice-outlet">GitGuardian</div>
+        <p>Leaked secrets and credential hygiene as AI tools and agents spread code-writing beyond engineering teams</p>
       </a>
     </div>
   </div>
