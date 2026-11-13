@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 10, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 13, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -66,6 +66,48 @@
       <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>50</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Schneier on Security &middot; <time datetime="2026-11-13">Nov 13, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Schneier: AI does not need to go rogue to break the systems we rely on</h3>
+        <p class="intel-tldr">In an essay based on his DEF CON keynote, Bruce Schneier argues the biggest risk is AI finding unintended shortcuts in rules, from code to tax law and finance, while doing what it was asked. He says AI speeds up and scales such hacks, and that laws and institutions must become as quick to patch as software.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Give every AI agent a narrow goal, written limits on what it may not do, and a person who reviews its actions before they touch money or customers.</div>
+        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-doesnt-have-to-go-rogue-to-break-the-world.html" target="_blank" rel="noopener noreferrer">Read the essay &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Aikido Security and SafeDep &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Stolen logins for 4,837 GitHub accounts used to plant a CI secret stealer that also grabs AI keys</h3>
+        <p class="intel-tldr">Since Tuesday an attacker has used hijacked GitHub accounts to slip a stealer into at least 1,806 repositories, taking cloud credentials, CI tokens and AI service keys before quietly reverting the changes. Some victims publish npm, Go, Packagist and PyPI packages, and the attacker left AWS and Azure backdoors.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Search your repositories for a wfx-docs branch, rotate every secret your workflows can read, including AI keys, and require 2FA on all GitHub accounts.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Apache &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Critical Apache web server flaw, first reported by Anthropic&#x27;s AI scanner, is fixed in 2.4.71</h3>
+        <p class="intel-tldr">A flaw in Apache&#x27;s HTTP/2 module lets an unauthenticated attacker run code on servers from 2.4.55 to 2.4.70 that have HTTP/2 turned on. Anthropic&#x27;s free AI scanner for open-source projects reported it in October, Google researchers found it independently, and several Linux distributions still lack a fix.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask your web host or IT provider whether your Apache servers run HTTP/2, and update to 2.4.71 or switch HTTP/2 off until a patch is available.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>TechCrunch, on United Airlines &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">United Airlines blocks AI agents from booking flights and managing reservations</h3>
+        <p class="intel-tldr">United will stop AI assistants from booking or changing trips for customers, on its own sites and through travel agencies, saying shared logins can leak data and agents can make purchases or spend miles nobody intended. It follows a Bank of America warning last week not to give banking passwords to AI assistants.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Write a short rule that staff never give an AI assistant their passwords for company bank, travel or supplier accounts.</div>
+        <a class="intel-link" href="https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Cequence Security &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Bots are posing as AI agents, and real AI agents are posing as people</h3>
+        <p class="intel-tldr">Cequence saw 414,210 visits in one week that claimed to be a popular consumer AI agent but were a credential stuffing attack on a marketplace&#x27;s sign-in page. At a telecom carrier, a real AI agent signed in, passed multi-factor checks and filled carts while presenting itself as an ordinary browser.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Add rate limits and extra verification to sign-in, payment and payee-change pages, and judge visitors by what they do rather than the name they claim.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/12/bots-ai-agent-impersonation/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Claroc &middot; <time datetime="2026-11-11">Nov 11, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">More than 35,000 apps built with Grok were open to anyone with the address</h3>
+        <p class="intel-tldr">Claroc found 35,578 apps made with Grok&#x27;s app builder that needed no sign-in, because sharing defaulted to anyone with the link and the addresses show up in public DNS data. About one in ten held internal or personal data, from sales plans at X and SpaceXSI to hospital staff lists and plain-text passwords.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask staff which AI app builders they use, set any app holding company data to invited users only, and test it from an outside account.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Record, on Microsoft Patch Tuesday &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
         <h3 class="heading-sm intel-title">November Patch Tuesday tops 1,000 bugs again, and the one exploited Outlook flaw was found with Claude</h3>
@@ -443,48 +485,6 @@
         <p class="intel-tldr">The UK&#x27;s NCSC said hostile groups will very likely use AI within two years to scale up ransomware, phishing and attacks on known flaws, with AI-powered ransomware likely to hit UK critical infrastructure by 2028. Its chief said the danger is old weaknesses that AI now finds faster.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Take any system off the internet that does not need to be online, and treat patching and multi-factor login as the starting point, not the finish line.</div>
         <a class="intel-link" href="https://ncsc.gov.uk/news/cyber-chief-uk-facing-ai-powered-attacks-on-critical-infrastructure-in-two-years" target="_blank" rel="noopener noreferrer">Read the NCSC statement &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Google and Mandiant research &middot; <time datetime="2026-11-03">Nov 3, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Stolen AI access is leaving companies with cloud bills of up to 1 million dollars</h3>
-        <p class="intel-tldr">Google Threat Intelligence and Mandiant describe criminals breaking into company cloud accounts and reselling the AI model access through cheap underground subscriptions. In one case a stolen key made over 500,000 model calls in under eight hours, and some victims saw charges above 100,000 dollars in a single day.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Set billing alerts and spending caps on every cloud and AI account, and get an alert whenever an AI service is switched on or re-enabled.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/03/llmjacking-stolen-ai-access-cloud-bills/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Critical Langflow flaws let attackers without an account run code on AI app servers</h3>
-        <p class="intel-tldr">IBM disclosed critical flaws in the Langflow AI app builder, versions 1.0.0 to 1.12.8, including an authentication bypass and code execution that need no login. A public Metasploit module exists for one flaw, though no attacks have been confirmed; version 1.13.0 fixes them.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Upgrade any Langflow server to version 1.13.0 after backing up its data, and turn off automatic login on any instance you cannot upgrade yet.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>Jason Haddix, via CYBR.SEC.Media &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Haddix releases SpikeStrip, decoys that trip up AI pentesting agents</h3>
-        <p class="intel-tldr">Jason Haddix of Arcanum released SpikeStrip, an experimental open-source project that hides fake vulnerability leads, prompt injection decoys and reasoning traps in a website&#x27;s code comments. The aim is to waste the time and compute of AI hacking agents that scan a site, without changing how the site works.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Assume AI agents are scanning your public website, and review its page source for comments that reveal internal paths, software versions or credentials.</div>
-        <a class="intel-link" href="https://www.cybrsecmedia.com/spikestrip-jason-haddix-targets-ai-pentesting-with-prompt-injection/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Northflank status page &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Northflank breach: customers&#x27; stored AI API keys used by attackers</h3>
-        <p class="intel-tldr">Cloud hosting platform Northflank says an attacker reached secrets held in its control plane on October 30, and several customers then saw their AI provider keys used without permission. The company told every customer to treat all stored environment variables as stolen and to rotate them.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Rotate any AI, cloud and payment keys stored with a hosting platform, set spending caps with your AI providers, and check their usage logs for charges you don&#x27;t recognise.</div>
-        <a class="intel-link" href="https://status.northflank.com/cmvv0rn5a092f14rutwccodpp" target="_blank" rel="noopener noreferrer">Read the incident update &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Sophos research &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Ransomware group had AI coding agents do most of its hands-on hacking</h3>
-        <p class="intel-tldr">Sophos found that the GOLD OGRE group, behind Aur0ra ransomware, gave AI coding agents stolen VPN logins and let them map networks, hunt for passwords and move between machines with little human input. The attackers passed off the work as authorised red-team testing, and three victims later appeared on its leak site.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Put phishing-resistant MFA on your VPN and remote access, patch internet-facing devices first, and make sure someone acts on endpoint security alerts within hours.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/02/aur0ra-ransomware-ai-agents/" target="_blank" rel="noopener noreferrer">Read the article &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Cisco Talos research &middot; <time datetime="2026-11-02">Nov 2, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">VOLTA infostealer sends stolen data to an AI model to rank what is worth selling</h3>
-        <p class="intel-tldr">Cisco Talos found a Windows password stealer, VOLTA-AUTODOXER, that builds a profile of each victim and asks AI models through OpenRouter to rank their accounts and wallets by resale value. If one model refuses, it falls back to others, and buyers order custom copies that report back over Telegram.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Turn on MFA for email and finance accounts, stop staff saving work passwords in browsers on shared or personal PCs, and use a password manager instead.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/02/ai-powered-infostealer-volta-victim-profiling/" target="_blank" rel="noopener noreferrer">Read the article &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>

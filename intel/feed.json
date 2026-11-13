@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-13",
   "threat_of_the_week": {
     "source": "Cyber Security News, on Microsoft and Todyl",
     "date": "2026-11-09",
@@ -10,6 +10,66 @@
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Aikido Security and SafeDep",
+      "date": "2026-11-12",
+      "title": "Stolen logins for 4,837 GitHub accounts used to plant a CI secret stealer that also grabs AI keys",
+      "tldr": "Since Tuesday an attacker has used hijacked GitHub accounts to slip a stealer into at least 1,806 repositories, taking cloud credentials, CI tokens and AI service keys before quietly reverting the changes. Some victims publish npm, Go, Packagist and PyPI packages, and the attacker left AWS and Azure backdoors.",
+      "smb": "Search your repositories for a wfx-docs branch, rotate every secret your workflows can read, including AI keys, and require 2FA on all GitHub accounts.",
+      "url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Claroc",
+      "date": "2026-11-11",
+      "title": "More than 35,000 apps built with Grok were open to anyone with the address",
+      "tldr": "Claroc found 35,578 apps made with Grok's app builder that needed no sign-in, because sharing defaulted to anyone with the link and the addresses show up in public DNS data. About one in ten held internal or personal data, from sales plans at X and SpaceXSI to hospital staff lists and plain-text passwords.",
+      "smb": "Ask staff which AI app builders they use, set any app holding company data to invited users only, and test it from an outside account.",
+      "url": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Apache",
+      "date": "2026-11-12",
+      "title": "Critical Apache web server flaw, first reported by Anthropic's AI scanner, is fixed in 2.4.71",
+      "tldr": "A flaw in Apache's HTTP/2 module lets an unauthenticated attacker run code on servers from 2.4.55 to 2.4.70 that have HTTP/2 turned on. Anthropic's free AI scanner for open-source projects reported it in October, Google researchers found it independently, and several Linux distributions still lack a fix.",
+      "smb": "Ask your web host or IT provider whether your Apache servers run HTTP/2, and update to 2.4.71 or switch HTTP/2 off until a patch is available.",
+      "url": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "TechCrunch, on United Airlines",
+      "date": "2026-11-12",
+      "title": "United Airlines blocks AI agents from booking flights and managing reservations",
+      "tldr": "United will stop AI assistants from booking or changing trips for customers, on its own sites and through travel agencies, saying shared logins can leak data and agents can make purchases or spend miles nobody intended. It follows a Bank of America warning last week not to give banking passwords to AI assistants.",
+      "smb": "Write a short rule that staff never give an AI assistant their passwords for company bank, travel or supplier accounts.",
+      "url": "https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Cequence Security",
+      "date": "2026-11-12",
+      "title": "Bots are posing as AI agents, and real AI agents are posing as people",
+      "tldr": "Cequence saw 414,210 visits in one week that claimed to be a popular consumer AI agent but were a credential stuffing attack on a marketplace's sign-in page. At a telecom carrier, a real AI agent signed in, passed multi-factor checks and filled carts while presenting itself as an ordinary browser.",
+      "smb": "Add rate limits and extra verification to sign-in, payment and payee-change pages, and judge visitors by what they do rather than the name they claim.",
+      "url": "https://www.helpnetsecurity.com/2026/11/12/bots-ai-agent-impersonation/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Schneier on Security",
+      "date": "2026-11-13",
+      "title": "Schneier: AI does not need to go rogue to break the systems we rely on",
+      "tldr": "In an essay based on his DEF CON keynote, Bruce Schneier argues the biggest risk is AI finding unintended shortcuts in rules, from code to tax law and finance, while doing what it was asked. He says AI speeds up and scales such hacks, and that laws and institutions must become as quick to patch as software.",
+      "smb": "Give every AI agent a narrow goal, written limits on what it may not do, and a person who reviews its actions before they touch money or customers.",
+      "url": "https://www.schneier.com/blog/archives/2026/11/ai-doesnt-have-to-go-rogue-to-break-the-world.html",
+      "link_label": "Read the essay"
+    },
     {
       "cat": "news",
       "source": "The Record, on Microsoft Patch Tuesday",
