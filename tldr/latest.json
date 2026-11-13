@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-13",
   "items": [
     {
-      "title": "Microsoft fixes an exploited Outlook zero-day among 1,000-plus Patch Tuesday flaws",
-      "why": "Attackers are using an Outlook flaw that leaks a user's Windows password hash when a crafted Office file is opened, letting them pose as that user. November's update also fixes critical Exchange, Active Directory and Windows flaws.",
-      "action": "Install November's Windows and Office updates on every PC this week, patch Exchange and domain controllers first, and block outbound SMB (port 445) at the firewall.",
+      "title": "New N-able N-central zero-day bypasses Hotfix 2; attackers planted miners on 21 servers",
+      "why": "A second exploit chain, 4EverAble2Shell, lets attackers run commands as root on on-premises N-central without a login. Attacks began about five hours after code went public, and 19 of 21 hacked servers already had Hotfix 2. No fixed build exists yet.",
+      "action": "Disable the Legacy API on every on-premises N-central server or take it off the internet, then ask your IT provider to check managed PCs for new accounts and scripts since Nov 11.",
       "heat": 5,
       "cat": "patch",
-      "source_name": "Tenable",
-      "source_url": "https://www.tenable.com/blog/microsoft-november-2026-patch-tuesday-addresses-1093-cves-cve-2026-124194"
+      "source_name": "SOCRadar",
+      "source_url": "https://socradar.io/blog/4everable2shell-at-a-glance/"
     },
     {
-      "title": "Google patches a Chrome zero-day that attackers are already exploiting",
-      "why": "A use-after-free flaw in Chrome's XML component is being used in attacks, Google says; it is the eighth exploited Chrome zero-day this year. The update fixes nine flaws and affects every Windows, Mac and Linux user.",
-      "action": "Update Chrome to 157.0.8103.50 or later on every computer, then restart the browser; update Edge and other Chromium browsers as their fixes arrive.",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year/",
+      "title": "ScreenConnect customers breached through a third-party remote command add-on",
+      "why": "Attackers reached 288 computers at 48 organizations within 90 minutes by abusing RMM+, a passphrase-protected extension for ConnectWise ScreenConnect, then planted backdoors. ConnectWise disabled it in about 400 hosted environments.",
+      "action": "Confirm RMM+ is disabled in your ScreenConnect (on-premises users must do it themselves), apply the latest patch, reset operator passwords and watch for odd sign-ins.",
       "heat": 4,
-      "cat": "browser"
+      "cat": "breach",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/connectwise-screenconnect-breaches-third-party-tool"
     },
     {
-      "title": "Fortinet details eight critical FortiOS and FortiManager flaws, most needing no login",
-      "why": "Fortinet published details of critical flaws in FortiGate firewalls, FortiManager and FortiAnalyzer, three weeks after quietly shipping fixes. No attacks are confirmed yet, but full details make exploits easier to build.",
-      "action": "Update FortiOS to 7.2.14, 7.4.13, 7.6.8 or 8.0.2 and patch FortiManager and FortiAnalyzer; keep their management, OFTP and FGFM ports off the internet.",
+      "title": "Hackers exploit unpatched Check Point firewalls, then wipe VMware ESXi servers",
+      "why": "An unknown group broke into Check Point gateways and management servers running R81 through R82.20, gained root, installed a backdoor and in some cases moved on to ESXi hosts to run a wiper. Check Point says a couple of dozen customers were hit.",
+      "action": "Apply Check Point's latest fixes for your Gaia version now, check gateways for unknown PHP files, and review SSH logins to your ESXi hosts.",
       "heat": 4,
       "cat": "vpn",
-      "source_name": "SecurityOnline",
-      "source_url": "https://securityonline.info/fortinet-critical-vulnerabilities-november-2026/"
-    },
-    {
-      "title": "Attackers used Qubole's trusted AWS access to raid customer accounts and copy data",
-      "why": "Wiz says an attacker used the AWS account Qubole uses to reach customers, assumed their roles, hunted for stored secrets and copied S3 data in October. Former customers whose old Qubole roles still exist were hit too.",
-      "action": "Delete unused vendor roles in AWS, check CloudTrail since October 1 for AssumeRole calls from Qubole's account, and rotate any secrets those roles could reach.",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
-      "heat": 4,
-      "cat": "cloud"
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html"
     },
     {
-      "title": "France blames Iran for refrigeration attacks that caused at least 15 store fires",
-      "why": "New: France says an Iranian Revolutionary Guard unit, which US agencies link to CyberAv3ngers, sabotaged refrigeration at about 700 grocery stores and food businesses in October. The same group has hit US water utilities before.",
-      "action": "Take refrigeration and building controllers off the open internet, change their default passwords, and allow remote access only through a VPN with MFA.",
+      "title": "Hijacked GitHub accounts used to steal cloud keys from at least 1,835 projects",
+      "why": "A campaign called wfx-loot used 4,837 compromised GitHub accounts to slip a credential-stealing script into automated workflows, taking AWS, Azure, Google Cloud and AI service keys, then deleting its traces within a minute.",
+      "action": "Look for a branch named wfx-docs or a pull request titled 'docs: dependency audit notes' in your repos; if found, rotate every secret those workflows could use.",
+      "heat": 4,
+      "cat": "cloud",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/"
+    },
+    {
+      "title": "FBI disrupts North Korean fake video call scheme that stole over $400 million",
+      "why": "Attackers used hijacked chat accounts to invite victims to fake Zoom or Teams calls, then claimed an audio problem and had them run a 'fix' that installed malware. The DOJ also moved to seize $1.2 billion stolen from Binance.",
+      "action": "Tell staff never to run a command or install a 'fix' to join a meeting, and to confirm unexpected meeting invites with the sender by phone.",
+      "heat": 4,
+      "cat": "crypto",
       "source_name": "The Record",
-      "source_url": "https://therecord.media/france-blames-iran-for-fridge-cyberattacks",
-      "heat": 4,
-      "cat": "policy"
+      "source_url": "https://therecord.media/stolen-binance-crypto-recovered-doj-facestealer-disrupted"
     },
     {
-      "title": "Ivanti patches a critical Endpoint Manager flaw that allows takeover without a login",
-      "why": "Ivanti fixed 13 flaws, including a critical SQL injection in Endpoint Manager that can run code without credentials and a critical missing-login bug in Cloud Services Application. Ivanti says none are being exploited yet.",
-      "action": "Update Ivanti Endpoint Manager to 2024 SU8 and Cloud Services Application to 5.0.8.1 first, then patch EPMM, Sentry and User Workspace Manager.",
+      "title": "Maersk confirms data theft from an old system it inherited in an acquisition",
+      "why": "The shipping company says attackers took data from a legacy LF Logistics system and operations are unaffected. The WhiteArmor ransomware group claims 100GB, including driver records and passwords, and wants $5 million.",
+      "action": "List any old systems you kept after buying a company or switching vendors, and shut down or isolate the ones nobody actively maintains.",
       "heat": 3,
-      "cat": "patch",
-      "source_name": "SecurityOnline",
-      "source_url": "https://securityonline.info/ivanti-security-advisories-november-2026/"
+      "cat": "ransomware",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million"
     }
   ]
 }

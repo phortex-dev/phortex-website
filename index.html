@@ -123,37 +123,37 @@
 <!-- TLDR:START -->
 <section class="compact" id="tldr" aria-labelledby="tldr-heading">
   <div class="container">
-    <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-11-10">November 10, 2026</time></div>
+    <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-11-13">November 13, 2026</time></div>
     <h2 class="heading-md" id="tldr-heading">Today&rsquo;s top security stories, <span class="text-accent-cyan">ranked</span></h2>
     <div class="tl-grid">
 <article class="tl-card tl-feature" data-cat="patch">
   <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
   <div class="tl-body">
     <div class="tl-meta"><span class="tl-rank">#1</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 5 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Top story</span></div>
-    <h3 class="tl-title">Microsoft fixes an exploited Outlook zero-day among 1,000-plus Patch Tuesday flaws</h3>
-    <p class="tl-why">Attackers are using an Outlook flaw that leaks a user&#x27;s Windows password hash when a crafted Office file is opened, letting them pose as that user. November&#x27;s update also fixes critical Exchange, Active Directory and Windows flaws.</p>
-    <p class="tl-do"><strong>Do this:</strong> Install November&#x27;s Windows and Office updates on every PC this week, patch Exchange and domain controllers first, and block outbound SMB (port 445) at the firewall.</p>
-    <a class="tl-src" href="https://www.tenable.com/blog/microsoft-november-2026-patch-tuesday-addresses-1093-cves-cve-2026-124194" target="_blank" rel="noopener noreferrer">Tenable &rarr;</a>
+    <h3 class="tl-title">New N-able N-central zero-day bypasses Hotfix 2; attackers planted miners on 21 servers</h3>
+    <p class="tl-why">A second exploit chain, 4EverAble2Shell, lets attackers run commands as root on on-premises N-central without a login. Attacks began about five hours after code went public, and 19 of 21 hacked servers already had Hotfix 2. No fixed build exists yet.</p>
+    <p class="tl-do"><strong>Do this:</strong> Disable the Legacy API on every on-premises N-central server or take it off the internet, then ask your IT provider to check managed PCs for new accounts and scripts since Nov 11.</p>
+    <a class="tl-src" href="https://socradar.io/blog/4everable2shell-at-a-glance/" target="_blank" rel="noopener noreferrer">SOCRadar &rarr;</a>
   </div>
 </article>
-<article class="tl-card tl-feature" data-cat="browser">
-  <div class="tl-art tl-art-md" style="--c:#4FA3FF" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="36" height="30" rx="3"/><path d="M6 17h36M11 13h.01M15 13h.01"/><circle cx="22" cy="28" r="5"/><path d="M26 32l5 5"/></svg></div>
+<article class="tl-card tl-feature" data-cat="breach">
+  <div class="tl-art tl-art-md" style="--c:#8B5CF6" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="12" rx="13" ry="5"/><path d="M11 12v12c0 3 6 5 13 5s13-2 13-5V12"/><path d="M11 24v10c0 3 6 5 13 5"/><path d="M33 31l6 6M39 31l-6 6"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#4FA3FF">Browser &amp; apps</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">Google patches a Chrome zero-day that attackers are already exploiting</h3>
-    <p class="tl-why">A use-after-free flaw in Chrome&#x27;s XML component is being used in attacks, Google says; it is the eighth exploited Chrome zero-day this year. The update fixes nine flaws and affects every Windows, Mac and Linux user.</p>
-    <p class="tl-do"><strong>Do this:</strong> Update Chrome to 157.0.8103.50 or later on every computer, then restart the browser; update Edge and other Chromium browsers as their fixes arrive.</p>
-    <a class="tl-src" href="https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year/" target="_blank" rel="noopener noreferrer">SecurityWeek &rarr;</a>
+    <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#8B5CF6">Data breach</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <h3 class="tl-title">ScreenConnect customers breached through a third-party remote command add-on</h3>
+    <p class="tl-why">Attackers reached 288 computers at 48 organizations within 90 minutes by abusing RMM+, a passphrase-protected extension for ConnectWise ScreenConnect, then planted backdoors. ConnectWise disabled it in about 400 hosted environments.</p>
+    <p class="tl-do"><strong>Do this:</strong> Confirm RMM+ is disabled in your ScreenConnect (on-premises users must do it themselves), apply the latest patch, reset operator passwords and watch for odd sign-ins.</p>
+    <a class="tl-src" href="https://therecord.media/connectwise-screenconnect-breaches-third-party-tool" target="_blank" rel="noopener noreferrer">The Record &rarr;</a>
   </div>
 </article>
 <article class="tl-card tl-feature" data-cat="vpn">
   <div class="tl-art tl-art-md" style="--c:#00D4F0" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M17 24h14M17 18h14M17 30h14M24 18v6M20 24v6M28 24v6"/></svg></div>
   <div class="tl-body">
     <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#00D4F0">Firewall &amp; VPN</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">Fortinet details eight critical FortiOS and FortiManager flaws, most needing no login</h3>
-    <p class="tl-why">Fortinet published details of critical flaws in FortiGate firewalls, FortiManager and FortiAnalyzer, three weeks after quietly shipping fixes. No attacks are confirmed yet, but full details make exploits easier to build.</p>
-    <p class="tl-do"><strong>Do this:</strong> Update FortiOS to 7.2.14, 7.4.13, 7.6.8 or 8.0.2 and patch FortiManager and FortiAnalyzer; keep their management, OFTP and FGFM ports off the internet.</p>
-    <a class="tl-src" href="https://securityonline.info/fortinet-critical-vulnerabilities-november-2026/" target="_blank" rel="noopener noreferrer">SecurityOnline &rarr;</a>
+    <h3 class="tl-title">Hackers exploit unpatched Check Point firewalls, then wipe VMware ESXi servers</h3>
+    <p class="tl-why">An unknown group broke into Check Point gateways and management servers running R81 through R82.20, gained root, installed a backdoor and in some cases moved on to ESXi hosts to run a wiper. Check Point says a couple of dozen customers were hit.</p>
+    <p class="tl-do"><strong>Do this:</strong> Apply Check Point&#x27;s latest fixes for your Gaia version now, check gateways for unknown PHP files, and review SSH logins to your ESXi hosts.</p>
+    <a class="tl-src" href="https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html" target="_blank" rel="noopener noreferrer">The Hacker News &rarr;</a>
   </div>
 </article>
     </div>

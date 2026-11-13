@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-13",
   "items": [
+    {
+      "date": "2026-11-13",
+      "title": "New N-able N-central zero-day bypasses Hotfix 2; attackers planted miners on 21 servers",
+      "why": "A second exploit chain, 4EverAble2Shell, lets attackers run commands as root on on-premises N-central without a login. Attacks began about five hours after code went public, and 19 of 21 hacked servers already had Hotfix 2. No fixed build exists yet.",
+      "action": "Disable the Legacy API on every on-premises N-central server or take it off the internet, then ask your IT provider to check managed PCs for new accounts and scripts since Nov 11.",
+      "source_name": "SOCRadar",
+      "source_url": "https://socradar.io/blog/4everable2shell-at-a-glance/",
+      "heat": 5,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-13",
+      "title": "ScreenConnect customers breached through a third-party remote command add-on",
+      "why": "Attackers reached 288 computers at 48 organizations within 90 minutes by abusing RMM+, a passphrase-protected extension for ConnectWise ScreenConnect, then planted backdoors. ConnectWise disabled it in about 400 hosted environments.",
+      "action": "Confirm RMM+ is disabled in your ScreenConnect (on-premises users must do it themselves), apply the latest patch, reset operator passwords and watch for odd sign-ins.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/connectwise-screenconnect-breaches-third-party-tool",
+      "heat": 4,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-13",
+      "title": "Hackers exploit unpatched Check Point firewalls, then wipe VMware ESXi servers",
+      "why": "An unknown group broke into Check Point gateways and management servers running R81 through R82.20, gained root, installed a backdoor and in some cases moved on to ESXi hosts to run a wiper. Check Point says a couple of dozen customers were hit.",
+      "action": "Apply Check Point's latest fixes for your Gaia version now, check gateways for unknown PHP files, and review SSH logins to your ESXi hosts.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+      "heat": 4,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-11-13",
+      "title": "Hijacked GitHub accounts used to steal cloud keys from at least 1,835 projects",
+      "why": "A campaign called wfx-loot used 4,837 compromised GitHub accounts to slip a credential-stealing script into automated workflows, taking AWS, Azure, Google Cloud and AI service keys, then deleting its traces within a minute.",
+      "action": "Look for a branch named wfx-docs or a pull request titled 'docs: dependency audit notes' in your repos; if found, rotate every secret those workflows could use.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-4-800-github-accounts-to-steal-cloud-credentials/",
+      "heat": 4,
+      "cat": "cloud"
+    },
+    {
+      "date": "2026-11-13",
+      "title": "FBI disrupts North Korean fake video call scheme that stole over $400 million",
+      "why": "Attackers used hijacked chat accounts to invite victims to fake Zoom or Teams calls, then claimed an audio problem and had them run a 'fix' that installed malware. The DOJ also moved to seize $1.2 billion stolen from Binance.",
+      "action": "Tell staff never to run a command or install a 'fix' to join a meeting, and to confirm unexpected meeting invites with the sender by phone.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/stolen-binance-crypto-recovered-doj-facestealer-disrupted",
+      "heat": 4,
+      "cat": "crypto"
+    },
+    {
+      "date": "2026-11-13",
+      "title": "Maersk confirms data theft from an old system it inherited in an acquisition",
+      "why": "The shipping company says attackers took data from a legacy LF Logistics system and operations are unaffected. The WhiteArmor ransomware group claims 100GB, including driver records and passwords, and wants $5 million.",
+      "action": "List any old systems you kept after buying a company or switching vendors, and shut down or isolate the ones nobody actively maintains.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million",
+      "heat": 3,
+      "cat": "ransomware"
+    },
     {
       "date": "2026-11-10",
       "title": "Microsoft fixes an exploited Outlook zero-day among 1,000-plus Patch Tuesday flaws",
