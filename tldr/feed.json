@@ -13,6 +13,16 @@
     },
     {
       "date": "2026-11-14",
+      "title": "Expedia confirms breach through a data vendor; extortion group claims nearly 1B records",
+      "why": "Expedia says attackers got in through a compromised third-party data platform, which researchers tie to the stolen Qubole cloud key. A group called n0n claims about a billion traveler records; Expedia has not confirmed the figures.",
+      "action": "Remove cloud access roles for vendors you no longer use, and warn staff to expect phishing that cites Expedia bookings or loyalty points.",
+      "source_name": "Security Affairs",
+      "source_url": "https://securityaffairs.com/203062/cyber-crime/extortion-group-claims-theft-of-nearly-one-billion-expedia-traveler-records.html",
+      "heat": 4,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-14",
       "title": "Police take down Gootloader, CastleRAT and StealC malware servers, seize 6.4M logins",
       "why": "Operation Endgame seized or disrupted about 235 servers used to spread password-stealing and ransomware-linked malware. The stolen logins were shared with Have I Been Pwned and other notification services.",
       "action": "Check your business email domain on Have I Been Pwned and reset passwords, with MFA turned on, for any accounts that appear.",
@@ -40,16 +50,6 @@
       "source_url": "https://www.securityweek.com/citrix-patches-10-critical-netscaler-vulnerabilities/",
       "heat": 3,
       "cat": "vpn"
-    },
-    {
-      "date": "2026-11-14",
-      "title": "Notion AI chat transcripts stolen through a breach at its AI provider Fireworks",
-      "why": "Attackers got into Fireworks AI through its cloud provider and took billing data and datasets. Notion says about 1% of its customers had Notion AI transcripts taken before it cut ties on November 3.",
-      "action": "List the AI services your tools send company data to, and ask each vendor which of their own providers can see it.",
-      "source_name": "TechCrunch",
-      "source_url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
-      "heat": 3,
-      "cat": "ai"
     },
     {
       "date": "2026-11-14",
