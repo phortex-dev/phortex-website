@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The New Post-Quantum Standards in Plain English — Post-Quantum, Explained 02 — Phortex</title>
+  <meta name="description" content="ML-KEM, ML-DSA, SLH-DSA, FN-DSA and HQC explained for business owners: what each does, what it replaces, and what to ask vendors for." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://phortex.com/post-quantum/standards/" />
+  <link rel="stylesheet" href="/css/style.css?v=20261114a" />
+  <link rel="stylesheet" href="/css/pqc.css?v=20261114a" />
+</head>
+<body class="grid-bg">
+<script src="/js/components.js?v=20261114a"></script>
+
+<div class="page-hero">
+  <div class="page-hero-bg"><div class="page-hero-glow" style="background:radial-gradient(ellipse, rgba(122,162,255,0.10) 0%, transparent 65%)"></div></div>
+  <div class="container" style="position:relative;">
+    <div class="hero-stagger">
+      <div class="eyebrow q">Post-Quantum, Explained · Part 02 of 04 · 5 min read</div>
+      <h1 class="heading-xl" style="margin-bottom:1.25rem; max-width:860px;">The new standards, <span class="text-accent-q">in plain English</span></h1>
+      <p class="lead" style="max-width:720px;">After an eight-year public competition, NIST picked replacements built on math that quantum computers aren’t known to shortcut. You won’t implement them yourself. You’ll buy products that do, so it helps to know the names on the spec sheet.</p>
+      <nav class="pq-series" aria-label="Post-Quantum, Explained series">
+        <a href="/post-quantum/">Hub</a>
+        <a href="/post-quantum/risk/">01 Risk</a>
+        <a href="/post-quantum/standards/" aria-current="page">02 Standards</a>
+        <a href="/post-quantum/timeline/">03 Timeline</a>
+        <a href="/post-quantum/action-plan/">04 Action plan</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="compact">
+  <div class="container">
+    <h2 class="heading-md reveal" style="margin-bottom:1.5rem;">Meet the replacements</h2>
+    <div class="pq-grid">
+      <div class="pq-panel reveal" style="display:flex; flex-direction:column; gap:0.75rem;">
+        <div class="pq-alg-meta"><span>FIPS 203</span><span class="pq-pill ok">FINAL · AUG 2024</span></div>
+        <div class="pq-alg-name">ML-KEM</div>
+        <span class="text-muted" style="font-size:0.85rem;">Module-Lattice Key Encapsulation · formerly CRYSTALS-Kyber</span>
+        <span class="pq-pill q" style="align-self:flex-start">KEY EXCHANGE</span>
+        <p style="font-size:0.92rem; color:var(--gray-100);">How two computers agree on a secret key over the internet. The one to prioritize, because it protects against harvest-now attacks.</p>
+        <div class="pq-where"><b>REPLACES</b>RSA and ECDH key exchange</div>
+      </div>
+      <div class="pq-panel reveal reveal-delay-1" style="display:flex; flex-direction:column; gap:0.75rem;">
+        <div class="pq-alg-meta"><span>FIPS 204</span><span class="pq-pill ok">FINAL · AUG 2024</span></div>
+        <div class="pq-alg-name">ML-DSA</div>
+        <span class="text-muted" style="font-size:0.85rem;">Module-Lattice Digital Signature · formerly CRYSTALS-Dilithium</span>
+        <span class="pq-pill v" style="align-self:flex-start">SIGNATURES</span>
+        <p style="font-size:0.92rem; color:var(--gray-100);">The main general-purpose signature: proves a website, software update or document is genuine.</p>
+        <div class="pq-where"><b>REPLACES</b>RSA and ECDSA signatures</div>
+      </div>
+      <div class="pq-panel reveal reveal-delay-2" style="display:flex; flex-direction:column; gap:0.75rem;">
+        <div class="pq-alg-meta"><span>FIPS 205</span><span class="pq-pill ok">FINAL · AUG 2024</span></div>
+        <div class="pq-alg-name">SLH-DSA</div>
+        <span class="text-muted" style="font-size:0.85rem;">Stateless Hash-Based Digital Signature · formerly SPHINCS+</span>
+        <span class="pq-pill v" style="align-self:flex-start">SIGNATURES</span>
+        <p style="font-size:0.92rem; color:var(--gray-100);">A conservative backup built only on hash functions. Larger and slower, but rests on very well-understood math.</p>
+        <div class="pq-where"><b>REPLACES</b>RSA and ECDSA where caution matters most</div>
+      </div>
+      <div class="pq-panel reveal" style="display:flex; flex-direction:column; gap:0.75rem;">
+        <div class="pq-alg-meta"><span>FIPS 206</span><span class="pq-pill md">DRAFT</span></div>
+        <div class="pq-alg-name">FN-DSA</div>
+        <span class="text-muted" style="font-size:0.85rem;">FFT over NTRU-Lattice Digital Signature · formerly FALCON</span>
+        <span class="pq-pill v" style="align-self:flex-start">SIGNATURES</span>
+        <p style="font-size:0.92rem; color:var(--gray-100);">Compact signatures for places where size matters, like certificates and constrained devices.</p>
+        <div class="pq-where"><b>REPLACES</b>RSA and ECDSA in size-sensitive uses</div>
+      </div>
+      <div class="pq-panel reveal reveal-delay-1" style="display:flex; flex-direction:column; gap:0.75rem;">
+        <div class="pq-alg-meta"><span>Selected Mar 2025</span><span class="pq-pill md">STANDARD IN DEVELOPMENT</span></div>
+        <div class="pq-alg-name">HQC</div>
+        <span class="text-muted" style="font-size:0.85rem;">Hamming Quasi-Cyclic</span>
+        <span class="pq-pill q" style="align-self:flex-start">KEY EXCHANGE</span>
+        <p style="font-size:0.92rem; color:var(--gray-100);">A backup to ML-KEM built on different math (error-correcting codes), in case lattices ever show a weakness.</p>
+        <div class="pq-where"><b>ROLE</b>A fallback for ML-KEM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="compact" style="background:var(--navy-1);">
+  <div class="container">
+    <div class="pq-panel reveal">
+      <div style="max-width:760px; margin-bottom:1.75rem;">
+        <div class="eyebrow q">Infographic</div>
+        <h2 class="heading-md" style="margin:0.4rem 0 0.5rem;">Bigger keys, same job</h2>
+        <p class="text-muted" style="font-size:0.92rem;">Post-quantum keys and signatures are much larger. That’s why old firewalls, VPNs and embedded devices sometimes choke on them, and why testing matters.</p>
+      </div>
+      <div class="pq-grid" style="gap:2.5rem;">
+        <div class="pq-bars" role="img" aria-label="Key exchange public key size: X25519 32 bytes, ML-KEM-768 1,184 bytes.">
+          <strong>Key exchange · public key</strong>
+          <div><div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.3rem;"><span class="pq-mono">X25519 (classical)</span><span class="pq-mono">32 B</span></div><div class="pq-track"><div class="pq-fill" style="width:2.7%; background:var(--gray-500)"></div></div></div>
+          <div><div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.3rem;"><span class="pq-mono">ML-KEM-768</span><span class="pq-mono">1,184 B</span></div><div class="pq-track"><div class="pq-fill" style="width:100%; background:var(--q)"></div></div></div>
+        </div>
+        <div class="pq-bars" role="img" aria-label="Signature size: ECDSA P-256 64 bytes, FN-DSA-512 about 666 bytes, ML-DSA-65 3,309 bytes, SLH-DSA-128s 7,856 bytes.">
+          <strong>Signatures · signature size</strong>
+          <div><div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.3rem;"><span class="pq-mono">ECDSA P-256 (classical)</span><span class="pq-mono">64 B</span></div><div class="pq-track"><div class="pq-fill" style="width:1.5%; background:var(--gray-500)"></div></div></div>
+          <div><div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.3rem;"><span class="pq-mono">FN-DSA-512</span><span class="pq-mono">~666 B</span></div><div class="pq-track"><div class="pq-fill" style="width:8.5%; background:var(--violet)"></div></div></div>
+          <div><div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.3rem;"><span class="pq-mono">ML-DSA-65</span><span class="pq-mono">3,309 B</span></div><div class="pq-track"><div class="pq-fill" style="width:42.1%; background:var(--violet)"></div></div></div>
+          <div><div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.3rem;"><span class="pq-mono">SLH-DSA-128s</span><span class="pq-mono">7,856 B</span></div><div class="pq-track"><div class="pq-fill" style="width:100%; background:var(--violet)"></div></div></div>
+        </div>
+      </div>
+      <p class="pq-note">Bytes. ML-KEM-768 and ML-DSA-65 are the common general-purpose settings. FN-DSA-512 signature size is an average. Linear scale within each group.</p>
+    </div>
+
+    <div class="pq-panel q reveal" style="margin-top:1.5rem;">
+      <div style="max-width:760px; margin-bottom:1.5rem;">
+        <div class="eyebrow q">Infographic · How the transition actually happens</div>
+        <h2 class="heading-md" style="margin:0.4rem 0 0.5rem;">Hybrid: belt and suspenders</h2>
+        <p class="text-muted" style="font-size:0.92rem;">Most systems won’t switch overnight. They run the old and new algorithms together and combine the results, so an attacker has to break both. This is already the default in Chrome and is supported by OpenSSL 3.5 and later.</p>
+      </div>
+      <div class="pq-eq" role="img" aria-label="Classical X25519 plus post-quantum ML-KEM-768 combine into one hybrid session key, X25519MLKEM768, which stays safe if either half holds.">
+        <div><div class="pq-mono" style="font-size:1.1rem; font-weight:600;">X25519</div><div class="text-muted" style="font-size:0.85rem;">Classical. Battle-tested for years.</div></div>
+        <span class="op" aria-hidden="true">+</span>
+        <div><div class="pq-mono text-accent-q" style="font-size:1.1rem; font-weight:600;">ML-KEM-768</div><div class="text-muted" style="font-size:0.85rem;">Post-quantum. FIPS 203.</div></div>
+        <span class="op" aria-hidden="true">=</span>
+        <div class="res"><div class="pq-mono" style="font-size:1.1rem; font-weight:600; color:#7CEBBF;">X25519MLKEM768</div><div class="text-muted" style="font-size:0.85rem;">One session key. Safe if either half holds.</div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:1.25rem;">
+      <div class="pq-panel reveal" style="flex:999 1 480px;">
+        <div class="eyebrow q">The takeaway</div>
+        <p style="font-size:1.1rem; line-height:1.65; margin-top:0.6rem;">When you buy or renew a VPN, firewall, identity provider or hosting plan, ask for <strong>FIPS 203 (ML-KEM)</strong> support by name, and whether the product can switch algorithms with a software update.</p>
+      </div>
+      <div class="pq-panel reveal reveal-delay-1" style="flex:1 1 260px; display:flex; flex-direction:column; gap:0.75rem;">
+        <strong>Get the vendor questions</strong>
+        <span class="text-muted" style="font-size:0.9rem;">Six questions to send every key vendor, ready to copy.</span>
+        <a href="/post-quantum/action-plan/#vendor-questions" class="btn btn-q" style="margin-top:auto; justify-content:center;">See the questions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="compact">
+  <div class="container">
+    <div class="pq-sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://csrc.nist.gov/pubs/fips/203/final" rel="noopener">NIST FIPS 203: ML-KEM</a> · <a href="https://csrc.nist.gov/pubs/fips/204/final" rel="noopener">FIPS 204: ML-DSA</a> · <a href="https://csrc.nist.gov/pubs/fips/205/final" rel="noopener">FIPS 205: SLH-DSA</a></li>
+        <li><a href="https://www.securityweek.com/nist-announces-hqc-as-fifth-standardized-post-quantum-algorithm/" rel="noopener">SecurityWeek: NIST selects HQC as a fifth algorithm</a></li>
+        <li><a href="https://www.encryptionconsulting.com/education-center/fn-dsa-fips-206/" rel="noopener">Encryption Consulting: FN-DSA (FIPS 206) draft status</a></li>
+        <li><a href="https://unveilscan.unveiltech.com/blog/post-quantum-tls.html" rel="noopener">UnveilScan: post-quantum TLS support in browsers and servers</a></li>
+      </ul>
+    </div>
+    <div class="pq-pager" style="margin-top:2.5rem;">
+      <a href="/post-quantum/risk/" class="btn btn-ghost">← 01 What’s at risk</a>
+      <a href="/post-quantum/timeline/" class="btn btn-q btn-arrow">Next: 03 The timeline</a>
+    </div>
+  </div>
+</section>
+
+<script src="/js/main.js?v=20261114a"></script>
+</body>
+</html>

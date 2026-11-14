@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What’s Actually at Risk from Quantum Computers — Post-Quantum, Explained 01 — Phortex</title>
+  <meta name="description" content="Which encryption quantum computers break, which they weaken, and which holds — plus why your data’s shelf life decides what to fix first." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://phortex.com/post-quantum/risk/" />
+  <link rel="stylesheet" href="/css/style.css?v=20261114a" />
+  <link rel="stylesheet" href="/css/pqc.css?v=20261114a" />
+</head>
+<body class="grid-bg">
+<script src="/js/components.js?v=20261114a"></script>
+
+<div class="page-hero">
+  <div class="page-hero-bg"><div class="page-hero-glow" style="background:radial-gradient(ellipse, rgba(255,138,101,0.08) 0%, transparent 65%)"></div></div>
+  <div class="container" style="position:relative;">
+    <div class="hero-stagger">
+      <div class="eyebrow q">Post-Quantum, Explained · Part 01 of 04 · 5 min read</div>
+      <h1 class="heading-xl" style="margin-bottom:1.25rem; max-width:820px;">What’s actually <span class="text-accent-q">at risk</span></h1>
+      <p class="lead" style="max-width:720px;">Not all encryption is equally exposed. A large quantum computer would break the math behind how computers <em>agree on keys</em> and <em>prove identity</em>, while the ciphers that scramble your stored data mostly hold. That difference decides where you spend money first.</p>
+      <nav class="pq-series" aria-label="Post-Quantum, Explained series">
+        <a href="/post-quantum/">Hub</a>
+        <a href="/post-quantum/risk/" aria-current="page">01 Risk</a>
+        <a href="/post-quantum/standards/">02 Standards</a>
+        <a href="/post-quantum/timeline/">03 Timeline</a>
+        <a href="/post-quantum/action-plan/">04 Action plan</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="compact">
+  <div class="container">
+    <h2 class="heading-md reveal" style="margin-bottom:1.5rem;">Breaks, bends or holds</h2>
+    <div class="pq-grid">
+      <div class="pq-panel pq-tier reveal" style="--c:var(--risk-hi)">
+        <span class="pq-pill hi" style="align-self:flex-start">BREAKS</span>
+        <h3 class="heading-sm" style="font-size:1.3rem;">Public-key cryptography</h3>
+        <p class="text-muted" style="font-size:0.9rem;">Shor’s algorithm solves the math these rely on.</p>
+        <div class="pq-chips"><span class="pq-chip">RSA</span><span class="pq-chip">ECDH</span><span class="pq-chip">ECDSA</span><span class="pq-chip">Diffie-Hellman</span></div>
+        <div class="pq-where"><b>WHERE YOU USE IT</b>HTTPS key exchange, VPNs, SSH, digital certificates, code signing, signed email, many payment and single sign-on systems.</div>
+      </div>
+      <div class="pq-panel pq-tier reveal reveal-delay-1" style="--c:var(--risk-md)">
+        <span class="pq-pill md" style="align-self:flex-start">BENDS</span>
+        <h3 class="heading-sm" style="font-size:1.3rem;">Smaller symmetric keys and hashes</h3>
+        <p class="text-muted" style="font-size:0.9rem;">Grover’s algorithm reduces their safety margin; it doesn’t break them.</p>
+        <div class="pq-chips"><span class="pq-chip">AES-128</span><span class="pq-chip">SHA-256</span></div>
+        <div class="pq-where"><b>WHERE YOU USE IT</b>File and disk encryption, database encryption, integrity checks. Move to larger sizes as you upgrade.</div>
+      </div>
+      <div class="pq-panel pq-tier reveal reveal-delay-2" style="--c:var(--risk-ok)">
+        <span class="pq-pill ok" style="align-self:flex-start">HOLDS</span>
+        <h3 class="heading-sm" style="font-size:1.3rem;">Strong symmetric crypto and the new standards</h3>
+        <p class="text-muted" style="font-size:0.9rem;">No known quantum attack meaningfully weakens these.</p>
+        <div class="pq-chips"><span class="pq-chip">AES-256</span><span class="pq-chip">SHA-384</span><span class="pq-chip">SHA-3</span><span class="pq-chip">ML-KEM</span><span class="pq-chip">ML-DSA</span></div>
+        <div class="pq-where"><b>WHERE YOU USE IT</b>Backups and data at rest (AES-256), and the post-quantum algorithms covered in <a href="/post-quantum/standards/" class="pq-link">Part 02</a>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="compact" style="background:var(--navy-1);">
+  <div class="container">
+    <div class="pq-panel reveal">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:1rem; margin-bottom:1.75rem;">
+        <div style="max-width:700px;">
+          <div class="eyebrow q">Infographic</div>
+          <h2 class="heading-md" style="margin:0.4rem 0 0.5rem;">The target keeps getting closer</h2>
+          <p class="text-muted" style="font-size:0.92rem;">Estimated size of the quantum computer needed to break RSA-2048. Better algorithms and error correction keep cutting the number. Real machines are still far smaller than any of these.</p>
+        </div>
+        <span class="pq-mono text-muted" style="font-size:0.72rem;">PHYSICAL QUBITS · LOG SCALE</span>
+      </div>
+      <div class="pq-bars" role="img" aria-label="Estimated qubits to break RSA-2048: about 20 million in 2019, under 1 million in 2025, about 100,000 in a 2026 preprint.">
+        <div class="pq-bar-row"><div class="pq-bar-label"><strong class="pq-mono">2019</strong><small>Gidney &amp; Ekerå</small></div><div class="pq-track"><div class="pq-fill" style="width:100%; background:var(--gray-500)"></div></div><div class="pq-bar-val">~20 million<small>~8 hours</small></div></div>
+        <div class="pq-bar-row"><div class="pq-bar-label"><strong class="pq-mono">2025</strong><small>Gidney</small></div><div class="pq-track"><div class="pq-fill" style="width:53.9%; background:var(--q)"></div></div><div class="pq-bar-val">&lt; 1 million<small>&lt; 1 week</small></div></div>
+        <div class="pq-bar-row"><div class="pq-bar-label"><strong class="pq-mono">2026 (preprint)</strong><small>QLDPC architecture study</small></div><div class="pq-track"><div class="pq-fill" style="width:17.9%; background:var(--risk-hi)"></div></div><div class="pq-bar-val">~100,000<small>~1 month</small></div></div>
+      </div>
+      <p class="pq-note">The 2026 figure is from a preprint that had not been peer reviewed at the time of writing.</p>
+    </div>
+
+    <div class="pq-panel reveal" style="margin-top:1.5rem;">
+      <div style="max-width:760px; margin-bottom:1.5rem;">
+        <div class="eyebrow q">Infographic</div>
+        <h2 class="heading-md" style="margin:0.4rem 0 0.5rem;">How long does your data need to stay secret?</h2>
+        <p class="text-muted" style="font-size:0.92rem;">Anything that must stay private past the dashed line is a harvest-now, decrypt-later target if it travels over today’s encryption. Typical ranges; your retention rules may differ.</p>
+      </div>
+      <div class="pq-bars" role="img" aria-label="Typical secrecy needs from 2026: marketing email months, contracts and tax records about 7 years, patient and client records 10 or more years, trade secrets decades, identity data a lifetime. The 2035 cutoff falls at 9 years.">
+        <div class="pq-shelf-axis"><span></span><div><span style="left:0">2026</span><span style="left:36%; transform:translateX(-50%); color:var(--risk-hi)">2035</span><span style="right:0">2051+</span></div></div>
+        <div class="pq-shelf-row"><strong style="font-size:0.92rem;">Marketing email</strong><div class="pq-track"><div class="pq-fill" style="width:16%; background:var(--risk-ok)"><span>Months</span></div><div class="pq-cutline" style="left:36%"></div></div></div>
+        <div class="pq-shelf-row"><strong style="font-size:0.92rem;">Contracts &amp; tax records</strong><div class="pq-track"><div class="pq-fill" style="width:28%; background:var(--risk-ok)"><span>~7 years</span></div><div class="pq-cutline" style="left:36%"></div></div></div>
+        <div class="pq-shelf-row"><strong style="font-size:0.92rem;">Patient &amp; client records</strong><div class="pq-track"><div class="pq-fill" style="width:44%; background:var(--risk-hi)"><span>10+ years</span></div><div class="pq-cutline" style="left:36%"></div></div></div>
+        <div class="pq-shelf-row"><strong style="font-size:0.92rem;">Trade secrets &amp; IP</strong><div class="pq-track"><div class="pq-fill" style="width:80%; background:var(--risk-hi)"><span>Decades</span></div><div class="pq-cutline" style="left:36%"></div></div></div>
+        <div class="pq-shelf-row"><strong style="font-size:0.92rem;">SSNs &amp; identity data</strong><div class="pq-track"><div class="pq-fill" style="width:100%; background:var(--risk-hi)"><span>Lifetime</span></div><div class="pq-cutline" style="left:36%"></div></div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:1.25rem;">
+      <div class="pq-panel q reveal" style="flex:999 1 480px;">
+        <div class="eyebrow q">The takeaway</div>
+        <p style="font-size:1.1rem; line-height:1.65; margin-top:0.6rem;">Fix <strong>key exchange</strong> first for anything carrying long-lived data, because that’s what harvest-now attacks target. Signatures and certificates matter too, but an attacker can’t go back in time to forge yesterday’s login.</p>
+      </div>
+      <div class="pq-panel reveal reveal-delay-1" style="flex:1 1 260px; display:flex; flex-direction:column; gap:0.75rem;">
+        <strong>See your own exposure</strong>
+        <span class="text-muted" style="font-size:0.9rem;">Run the 60-second check with your numbers.</span>
+        <a href="/post-quantum/#check" class="btn btn-q" style="margin-top:auto; justify-content:center;">Am I exposed?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="compact">
+  <div class="container">
+    <div class="pq-sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://arxiv.org/abs/1905.09749" rel="noopener">Gidney &amp; Ekerå (2019), How to factor 2048 bit RSA integers in 8 hours using 20 million noisy qubits</a></li>
+        <li><a href="https://arxiv.org/abs/2505.15917" rel="noopener">Gidney (2025), How to factor 2048 bit RSA integers with less than a million noisy qubits</a></li>
+        <li><a href="https://quantumcomputingreport.com/shor-qldpc-codes-and-the-compression-of-rsa-2048-resource-estimates-part-i/" rel="noopener">Quantum Computing Report on the 2026 QLDPC resource estimate (arXiv:2602.11457)</a></li>
+        <li><a href="https://thequantuminsider.com/2026/10/27/nist-report-provides-guidelines-for-transition-to-post-quantum-cryptography-standards/" rel="noopener">The Quantum Insider on NIST IR 8547 and harvest-now, decrypt-later</a></li>
+      </ul>
+    </div>
+    <div class="pq-pager" style="margin-top:2.5rem;">
+      <a href="/post-quantum/" class="btn btn-ghost">← Post-Quantum hub</a>
+      <a href="/post-quantum/standards/" class="btn btn-q btn-arrow">Next: 02 The new standards</a>
+    </div>
+  </div>
+</section>
+
+<script src="/js/main.js?v=20261114a"></script>
+</body>
+</html>

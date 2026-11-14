@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Post-Quantum Action Plan: Six Steps for Small Business — Post-Quantum, Explained 04 — Phortex</title>
+  <meta name="description" content="A six-step post-quantum migration plan for small businesses: inventory, risk ranking, vendor questions, quick wins, crypto agility and replacement planning to 2030." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://phortex.com/post-quantum/action-plan/" />
+  <link rel="stylesheet" href="/css/style.css?v=20261114a" />
+  <link rel="stylesheet" href="/css/pqc.css?v=20261114a" />
+</head>
+<body class="grid-bg">
+<script src="/js/components.js?v=20261114a"></script>
+
+<div class="page-hero">
+  <div class="page-hero-bg"><div class="page-hero-glow" style="background:radial-gradient(ellipse, rgba(16,217,138,0.08) 0%, transparent 65%)"></div></div>
+  <div class="container" style="position:relative;">
+    <div class="hero-stagger">
+      <div class="eyebrow q">Post-Quantum, Explained · Part 04 of 04 · 6 min read</div>
+      <h1 class="heading-xl" style="margin-bottom:1.25rem; max-width:900px;">Your action plan: <span class="text-accent-q">six steps</span> for a small business</h1>
+      <p class="lead" style="max-width:720px;">You don’t need a cryptographer. You need to know where encryption lives in your business, who controls it, and to stop buying things that can’t be upgraded. Tick the steps off as you go.</p>
+      <nav class="pq-series" aria-label="Post-Quantum, Explained series">
+        <a href="/post-quantum/">Hub</a>
+        <a href="/post-quantum/risk/">01 Risk</a>
+        <a href="/post-quantum/standards/">02 Standards</a>
+        <a href="/post-quantum/timeline/">03 Timeline</a>
+        <a href="/post-quantum/action-plan/" aria-current="page">04 Action plan</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="compact">
+  <div class="container">
+    <div class="pq-panel reveal">
+      <div style="max-width:760px; margin-bottom:1.25rem;">
+        <div class="eyebrow q">Infographic</div>
+        <h2 class="heading-md" style="margin:0.4rem 0 0.5rem;">Where encryption hides in a typical small business</h2>
+        <p class="text-muted" style="font-size:0.92rem;">Who controls it decides your next step: things you control, you change; things a vendor controls, you ask about.</p>
+      </div>
+      <div class="pq-legend">
+        <span style="--c:var(--emerald)"><i aria-hidden="true"></i>You control it</span>
+        <span style="--c:var(--q)"><i aria-hidden="true"></i>Vendor controls it</span>
+        <span style="--c:var(--risk-hi)"><i aria-hidden="true"></i>Hardware you own; may need replacing</span>
+      </div>
+      <div class="pq-places">
+        <div class="pq-place" style="--c:var(--emerald)"><strong>Website (HTTPS)</strong><span>You, via your host or CDN</span></div>
+        <div class="pq-place" style="--c:var(--q)"><strong>Email</strong><span>Microsoft 365 or Google</span></div>
+        <div class="pq-place" style="--c:var(--risk-hi)"><strong>Remote-access VPN</strong><span>Appliance you own</span></div>
+        <div class="pq-place" style="--c:var(--risk-hi)"><strong>Firewall</strong><span>Appliance you own</span></div>
+        <div class="pq-place" style="--c:var(--q)"><strong>Single sign-on &amp; MFA</strong><span>Identity provider</span></div>
+        <div class="pq-place" style="--c:var(--q)"><strong>Card payments</strong><span>Payment processor</span></div>
+        <div class="pq-place" style="--c:var(--emerald)"><strong>Backups</strong><span>You or backup vendor</span></div>
+        <div class="pq-place" style="--c:var(--q)"><strong>File sharing</strong><span>Cloud vendor</span></div>
+        <div class="pq-place" style="--c:var(--q)"><strong>Line-of-business apps</strong><span>Software vendor</span></div>
+        <div class="pq-place" style="--c:var(--risk-hi)"><strong>Cameras &amp; IoT devices</strong><span>Devices you own</span></div>
+        <div class="pq-place" style="--c:var(--emerald)"><strong>Certificates</strong><span>You, via your provider</span></div>
+        <div class="pq-place" style="--c:var(--q)"><strong>Software updates &amp; code signing</strong><span>Every vendor you use</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="compact" style="background:var(--navy-1);">
+  <div class="container">
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+      <h2 class="heading-md">The six steps</h2>
+      <div class="pq-progress"><div class="pq-track"><div class="pq-fill" data-done-bar style="width:0; background:var(--emerald)"></div></div><span class="pq-mono" data-done-count aria-live="polite">0/6 done</span></div>
+    </div>
+    <div class="pq-steps" data-steps>
+      <div class="pq-step"><button type="button" class="pq-check" aria-pressed="false" aria-label="Mark step 1 done: Take inventory"></button><div><div class="pq-step-head"><small>STEP 1</small><h3 class="heading-sm">Take inventory</h3><span class="pq-pill ok">THIS MONTH</span></div><p>You can’t migrate what you can’t see. List every system that encrypts or signs anything.</p><ul><li>Start from the map above and add your own systems.</li><li>Record the algorithm and key size where you can, and who controls each one.</li><li>A scanner or the PQC Toolkit speeds this up for anything internet-facing.</li></ul></div></div>
+      <div class="pq-step"><button type="button" class="pq-check" aria-pressed="false" aria-label="Mark step 2 done: Rank by data shelf life"></button><div><div class="pq-step-head"><small>STEP 2</small><h3 class="heading-sm">Rank by data shelf life</h3><span class="pq-pill ok">THIS MONTH</span></div><p>Harvest-now attacks only matter for data that must stay secret for years. Fix those paths first.</p><ul><li>Mark where patient, client, financial, legal or identity data travels.</li><li>Anything that must stay private past 2035 goes to the top.</li><li>Public or short-lived data can wait for normal upgrades.</li></ul></div></div>
+      <div class="pq-step"><button type="button" class="pq-check" aria-pressed="false" aria-label="Mark step 3 done: Ask your vendors"></button><div><div class="pq-step-head"><small>STEP 3</small><h3 class="heading-sm">Ask your vendors</h3><span class="pq-pill q">THIS QUARTER</span></div><p>Most of your encryption is run by vendors. Their roadmap is your roadmap.</p><ul><li>Send the six questions below to each key vendor.</li><li>Note who has a date, who is vague, and who has no plan.</li><li>Flag no-plan vendors for review at renewal.</li></ul></div></div>
+      <div class="pq-step"><button type="button" class="pq-check" aria-pressed="false" aria-label="Mark step 4 done: Turn on what already exists"></button><div><div class="pq-step-head"><small>STEP 4</small><h3 class="heading-sm">Turn on what already exists</h3><span class="pq-pill q">THIS QUARTER</span></div><p>Hybrid post-quantum TLS is already available in many CDNs, load balancers and current server software.</p><ul><li>Enable hybrid key exchange (X25519MLKEM768) for your website where your host or CDN offers it.</li><li>Keep browsers, operating systems and OpenSSL-based servers current (OpenSSL 3.5 or later).</li><li>Test after enabling: older firewalls can choke on the larger handshakes.</li></ul></div></div>
+      <div class="pq-step"><button type="button" class="pq-check" aria-pressed="false" aria-label="Mark step 5 done: Build crypto agility"></button><div><div class="pq-step-head"><small>STEP 5</small><h3 class="heading-sm">Build crypto agility</h3><span class="pq-pill md">ONGOING</span></div><p>NIST may add or change algorithms again. Systems that can switch by configuration save you a second migration.</p><ul><li>Prefer settings over hard-coded algorithms in anything you build or commission.</li><li>Automate certificate renewal so swapping certificate types is routine.</li><li>Keep your inventory current; re-check it every six months.</li></ul></div></div>
+      <div class="pq-step"><button type="button" class="pq-check" aria-pressed="false" aria-label="Mark step 6 done: Plan replacements to 2030"></button><div><div class="pq-step-head"><small>STEP 6</small><h3 class="heading-sm">Plan replacements to 2030</h3><span class="pq-pill md">NEXT BUDGET CYCLE</span></div><p>Some hardware will never get post-quantum support. Replacing it on schedule costs far less than in a rush.</p><ul><li>Make PQC support (FIPS 203) a written requirement for every new purchase.</li><li>Budget VPN, firewall and device replacements on their normal cycles before 2030.</li><li>Document the plan; customers and insurers are starting to ask.</li></ul></div></div>
+    </div>
+    <p class="pq-note">Your checkmarks are saved only in this browser.</p>
+  </div>
+</section>
+
+<section class="compact" id="vendor-questions">
+  <div class="container">
+    <div class="pq-panel q reveal" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
+      <div>
+        <div class="eyebrow q">Copy and send</div>
+        <h2 class="heading-md" style="margin:0.4rem 0 0.5rem;">Six questions for every vendor</h2>
+        <p class="text-muted" style="font-size:0.92rem; line-height:1.7;">Send these to your VPN, firewall, hosting, identity, payment and line-of-business software providers. Vague answers are an answer.</p>
+        <div class="pq-copy-row"><button type="button" class="btn btn-q" data-copy="vq-list">Copy the questions</button><span class="text-muted" style="font-size:0.85rem;" data-copy-status aria-live="polite"></span></div>
+      </div>
+      <ol class="pq-qlist" id="vq-list">
+        <li>Which post-quantum algorithms does your product support today, by FIPS number? When will ML-KEM (FIPS 203) be on by default?</li>
+        <li>Do you support hybrid key exchange, such as X25519MLKEM768?</li>
+        <li>Can algorithms be changed with a software update, or will this need new hardware?</li>
+        <li>When will your FIPS 140-3 validated modules cover the new algorithms?</li>
+        <li>Can you provide a cryptographic bill of materials (CBOM) for your product?</li>
+        <li>What is your plan and date for retiring RSA and elliptic-curve cryptography?</li>
+      </ol>
+    </div>
+
+    <div class="pq-grid" style="margin-top:1.5rem;">
+      <div class="pq-panel reveal" style="display:flex; flex-direction:column; gap:0.75rem;">
+        <strong style="font-size:1.1rem;">Do it yourself with the PQC Toolkit</strong>
+        <span class="text-muted" style="font-size:0.9rem;">Scan, analyze and report on systems you own or manage. Coming soon.</span>
+        <a href="/post-quantum/#toolkit" class="btn btn-ghost" style="margin-top:auto; align-self:flex-start;">See the demo</a>
+      </div>
+      <div class="pq-panel reveal reveal-delay-1" style="display:flex; flex-direction:column; gap:0.75rem;">
+        <strong style="font-size:1.1rem;">Or let us do steps 1–4 with you</strong>
+        <span class="text-muted" style="font-size:0.9rem;">The Post-Quantum Readiness Assessment delivers your inventory, vendor answers, risk ranking and roadmap.</span>
+        <a href="/#contact" class="btn btn-q btn-arrow" style="margin-top:auto; align-self:flex-start;">Book a free consultation</a>
+      </div>
+    </div>
+
+    <div class="pq-sources" style="margin-top:3rem;">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://thequantuminsider.com/2026/10/27/nist-report-provides-guidelines-for-transition-to-post-quantum-cryptography-standards/" rel="noopener">The Quantum Insider: NIST IR 8547 guidance on supply chain, prioritizing long-lived data, and hybrid approaches</a></li>
+        <li><a href="https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/" rel="noopener">Executive Order 14412: cryptographic bill of materials and contractor requirements</a></li>
+        <li><a href="https://unveilscan.unveiltech.com/blog/post-quantum-tls.html" rel="noopener">UnveilScan: where hybrid post-quantum TLS is available today</a></li>
+      </ul>
+    </div>
+    <div class="pq-pager" style="margin-top:2.5rem;">
+      <a href="/post-quantum/timeline/" class="btn btn-ghost">← 03 The timeline</a>
+      <a href="/post-quantum/" class="btn btn-q btn-arrow">Back to the Post-Quantum hub</a>
+    </div>
+  </div>
+</section>
+
+<script src="/js/main.js?v=20261114a"></script>
+<script src="/js/pqc.js?v=20261114a"></script>
+</body>
+</html>

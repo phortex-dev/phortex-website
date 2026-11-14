@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Post-Quantum Timeline: Every Date That Matters — Post-Quantum, Explained 03 — Phortex</title>
+  <meta name="description" content="From NIST’s 2016 competition to the 2035 cutoff: Executive Order 14412, NIST IR 8547, contractor deadlines and what they mean for small businesses." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://phortex.com/post-quantum/timeline/" />
+  <link rel="stylesheet" href="/css/style.css?v=20261114a" />
+  <link rel="stylesheet" href="/css/pqc.css?v=20261114a" />
+</head>
+<body class="grid-bg">
+<script src="/js/components.js?v=20261114a"></script>
+
+<div class="page-hero">
+  <div class="page-hero-bg"><div class="page-hero-glow" style="background:radial-gradient(ellipse, rgba(245,196,81,0.08) 0%, transparent 65%)"></div></div>
+  <div class="container" style="position:relative;">
+    <div class="hero-stagger">
+      <div class="eyebrow q">Post-Quantum, Explained · Part 03 of 04 · 4 min read</div>
+      <h1 class="heading-xl" style="margin-bottom:1.25rem; max-width:860px;">The timeline: <span class="text-accent-q">every date that matters</span></h1>
+      <p class="lead" style="max-width:720px;">The deadlines are set by policy, not by when a quantum computer shows up. NIST notes that past cryptographic transitions took 10 to 20 years, and the federal government now wants its most important systems done by 2030.</p>
+      <nav class="pq-series" aria-label="Post-Quantum, Explained series">
+        <a href="/post-quantum/">Hub</a>
+        <a href="/post-quantum/risk/">01 Risk</a>
+        <a href="/post-quantum/standards/">02 Standards</a>
+        <a href="/post-quantum/timeline/" aria-current="page">03 Timeline</a>
+        <a href="/post-quantum/action-plan/">04 Action plan</a>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<section class="compact">
+  <div class="container">
+    <div class="pq-two">
+      <div>
+        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1.5rem;">
+          <h2 class="heading-md">From competition to cutoff</h2>
+          <div class="pq-filters" role="group" aria-label="Filter the timeline">
+            <button type="button" class="pq-filter" data-tl-filter="all" aria-pressed="true">All dates</button>
+            <button type="button" class="pq-filter" data-tl-filter="fed" aria-pressed="false">Federal &amp; contractors</button>
+          </div>
+        </div>
+        <ol class="pq-tl" data-timeline>
+          <li data-aud="all" style="--c:var(--emerald); --fill:var(--emerald)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">Dec 2016</span><span class="pq-pill n">EVERYONE</span></div><strong>NIST opens a worldwide competition</strong><p>Cryptographers submit candidate algorithms for public attack and review.</p></div></li>
+          <li data-aud="all" style="--c:var(--emerald); --fill:var(--emerald)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">Jul 2022</span><span class="pq-pill n">EVERYONE</span></div><strong>First four algorithms selected</strong><p>Kyber, Dilithium, SPHINCS+ and FALCON advance to standardization.</p></div></li>
+          <li data-aud="all" style="--c:var(--emerald); --fill:var(--emerald)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">Aug 2024</span><span class="pq-pill n">EVERYONE</span></div><strong>FIPS 203, 204 and 205 published</strong><p>ML-KEM, ML-DSA and SLH-DSA become official standards. Vendors can now build to them.</p></div></li>
+          <li data-aud="all" style="--c:var(--emerald); --fill:var(--emerald)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">Mar 2025</span><span class="pq-pill n">EVERYONE</span></div><strong>HQC chosen as a backup</strong><p>A second key-exchange algorithm on different math, in case lattices are ever weakened.</p></div></li>
+          <li data-aud="fed" style="--c:var(--emerald); --fill:var(--emerald)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">Jun 22, 2026</span><span class="pq-pill q">FEDERAL &amp; CONTRACTORS</span></div><strong>Executive Order 14412 signed</strong><p>Sets hard federal deadlines and directs a contractor rule and cryptographic bill-of-materials guidance.</p></div></li>
+          <li data-aud="all" style="--c:var(--emerald); --fill:var(--emerald)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">Oct 27, 2026</span><span class="pq-pill n">EVERYONE</span></div><strong>NIST IR 8547 finalized</strong><p>The official roadmap for retiring quantum-vulnerable algorithms.</p></div></li>
+          <li style="--c:var(--risk-md); --fill:var(--risk-md)"><span class="pq-tl-dot" aria-hidden="true" style="top:0.55rem;"></span><span class="pq-now">YOU ARE HERE · NOVEMBER 2026</span></li>
+          <li data-aud="fed" style="--c:var(--q)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">~Dec 2026</span><span class="pq-pill q">FEDERAL &amp; CONTRACTORS</span></div><strong>Proposed contractor rule due</strong><p>The FAR Council is directed to propose requiring covered federal contractors to meet NIST FIPS standards, including PQC.</p></div></li>
+          <li data-aud="all" style="--c:var(--q)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">~Mar 2027</span><span class="pq-pill n">EVERYONE</span></div><strong>Cryptographic bill-of-materials guidance</strong><p>CISA and NIST to publish minimum elements for a CBOM: an inventory of the cryptography inside products.</p></div></li>
+          <li data-aud="fed" style="--c:var(--risk-md)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">Dec 31, 2030</span><span class="pq-pill q">FEDERAL &amp; CONTRACTORS</span></div><strong>Federal key-exchange deadline</strong><p>High-value federal systems must use PQC key exchange; covered contractors must comply with the FIPS rule.</p></div></li>
+          <li data-aud="all" style="--c:var(--risk-md)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">After 2030</span><span class="pq-pill n">EVERYONE</span></div><strong>RSA and ECC deprecated</strong><p>NIST deprecates quantum-vulnerable algorithms. Expect vendors and auditors to start flagging them.</p></div></li>
+          <li data-aud="fed" style="--c:var(--risk-md)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card"><div class="pq-tl-top"><span class="pq-tl-date">Dec 31, 2031</span><span class="pq-pill q">FEDERAL &amp; CONTRACTORS</span></div><strong>Federal signature deadline</strong><p>High-value federal systems must use PQC digital signatures.</p></div></li>
+          <li data-aud="all" style="--c:var(--risk-hi)"><span class="pq-tl-dot" aria-hidden="true"></span><div class="pq-tl-card" style="border-color:rgba(255,138,101,0.35)"><div class="pq-tl-top"><span class="pq-tl-date">2035</span><span class="pq-pill n">EVERYONE</span></div><strong>RSA and ECC disallowed</strong><p>NIST disallows quantum-vulnerable algorithms; the national goal for completing federal migration.</p></div></li>
+        </ol>
+      </div>
+
+      <aside style="display:flex; flex-direction:column; gap:1.25rem;">
+        <div class="pq-panel">
+          <div class="eyebrow q">Infographic · How it reaches you</div>
+          <h2 class="heading-sm" style="font-size:1.2rem; margin:0.5rem 0 1rem;">Not federal? It still flows downhill.</h2>
+          <div class="pq-chain" role="img" aria-label="Requirements flow from federal agencies to prime contractors, to their suppliers, to small businesses.">
+            <div style="--c:var(--q)"><strong>Federal agencies</strong><span>Deadlines set by EO 14412</span></div>
+            <i aria-hidden="true">▼</i>
+            <div style="--c:var(--q)"><strong>Prime contractors</strong><span>Must meet FIPS, including PQC, by 2030</span></div>
+            <i aria-hidden="true">▼</i>
+            <div style="--c:var(--risk-md)"><strong>Their suppliers</strong><span>See it written into contracts and questionnaires</span></div>
+            <i aria-hidden="true">▼</i>
+            <div style="--c:var(--risk-hi)"><strong>Small businesses like yours</strong><span>Asked to prove readiness to win or keep work</span></div>
+          </div>
+          <p class="text-muted" style="font-size:0.875rem; margin-top:1rem; line-height:1.65;">Vendors, browsers, cloud providers and cyber insurers follow NIST’s dates too, so the change arrives whether or not a contract requires it.</p>
+        </div>
+        <div class="pq-panel q">
+          <div class="eyebrow q">The takeaway</div>
+          <p style="margin-top:0.6rem; line-height:1.65;">Hardware and software you buy in 2027 will likely still be running in 2031. Make post-quantum support a buying requirement now, and you avoid paying for the same replacement twice.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="compact">
+  <div class="container">
+    <div class="pq-sources">
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/" rel="noopener">The White House: Executive Order 14412, Securing the Nation Against Advanced Cryptographic Attacks (June 22, 2026)</a></li>
+        <li><a href="https://www.executivegov.com/articles/nist-post-quantum-cryptography-transition-report" rel="noopener">ExecutiveGov: NIST finalizes road map for post-quantum transition (NIST IR 8547)</a></li>
+        <li><a href="https://www.shashi.co/2026/11/nist-sets-new-post-quantum-deadlines.html" rel="noopener">Summary of NIST IR 8547 deprecation (after 2030) and disallowance (after 2035) dates</a></li>
+        <li><a href="https://www.securityweek.com/nist-announces-hqc-as-fifth-standardized-post-quantum-algorithm/" rel="noopener">SecurityWeek: HQC selected (March 2025)</a></li>
+      </ul>
+    </div>
+    <div class="pq-pager" style="margin-top:2.5rem;">
+      <a href="/post-quantum/standards/" class="btn btn-ghost">← 02 The new standards</a>
+      <a href="/post-quantum/action-plan/" class="btn btn-q btn-arrow">Next: 04 Your action plan</a>
+    </div>
+  </div>
+</section>
+
+<script src="/js/main.js?v=20261114a"></script>
+<script src="/js/pqc.js?v=20261114a"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post-Quantum Readiness for Small Business — Phortex</title>
+  <meta name="description" content="NIST will deprecate RSA and elliptic-curve encryption after 2030 and disallow them after 2035. Check your exposure, see the Phortex PQC Toolkit demo, and get a migration plan." />
+  <meta property="og:title" content="Your encryption has an expiration date — Phortex Post-Quantum Readiness" />
+  <meta property="og:description" content="Check your quantum exposure in 60 seconds and see what to fix first." />
+  <meta property="og:url" content="https://phortex.com/post-quantum/" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://phortex.com/post-quantum/" />
+  <link rel="stylesheet" href="/css/style.css?v=20261114a" />
+  <link rel="stylesheet" href="/css/pqc.css?v=20261114a" />
+</head>
+<body class="grid-bg">
+<script src="/js/components.js?v=20261114a"></script>
+
+<div class="page-hero">
+  <div class="page-hero-bg">
+    <div class="page-hero-glow" style="background:radial-gradient(ellipse, rgba(122,162,255,0.10) 0%, transparent 65%)"></div>
+  </div>
+  <div class="container" style="position:relative;">
+    <div class="hero-two-col" style="align-items:center;">
+      <div class="hero-stagger">
+        <div class="eyebrow q">Post-Quantum Readiness · For small &amp; mid-size business</div>
+        <h1 class="heading-xl" style="margin-bottom:1.25rem;">Your encryption has an <span class="text-accent-q">expiration date.</span></h1>
+        <p class="lead" style="margin-bottom:2rem; max-width:600px;">The encryption behind your website, VPN, email and payments was built for classical computers. NIST now says to move off it by 2030 and stop using it by 2035, and attackers can record your data today to decrypt later. We help you find what’s exposed and fix it in the right order.</p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="#check" class="btn btn-q btn-lg btn-arrow">Check your exposure</a>
+          <a href="#toolkit" class="btn btn-ghost btn-lg">See the toolkit demo</a>
+        </div>
+      </div>
+      <div class="pq-panel q" role="img" aria-label="Harvest now, decrypt later: attackers copy encrypted data today, store it for years, and decrypt it once a large quantum computer exists.">
+        <div class="eyebrow q" style="margin-bottom:1rem;">Harvest now, decrypt later</div>
+        <div class="pq-flow">
+          <div class="pq-flow-step"><span class="pq-flow-n" style="background:var(--risk-hi)">1</span><div><div class="pq-flow-t">Today</div><div class="pq-flow-d">An attacker copies your encrypted traffic or a stolen backup. It looks like noise.</div></div></div>
+          <div class="pq-flow-arrow" aria-hidden="true">▼</div>
+          <div class="pq-flow-step"><span class="pq-flow-n" style="background:var(--risk-md)">2</span><div><div class="pq-flow-t">For years</div><div class="pq-flow-d">They store it. Storage is cheap and patient.</div></div></div>
+          <div class="pq-flow-arrow" aria-hidden="true">▼</div>
+          <div class="pq-flow-step"><span class="pq-flow-n" style="background:var(--q)">3</span><div><div class="pq-flow-t">Q-Day</div><div class="pq-flow-d">A large enough quantum computer breaks the key exchange, and the old data opens.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="compact">
+  <div class="container">
+    <div class="pq-dates reveal">
+      <div class="pq-date"><div class="pq-date-num" style="color:var(--emerald)">Aug 2024</div><div class="pq-date-label">NIST publishes the first post-quantum standards (FIPS 203, 204, 205)</div></div>
+      <div class="pq-date"><div class="pq-date-num" style="color:var(--q)">Dec 2030</div><div class="pq-date-label">Federal high-value systems and covered contractors must use PQC key exchange (EO 14412)</div></div>
+      <div class="pq-date"><div class="pq-date-num" style="color:var(--risk-md)">After 2030</div><div class="pq-date-label">NIST deprecates RSA and elliptic-curve algorithms (NIST IR 8547)</div></div>
+      <div class="pq-date"><div class="pq-date-num" style="color:var(--risk-hi)">After 2035</div><div class="pq-date-label">NIST disallows them entirely</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="check" style="background:var(--navy-1);">
+  <div class="container">
+    <div class="pq-calc">
+      <div class="reveal">
+        <div class="eyebrow q">Am I exposed? · 60-second check</div>
+        <h2 class="heading-lg" style="margin-bottom:1rem;">The quantum math every owner should know</h2>
+        <p class="text-muted" style="line-height:1.75;">Security researcher Michele Mosca put it simply: if the years your data must stay secret, plus the years it takes you to migrate, add up to more than the years until a quantum computer can break it, you’re already late.</p>
+        <div class="pq-formula">shelf life + migration time &gt; time to Q-Day</div>
+        <p class="pq-note" style="margin-top:0;">No one knows when Q-Day arrives. The third number is your assumption; try a few. Nothing you enter leaves your browser.</p>
+      </div>
+      <div class="pq-panel reveal reveal-delay-2" data-mosca>
+        <div class="pq-knob"><div class="pq-knob-text"><strong>Data shelf life</strong><span>How long must your most sensitive data stay secret? Patient, legal and financial records often run 7–10+ years.</span></div><div class="pq-stepper"><button type="button" data-k="x" data-d="-1" aria-label="Decrease data shelf life">−</button><output data-out="x" aria-live="polite">7 yrs</output><button type="button" data-k="x" data-d="1" aria-label="Increase data shelf life">+</button></div></div>
+        <div class="pq-knob"><div class="pq-knob-text"><strong>Migration time</strong><span>How long to find and replace the cryptography in your systems and vendors? Past transitions took years.</span></div><div class="pq-stepper"><button type="button" data-k="y" data-d="-1" aria-label="Decrease migration time">−</button><output data-out="y" aria-live="polite">4 yrs</output><button type="button" data-k="y" data-d="1" aria-label="Increase migration time">+</button></div></div>
+        <div class="pq-knob"><div class="pq-knob-text"><strong>Years until Q-Day</strong><span>Your assumption. Estimates vary widely and no one knows.</span></div><div class="pq-stepper"><button type="button" data-k="z" data-d="-1" aria-label="Decrease years until Q-Day">−</button><output data-out="z" aria-live="polite">10 yrs</output><button type="button" data-k="z" data-d="1" aria-label="Increase years until Q-Day">+</button></div></div>
+        <div class="pq-result-bars">
+          <div><label>Shelf life + migration = <span data-need>11</span> years</label><div class="pq-track"><div class="pq-fill" data-bar="x" style="background:var(--risk-hi); border-radius:4px 0 0 4px;"></div><div class="pq-fill" data-bar="y" style="background:var(--risk-md); border-radius:0 4px 4px 0;"></div></div></div>
+          <div><label>Time to Q-Day (your assumption) = <span data-zval>10</span> years</label><div class="pq-track"><div class="pq-fill" data-bar="z" style="background:var(--q);"></div></div></div>
+        </div>
+        <div class="pq-verdict hi" data-verdict aria-live="polite"><b>ALREADY EXPOSED</b><strong>Data you send today could be read before you finish migrating.</strong><span>Start with an inventory and fix your longest-lived data paths first.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="toolkit">
+  <div class="container">
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:1rem; margin-bottom:2rem;">
+      <div class="pq-section-head reveal" style="margin-bottom:0;">
+        <div class="eyebrow q">Phortex PQC Toolkit · Demo</div>
+        <h2 class="heading-lg" style="margin-bottom:0.75rem;">Scan. Analyze. <span class="text-accent-q">Report.</span></h2>
+        <p class="lead">Find the quantum-vulnerable cryptography across your business, rank it by what an attacker could harvest, and get a plan in plain English.</p>
+      </div>
+      <span class="pq-pill md">DEMO · SAMPLE DATA FOR A FICTIONAL COMPANY · NOT A LIVE SCAN</span>
+    </div>
+
+    <div class="pq-demo reveal" data-demo>
+      <div class="pq-demo-tabs" role="tablist" aria-label="Toolkit steps">
+        <button type="button" class="pq-demo-tab" role="tab" id="tab-scan" aria-controls="panel-scan" aria-selected="true"><small>STEP 1</small><span>Scan</span></button>
+        <button type="button" class="pq-demo-tab" role="tab" id="tab-analyze" aria-controls="panel-analyze" aria-selected="false" tabindex="-1"><small>STEP 2</small><span>Analyze</span></button>
+        <button type="button" class="pq-demo-tab" role="tab" id="tab-report" aria-controls="panel-report" aria-selected="false" tabindex="-1"><small>STEP 3</small><span>Report</span></button>
+      </div>
+      <div class="pq-demo-body">
+        <div class="pq-demo-meta"><span>Sample target: <span class="pq-mono" style="color:var(--white)">Riverside Dental Group (fictional) · 14 staff · patient records kept 10+ years</span></span><span data-caption>5 assets discovered</span></div>
+
+        <div class="pq-demo-panel" role="tabpanel" id="panel-scan" aria-labelledby="tab-scan">
+          <div class="pq-table-wrap">
+            <table class="pq-table">
+              <thead><tr><th scope="col">Asset found</th><th scope="col">Cryptography in use</th><th scope="col">Quantum status</th></tr></thead>
+              <tbody>
+                <tr><td>Public website</td><td class="pq-mono">TLS 1.3 · X25519 key exchange · RSA-2048 certificate</td><td><span class="pq-pill hi">Quantum-vulnerable</span></td></tr>
+                <tr><td>Remote-access VPN appliance</td><td class="pq-mono">IKEv2 · RSA-2048 authentication · firmware from 2021</td><td><span class="pq-pill hi">Quantum-vulnerable</span></td></tr>
+                <tr><td>Patient portal (hosted)</td><td class="pq-mono">TLS 1.2 · ECDHE · vendor-managed</td><td><span class="pq-pill md">Depends on vendor</span></td></tr>
+                <tr><td>Email (Microsoft 365)</td><td class="pq-mono">Vendor-managed TLS</td><td><span class="pq-pill md">Depends on vendor</span></td></tr>
+                <tr><td>Offsite backups</td><td class="pq-mono">AES-256 at rest</td><td><span class="pq-pill ok">Quantum-resistant</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="pq-demo-panel" role="tabpanel" id="panel-analyze" aria-labelledby="tab-analyze" hidden>
+          <div class="pq-grid">
+            <div class="pq-rank"><div class="pq-rank-top">Patient portal <span class="pq-pill hi">High</span></div><div><small class="text-muted">Harvest risk</small><div class="pq-track"><div class="pq-fill" style="width:92%; background:var(--risk-hi)"></div></div></div><p class="text-muted" style="font-size:0.875rem;">Carries patient records that must stay private for 10+ years: the textbook harvest-now target.</p></div>
+            <div class="pq-rank"><div class="pq-rank-top">Remote-access VPN <span class="pq-pill hi">High</span></div><div><small class="text-muted">Harvest risk</small><div class="pq-track"><div class="pq-fill" style="width:80%; background:var(--risk-hi)"></div></div></div><p class="text-muted" style="font-size:0.875rem;">All remote staff traffic runs through it, and its firmware has no PQC upgrade path.</p></div>
+            <div class="pq-rank"><div class="pq-rank-top">Public website <span class="pq-pill md">Medium</span></div><div><small class="text-muted">Harvest risk</small><div class="pq-track"><div class="pq-fill" style="width:45%; background:var(--risk-md)"></div></div></div><p class="text-muted" style="font-size:0.875rem;">Mostly public content, but contact forms carry personal data. Easy to fix at the CDN.</p></div>
+            <div class="pq-rank"><div class="pq-rank-top">Offsite backups <span class="pq-pill ok">Low</span></div><div><small class="text-muted">Harvest risk</small><div class="pq-track"><div class="pq-fill" style="width:10%; background:var(--risk-ok)"></div></div></div><p class="text-muted" style="font-size:0.875rem;">AES-256 stays strong. Check how the backup keys themselves are exchanged.</p></div>
+          </div>
+        </div>
+
+        <div class="pq-demo-panel" role="tabpanel" id="panel-report" aria-labelledby="tab-report" hidden>
+          <div class="pq-report">
+            <div class="pq-rank" style="align-items:flex-start;"><small class="text-muted">Readiness score (sample)</small><div class="pq-score">38<small>/100</small></div><p class="text-muted" style="font-size:0.875rem;">Two quick wins, one vendor conversation, one hardware replacement to budget.</p></div>
+            <div class="pq-actions">
+              <div class="pq-action"><span class="pq-action-n">1</span><div><strong>Turn on hybrid post-quantum TLS for the website</strong><p class="text-muted" style="font-size:0.875rem;">Enable X25519MLKEM768 at your CDN or load balancer. Most visitors’ browsers already support it.</p><small>QUICK WIN · THIS MONTH</small></div></div>
+              <div class="pq-action"><span class="pq-action-n">2</span><div><strong>Send the vendor question pack to the patient-portal provider</strong><p class="text-muted" style="font-size:0.875rem;">Ask for their ML-KEM support date and whether they can switch algorithms without a re-platform.</p><small>QUICK WIN · THIS MONTH</small></div></div>
+              <div class="pq-action"><span class="pq-action-n">3</span><div><strong>Budget a VPN replacement with PQC support</strong><p class="text-muted" style="font-size:0.875rem;">The current appliance can’t be upgraded. Make PQC support a requirement in the next purchase.</p><small>NEXT BUDGET CYCLE</small></div></div>
+              <div class="pq-action"><span class="pq-action-n">4</span><div><strong>Re-scan every 6 months</strong><p class="text-muted" style="font-size:0.875rem;">Vendors are shipping PQC support quickly. Track progress toward the 2030 deadline.</p><small>ONGOING</small></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pq-demo-foot"><button type="button" class="btn btn-q" data-next>Next: Analyze →</button></div>
+      </div>
+    </div>
+
+    <div class="pq-grid" style="margin-top:1.5rem;">
+      <div class="pq-panel q reveal" id="get-toolkit">
+        <span class="pq-pill q">COMING SOON</span>
+        <h3 class="heading-md" style="margin:0.75rem 0 0.5rem;">Get the PQC Toolkit</h3>
+        <p class="text-muted" style="font-size:0.92rem; line-height:1.7;">Run the scan on systems you own or manage. Includes the report template and vendor question pack.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1rem;">
+          <button type="button" class="btn btn-ghost" disabled>Download · coming soon</button>
+          <button type="button" class="btn btn-ghost" disabled>Buy · pricing at launch</button>
+        </div>
+        <form class="pq-wait" action="https://formspree.io/f/mreoodbz" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="PQC Toolkit waitlist" />
+          <input type="hidden" name="service" value="PQC Toolkit waitlist" />
+          <div class="form-group"><label class="form-label" for="tk-email">Email me when it launches</label><input class="form-input" type="email" id="tk-email" name="email" required autocomplete="email" placeholder="you@company.com" /></div>
+          <button type="submit" class="btn btn-q">Join the waitlist</button>
+          <p class="pq-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="pq-panel reveal reveal-delay-2" id="assessment">
+        <span class="pq-pill ok">SERVICE</span>
+        <h3 class="heading-md" style="margin:0.75rem 0 0.5rem;">Post-Quantum Readiness Assessment</h3>
+        <p class="text-muted" style="font-size:0.92rem; line-height:1.7;">We run the toolkit with you, interview your key vendors, and hand over a cryptographic inventory, a risk-ranked findings list and a migration roadmap to 2030.</p>
+        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem; margin-top:1.25rem;">
+          <span class="pq-mono" style="font-size:0.9rem;">Fixed-fee quote after a free call</span>
+          <a href="/#contact" class="btn btn-q btn-arrow">Book a free consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="learn" style="background:var(--navy-1);">
+  <div class="container">
+    <div class="pq-section-head reveal">
+      <div class="eyebrow q">Post-Quantum, Explained · 4-part series</div>
+      <h2 class="heading-lg">Understand it in <span class="text-accent-q">20 minutes</span></h2>
+    </div>
+    <div class="pq-grid cols-4">
+      <a href="/post-quantum/risk/" class="card reveal" style="display:flex; flex-direction:column; gap:0.6rem;"><span class="pq-date-num" style="color:var(--risk-hi)">01</span><span class="heading-sm">What’s actually at risk</span><span class="text-muted" style="font-size:0.875rem;">Which encryption breaks, which bends, and why your data shelf life matters.</span><span class="pq-mono text-muted" style="font-size:0.72rem; margin-top:auto;">5 MIN READ</span></a>
+      <a href="/post-quantum/standards/" class="card reveal reveal-delay-1" style="display:flex; flex-direction:column; gap:0.6rem;"><span class="pq-date-num" style="color:var(--q)">02</span><span class="heading-sm">The new standards</span><span class="text-muted" style="font-size:0.875rem;">ML-KEM, ML-DSA and friends, in plain English, with what they replace.</span><span class="pq-mono text-muted" style="font-size:0.72rem; margin-top:auto;">5 MIN READ</span></a>
+      <a href="/post-quantum/timeline/" class="card reveal reveal-delay-2" style="display:flex; flex-direction:column; gap:0.6rem;"><span class="pq-date-num" style="color:var(--risk-md)">03</span><span class="heading-sm">The timeline</span><span class="text-muted" style="font-size:0.875rem;">Every date that matters, from 2016 to 2035, and who it applies to.</span><span class="pq-mono text-muted" style="font-size:0.72rem; margin-top:auto;">4 MIN READ</span></a>
+      <a href="/post-quantum/action-plan/" class="card reveal reveal-delay-3" style="display:flex; flex-direction:column; gap:0.6rem;"><span class="pq-date-num" style="color:var(--emerald)">04</span><span class="heading-sm">Your action plan</span><span class="text-muted" style="font-size:0.875rem;">Six steps for a small business, with quick wins you can do this month.</span><span class="pq-mono text-muted" style="font-size:0.72rem; margin-top:auto;">6 MIN READ</span></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container-sm">
+    <h2 class="heading-md reveal" style="margin-bottom:1.25rem;">Straight answers</h2>
+    <div class="pq-faq reveal">
+      <details><summary>Is this hype? Quantum computers can’t break anything yet.</summary><p>True today. But the estimated machine size needed to break RSA-2048 keeps shrinking, from about 20 million noisy qubits (2019) to under a million (2025), and the US government has set firm migration dates anyway. Data you send now can be stored and broken later.</p></details>
+      <details><summary>We’re not a federal agency. Does this apply to us?</summary><p>Indirectly, yes. Federal contractors face PQC requirements by 2030, and they will push them down to their suppliers. NIST’s deprecation dates also steer what vendors, browsers and auditors support.</p></details>
+      <details><summary>Won’t our vendors just handle it?</summary><p>Many will, for cloud services. Older VPN appliances, firewalls, line-of-business software and devices you own often won’t, and you need to know which is which before budgets are set.</p></details>
+      <details><summary>Do we need to replace AES encryption too?</summary><p>Generally no. Quantum attacks hit public-key cryptography (RSA, elliptic curves) hardest. Symmetric encryption like AES-256 remains strong at that key size.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band reveal">
+  <div class="cta-band-glow"></div>
+  <div class="container" style="position:relative;">
+    <h2 class="heading-lg" style="margin-bottom:1rem;">Know where you stand <span class="text-accent-q">before 2030 does.</span></h2>
+    <p class="lead" style="margin:0 auto; text-align:center;">A free 30-minute call tells you whether you need an assessment, the toolkit, or just a few settings changed. Call <a href="tel:+12676411557" class="pq-link">267-641-1557</a> or book online.</p>
+    <div class="cta-band-actions">
+      <a href="/#contact" class="btn btn-q btn-lg btn-arrow">Book a Free Consultation</a>
+    </div>
+  </div>
+</div>
+
+<script src="/js/main.js?v=20261114a"></script>
+<script src="/js/pqc.js?v=20261114a"></script>
+</body>
+</html>

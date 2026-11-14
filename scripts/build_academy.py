@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "academy" / "catalog.json"
 PAGE = ROOT / "academy" / "index.html"
-ASSET_V = "20261030b"
+ASSET_V = "20261114a"
 FORM = "https://formspree.io/f/mreoodbz"
 BANNED = re.compile(r"<|>|javascript:", re.I)
 LEVELS = ("Beginner", "Intermediate", "Advanced")

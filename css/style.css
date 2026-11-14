@@ -1195,3 +1195,27 @@ footer {
   .ac-count { grid-column: 2; }
   .ac-checks { grid-template-columns: 1fr; }
 }
+
+/* ── Nav badge, footer contact + legal (Nov 2026) ───────── */
+.nav-pq { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--white) !important; }
+.nav-new { font-family: var(--font-mono); font-size: 0.58rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; background: #7AA2FF; color: var(--navy); padding: 0.1rem 0.35rem; border-radius: 3px; }
+.footer-contact { margin-top: 1rem; font-size: 0.85rem; line-height: 1.9; color: var(--gray-100); }
+.footer-contact a:hover, .footer-legal a:hover { color: var(--cyan); }
+.footer-legal { display: inline-flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
+.nav-links a { white-space: nowrap; }
+@media (max-width: 1360px) and (min-width: 1121px) {
+  .nav-links a { padding: 0.4rem 0.5rem; font-size: 0.72rem; letter-spacing: 0.03em; }
+  .nav-cta { padding: 0.5rem 0.9rem !important; }
+  .nav-inner { gap: 1rem; }
+}
+/* With nine items the full menu needs ~1120px; collapse to the menu button below that. */
+@media (max-width: 1120px) {
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column; align-items: flex-start;
+    position: absolute; top: 66px; left: 0; right: 0;
+    background: rgba(7,13,26,0.98); border-bottom: 1px solid var(--gray-700);
+    padding: 1.25rem 2rem; gap: 0.5rem;
+  }
+  .nav-hamburger { display: flex; }
+}

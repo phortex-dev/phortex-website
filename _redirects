@@ -7,3 +7,8 @@
 /ai       /ai/       301
 /academy  /academy/  301
 /about    /about/    301
+/post-quantum /post-quantum/ 301
+/pqc          /post-quantum/ 301
+/quantum      /post-quantum/ 301
+/privacy      /privacy/      301
+/terms        /terms/        301

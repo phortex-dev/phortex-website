@@ -10,6 +10,7 @@
   <div class="nav-inner">
     <a href="/" class="nav-logo" aria-label="Phortex home">PHORTEX<span class="nav-logo-dot">.</span></a>
     <ul class="nav-links" role="list">
+      <li><a href="/post-quantum/" class="nav-pq">Post-Quantum<span class="nav-new">New</span></a></li>
       <li><a href="/security/">Security</a></li>
       <li><a href="/ai/">AI Services</a></li>
       <li><a href="/security-tldr/">Sec TL;DR</a></li>
@@ -31,6 +32,7 @@
       <div>
         <div class="footer-brand-logo">PHORTEX<span style="color:var(--cyan)">.</span></div>
         <p class="footer-tagline">Cybersecurity consulting, AI strategy, and a learning academy — built on 25 years of hands-on expertise and Wharton business thinking.</p>
+        <p class="footer-contact"><a href="tel:+12676411557">267-641-1557</a><br><a href="mailto:contact@phortex.com">contact@phortex.com</a></p>
         <div class="footer-socials">
           <a href="https://linkedin.com/company/phortex-llc" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">in</a>
           <a href="https://x.com/PhortexLLC" target="_blank" rel="noopener" class="footer-social-btn" aria-label="X / Twitter">𝕏</a>
@@ -42,6 +44,7 @@
         <h5>Security</h5>
         <ul>
           <li><a href="/security/">Overview</a></li>
+          <li><a href="/post-quantum/">Post-Quantum Readiness</a></li>
           <li><a href="/security/#health-check">Health Check</a></li>
           <li><a href="/security/#smb">SMB Assessment</a></li>
           <li><a href="/security/#vciso">Virtual CISO</a></li>
@@ -65,12 +68,15 @@
           <li><a href="/academy/">Learning Academy</a></li>
           <li><a href="/about/">About</a></li>
           <li><a href="/#contact">Contact</a></li>
-          <li><a href="https://x.com/PhortexLLC" target="_blank" rel="noopener">@PhortexLLC</a></li>
+          <li><a href="/post-quantum/risk/">Post-Quantum, Explained</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Service</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span class="year"></span> Phortex LLC · Doylestown, PA · All rights reserved</span>
+      <span class="footer-legal"><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="tel:+12676411557">267-641-1557</a></span>
       <span class="footer-mono">// Built on AI. Delivered by expertise.</span>
     </div>
   </div>
