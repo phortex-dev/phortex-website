@@ -67,6 +67,20 @@
     </div>
     <div class="intel-grid">
       <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>CSA research note, on an FBI FLASH alert &middot; <time datetime="2026-11-14">Nov 14, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">FBI warns North Korean FaceStealer crews use replayed and deepfaked video calls to steal crypto</h3>
+        <p class="intel-tldr">The FBI says North Korean operators hijack messaging accounts, then invite the victim&#x27;s contacts to fake meetings that show recorded or deepfaked footage of the real person. A staged audio fault gets the target to run a fix command, and the scheme has taken more than 400 million dollars in about 18 months.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Tell staff that no real meeting ever needs them to paste a command or run a script to fix audio, and confirm payment or code requests on a second, known channel.</div>
+        <a class="intel-link" href="https://labs.cloudsecurityalliance.org/research/csa-research-note-facestealer-deepfake-meeting-intrusion-202" target="_blank" rel="noopener noreferrer">Read the research note &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on OpenAI &middot; <time datetime="2026-11-13">Nov 13, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">OpenAI launches Daybreak, AI agents that test web apps and draft fixes for found flaws</h3>
+        <p class="intel-tldr">OpenAI introduced Daybreak, with a Red Team service that probes web applications in isolated environments and a Defense Factory plugin that traces findings through a GitHub repository and proposes patches. Red Team is in early access, Defense Factory is in preview, and engineers review each fix before merging.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Before trying an AI code-fixing tool, connect it only to the repositories it needs and keep human review required on every pull request it opens.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/13/openai-daybreak-vulnerability-remediation-red-team-defense-factory-agents/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Record, on the FBI &middot; <time datetime="2026-11-13">Nov 13, 2026</time></span></div>
         <h3 class="heading-sm intel-title">FBI flash alert warns the ARTEX AI attack tool lets low-skill crews break in within hours</h3>
         <p class="intel-tldr">The FBI says ARTEX, an open-source tool that lets any language model run an intrusion step by step, is being used against finance, government, health, legal and other sectors, at times reaching privileged access in under three hours. It often targets less watched systems such as supplier portals and mobile backends.</p>
@@ -86,6 +100,13 @@
         <p class="intel-tldr">In an essay based on his DEF CON keynote, Bruce Schneier argues the biggest risk is AI finding unintended shortcuts in rules, from code to tax law and finance, while doing what it was asked. He says AI speeds up and scales such hacks, and that laws and institutions must become as quick to patch as software.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Give every AI agent a narrow goal, written limits on what it may not do, and a person who reviews its actions before they touch money or customers.</div>
         <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-doesnt-have-to-go-rogue-to-break-the-world.html" target="_blank" rel="noopener noreferrer">Read the essay &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Unit 42 &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Unit 42: open-source Cairn AI pentest tool used to breach 10 organizations with familiar flaws</h3>
+        <p class="intel-tldr">Palo Alto Networks&#x27; Unit 42 says a likely China-linked operator ran 25 autonomous intrusions with a modified Cairn framework, targeting 19 chip makers, defence groups and civil society bodies and breaching 10, including a US teachers&#x27; union. The AI found weak passwords, exposed APIs and old CVEs, not new tricks.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Run a quick audit for default or reused passwords, open registration pages and internet-facing APIs, since AI attack tools find those first.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/12/cairn-autonomous-ai-cyberattacks/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Aikido Security and SafeDep &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
@@ -464,27 +485,6 @@
         <p class="intel-tldr">Endor Labs found that the copy command in Docker Sandboxes followed symbolic links, so an agent could plant a link and read or overwrite files on the developer&#x27;s machine, such as cloud keys. Docker fixed it in version 0.51.0 after an earlier fix proved incomplete.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Update Docker Sandboxes to 0.51.0 or later, and read any file-copy command an AI agent suggests before you run it.</div>
         <a class="intel-link" href="https://www.endorlabs.com/learn/docker-sandboxes-vulnerability-lets-ai-agents-access-sensitive-files-outside-their-sandbox-cve-2026-103916" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Chainstack &middot; <time datetime="2026-11-03">Nov 3, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Chainstack breach exposes customer data in a suspected AI-driven campaign</h3>
-        <p class="intel-tldr">Blockchain infrastructure provider Chainstack said an attacker got in through a third-party component, moved from a development system into production, and read customer names, emails and password hashes. It is assessed as part of the AI-powered campaign linked to breaches at Chainalysis and WorkOS.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Keep development and production systems on separate accounts and credentials, so a break-in at a test server cannot reach customer data.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/chainstack-reports-production-systems.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Binance &middot; <time datetime="2026-11-03">Nov 3, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Binance traces its 6.43 billion dollar theft to fake job interviews and an abused internal AI tool</h3>
-        <p class="intel-tldr">Binance said attackers infected one engineer through a fake job interview assignment and another through a trojanized AI tool installer, then abused an internal AI tool to reach colleagues&#x27; machines. From there they used a deployment token to reach the wallet signing service.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Tell staff never to run job interview assignments or newly downloaded AI tools on work computers, and install AI tools only from the vendor&#x27;s official site.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Kaspersky research &middot; <time datetime="2026-11-03">Nov 3, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">AI agent framework took attackers from a school server to domain admin in days</h3>
-        <p class="intel-tldr">Kaspersky saw attackers use the open-source CyberStrikeAI framework against schools and universities in Africa and Latin America, with an AI model on their own server picking each next step. After a manual break-in through SQL Server, the agent mapped the network in hours and reached domain admin in three to four days.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Close internet access to database servers such as SQL Server and set alerts for credential dumping and Kerberoasting, which AI-driven attacks still rely on.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/03/ai-powered-cyberattacks-artex-cyberstrikeai/" target="_blank" rel="noopener noreferrer">Read the research summary &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>

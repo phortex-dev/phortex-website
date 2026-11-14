@@ -12,6 +12,36 @@
   "items": [
     {
       "cat": "news",
+      "source": "CSA research note, on an FBI FLASH alert",
+      "date": "2026-11-14",
+      "title": "FBI warns North Korean FaceStealer crews use replayed and deepfaked video calls to steal crypto",
+      "tldr": "The FBI says North Korean operators hijack messaging accounts, then invite the victim's contacts to fake meetings that show recorded or deepfaked footage of the real person. A staged audio fault gets the target to run a fix command, and the scheme has taken more than 400 million dollars in about 18 months.",
+      "smb": "Tell staff that no real meeting ever needs them to paste a command or run a script to fix audio, and confirm payment or code requests on a second, known channel.",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-facestealer-deepfake-meeting-intrusion-202",
+      "link_label": "Read the research note"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on OpenAI",
+      "date": "2026-11-13",
+      "title": "OpenAI launches Daybreak, AI agents that test web apps and draft fixes for found flaws",
+      "tldr": "OpenAI introduced Daybreak, with a Red Team service that probes web applications in isolated environments and a Defense Factory plugin that traces findings through a GitHub repository and proposes patches. Red Team is in early access, Defense Factory is in preview, and engineers review each fix before merging.",
+      "smb": "Before trying an AI code-fixing tool, connect it only to the repositories it needs and keep human review required on every pull request it opens.",
+      "url": "https://www.helpnetsecurity.com/2026/11/13/openai-daybreak-vulnerability-remediation-red-team-defense-factory-agents/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Unit 42",
+      "date": "2026-11-12",
+      "title": "Unit 42: open-source Cairn AI pentest tool used to breach 10 organizations with familiar flaws",
+      "tldr": "Palo Alto Networks' Unit 42 says a likely China-linked operator ran 25 autonomous intrusions with a modified Cairn framework, targeting 19 chip makers, defence groups and civil society bodies and breaching 10, including a US teachers' union. The AI found weak passwords, exposed APIs and old CVEs, not new tricks.",
+      "smb": "Run a quick audit for default or reused passwords, open registration pages and internet-facing APIs, since AI attack tools find those first.",
+      "url": "https://www.helpnetsecurity.com/2026/11/12/cairn-autonomous-ai-cyberattacks/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
       "source": "The Record, on the FBI",
       "date": "2026-11-13",
       "title": "FBI flash alert warns the ARTEX AI attack tool lets low-skill crews break in within hours",
