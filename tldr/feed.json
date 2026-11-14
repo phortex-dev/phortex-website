@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "items": [
+    {
+      "date": "2026-11-14",
+      "title": "Microsoft 365 email, Teams and Outlook are back after an outage of more than a day",
+      "why": "A failed network capacity upgrade knocked out Exchange Online, Outlook, Teams and Copilot for businesses worldwide from Thursday afternoon. Microsoft says service was restored early Saturday and that it was not a cyberattack.",
+      "action": "Write down a backup plan for the next email outage: a phone or chat fallback, an offline staff contact list, and who tells customers.",
+      "source_name": "CBS News",
+      "source_url": "https://www.cbsnews.com/news/microsoft-battling-major-outage/",
+      "heat": 5,
+      "cat": "cloud"
+    },
+    {
+      "date": "2026-11-14",
+      "title": "Police take down Gootloader, CastleRAT and StealC malware servers, seize 6.4M logins",
+      "why": "Operation Endgame seized or disrupted about 235 servers used to spread password-stealing and ransomware-linked malware. The stolen logins were shared with Have I Been Pwned and other notification services.",
+      "action": "Check your business email domain on Have I Been Pwned and reset passwords, with MFA turned on, for any accounts that appear.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/law-enforcement-disrupts-gootloader-castlerat-and-stealc-infrastructure/",
+      "heat": 4,
+      "cat": "malware"
+    },
+    {
+      "date": "2026-11-14",
+      "title": "Public 'SignDrop' exploit lets a standard Windows user take full control; no patch yet",
+      "why": "A researcher released code abusing the Windows log file driver to reach SYSTEM on Windows 11 and Server 2025. Microsoft has not issued a fix, and no attacks have been reported so far.",
+      "action": "Keep Windows CLFS protection switched on (do not set it to mode 2 or 3), limit who can log in to servers, and install Microsoft's fix when it ships.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-14",
+      "title": "Citrix fixes nine critical NetScaler ADC and Gateway flaws plus a Console login bypass",
+      "why": "The patches cover memory flaws in NetScaler ADC and Gateway and a 9.4-rated NetScaler Console bug that lets attackers reach restricted areas without a login. No attacks are reported yet, but NetScaler is a frequent target.",
+      "action": "Update NetScaler ADC and Gateway to 14.1-73.57 or 13.1-64.39 or later, and NetScaler Console to 14.1-74.34 or later.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/citrix-patches-10-critical-netscaler-vulnerabilities/",
+      "heat": 3,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-11-14",
+      "title": "Notion AI chat transcripts stolen through a breach at its AI provider Fireworks",
+      "why": "Attackers got into Fireworks AI through its cloud provider and took billing data and datasets. Notion says about 1% of its customers had Notion AI transcripts taken before it cut ties on November 3.",
+      "action": "List the AI services your tools send company data to, and ask each vendor which of their own providers can see it.",
+      "source_name": "TechCrunch",
+      "source_url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
+      "heat": 3,
+      "cat": "ai"
+    },
+    {
+      "date": "2026-11-14",
+      "title": "Apache web server update fixes a critical HTTP/2 flaw that could allow remote takeover",
+      "why": "Apache HTTP Server 2.4.55 through 2.4.70 with HTTP/2 turned on can be crashed and possibly taken over without a login. Version 2.4.71 fixes it; no attacks are reported yet.",
+      "action": "Ask your web host or IT provider to update Apache to 2.4.71, or turn off HTTP/2 until the update is installed.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/apache-patches-critical-http-server-rce-found-by-anthropic-google/",
+      "heat": 3,
+      "cat": "patch"
+    },
     {
       "date": "2026-11-13",
       "title": "New N-able N-central zero-day bypasses Hotfix 2; attackers planted miners on 21 servers",
