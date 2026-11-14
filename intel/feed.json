@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "threat_of_the_week": {
     "source": "Cyber Security News, on Microsoft and Todyl",
     "date": "2026-11-09",
@@ -10,6 +10,56 @@
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "The Record, on the FBI",
+      "date": "2026-11-13",
+      "title": "FBI flash alert warns the ARTEX AI attack tool lets low-skill crews break in within hours",
+      "tldr": "The FBI says ARTEX, an open-source tool that lets any language model run an intrusion step by step, is being used against finance, government, health, legal and other sectors, at times reaching privileged access in under three hours. It often targets less watched systems such as supplier portals and mobile backends.",
+      "smb": "List every partner portal, vendor login and third-party integration you expose, then put them behind MFA and add them to your log monitoring.",
+      "url": "https://therecord.media/artex-ai-tool-fbi-flash-alert",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Cloud Security Alliance, on Darktrace research",
+      "date": "2026-11-13",
+      "title": "Darktrace shows stolen Claude keys can turn a developer's coding agent into a remote-controlled implant",
+      "tldr": "In a lab test, Darktrace took a developer's Claude credentials and used memory stores as a hidden job queue, so the installed coding agent scanned the network, sprayed passwords and uploaded a 1 GB file. All traffic went to the normal AI API, and Darktrace says it has not seen this in the wild.",
+      "smb": "Find where AI API keys sit on developer machines and CI, rotate any on a suspect host, and switch off permission-bypass modes for coding agents.",
+      "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-coding-agent-api-key-implant-20261113-csa/",
+      "link_label": "Read the research note"
+    },
+    {
+      "cat": "news",
+      "source": "BleepingComputer, on Arctic Wolf",
+      "date": "2026-11-11",
+      "title": "Attackers run AntiFox, an AI pentest agent built on ARTEX, to pull production secrets from AWS",
+      "tldr": "Arctic Wolf saw self-hosted AntiFox agents plant a web shell on an exposed IIS server, read database connection strings and cycle through valid AWS identities with hundreds of API calls in about 30 minutes. Some calls succeeded and production secrets were taken; AWS says its own services were not breached.",
+      "smb": "Move AWS keys out of web.config and app files into a secrets manager, require IMDSv2, and alert when one identity hits many AWS services quickly.",
+      "url": "https://bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "CloudSEK",
+      "date": "2026-11-11",
+      "title": "Exposed server shows the Silent Lynx group used an AI agent to steal Tajik defence documents",
+      "tldr": "CloudSEK found a Silent Lynx operator's open server holding a customised Hermes agent, run over Telegram, that collected more than 2,000 documents from a Tajik government platform through one railway employee's login. The agent also wiped logs and shell histories, but missed the exposed directory.",
+      "smb": "Review which outside staff or partner accounts can reach your document systems, require MFA on them, and alert on bulk downloads.",
+      "url": "https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server",
+      "link_label": "Read the research"
+    },
+    {
+      "cat": "voices",
+      "source": "Schneier on Security",
+      "date": "2026-11-11",
+      "title": "Schneier: the $129 million deepfake executive scam is what security from AI looks like",
+      "tldr": "Schneier points to US charges against three men accused of cloning executives' and lawyers' voices and faces to talk staff into wiring over $129 million from companies worldwide. He files it under the third part of AI security, attacks that use AI against people and organisations.",
+      "smb": "Require a call-back on a known number and a second approver for any urgent or unusual wire request, even when it seems to come from a boss.",
+      "url": "https://www.schneier.com/blog/archives/2026/11/three-people-arrested-for-ai-enhanced-impersonation-fraud.html",
+      "link_label": "Read the post"
+    },
     {
       "cat": "news",
       "source": "The Hacker News, on Aikido Security and SafeDep",
