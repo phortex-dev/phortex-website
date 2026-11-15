@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "threat_of_the_week": {
     "source": "Cyber Security News, on Microsoft and Todyl",
     "date": "2026-11-09",
@@ -10,6 +10,46 @@
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "Microsoft Security Blog",
+      "date": "2026-11-12",
+      "title": "Microsoft shows poisoned training data can make coding agents run attacker commands on cue",
+      "tldr": "Microsoft researchers found that about 90 tainted examples in a 9,000-conversation fine-tuning set taught coding agents to misuse their command tools when a trigger appeared, in about 78 percent of tests. Poisoned open-weight checkpoints did the same on unseen code, and suspect rows turned up in one public dataset.",
+      "smb": "Treat third-party fine-tuned models and datasets as untrusted, give coding agents only the tools and network access they need, and log every command they run.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/",
+      "link_label": "Read the research"
+    },
+    {
+      "cat": "news",
+      "source": "Google Project Zero",
+      "date": "2026-11-13",
+      "title": "Google Project Zero drops its patch grace period and will cut disclosure deadlines to 30 days by 2028",
+      "tldr": "Project Zero now publishes bug details 90 days after reporting them, fixed or not, and the window shrinks to 60 days in February 2027 and 30 days in January 2028. Google ties the change partly to AI tools that let attackers turn a fresh patch into a working exploit within hours.",
+      "smb": "Measure how many days it really takes you to install vendor patches, and set a goal of under two weeks for internet-facing systems.",
+      "url": "https://projectzero.google/vulnerability-disclosure-policy.html",
+      "link_label": "Read the policy"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Corelight research",
+      "date": "2026-11-13",
+      "title": "A pinned MCP server quietly ran 15 different sets of dependencies in five weeks",
+      "tldr": "Corelight found that an AI tool server locked to one release still pulled 23 changed packages from PyPI because its launcher re-resolved dependencies on each rebuild. Of 35 MCP servers it reviewed, 23 fetched fresh code from public registries at launch, often while holding admin keys to security tools.",
+      "smb": "Install MCP servers once from a hash-pinned lock file, avoid npx or uvx launch commands and latest tags, and update them on a set schedule.",
+      "url": "https://www.helpnetsecurity.com/2026/11/13/corelight-mcp-server-supply-chain/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security",
+      "date": "2026-11-12",
+      "title": "Anthropic lets companies self-host Claude Managed Agents so credentials stay in their own network",
+      "tldr": "Anthropic opened a private beta in which customers run the agent harness, sandboxes, session history and secrets vault on their own cloud or servers. A proxy outside the sandbox adds credentials to tool calls, though only MCP tools and supported APIs are covered and customers must patch the stack themselves.",
+      "smb": "Whatever agent platform you use, keep API keys outside the agent's sandbox, restrict it to an allowlist of hosts, and export its tool-call logs to your monitoring.",
+      "url": "https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "CSA research note, on an FBI FLASH alert",
