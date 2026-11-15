@@ -1,35 +1,59 @@
 {
   "date": "2026-11-15",
   "items": [
-    {"title": "Phishing emails pose as Microsoft 365 outage notices to steal logins",
-     "why": "Microsoft says attackers are sending fake outage alerts to US organizations after this week's Microsoft 365 disruption, claiming held emails will be deleted in 24 hours unless the recipient clicks to restore them.",
-     "action": "Warn staff that Microsoft never asks them to click to restore held mail, and have IT search for subject lines starting with 'Outage -' and block the links.",
-     "heat": 4, "cat": "phishing", "source_name": "Khaleej Times",
-     "source_url": "https://www.khaleejtimes.com/business/tech/microsoft-finds-active-phishing-campaign-exploiting-service-disruption"},
-    {"title": "Cursor details breach behind fake Claude Code update: a vendor's leaked AI key",
-     "why": "Cursor says an attacker used a key exposed by its AI vendor Fireworks to copy coding session data, then reached support emails, contact details and some credentials. The same vendor breach also hit Uber and Notion.",
-     "action": "Rotate any API keys or passwords your developers pasted into Cursor or sent to its support, and list which AI vendors hold copies of your data.",
-     "heat": 4, "cat": "ai", "source_name": "The Hacker News",
-     "source_url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html"},
-    {"title": "Accounting firm Baker Tilly says client SSNs were stolen through a vendor's platform",
-     "why": "Hackers took names and Social Security numbers of clients and their dependents from a platform run by one of the firm's service providers in September. Texas filings alone show more than 10,000 people affected.",
-     "action": "Ask your accountant and payroll provider which outside platforms hold your staff and client tax data, and watch for notification letters this month.",
-     "heat": 3, "cat": "breach", "source_name": "SecurityWeek",
-     "source_url": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/"},
-    {"title": "PostgreSQL fixes 52 flaws, including bugs that let a database user run server code",
-     "why": "New releases for versions 14 through 18 fix 52 issues; the worst let a user who can create objects run commands on the server, and one lets anyone restart version 18. No attacks reported yet.",
-     "action": "Update PostgreSQL to 18.7, 17.12, 16.16, 15.20 or 14.25, rebuild extensions at the same time, and plan off version 14, which has now reached end of life.",
-     "heat": 3, "cat": "patch", "source_name": "The Hacker News",
-     "source_url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html"},
-    {"title": "Trezor finds hidden implants that steal recovery phrases in wallets from one reseller",
-     "why": "Three Trezor Safe 5 wallets sold by Southeast Asian reseller CryptoBilis carried an extra circuit board that sends the recovery phrase to an attacker. Buyers from that seller since March are urged to move funds.",
-     "action": "Buy security hardware only from the maker or an official reseller, and move funds to a new phrase if a wallet came from CryptoBilis.",
-     "heat": 2, "cat": "crypto", "source_name": "The Hacker News",
-     "source_url": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html"},
-    {"title": "La Poste's mailing service Maileva exposes names and addresses of 22 million people",
-     "why": "A September attack on Maileva, which sends payslips, invoices and letters for French companies, exposed recipients' names and postal addresses. Bank details were reportedly not taken.",
-     "action": "Review what customer data your outsourced billing, mailing and print vendors keep, and ask how long they hold it after sending.",
-     "heat": 2, "cat": "breach", "source_name": "Security Affairs",
-     "source_url": "https://securityaffairs.com/203126/data-breach/data-breach-at-la-poste-subsidiary-maileva-affects-22-million-people-in-france.html"}
+    {
+      "title": "Phishing emails pose as Microsoft 365 outage notices to steal logins",
+      "why": "Microsoft says attackers are sending fake outage alerts to US organizations after this week's Microsoft 365 disruption, claiming held emails will be deleted in 24 hours unless the recipient clicks to restore them.",
+      "action": "Warn staff that Microsoft never asks them to click to restore held mail, and have IT search for subject lines starting with 'Outage -' and block the links.",
+      "source_name": "Khaleej Times",
+      "source_url": "https://www.khaleejtimes.com/business/tech/microsoft-finds-active-phishing-campaign-exploiting-service-disruption",
+      "heat": 4,
+      "cat": "phishing"
+    },
+    {
+      "title": "FBI warns attackers are using the ARTEX AI tool to break into networks in hours",
+      "why": "An FBI flash alert says several hacking groups use ARTEX, an open-source AI attack framework, to automate scanning, break-ins and data theft, sometimes reaching admin access in under three hours. Victims span finance, health care and tech.",
+      "action": "Review internet-facing apps and third-party integrations, limit who can reach cloud admin consoles, and set alerts for new admin accounts or sudden privilege changes.",
+      "heat": 4,
+      "cat": "ai",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks"
+    },
+    {
+      "title": "Cursor details breach behind fake Claude Code update: a vendor's leaked AI key",
+      "why": "Cursor says an attacker used a key exposed by its AI vendor Fireworks to copy coding session data, then reached support emails, contact details and some credentials. The same vendor breach also hit Uber and Notion.",
+      "action": "Rotate any API keys or passwords your developers pasted into Cursor or sent to its support, and list which AI vendors hold copies of your data.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+      "heat": 4,
+      "cat": "ai"
+    },
+    {
+      "title": "Attackers guess passwords on exposed SQL Servers to plant miners and backdoors",
+      "why": "FortiGuard Labs says a campaign running since October scans for SQL Server on port 1433, tries over 2,700 passwords against accounts like 'sa', then installs a crypto miner and a Gh0st RAT backdoor.",
+      "action": "Block port 1433 from the internet, give the sa account a long unique password or disable it, and turn off xp_cmdshell unless you need it.",
+      "heat": 3,
+      "cat": "malware",
+      "source_name": "Cyber Security News",
+      "source_url": "https://cybersecuritynews.com/break-into-microsoft-sql-servers/"
+    },
+    {
+      "title": "Accounting firm Baker Tilly says client SSNs were stolen through a vendor's platform",
+      "why": "Hackers took names and Social Security numbers of clients and their dependents from a platform run by one of the firm's service providers in September. Texas filings alone show more than 10,000 people affected.",
+      "action": "Ask your accountant and payroll provider which outside platforms hold your staff and client tax data, and watch for notification letters this month.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/",
+      "heat": 3,
+      "cat": "breach"
+    },
+    {
+      "title": "PostgreSQL fixes 52 flaws, including bugs that let a database user run server code",
+      "why": "New releases for versions 14 through 18 fix 52 issues; the worst let a user who can create objects run commands on the server, and one lets anyone restart version 18. No attacks reported yet.",
+      "action": "Update PostgreSQL to 18.7, 17.12, 16.16, 15.20 or 14.25, rebuild extensions at the same time, and plan off version 14, which has now reached end of life.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+      "heat": 3,
+      "cat": "patch"
+    }
   ]
 }

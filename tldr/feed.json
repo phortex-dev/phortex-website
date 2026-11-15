@@ -13,6 +13,16 @@
     },
     {
       "date": "2026-11-15",
+      "title": "FBI warns attackers are using the ARTEX AI tool to break into networks in hours",
+      "why": "An FBI flash alert says several hacking groups use ARTEX, an open-source AI attack framework, to automate scanning, break-ins and data theft, sometimes reaching admin access in under three hours. Victims span finance, health care and tech.",
+      "action": "Review internet-facing apps and third-party integrations, limit who can reach cloud admin consoles, and set alerts for new admin accounts or sudden privilege changes.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks",
+      "heat": 4,
+      "cat": "ai"
+    },
+    {
+      "date": "2026-11-15",
       "title": "Cursor details breach behind fake Claude Code update: a vendor's leaked AI key",
       "why": "Cursor says an attacker used a key exposed by its AI vendor Fireworks to copy coding session data, then reached support emails, contact details and some credentials. The same vendor breach also hit Uber and Notion.",
       "action": "Rotate any API keys or passwords your developers pasted into Cursor or sent to its support, and list which AI vendors hold copies of your data.",
@@ -20,6 +30,16 @@
       "source_url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
       "heat": 4,
       "cat": "ai"
+    },
+    {
+      "date": "2026-11-15",
+      "title": "Attackers guess passwords on exposed SQL Servers to plant miners and backdoors",
+      "why": "FortiGuard Labs says a campaign running since October scans for SQL Server on port 1433, tries over 2,700 passwords against accounts like 'sa', then installs a crypto miner and a Gh0st RAT backdoor.",
+      "action": "Block port 1433 from the internet, give the sa account a long unique password or disable it, and turn off xp_cmdshell unless you need it.",
+      "source_name": "Cyber Security News",
+      "source_url": "https://cybersecuritynews.com/break-into-microsoft-sql-servers/",
+      "heat": 3,
+      "cat": "malware"
     },
     {
       "date": "2026-11-15",
@@ -40,26 +60,6 @@
       "source_url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
       "heat": 3,
       "cat": "patch"
-    },
-    {
-      "date": "2026-11-15",
-      "title": "Trezor finds hidden implants that steal recovery phrases in wallets from one reseller",
-      "why": "Three Trezor Safe 5 wallets sold by Southeast Asian reseller CryptoBilis carried an extra circuit board that sends the recovery phrase to an attacker. Buyers from that seller since March are urged to move funds.",
-      "action": "Buy security hardware only from the maker or an official reseller, and move funds to a new phrase if a wallet came from CryptoBilis.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
-      "heat": 2,
-      "cat": "crypto"
-    },
-    {
-      "date": "2026-11-15",
-      "title": "La Poste's mailing service Maileva exposes names and addresses of 22 million people",
-      "why": "A September attack on Maileva, which sends payslips, invoices and letters for French companies, exposed recipients' names and postal addresses. Bank details were reportedly not taken.",
-      "action": "Review what customer data your outsourced billing, mailing and print vendors keep, and ask how long they hold it after sending.",
-      "source_name": "Security Affairs",
-      "source_url": "https://securityaffairs.com/203126/data-breach/data-breach-at-la-poste-subsidiary-maileva-affects-22-million-people-in-france.html",
-      "heat": 2,
-      "cat": "breach"
     },
     {
       "date": "2026-11-14",
