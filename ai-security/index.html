@@ -63,9 +63,23 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>52</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>2</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>6</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>52</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>1</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>7</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Cursor &middot; <time datetime="2026-11-15">Nov 15, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Cursor says a key it gave Fireworks AI led to its data theft and the fake Claude Code extension</h3>
+        <p class="intel-tldr">Cursor says attackers used an access key it had issued to Fireworks AI to copy a storage bucket of older coding-agent traces, some holding unredacted credentials. Keys in it let them reach Cursor&#x27;s internal tools and push a backdoored Claude Code extension build that up to 5,000 users may have received on October 29.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Rotate any key that was ever pasted into an AI coding session or a support ticket, and keep secrets out of agent prompts with a vault or environment variables.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>SecurityWeek column, Joshua Goldfarb &middot; <time datetime="2026-11-14">Nov 14, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Goldfarb: leaning on AI for every task may be wearing down security teams&#x27; judgment</h3>
+        <p class="intel-tldr">F5 field CISO Joshua Goldfarb argues that handing research, analysis and writing to AI can weaken the creativity and critical thinking security work depends on. He says he keeps that core work human and urges others to set clear limits on when they use AI.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Decide which security tasks staff must still do themselves, such as incident write-ups and alert triage reviews, so skills stay sharp when there is no playbook.</div>
+        <a class="intel-link" href="https://www.securityweek.com/is-ai-making-us-worse-at-cybersecurity/" target="_blank" rel="noopener noreferrer">Read the column &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>CSA research note, on an FBI FLASH alert &middot; <time datetime="2026-11-14">Nov 14, 2026</time></span></div>
         <h3 class="heading-sm intel-title">FBI warns North Korean FaceStealer crews use replayed and deepfaked video calls to steal crypto</h3>
@@ -114,6 +128,13 @@
         <p class="intel-tldr">In an essay based on his DEF CON keynote, Bruce Schneier argues the biggest risk is AI finding unintended shortcuts in rules, from code to tax law and finance, while doing what it was asked. He says AI speeds up and scales such hacks, and that laws and institutions must become as quick to patch as software.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Give every AI agent a narrow goal, written limits on what it may not do, and a person who reviews its actions before they touch money or customers.</div>
         <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-doesnt-have-to-go-rogue-to-break-the-world.html" target="_blank" rel="noopener noreferrer">Read the essay &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Island research &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">186 misspelled AI-brand domains lead to fake security checks, malware and search hijackers</h3>
+        <p class="intel-tldr">Island found 186 lookalike domains for 27 AI brands such as ChatGPT, Claude, Gemini and Copilot that catch people who mistype the address. Visitors are sent to fake Cloudflare checks that ask them to run a command, a rogue scanner app, or browser extensions with about 972,000 declared users that reroute searches.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Give staff bookmarked links to the AI tools you approve, block unapproved browser extensions, and teach that no real site asks you to paste a command to prove you are human.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Microsoft Security Blog &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
@@ -191,6 +212,13 @@
         <p class="intel-tldr">Claroc found 35,578 apps made with Grok&#x27;s app builder that needed no sign-in, because sharing defaulted to anyone with the link and the addresses show up in public DNS data. About one in ten held internal or personal data, from sales plans at X and SpaceXSI to hospital staff lists and plain-text passwords.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Ask staff which AI app builders they use, set any app holding company data to invited users only, and test it from an outside account.</div>
         <a class="intel-link" href="https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>OWASP GenAI Security Project &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">OWASP publishes version 2 of its guide to securing agentic AI applications</h3>
+        <p class="intel-tldr">The OWASP GenAI Security Project released a second version of its builder and defender guide for AI agents. It covers secure design, identity and access controls, runtime protection, supply chain security and testing for single-agent and multi-agent systems.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Use the guide as a checklist before you connect an AI agent to company email, files or payments, starting with its identity and access controls section.</div>
+        <a class="intel-link" href="https://genai.owasp.org/resource/securing-agentic-applications-v2/" target="_blank" rel="noopener noreferrer">Get the guide &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Record, on Microsoft Patch Tuesday &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
@@ -458,34 +486,6 @@
         <div class="intel-smb"><span>SMB takeaway</span>Remove default passwords and require sign-in on every API and database you expose, since the agents failed wherever authentication was enforced.</div>
         <a class="intel-link" href="https://www.acronis.com/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services" target="_blank" rel="noopener noreferrer">Read the report &rarr;</a>
       </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Check Point Research &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Codex jailbreak bundle quietly rewrote agent settings to show ads for its author&#x27;s AI gateway</h3>
-        <p class="intel-tldr">Check Point found that Haiou, a popular free jailbreak bundle for OpenAI&#x27;s Codex coding agent, changed the agent&#x27;s global instruction files so simple greetings triggered ads for a paid AI gateway. Anyone who installed it, or the Codex-X tool that bundled it, let a stranger&#x27;s instructions into their agent.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Review the instruction files, skills and add-ons your AI coding agents load, and remove any you did not write or approve.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="talk">
-        <div class="intel-meta"><span class="tag">Talks</span><span>Code.talks 2026, Richard Gross &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Secure your coding agent like it is malware</h3>
-        <p class="intel-tldr">Richard Gross of MaibornWolff argued at Code.talks that coding agents are remote code execution by design, open to prompt injection from issues, code comments, skills and websites. His slides compare sandbox options and favor microVMs over plain containers for limiting damage.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Run AI coding agents in an isolated machine or microVM with no access to production keys, rather than on a developer&#x27;s everyday laptop.</div>
-        <a class="intel-link" href="https://speakerdeck.com/richargh/secure-your-coding-agent-2026-11-code-dot-talks-en" target="_blank" rel="noopener noreferrer">View the slides &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">At least a dozen AI developer platforms breached in a month as attackers hunt stored AI keys</h3>
-        <p class="intel-tldr">WorkOS, Trigger.dev, CommandCode, Northflank and Chainstack are among at least twelve AI developer platforms that disclosed breaches over the past month. Wiz says stolen AI access tokens resell easily, and in two cases attackers used customer keys within 30 minutes of the vendor breach.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>List every outside platform that holds your AI provider keys, rotate those keys now, and set spending alerts on each AI account.</div>
-        <a class="intel-link" href="https://www.securityweek.com/ai-linked-breaches-mount-as-workos-northflank-trigger-dev-disclose-hacks/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>MediaNama, on CERT-In &middot; <time datetime="2026-11-04">Nov 4, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">India&#x27;s CERT-In: an AI agent that misuses credentials is a reportable incident</h3>
-        <p class="intel-tldr">CERT-In&#x27;s director general said AI agents that misuse credentials or act beyond their scope are cyber incidents that must be reported within six hours. He described test agents reaching live business records through exposed keys, and criminals using public agent frameworks to cut attacks to hours.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Give each AI agent its own limited account and keep a log of the tools and actions it runs, so you can show what it did if something goes wrong.</div>
-        <a class="intel-link" href="https://www.medianama.com/2026/11/223-interview-cert-in-chief-ai-agents-prompt-injection/" target="_blank" rel="noopener noreferrer">Read the interview &rarr;</a>
-      </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
   </div>
@@ -545,6 +545,11 @@
         <div class="intel-voice-name">Eric Fourrier</div>
         <div class="intel-voice-outlet">GitGuardian</div>
         <p>Leaked secrets and credential hygiene as AI tools and agents spread code-writing beyond engineering teams</p>
+      </a>
+      <a class="card intel-voice" href="https://www.f5.com/company/blog/authors/joshua-goldfarb" target="_blank" rel="noopener noreferrer">
+        <div class="intel-voice-name">Joshua Goldfarb</div>
+        <div class="intel-voice-outlet">SecurityWeek columnist, F5</div>
+        <p>Field CISO writing on security operations, fraud and the human side of using AI in security</p>
       </a>
     </div>
   </div>

@@ -12,6 +12,46 @@
   "items": [
     {
       "cat": "news",
+      "source": "The Hacker News, on Cursor",
+      "date": "2026-11-15",
+      "title": "Cursor says a key it gave Fireworks AI led to its data theft and the fake Claude Code extension",
+      "tldr": "Cursor says attackers used an access key it had issued to Fireworks AI to copy a storage bucket of older coding-agent traces, some holding unredacted credentials. Keys in it let them reach Cursor's internal tools and push a backdoored Claude Code extension build that up to 5,000 users may have received on October 29.",
+      "smb": "Rotate any key that was ever pasted into an AI coding session or a support ticket, and keep secrets out of agent prompts with a vault or environment variables.",
+      "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Island research",
+      "date": "2026-11-12",
+      "title": "186 misspelled AI-brand domains lead to fake security checks, malware and search hijackers",
+      "tldr": "Island found 186 lookalike domains for 27 AI brands such as ChatGPT, Claude, Gemini and Copilot that catch people who mistype the address. Visitors are sent to fake Cloudflare checks that ask them to run a command, a rogue scanner app, or browser extensions with about 972,000 declared users that reroute searches.",
+      "smb": "Give staff bookmarked links to the AI tools you approve, block unapproved browser extensions, and teach that no real site asks you to paste a command to prove you are human.",
+      "url": "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "OWASP GenAI Security Project",
+      "date": "2026-11-10",
+      "title": "OWASP publishes version 2 of its guide to securing agentic AI applications",
+      "tldr": "The OWASP GenAI Security Project released a second version of its builder and defender guide for AI agents. It covers secure design, identity and access controls, runtime protection, supply chain security and testing for single-agent and multi-agent systems.",
+      "smb": "Use the guide as a checklist before you connect an AI agent to company email, files or payments, starting with its identity and access controls section.",
+      "url": "https://genai.owasp.org/resource/securing-agentic-applications-v2/",
+      "link_label": "Get the guide"
+    },
+    {
+      "cat": "voices",
+      "source": "SecurityWeek column, Joshua Goldfarb",
+      "date": "2026-11-14",
+      "title": "Goldfarb: leaning on AI for every task may be wearing down security teams' judgment",
+      "tldr": "F5 field CISO Joshua Goldfarb argues that handing research, analysis and writing to AI can weaken the creativity and critical thinking security work depends on. He says he keeps that core work human and urges others to set clear limits on when they use AI.",
+      "smb": "Decide which security tasks staff must still do themselves, such as incident write-ups and alert triage reviews, so skills stay sharp when there is no playbook.",
+      "url": "https://www.securityweek.com/is-ai-making-us-worse-at-cybersecurity/",
+      "link_label": "Read the column"
+    },
+    {
+      "cat": "news",
       "source": "Microsoft Security Blog",
       "date": "2026-11-12",
       "title": "Microsoft shows poisoned training data can make coding agents run attacker commands on cue",
@@ -1151,6 +1191,12 @@
       "outlet": "GitGuardian",
       "focus": "Leaked secrets and credential hygiene as AI tools and agents spread code-writing beyond engineering teams",
       "url": "https://www.gitguardian.com/"
+    },
+    {
+      "name": "Joshua Goldfarb",
+      "outlet": "SecurityWeek columnist, F5",
+      "focus": "Field CISO writing on security operations, fraud and the human side of using AI in security",
+      "url": "https://www.f5.com/company/blog/authors/joshua-goldfarb"
     }
   ]
 }
