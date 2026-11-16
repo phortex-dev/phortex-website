@@ -13,6 +13,16 @@
     },
     {
       "date": "2026-11-16",
+      "title": "Infoblox confirms hackers took company data through its SharePoint migration vendor",
+      "why": "Networking and DNS security firm Infoblox says attackers reached company information, reportedly including some customer data, through an outside vendor hired to move its SharePoint files. It says its products and updates were not affected.",
+      "action": "Remove vendor accounts and app permissions in Microsoft 365 as soon as a migration or project ends, and review which outside tools still have access.",
+      "source_name": "TechCrunch",
+      "source_url": "https://techcrunch.com/2026/11/16/cyber-giant-infoblox-confirms-security-incident-after-hackers-access-company-information/",
+      "heat": 4,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-16",
       "title": "CISA flags a second exploited Check Point flaw that gives attackers root on gateways",
       "why": "In the attacks that wiped ESXi servers, intruders broke into Check Point Mobile Access portals and then used a separate Gaia OS bug to become root. CISA added it to its exploited list and set a November 16 deadline for agencies.",
       "action": "Update Check Point Gaia to R82.20 Take 14, R82.10 Take 52, R82 Take 132 or R81.20 Take 174, and move off unsupported R81 or R81.10.",
@@ -33,23 +43,13 @@
     },
     {
       "date": "2026-11-16",
-      "title": "Amazon sees AI agents scanning for exposed AI apps to steal their API keys",
-      "why": "Amazon's decoy servers caught automated agents hunting for internet-facing tools such as LiteLLM, Dify, Ollama and Open WebUI with default passwords or open admin pages, then taking the AI provider keys stored inside.",
-      "action": "Take self-hosted AI tools off the open internet or put them behind a login, change default admin keys, and set spending alerts on your AI provider accounts.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
+      "title": "Microsoft says a faulty server fix caused last week's day-long Microsoft 365 email outage",
+      "why": "Microsoft's early report blames a hidden defect in a July fix to its email gateway servers, which stalled more than 80% of them on November 12 and 13. It says no attacker was involved and a repair plan is due November 20.",
+      "action": "Keep a backup way to reach staff and customers during an outage, and treat any 'outage recovery' email that asks you to sign in as phishing.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/microsoft-reveals-windows-bug-that-crashed-over-80-of-servers/",
       "heat": 3,
-      "cat": "ai"
-    },
-    {
-      "date": "2026-11-16",
-      "title": "November Windows updates break activation commands with error 0x80041008",
-      "why": "Microsoft confirmed that this month's Patch Tuesday updates make slmgr activation and product key commands fail on Windows 10, Windows 11 23H2 and Windows Server 2019 to 2025. PCs that are already activated stay activated.",
-      "action": "Hold off on activating new PCs or changing keys with slmgr until you install Microsoft's fix, and check Windows release health for the update that covers your version.",
-      "source_name": "BleepingComputer",
-      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-windows-activation-failures-after-november-updates/",
-      "heat": 3,
-      "cat": "patch"
+      "cat": "cloud"
     },
     {
       "date": "2026-11-16",
