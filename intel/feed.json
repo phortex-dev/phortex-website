@@ -1,15 +1,35 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "threat_of_the_week": {
-    "source": "Cyber Security News, on Microsoft and Todyl",
-    "date": "2026-11-09",
-    "title": "AI attack agents went from a GitHub leak to Azure Key Vault secrets in five minutes",
-    "tldr": "Microsoft and Todyl say attackers ran ARTEX AI agents that searched public GitHub code for leaked cloud and AI keys, then used them to sign in to Azure from late October. About 27 organizations were reached, including MSP clients, and one agent pulled Key Vault secrets five minutes after its first search.",
-    "smb": "Turn on secret scanning for your code, rotate any key that was ever public even if you deleted it, and check cloud sign-in logs back to October 28.",
-    "url": "https://cybersecuritynews.com/artex-ai-azure-key-vault-secrets/",
+    "source": "The Hacker News, on Amazon and Cloudflare",
+    "date": "2026-11-16",
+    "title": "Amazon decoys catch AI agents raiding self-hosted AI tools for their stored API keys",
+    "tldr": "Amazon says its decoy servers caught attacker AI agents, likely built on ARTEX, combing hundreds of exposed AI tools such as LiteLLM, Dify and Open WebUI for stored model keys via default logins. Cloudflare saw similar agents move from customers' clouds into their Cloudflare accounts with CI tokens that never expire.",
+    "smb": "Change default admin passwords on any self-hosted AI tool, put it behind a login or VPN, and give every cloud and CI token an expiry date and IP limits.",
+    "url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
     "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "Trending Topics, on Crissy Field and Handelsblatt",
+      "date": "2026-11-14",
+      "title": "24,664 apps built with Lovable handed out database records to anyone who loaded the page",
+      "tldr": "Crissy Field and Handelsblatt checked about 34,500 Lovable apps that use Supabase and found 24,664 sending database records with no login, including passport numbers, chats and invoices. The cause was missing or loose database access rules, not a break-in, and Lovable calls it a known setup issue.",
+      "smb": "Before an AI-built app touches customer data, have someone confirm row-level access rules are on for every table and run the builder's security scan.",
+      "url": "https://www.trendingtopics.eu/lovable-apps-sensitive-data-exposed/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Cloudflare",
+      "date": "2026-11-16",
+      "title": "Cloudflare open-sources Kitesurf, a lightweight browser that AI agents can run on its Workers",
+      "tldr": "Cloudflare published Kitesurf, which loads pages and runs their scripts for AI agents in isolated Workers instead of a full desktop browser, and lets companies host it in their own accounts. The write-up gives no threat model or guidance on locking down the browser control endpoint.",
+      "smb": "Run any agent that browses the web in a separate, isolated browser with no saved logins, and require authentication on its remote-control port.",
+      "url": "https://www.helpnetsecurity.com/2026/11/16/cloudflare-kitesurf-open-source/",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "The Hacker News, on Cursor",
@@ -1128,6 +1148,16 @@
       "tldr": "NorForge researcher Snorre Fagerland found exposed panels showing a Chinese-speaking operator steering Claude Code and DeepSeek agents through the open-source Cairn platform to break into company sites. Reuters named Deere, SharkNinja and Cummins among about 100 victims, at roughly 50 dollars in AI tokens per success.",
       "smb": "Turn on automatic updates for your website platform and plugins, and rotate the admin and hosting passwords for any site you have not touched in months.",
       "url": "https://securityboulevard.com/2026/11/chinese-speaking-hacker-successfully-charged-ai-agents-to-break-into-around-100-websites",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Cyber Security News, on Microsoft and Todyl",
+      "date": "2026-11-09",
+      "title": "AI attack agents went from a GitHub leak to Azure Key Vault secrets in five minutes",
+      "tldr": "Microsoft and Todyl say attackers ran ARTEX AI agents that searched public GitHub code for leaked cloud and AI keys, then used them to sign in to Azure from late October. About 27 organizations were reached, including MSP clients, and one agent pulled Key Vault secrets five minutes after its first search.",
+      "smb": "Turn on secret scanning for your code, rotate any key that was ever public even if you deleted it, and check cloud sign-in logs back to October 28.",
+      "url": "https://cybersecuritynews.com/artex-ai-azure-key-vault-secrets/",
       "link_label": "Read the story"
     }
   ],
