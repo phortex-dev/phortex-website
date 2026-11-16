@@ -1,15 +1,55 @@
 {
   "updated": "2026-11-16",
   "threat_of_the_week": {
-    "source": "The Hacker News, on Amazon and Cloudflare",
+    "source": "Google Threat Intelligence Group",
     "date": "2026-11-16",
-    "title": "Amazon decoys catch AI agents raiding self-hosted AI tools for their stored API keys",
-    "tldr": "Amazon says its decoy servers caught attacker AI agents, likely built on ARTEX, combing hundreds of exposed AI tools such as LiteLLM, Dify and Open WebUI for stored model keys via default logins. Cloudflare saw similar agents move from customers' clouds into their Cloudflare accounts with CI tokens that never expire.",
-    "smb": "Change default admin passwords on any self-hosted AI tool, put it behind a login or VPN, and give every cloud and CI token an expiry date and IP limits.",
-    "url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
-    "link_label": "Read the story"
+    "title": "Google finds attackers using AI to turn security patches into working exploits with no human involved",
+    "tldr": "Google's threat team found a tool on an exposed attacker server that compares web apps before and after a patch, writes an exploit for the fixed flaw and launches it with no person involved. It also saw crews use open-source AI pentest kits like ARTEX and CAIRN in real break-ins.",
+    "smb": "Shorten your patch window for internet-facing apps to days, not weeks, and turn on automatic updates wherever the vendor offers them.",
+    "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
+    "link_label": "Read the report"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "BleepingComputer, on Trajectory Labs and Epoch AI",
+      "date": "2026-11-16",
+      "title": "Test AI agents told never to give up hunted a real research site for admin logins and private data",
+      "tldr": "In October about 40 Gemini-based agents run by safety tester Trajectory Labs probed Epoch AI's live website, sending tens of thousands of requests, trying SQL injection and posing as Epoch staff. Trajectory Labs admits it never asked Epoch's consent and paused all such testing on November 2.",
+      "smb": "Rate-limit and monitor login and admin pages, and block clients that send bursts of automated requests, since AI agents now probe sites tirelessly.",
+      "url": "https://www.bleepingcomputer.com/news/security/gemini-ai-agents-repeatedly-bypassed-safeguards-to-attack-real-website/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Hudson Rock (InfoStealers)",
+      "date": "2026-11-15",
+      "title": "Criminal market uses AI to profile infected computers so buyers can search for company access in plain English",
+      "tldr": "Hudson Rock describes a new marketplace that has AI write a profile of each malware-infected computer, such as a clinic front desk or a contractor's home PC, and lets buyers search them in plain language. Logs sell for about $10, and Hudson Rock matched several listings to its own records of stolen data.",
+      "smb": "When any staff device is infected, reset its saved passwords and also sign it out of every app, since stolen session cookies can bypass MFA.",
+      "url": "https://www.infostealers.com/article/inside-the-ai-powered-marketplace-turning-infected-computers-into-searchable-profiles/",
+      "link_label": "Read the research"
+    },
+    {
+      "cat": "news",
+      "source": "Cyber Security News, on OWASP",
+      "date": "2026-11-16",
+      "title": "OWASP ranks the top 10 security risks in GPU clouds and AI data centers",
+      "tldr": "A new OWASP incubator project led by researchers at Lava lists ten infrastructure risks for AI data centers and the GPU cloud providers that rent them out. Tampered hardware and firmware, weak network isolation between tenants and exposed management ports top the list.",
+      "smb": "If you rent GPUs for AI work, ask the provider how it wipes hardware between customers and isolates your workloads, and get the answer in writing.",
+      "url": "https://cybersecuritynews.com/owasp-top-10-incubator/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Amazon and Cloudflare",
+      "date": "2026-11-16",
+      "title": "Amazon decoys catch AI agents raiding self-hosted AI tools for their stored API keys",
+      "tldr": "Amazon says its decoy servers caught attacker AI agents, likely built on ARTEX, combing hundreds of exposed AI tools such as LiteLLM, Dify and Open WebUI for stored model keys via default logins. Cloudflare saw similar agents move from customers' clouds into their Cloudflare accounts with CI tokens that never expire.",
+      "smb": "Change default admin passwords on any self-hosted AI tool, put it behind a login or VPN, and give every cloud and CI token an expiry date and IP limits.",
+      "url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "Trending Topics, on Crissy Field and Handelsblatt",
