@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "items": [
+    {
+      "date": "2026-11-16",
+      "title": "Uber says driver license data was stolen through its AI vendor Fireworks AI",
+      "why": "New fallout from the Fireworks AI breach: attackers used the vendor's stolen credentials to reach Uber's account there and took personal and driver's license details for thousands of US drivers. Uber's own systems were not breached.",
+      "action": "List the AI and data vendors that hold your customer or employee records, cut access you no longer need, and ask each how they protect their own credentials.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/uber-hacked-hackers-steal-drivers-license-personal-data/",
+      "heat": 4,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-16",
+      "title": "CISA flags a second exploited Check Point flaw that gives attackers root on gateways",
+      "why": "In the attacks that wiped ESXi servers, intruders broke into Check Point Mobile Access portals and then used a separate Gaia OS bug to become root. CISA added it to its exploited list and set a November 16 deadline for agencies.",
+      "action": "Update Check Point Gaia to R82.20 Take 14, R82.10 Take 52, R82 Take 132 or R81.20 Take 174, and move off unsupported R81 or R81.10.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/cisa-check-point-zero-day-vulnerability/",
+      "heat": 4,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-11-16",
+      "title": "SCKit malware hits about 490 computers at 89 firms through MSP ScreenConnect panels",
+      "why": "Huntress tracked a second wave of the ScreenConnect attacks: a toolkit pushed through remote support panels plants a hidden second ScreenConnect client, turns off Defender checks and steals login cookies. Clients of affected IT providers are the victims.",
+      "action": "Ask your IT provider whether it uses the RMM+ ScreenConnect add-on, runs ScreenConnect 26.6.5 or later, and has checked your PCs for a second ScreenConnect client.",
+      "source_name": "Huntress",
+      "source_url": "https://www.huntress.com/blog/sckit-worm-rogue-screenconnect",
+      "heat": 4,
+      "cat": "malware"
+    },
+    {
+      "date": "2026-11-16",
+      "title": "Amazon sees AI agents scanning for exposed AI apps to steal their API keys",
+      "why": "Amazon's decoy servers caught automated agents hunting for internet-facing tools such as LiteLLM, Dify, Ollama and Open WebUI with default passwords or open admin pages, then taking the AI provider keys stored inside.",
+      "action": "Take self-hosted AI tools off the open internet or put them behind a login, change default admin keys, and set spending alerts on your AI provider accounts.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
+      "heat": 3,
+      "cat": "ai"
+    },
+    {
+      "date": "2026-11-16",
+      "title": "November Windows updates break activation commands with error 0x80041008",
+      "why": "Microsoft confirmed that this month's Patch Tuesday updates make slmgr activation and product key commands fail on Windows 10, Windows 11 23H2 and Windows Server 2019 to 2025. PCs that are already activated stay activated.",
+      "action": "Hold off on activating new PCs or changing keys with slmgr until you install Microsoft's fix, and check Windows release health for the update that covers your version.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-windows-activation-failures-after-november-updates/",
+      "heat": 3,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-16",
+      "title": "BlackNevas ransomware wipes VMware servers and backups using stolen admin logins",
+      "why": "Kaspersky responders say the group used stolen passwords to reach vCenter and backup servers, quietly disabled backups over about ten days, then wiped every virtual machine. No VMware bug was needed.",
+      "action": "Put MFA on vCenter and backup consoles, keep backup admin accounts separate from your main domain, and test a restore that doesn't rely on vCenter.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/blacknevas-ransomware-attacks-vmware-esxi-servers/",
+      "heat": 3,
+      "cat": "ransomware"
+    },
     {
       "date": "2026-11-15",
       "title": "Phishing emails pose as Microsoft 365 outage notices to steal logins",

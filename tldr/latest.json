@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-16",
   "items": [
     {
-      "title": "Phishing emails pose as Microsoft 365 outage notices to steal logins",
-      "why": "Microsoft says attackers are sending fake outage alerts to US organizations after this week's Microsoft 365 disruption, claiming held emails will be deleted in 24 hours unless the recipient clicks to restore them.",
-      "action": "Warn staff that Microsoft never asks them to click to restore held mail, and have IT search for subject lines starting with 'Outage -' and block the links.",
-      "source_name": "Khaleej Times",
-      "source_url": "https://www.khaleejtimes.com/business/tech/microsoft-finds-active-phishing-campaign-exploiting-service-disruption",
+      "title": "Uber says driver license data was stolen through its AI vendor Fireworks AI",
+      "why": "New fallout from the Fireworks AI breach: attackers used the vendor's stolen credentials to reach Uber's account there and took personal and driver's license details for thousands of US drivers. Uber's own systems were not breached.",
+      "action": "List the AI and data vendors that hold your customer or employee records, cut access you no longer need, and ask each how they protect their own credentials.",
       "heat": 4,
-      "cat": "phishing"
+      "cat": "breach",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/uber-hacked-hackers-steal-drivers-license-personal-data/"
     },
     {
-      "title": "FBI warns attackers are using the ARTEX AI tool to break into networks in hours",
-      "why": "An FBI flash alert says several hacking groups use ARTEX, an open-source AI attack framework, to automate scanning, break-ins and data theft, sometimes reaching admin access in under three hours. Victims span finance, health care and tech.",
-      "action": "Review internet-facing apps and third-party integrations, limit who can reach cloud admin consoles, and set alerts for new admin accounts or sudden privilege changes.",
+      "title": "CISA flags a second exploited Check Point flaw that gives attackers root on gateways",
+      "why": "In the attacks that wiped ESXi servers, intruders broke into Check Point Mobile Access portals and then used a separate Gaia OS bug to become root. CISA added it to its exploited list and set a November 16 deadline for agencies.",
+      "action": "Update Check Point Gaia to R82.20 Take 14, R82.10 Take 52, R82 Take 132 or R81.20 Take 174, and move off unsupported R81 or R81.10.",
       "heat": 4,
-      "cat": "ai",
-      "source_name": "BleepingComputer",
-      "source_url": "https://bleepingcomputer.com/news/security/fbi-warns-artex-ai-hacking-tool-is-powering-global-cyberattacks"
+      "cat": "vpn",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/cisa-check-point-zero-day-vulnerability/"
     },
     {
-      "title": "Cursor details breach behind fake Claude Code update: a vendor's leaked AI key",
-      "why": "Cursor says an attacker used a key exposed by its AI vendor Fireworks to copy coding session data, then reached support emails, contact details and some credentials. The same vendor breach also hit Uber and Notion.",
-      "action": "Rotate any API keys or passwords your developers pasted into Cursor or sent to its support, and list which AI vendors hold copies of your data.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html",
+      "title": "SCKit malware hits about 490 computers at 89 firms through MSP ScreenConnect panels",
+      "why": "Huntress tracked a second wave of the ScreenConnect attacks: a toolkit pushed through remote support panels plants a hidden second ScreenConnect client, turns off Defender checks and steals login cookies. Clients of affected IT providers are the victims.",
+      "action": "Ask your IT provider whether it uses the RMM+ ScreenConnect add-on, runs ScreenConnect 26.6.5 or later, and has checked your PCs for a second ScreenConnect client.",
       "heat": 4,
-      "cat": "ai"
-    },
-    {
-      "title": "Attackers guess passwords on exposed SQL Servers to plant miners and backdoors",
-      "why": "FortiGuard Labs says a campaign running since October scans for SQL Server on port 1433, tries over 2,700 passwords against accounts like 'sa', then installs a crypto miner and a Gh0st RAT backdoor.",
-      "action": "Block port 1433 from the internet, give the sa account a long unique password or disable it, and turn off xp_cmdshell unless you need it.",
-      "heat": 3,
       "cat": "malware",
-      "source_name": "Cyber Security News",
-      "source_url": "https://cybersecuritynews.com/break-into-microsoft-sql-servers/"
+      "source_name": "Huntress",
+      "source_url": "https://www.huntress.com/blog/sckit-worm-rogue-screenconnect"
     },
     {
-      "title": "Accounting firm Baker Tilly says client SSNs were stolen through a vendor's platform",
-      "why": "Hackers took names and Social Security numbers of clients and their dependents from a platform run by one of the firm's service providers in September. Texas filings alone show more than 10,000 people affected.",
-      "action": "Ask your accountant and payroll provider which outside platforms hold your staff and client tax data, and watch for notification letters this month.",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/in-other-news-new-cisa-director-nominee-connected-car-hacking-baker-tilly-data-breach/",
+      "title": "Amazon sees AI agents scanning for exposed AI apps to steal their API keys",
+      "why": "Amazon's decoy servers caught automated agents hunting for internet-facing tools such as LiteLLM, Dify, Ollama and Open WebUI with default passwords or open admin pages, then taking the AI provider keys stored inside.",
+      "action": "Take self-hosted AI tools off the open internet or put them behind a login, change default admin keys, and set spending alerts on your AI provider accounts.",
       "heat": 3,
-      "cat": "breach"
-    },
-    {
-      "title": "PostgreSQL fixes 52 flaws, including bugs that let a database user run server code",
-      "why": "New releases for versions 14 through 18 fix 52 issues; the worst let a user who can create objects run commands on the server, and one lets anyone restart version 18. No attacks reported yet.",
-      "action": "Update PostgreSQL to 18.7, 17.12, 16.16, 15.20 or 14.25, rebuild extensions at the same time, and plan off version 14, which has now reached end of life.",
+      "cat": "ai",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
+      "source_url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html"
+    },
+    {
+      "title": "November Windows updates break activation commands with error 0x80041008",
+      "why": "Microsoft confirmed that this month's Patch Tuesday updates make slmgr activation and product key commands fail on Windows 10, Windows 11 23H2 and Windows Server 2019 to 2025. PCs that are already activated stay activated.",
+      "action": "Hold off on activating new PCs or changing keys with slmgr until you install Microsoft's fix, and check Windows release health for the update that covers your version.",
       "heat": 3,
-      "cat": "patch"
+      "cat": "patch",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-windows-activation-failures-after-november-updates/"
+    },
+    {
+      "title": "BlackNevas ransomware wipes VMware servers and backups using stolen admin logins",
+      "why": "Kaspersky responders say the group used stolen passwords to reach vCenter and backup servers, quietly disabled backups over about ten days, then wiped every virtual machine. No VMware bug was needed.",
+      "action": "Put MFA on vCenter and backup consoles, keep backup admin accounts separate from your main domain, and test a restore that doesn't rely on vCenter.",
+      "heat": 3,
+      "cat": "ransomware",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/blacknevas-ransomware-attacks-vmware-esxi-servers/"
     }
   ]
 }
