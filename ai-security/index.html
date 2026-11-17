@@ -63,9 +63,44 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>54</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>6</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>52</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Record, on Uber &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Uber says 149,346 people had driver&#x27;s license data taken through a breached AI vendor</h3>
+        <p class="intel-tldr">Uber told state regulators that stolen credentials belonging to a service provider, reported to be AI firm Fireworks, were used to open a cloud storage area Uber had set up for that vendor. Images and text from driver&#x27;s licenses were taken, and Uber&#x27;s alerts never fired because the logins were valid.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>List every AI vendor that holds copies of your customer data, delete what they no longer need, and require them to tell you within days of a breach.</div>
+        <a class="intel-link" href="https://therecord.media/uber-says-150000-impacted-third-party-breach" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Palo Alto Networks &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Survey: 40% of companies could not reconstruct what an AI agent had done</h3>
+        <p class="intel-tldr">Palo Alto Networks&#x27; 2026 cloud security survey found nearly every firm lets AI agents act in its development pipelines, and about three in four let them change code or production systems. More than half log agent actions under developers&#x27; own accounts, and 40% have failed to retrace an agent&#x27;s steps.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Give each AI agent its own named account and keep its activity log separate from staff logs, so you can see exactly what it changed.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/17/palo-alto-networks-ai-cloud-security-risks-report/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Anthropic &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Anthropic will publish serious bugs it reports after 30 days instead of 90, starting in January</h3>
+        <p class="intel-tldr">From January 1, 2027, Anthropic will make high and critical flaws it reports to software makers public after 30 days, and other bugs after 45. It says AI now helps write fixes faster and keeps rediscovering the same flaws, so long quiet periods no longer protect users.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask your key software vendors how fast they ship security fixes, and plan to install critical patches within a couple of weeks of release.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/17/anthropic-vulnerability-disclosure-days/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Simon Willison&#x27;s Weblog &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Willison: run the code your coding agent writes in a separate sandbox, not on your laptop</h3>
+        <p class="intel-tldr">Simon Willison shared work with Prime Radiant on an external sandbox pattern, where the coding agent stays outside and every command it runs goes to an isolated mini computer. The setup adds a list of allowed websites and swaps in credentials at the edge so the agent never sees the real secret.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Run AI coding tools inside a container or virtual machine with limited internet access, and keep real passwords and keys out of their reach.</div>
+        <a class="intel-link" href="https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Help Net Security interview, Peter Stöckli &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">GitHub&#x27;s Stöckli: fewer prompt instructions and a human check make AI code audits work</h3>
+        <p class="intel-tldr">GitHub Security Lab researcher Peter Stöckli explained that his team starts AI-driven audits by mapping what each part of an app is meant to do, and finds login and permission gaps a good first target. He said extra prompt rules can make newer models worse, and every finding is confirmed by a person before it goes out.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Point an AI review tool at your app&#x27;s login and access checks first, and have a person confirm each finding before acting on it.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/17/peter-stockli-github-ai-security-audits/" target="_blank" rel="noopener noreferrer">Read the interview &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Apple &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Apple splits Mac app-control permissions, citing the risk from more capable AI agents</h3>
@@ -451,41 +486,6 @@
         <div class="intel-smb"><span>SMB takeaway</span>Search your live systems for test or default passwords, and put rate limits and usage alerts on any internal tool that can be reached from the internet.</div>
         <a class="intel-link" href="https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Forever Security research &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Rogue browser extensions could use Claude Dispatch to make Claude Desktop install code</h3>
-        <p class="intel-tldr">Forever Security showed that an extension able to run scripts on claude.ai could send tasks to Claude Desktop through Dispatch and auto-click its approval prompts, ending in code running on the computer. Anthropic logged it as a known issue and plans to retire Dispatch; no attacks in the wild were reported.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Turn off phone-to-desktop AI features you do not use, and allow only approved browser extensions on staff computers that run AI assistants.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on BlueFlag Security research &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Report: 99% of code repository tokens never expire, and most AI coding agents run with admin rights</h3>
-        <p class="intel-tldr">BlueFlag Security&#x27;s developer risk report found that 99% of the repository access tokens it measured had no expiry and nearly half had sat unused for over 90 days. Unapproved AI coding agents showed up in 83% of organizations, often working through accounts with administrator rights.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>List the AI coding tools your developers use, give each its own limited account, and set expiry dates on every repository access token.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/06/blueflag-ai-agents-access-risks-report/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Avanade research &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Survey: 87% of large firms say they need better ways to approve and watch their AI</h3>
-        <p class="intel-tldr">A Vanson Bourne survey for Avanade of 3,600 decision-makers at large companies found more than half already let AI act or finish whole processes without routine human review. Among firms that rolled AI out fast, 46% reported security, privacy or compliance problems.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Name one person who approves new AI tools and decides which tasks still need a human sign-off before the AI acts.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/06/autonomous-ai-oversight-governance/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on OpenAI &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">OpenAI releases GPT-6 Cyber after it found 81 high-severity Firefox flaws</h3>
-        <p class="intel-tldr">OpenAI released GPT-6 Cyber, a model trained to find software flaws, test how they could be exploited and propose fixes, and rated it Critical for cyber risk. In testing it found 81 previously unknown high-severity Firefox bugs, and access starts with vetted customers in its Daybreak Red program.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Keep browsers and operating systems on automatic updates, since AI-found bugs mean patches will arrive more often and faster.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/06/openai-gpt-6-cyber-released/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Check Point Research &middot; <time datetime="2026-11-05">Nov 5, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Exposed ARTEX consoles show AI agents stole 190,000 game logins and 300 Apple signing certificates</h3>
-        <p class="intel-tldr">Check Point read ten misconfigured ARTEX operator panels and found AI agents, given only a goal, broke into gray-market game and app-signing shops through weak passwords, open APIs and injection flaws. Most runs used DeepSeek and Kimi models, and one operator switched to them after Claude refused.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Scan your public web apps for hardcoded admin passwords, unauthenticated APIs and credential files in the web root, and fix those before anything else.</div>
-        <a class="intel-link" href="https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
-      </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
   </div>
@@ -550,6 +550,11 @@
         <div class="intel-voice-name">Joshua Goldfarb</div>
         <div class="intel-voice-outlet">SecurityWeek columnist, F5</div>
         <p>Field CISO writing on security operations, fraud and the human side of using AI in security</p>
+      </a>
+      <a class="card intel-voice" href="https://securitylab.github.com/" target="_blank" rel="noopener noreferrer">
+        <div class="intel-voice-name">Peter Stöckli</div>
+        <div class="intel-voice-outlet">GitHub Security Lab</div>
+        <p>Security researcher using AI agents to audit open source code, with a focus on authentication and access control flaws</p>
       </a>
     </div>
   </div>

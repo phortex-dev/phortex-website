@@ -12,6 +12,56 @@
   "items": [
     {
       "cat": "news",
+      "source": "The Record, on Uber",
+      "date": "2026-11-17",
+      "title": "Uber says 149,346 people had driver's license data taken through a breached AI vendor",
+      "tldr": "Uber told state regulators that stolen credentials belonging to a service provider, reported to be AI firm Fireworks, were used to open a cloud storage area Uber had set up for that vendor. Images and text from driver's licenses were taken, and Uber's alerts never fired because the logins were valid.",
+      "smb": "List every AI vendor that holds copies of your customer data, delete what they no longer need, and require them to tell you within days of a breach.",
+      "url": "https://therecord.media/uber-says-150000-impacted-third-party-breach",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Palo Alto Networks",
+      "date": "2026-11-17",
+      "title": "Survey: 40% of companies could not reconstruct what an AI agent had done",
+      "tldr": "Palo Alto Networks' 2026 cloud security survey found nearly every firm lets AI agents act in its development pipelines, and about three in four let them change code or production systems. More than half log agent actions under developers' own accounts, and 40% have failed to retrace an agent's steps.",
+      "smb": "Give each AI agent its own named account and keep its activity log separate from staff logs, so you can see exactly what it changed.",
+      "url": "https://www.helpnetsecurity.com/2026/11/17/palo-alto-networks-ai-cloud-security-risks-report/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Anthropic",
+      "date": "2026-11-17",
+      "title": "Anthropic will publish serious bugs it reports after 30 days instead of 90, starting in January",
+      "tldr": "From January 1, 2027, Anthropic will make high and critical flaws it reports to software makers public after 30 days, and other bugs after 45. It says AI now helps write fixes faster and keeps rediscovering the same flaws, so long quiet periods no longer protect users.",
+      "smb": "Ask your key software vendors how fast they ship security fixes, and plan to install critical patches within a couple of weeks of release.",
+      "url": "https://www.helpnetsecurity.com/2026/11/17/anthropic-vulnerability-disclosure-days/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Simon Willison's Weblog",
+      "date": "2026-11-17",
+      "title": "Willison: run the code your coding agent writes in a separate sandbox, not on your laptop",
+      "tldr": "Simon Willison shared work with Prime Radiant on an external sandbox pattern, where the coding agent stays outside and every command it runs goes to an isolated mini computer. The setup adds a list of allowed websites and swaps in credentials at the edge so the agent never sees the real secret.",
+      "smb": "Run AI coding tools inside a container or virtual machine with limited internet access, and keep real passwords and keys out of their reach.",
+      "url": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+      "link_label": "Read the post"
+    },
+    {
+      "cat": "voices",
+      "source": "Help Net Security interview, Peter Stöckli",
+      "date": "2026-11-17",
+      "title": "GitHub's Stöckli: fewer prompt instructions and a human check make AI code audits work",
+      "tldr": "GitHub Security Lab researcher Peter Stöckli explained that his team starts AI-driven audits by mapping what each part of an app is meant to do, and finds login and permission gaps a good first target. He said extra prompt rules can make newer models worse, and every finding is confirmed by a person before it goes out.",
+      "smb": "Point an AI review tool at your app's login and access checks first, and have a person confirm each finding before acting on it.",
+      "url": "https://www.helpnetsecurity.com/2026/11/17/peter-stockli-github-ai-security-audits/",
+      "link_label": "Read the interview"
+    },
+    {
+      "cat": "news",
       "source": "SecurityWeek, on Barracuda",
       "date": "2026-11-16",
       "title": "Barracuda says an ARTEX-driven intruder used one leaked cloud key to reach about 10 accounts in 44 hours",
@@ -1307,6 +1357,12 @@
       "outlet": "SecurityWeek columnist, F5",
       "focus": "Field CISO writing on security operations, fraud and the human side of using AI in security",
       "url": "https://www.f5.com/company/blog/authors/joshua-goldfarb"
+    },
+    {
+      "name": "Peter Stöckli",
+      "outlet": "GitHub Security Lab",
+      "focus": "Security researcher using AI agents to audit open source code, with a focus on authentication and access control flaws",
+      "url": "https://securitylab.github.com/"
     }
   ]
 }
