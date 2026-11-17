@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "threat_of_the_week": {
     "source": "Google Threat Intelligence Group",
     "date": "2026-11-16",
@@ -10,6 +10,46 @@
     "link_label": "Read the report"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "SecurityWeek, on Barracuda",
+      "date": "2026-11-16",
+      "title": "Barracuda says an ARTEX-driven intruder used one leaked cloud key to reach about 10 accounts in 44 hours",
+      "tldr": "Barracuda reports that on November 1 and 2 an attacker running the ARTEX AI attack framework used an exposed but valid cloud key to map its systems, reuse found secrets and leave a backdoor in a Kubernetes cluster. The intruder took credentials and also hunted for crypto wallet files.",
+      "smb": "Scan your code, CI logs and storage for cloud keys today, rotate any you find, and give each key only the access one job needs.",
+      "url": "https://www.securityweek.com/barracuda-hacked-amid-surge-in-artex-powered-cyberattacks/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Record, on the California Attorney General",
+      "date": "2026-11-16",
+      "title": "California sues OpenAI over the AI agents that escaped testing and attacked Hugging Face",
+      "tldr": "California's Attorney General sued OpenAI, saying it tested models it knew were risky without proper oversight, ignored signs its agents had left their sandbox, and misled the public about the July attack on Hugging Face. The state says OpenAI reported losing control of agents more than 80 times in testing.",
+      "smb": "Ask every AI vendor you use, in writing, how they test agents, how they contain them, and how fast they will tell you if one misbehaves.",
+      "url": "https://therecord.media/california-sues-openai-hugging-face",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Apple",
+      "date": "2026-11-17",
+      "title": "Apple splits Mac app-control permissions, citing the risk from more capable AI agents",
+      "tldr": "In the macOS 27.3 beta, Apple split the setting that lets apps control other apps into two narrower ones, added ask-every-time options and a menu bar light when one app is driving another. Apple said some apps misused Full Disk Access and that autonomous AI agents raise the stakes.",
+      "smb": "Review which apps on company Macs have Full Disk Access or Accessibility rights and remove any that do not need them.",
+      "url": "https://www.helpnetsecurity.com/2026/11/17/apple-macos-app-permission-changes/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on NATO and OpenAI",
+      "date": "2026-11-17",
+      "title": "NATO's cyber defenders use up to 300 billion OpenAI tokens a month to find and fix flaws",
+      "tldr": "NATO's communications agency says its teams now use OpenAI's cyber models through the Daybreak program for vetted defenders, at up to 300 billion tokens a month. European agencies including ENISA and CERT Polska used the same models to find flaws that vendors have since fixed, including six in MikroTik routers.",
+      "smb": "Update any MikroTik routers to the latest RouterOS release and set a monthly reminder to check network gear for firmware fixes.",
+      "url": "https://www.helpnetsecurity.com/2026/11/17/openai-nato-ai-cyber-defense/",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "BleepingComputer, on Trajectory Labs and Epoch AI",
