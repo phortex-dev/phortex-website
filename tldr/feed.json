@@ -3,13 +3,23 @@
   "items": [
     {
       "date": "2026-11-17",
-      "title": "Optimizely hack slipped card skimmers and crypto stealers onto 178 major brands' websites",
-      "why": "Attackers used a flaw in Optimizely's testing tool to add malicious code to customer scripts on Nov. 16, hitting sites like CNN, the BBC, Zoom and Salesforce. It stole card details typed into site forms and swapped crypto wallet addresses.",
-      "action": "List every outside script your website loads, remove ones you no longer use, and take card payments in your processor's hosted page or iframe, not your own form.",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/",
+      "title": "Optimizely hack put card skimmers, crypto stealers and iPhone exploits on 178 major sites",
+      "why": "Attackers abused an Optimizely flaw on Nov. 16 to add code to scripts on sites like CNN, the BBC and Zoom. It stole card details and, new tonight, tried iPhone exploit kits on visitors running older iOS; no takeovers are confirmed.",
+      "action": "Update staff iPhones to the latest iOS, list every outside script your website loads, and take card payments on your processor's hosted page, not your own form.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
       "heat": 5,
       "cat": "malware"
+    },
+    {
+      "date": "2026-11-17",
+      "title": "Visa says a supplier was breached as the n0n gang names it, JPMorgan and 57 others",
+      "why": "The n0n extortion group listed 59 firms on Nov. 16, claiming marketing data held by suppliers. Visa says the break-in was at an Asia Pacific provider and card numbers were not affected; JPMorgan blames its outage on a software bug.",
+      "action": "Ask the agencies and vendors that hold your customer lists what data they keep, delete what they no longer need, and require breach notice in your contracts.",
+      "source_name": "Cybernews",
+      "source_url": "https://cybernews.com/security/visa-jpmorgan-data-breach/",
+      "heat": 4,
+      "cat": "breach"
     },
     {
       "date": "2026-11-17",
@@ -50,16 +60,6 @@
       "source_url": "https://gbhackers.com/old-bitly-links-hijacked-to-redirect-users/",
       "heat": 3,
       "cat": "phishing"
-    },
-    {
-      "date": "2026-11-17",
-      "title": "Viral claims of a Nov. 17 nationwide blackout are false; today's alert is a routine test",
-      "why": "Social media posts, including an edited Trump video, claimed a 90-day blackout starts today. PolitiFact found no evidence; Nov. 17 is a scheduled FEMA and FCC Emergency Alert System test that needs no action.",
-      "action": "Tell staff today's alert is a test and to ignore messages that use the blackout rumor to push links, payments or urgent purchases.",
-      "source_name": "PolitiFact",
-      "source_url": "https://politifact.com/factchecks/2026/nov/16/tiktok-posts/blackout-nov-17-trump-us-emergency",
-      "heat": 2,
-      "cat": "policy"
     },
     {
       "date": "2026-11-16",

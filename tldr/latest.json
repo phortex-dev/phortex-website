@@ -2,58 +2,58 @@
   "date": "2026-11-17",
   "items": [
     {
-      "title": "Optimizely hack slipped card skimmers and crypto stealers onto 178 major brands' websites",
-      "why": "Attackers used a flaw in Optimizely's testing tool to add malicious code to customer scripts on Nov. 16, hitting sites like CNN, the BBC, Zoom and Salesforce. It stole card details typed into site forms and swapped crypto wallet addresses.",
-      "action": "List every outside script your website loads, remove ones you no longer use, and take card payments in your processor's hosted page or iframe, not your own form.",
+      "title": "Optimizely hack put card skimmers, crypto stealers and iPhone exploits on 178 major sites",
+      "why": "Attackers abused an Optimizely flaw on Nov. 16 to add code to scripts on sites like CNN, the BBC and Zoom. It stole card details and, new tonight, tried iPhone exploit kits on visitors running older iOS; no takeovers are confirmed.",
+      "action": "Update staff iPhones to the latest iOS, list every outside script your website loads, and take card payments on your processor's hosted page, not your own form.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
       "heat": 5,
-      "cat": "malware",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/optimizely-vulnerability-exploited-to-serve-malware-on-major-websites/"
+      "cat": "malware"
+    },
+    {
+      "title": "Visa says a supplier was breached as the n0n gang names it, JPMorgan and 57 others",
+      "why": "The n0n extortion group listed 59 firms on Nov. 16, claiming marketing data held by suppliers. Visa says the break-in was at an Asia Pacific provider and card numbers were not affected; JPMorgan blames its outage on a software bug.",
+      "action": "Ask the agencies and vendors that hold your customer lists what data they keep, delete what they no longer need, and require breach notice in your contracts.",
+      "heat": 4,
+      "cat": "breach",
+      "source_name": "Cybernews",
+      "source_url": "https://cybernews.com/security/visa-jpmorgan-data-breach/"
     },
     {
       "title": "Attackers use a ScreenConnect client flaw to take over MSP technicians' computers",
       "why": "Attackers sent hundreds of thousands of 'run file' requests to MSP ScreenConnect servers; a technician on an older client who joins a malicious session runs the file with no prompt. Fixed clients are 26.6.5 and later.",
       "action": "Ask your IT provider to confirm every technician's ScreenConnect client is on 26.6.5 or later; updating the server alone does not fix this.",
-      "heat": 4,
-      "cat": "patch",
       "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/screenconnect-vulnerability-abused/"
+      "source_url": "https://gbhackers.com/screenconnect-vulnerability-abused/",
+      "heat": 4,
+      "cat": "patch"
     },
     {
       "title": "N-able ships N-central Hotfix 3 with 17 more fixes as earlier flaws stay under attack",
       "why": "New since last week's attacks: N-central 2026.4 Hotfix 3 fixes 17 more security bugs and removes the legacy API setting the exploited flaws rely on. N-able warns agents and probes that aren't updated can be impersonated.",
       "action": "Upgrade on-premises N-central servers to 2026.4 Hotfix 3 and update all agents and probes; if an MSP runs it for you, ask them to confirm.",
-      "heat": 4,
-      "cat": "patch",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html"
+      "source_url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+      "heat": 4,
+      "cat": "patch"
     },
     {
       "title": "Microsoft issues emergency Windows updates to fix activation errors from November patches",
       "why": "November's security updates broke slmgr license and KMS activation commands with error 0x80041008 on Windows Server 2019 to 2025 and some Windows 10 and 11 editions. Devices already activated stay activated.",
       "action": "If you activate or re-key Windows with scripts or KMS, install Microsoft's out-of-band update from Windows Update's optional updates or the Update Catalog.",
-      "heat": 3,
-      "cat": "patch",
       "source_name": "The Register",
-      "source_url": "https://www.theregister.com/software/2026/11/16/microsoft-fixes-windows-activation-as-admins-pick-through-exchange-outage-wreckage/5310102"
+      "source_url": "https://www.theregister.com/software/2026/11/16/microsoft-fixes-windows-activation-as-admins-pick-through-exchange-outage-wreckage/5310102",
+      "heat": 3,
+      "cat": "patch"
     },
     {
       "title": "Old Bitly links in posts by the FBI, McDonald's and others now redirect to other sites",
       "why": "Short links in X posts from 2009 to 2014 by accounts including the FBI, the Defense Department and Burger King were repointed to unrelated pages. Bitly says it suspended the accounts involved; no malware has been confirmed.",
       "action": "Check where the short links in your old social posts, emails and printed materials now lead, and replace them with direct links to your own site.",
-      "heat": 3,
-      "cat": "phishing",
       "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/old-bitly-links-hijacked-to-redirect-users/"
-    },
-    {
-      "title": "Viral claims of a Nov. 17 nationwide blackout are false; today's alert is a routine test",
-      "why": "Social media posts, including an edited Trump video, claimed a 90-day blackout starts today. PolitiFact found no evidence; Nov. 17 is a scheduled FEMA and FCC Emergency Alert System test that needs no action.",
-      "action": "Tell staff today's alert is a test and to ignore messages that use the blackout rumor to push links, payments or urgent purchases.",
-      "heat": 2,
-      "cat": "policy",
-      "source_name": "PolitiFact",
-      "source_url": "https://politifact.com/factchecks/2026/nov/16/tiktok-posts/blackout-nov-17-trump-us-emergency"
+      "source_url": "https://gbhackers.com/old-bitly-links-hijacked-to-redirect-users/",
+      "heat": 3,
+      "cat": "phishing"
     }
   ]
 }
