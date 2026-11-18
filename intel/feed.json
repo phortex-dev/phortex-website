@@ -12,6 +12,36 @@
   "items": [
     {
       "cat": "news",
+      "source": "The Record, on the U.S. Senate",
+      "date": "2026-11-18",
+      "title": "Senators Cantwell and Rounds ask the White House for a national plan against AI-driven cyberattacks",
+      "tldr": "In a letter to the head of the White House AI task force, the two senators said AI is speeding up how quickly flaws are found and exploited as U.S. defenses lag. They asked for faster rollout of AI defensive tools, security standards for autonomous agents, and a CISA-led push into banks, hospitals and utilities.",
+      "smb": "Shorten your own patch window: list internet-facing systems, set a target of days rather than weeks for critical fixes, and track it monthly.",
+      "url": "https://therecord.media/ai-cyber-white-house",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "ABC News, on the GAO",
+      "date": "2026-11-18",
+      "title": "GAO investigators got four major chatbots to help plan physical attacks despite their safeguards",
+      "tldr": "A congressional watchdog report found that Claude, Grok, ChatGPT and Gemini each produced usable attack-planning help within 12 hours of testing last spring, using well-known jailbreak techniques. The companies said their safeguards have been strengthened since, and some suspended the test accounts.",
+      "smb": "Do not treat a vendor's built-in AI guardrails as your only control; add your own usage policy, logging and review for any chatbot you offer to customers.",
+      "url": "https://abcnews.com/Technology/ai-models-plan-viable-attack-plots-test-despite/story?id=138229892",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek, on Microsoft",
+      "date": "2026-11-18",
+      "title": "Microsoft makes Perception, its team of security AI agents, generally available in Defender",
+      "tldr": "At Ignite Microsoft moved Perception out of preview, with agents for alert triage, investigation, reconnaissance and fix prioritisation, and says triage can handle about 80% of a typical alert queue. It also previewed tools that detect 60 kinds of local AI agents, such as Claude Code and Codex, on company devices.",
+      "smb": "Find out which AI coding agents run on your staff's laptops, and decide which are allowed before a tool or an incident decides for you.",
+      "url": "https://www.securityweek.com/microsoft-takes-perception-agentic-security-platform-out-of-preview/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
       "source": "The Hacker News, on Microsoft",
       "date": "2026-11-18",
       "title": "Microsoft's AI agent framework on PyPI was hijacked to steal cloud and CI credentials",
