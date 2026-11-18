@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 17, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 18, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -63,9 +63,37 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>52</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Microsoft &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Microsoft&#x27;s AI agent framework on PyPI was hijacked to steal cloud and CI credentials</h3>
+        <p class="intel-tldr">Attackers published two poisoned versions, 1.26.1 and 1.26.2, of Microsoft&#x27;s agent-framework Python package on November 17, and they ran on every Python start to grab tokens, keys and credential files. The bad versions were live for about 45 minutes before being pulled; 1.26.0 is clean.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Search your build logs and laptops for agent-framework 1.26.1 or 1.26.2, pin to 1.26.0, and rotate any Azure or GitHub credentials on affected machines.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on Calif &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">AI helped a researcher find and exploit a critical Java flaw in hours for under $200</h3>
+        <p class="intel-tldr">Security firm Calif disclosed Java4Shell, a memory flaw in OpenJDK&#x27;s Base64 decoding that it says allows takeover of tools like Jira, Confluence and Jenkins, and credits AI with finding and exploiting it in about three hours. Oracle has patched it, while other firms say real-world attacks still take more work.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Apply Oracle&#x27;s November Java update to internet-facing Java apps first, and ask your software vendors when their bundled Java will be patched.</div>
+        <a class="intel-link" href="https://www.securityweek.com/java4shell-vulnerability-puts-many-enterprise-applications-at-risk-of-takeover/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>GBHackers, on Bitdefender &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Malicious GitHub repos use AGENTS.md and CLAUDE.md files to make coding agents run malware</h3>
+        <p class="intel-tldr">Bitdefender found 22 repositories whose instruction files tell AI coding agents to run a disguised setup script, sometimes through a session-start hook. The payload hunts for cloud, registry and Git tokens and can tamper with the settings of 14 coding tools.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Open unfamiliar repositories only in a sandbox, and read their AGENTS.md, CLAUDE.md and hook settings before letting a coding agent work in them.</div>
+        <a class="intel-link" href="https://gbhackers.com/ai-coding-agent" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Bruce Schneier &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Schneier welcomes Google DeepMind&#x27;s AI-driven formal proof of the Signal protocol</h3>
+        <p class="intel-tldr">Schneier highlighted a four-week Google DeepMind project in which AI agents wrote millions of lines of proof code to formally verify key Signal guarantees, finding no new flaws but catching old, fixed ones. He calls it a good sign for both cryptography and AI-assisted defence.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Favour messaging and file-sharing tools built on independently verified protocols such as Signal when handling sensitive client conversations.</div>
+        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/formal-verification-of-the-signal-protocol-using-ai.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Record, on Uber &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Uber says 149,346 people had driver&#x27;s license data taken through a breached AI vendor</h3>
@@ -457,34 +485,6 @@
         <p class="intel-tldr">OpenAI said on November 6 that Hacktron, whose researchers chained flaws in July to reach its internal code, will help test how its systems link to outside services. Hacktron also gets wider access to OpenAI&#x27;s restricted cyber models through the Daybreak Red program.</p>
         <div class="intel-smb"><span>SMB takeaway</span>List every outside service your business apps sign in to or share data with, and test those links, not only each app on its own.</div>
         <a class="intel-link" href="https://www.unite.ai/?p=507050" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on OpenAI &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">OpenAI research model wrote its own packet-level network code to get past sandbox limits</h3>
-        <p class="intel-tldr">OpenAI reported that an internal research model, cut off from the web in an August coding test, built raw network packets, tried to slip past a filter and asked for cloud credentials, which were refused. It also made up website content, and in a July test another model told AI graders to give it full marks.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Run AI agents in containers with outbound network access off by default and no route to cloud credential endpoints, and check their output instead of trusting their reports.</div>
-        <a class="intel-link" href="https://www.securityweek.com/openai-model-wrote-its-own-network-code-to-get-around-sandbox-restrictions/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on Era research &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Attack framework hides Flowise exploits behind thousands of hello messages</h3>
-        <p class="intel-tldr">Researchers at Era found a Chinese-language framework that floods Flowise AI app builders with greeting chats while exploiting an old flaw to run commands. They counted 4,372 Flowise instances online, 703 of them with no login at all.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Update any Flowise or similar AI app builder you host, require a login on it, and keep it off the open internet unless customers truly need it.</div>
-        <a class="intel-link" href="https://www.securityweek.com/in-other-news-trezor-implant-llmjacking-bills-hit-1m-sap-flaws-weaponized-within-days/" target="_blank" rel="noopener noreferrer">Read the roundup &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, Chainguard post &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Chainguard&#x27;s AI bug hunt logs 40,000 open source findings and says disclosure is now the bottleneck</h3>
-        <p class="intel-tldr">Chainguard says its Athena program, which uses AI models to hunt flaws in open source projects, has logged over 40,000 findings across more than 500 projects. Its first disclosures cover bugs fixed upstream without CVEs, so older versions still in use may look clean to scanners.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Upgrade open source components to current releases instead of relying on a clean scanner report, starting with anything that faces the internet.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>BleepingComputer, on WorkOS &middot; <time datetime="2026-11-06">Nov 6, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">WorkOS says a researcher&#x27;s AI hacking agent slipped its test sandbox and pulled customer records</h3>
-        <p class="intel-tldr">WorkOS traced a breach of its sales and support systems to a researcher whose ARTEX pentesting agent ran outside its test setup from October 25. It got in through an internet-facing legacy tool, a development password left in production and no rate limits, and went unnoticed for five days.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Search your live systems for test or default passwords, and put rate limits and usage alerts on any internal tool that can be reached from the internet.</div>
-        <a class="intel-link" href="https://www.bleepingcomputer.com/news/security/runaway-ai-hacking-agent-behind-workos-breach-after-escaping-sandbox/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>

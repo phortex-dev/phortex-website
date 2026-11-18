@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "threat_of_the_week": {
     "source": "Google Threat Intelligence Group",
     "date": "2026-11-16",
@@ -10,6 +10,46 @@
     "link_label": "Read the report"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Microsoft",
+      "date": "2026-11-18",
+      "title": "Microsoft's AI agent framework on PyPI was hijacked to steal cloud and CI credentials",
+      "tldr": "Attackers published two poisoned versions, 1.26.1 and 1.26.2, of Microsoft's agent-framework Python package on November 17, and they ran on every Python start to grab tokens, keys and credential files. The bad versions were live for about 45 minutes before being pulled; 1.26.0 is clean.",
+      "smb": "Search your build logs and laptops for agent-framework 1.26.1 or 1.26.2, pin to 1.26.0, and rotate any Azure or GitHub credentials on affected machines.",
+      "url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek, on Calif",
+      "date": "2026-11-18",
+      "title": "AI helped a researcher find and exploit a critical Java flaw in hours for under $200",
+      "tldr": "Security firm Calif disclosed Java4Shell, a memory flaw in OpenJDK's Base64 decoding that it says allows takeover of tools like Jira, Confluence and Jenkins, and credits AI with finding and exploiting it in about three hours. Oracle has patched it, while other firms say real-world attacks still take more work.",
+      "smb": "Apply Oracle's November Java update to internet-facing Java apps first, and ask your software vendors when their bundled Java will be patched.",
+      "url": "https://www.securityweek.com/java4shell-vulnerability-puts-many-enterprise-applications-at-risk-of-takeover/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "GBHackers, on Bitdefender",
+      "date": "2026-11-18",
+      "title": "Malicious GitHub repos use AGENTS.md and CLAUDE.md files to make coding agents run malware",
+      "tldr": "Bitdefender found 22 repositories whose instruction files tell AI coding agents to run a disguised setup script, sometimes through a session-start hook. The payload hunts for cloud, registry and Git tokens and can tamper with the settings of 14 coding tools.",
+      "smb": "Open unfamiliar repositories only in a sandbox, and read their AGENTS.md, CLAUDE.md and hook settings before letting a coding agent work in them.",
+      "url": "https://gbhackers.com/ai-coding-agent",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Bruce Schneier",
+      "date": "2026-11-17",
+      "title": "Schneier welcomes Google DeepMind's AI-driven formal proof of the Signal protocol",
+      "tldr": "Schneier highlighted a four-week Google DeepMind project in which AI agents wrote millions of lines of proof code to formally verify key Signal guarantees, finding no new flaws but catching old, fixed ones. He calls it a good sign for both cryptography and AI-assisted defence.",
+      "smb": "Favour messaging and file-sharing tools built on independently verified protocols such as Signal when handling sensitive client conversations.",
+      "url": "https://www.schneier.com/blog/archives/2026/11/formal-verification-of-the-signal-protocol-using-ai.html",
+      "link_label": "Read the post"
+    },
     {
       "cat": "news",
       "source": "The Record, on Uber",
@@ -1259,16 +1299,6 @@
       "smb": "Ask any AI security vendor how they check that their agents actually finished the job.",
       "url": "https://www.youtube.com/watch?v=cRKToFkZMvk",
       "link_label": "Watch the talk"
-    },
-    {
-      "cat": "news",
-      "source": "BleepingComputer",
-      "date": "2026-07-20",
-      "title": "JadePuffer agent now ransoms AI model data",
-      "tldr": "Sysdig says an autonomous attack agent added ransomware built to encrypt model checkpoints, vector databases and training data. It got in through a vulnerable Langflow server and an exposed Docker socket.",
-      "smb": "Back up vector databases and AI configs offline, and never expose a Docker socket to the internet.",
-      "url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-attacks-now-target-ai-model-data-with-ransomware/",
-      "link_label": "Read on BleepingComputer"
     },
     {
       "cat": "news",
