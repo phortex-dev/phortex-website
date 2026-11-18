@@ -1,35 +1,59 @@
 {
   "date": "2026-11-18",
   "items": [
-    {"title": "Java4Shell: critical Java flaw opens Jira, Confluence, Jenkins and others to takeover",
-     "why": "A bug in Java's fast Base64 decoder (OpenJDK 17.0.6 and later, on newer Intel/AMD chips) can let attackers run code in common apps. Oracle patched it Nov. 17; a proof of concept is public, no attacks reported yet.",
-     "action": "Update Java on servers running Jira, Confluence, Jenkins, Keycloak or similar apps; if you can't yet, start Java with -XX:-UseBASE64Intrinsics.",
-     "heat": 4, "cat": "patch", "source_name": "BleepingComputer",
-     "source_url": "https://bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications"},
-    {"title": "Google sees attackers' AI agents find and exploit web app flaws from patches on their own",
-     "why": "Google's threat team found an AI framework that compares patched and unpatched code, then builds and runs working exploits with no human help. The gap between a patch and an attack keeps shrinking.",
-     "action": "Apply security updates for internet-facing websites and apps within days, not weeks, and turn on automatic updates where your vendor offers them.",
-     "heat": 4, "cat": "ai", "source_name": "SecurityWeek",
-     "source_url": "https://www.securityweek.com/ai-framework-autonomously-weaponized-flaws-in-real-attacks-google-says/"},
-    {"title": "Apple iCloud outage traced to an internal update; Equinor reports a cyberattack",
-     "why": "On Nov. 17 an Apple internal update knocked out iCloud sign-in, the App Store and new iPhone activation for many users. Separately, energy firm Equinor said attackers hit some IT systems, with no impact on production.",
-     "action": "Treat surprise Apple ID password prompts during outages with care: sign in only through Settings, never from a link in an email or text.",
-     "heat": 3, "cat": "cloud", "source_name": "Security Affairs",
-     "source_url": "https://securityaffairs.com/203354/security/apple-outages-add-to-growing-concerns-over-technology-service-disruptions.html"},
-    {"title": "Google Project Zero will publish bug details after 90 days, falling to 30 days by 2028",
-     "why": "Google's bug hunters now disclose 90 days after reporting a flaw, fixed or not, dropping to 60 days in February 2027 and 30 days in January 2028. Exploited bugs get 7 days. Vendors and customers will have less time to patch.",
-     "action": "Shorten your own patch cycle now: set a target of patching critical updates within 14 days and check monthly that it is being met.",
-     "heat": 3, "cat": "policy", "source_name": "SecurityWeek",
-     "source_url": "https://securityweek.com/google-project-zero-sets-course-for-30-day-disclosure-deadline"},
-    {"title": "Alleged INC and Lynx ransomware affiliate extradited to the US",
-     "why": "A Kazakh man accused of attacks on schools, hospitals and companies in at least six states appeared in a Tennessee federal court. His group claimed 50 TB of stolen data and $500 million in ransom demands.",
-     "action": "Keep offline or immutable backups and test a restore this month; INC and Lynx affiliates steal data first, then encrypt.",
-     "heat": 2, "cat": "ransomware", "source_name": "The Record",
-     "source_url": "https://therecord.media/kazakh-suspected-extradited-charges-8-digits-team-inc-lynx"},
-    {"title": "California fines Hertz $1.55 million for ignoring browser privacy opt-out signals",
-     "why": "California's privacy agency said Hertz did not honor automatic opt-out signals from browsers and made opting out harder. Any business covered by California's privacy law must respect these signals.",
-     "action": "Check that your website's cookie or consent tool honors Global Privacy Control signals if you serve California customers.",
-     "heat": 2, "cat": "policy", "source_name": "The Record",
-     "source_url": "https://therecord.media/california-fines-hertz-state-data-privacy-law"}
+    {
+      "title": "Java4Shell: critical Java flaw opens Jira, Confluence, Jenkins and others to takeover",
+      "why": "A bug in Java's fast Base64 decoder (OpenJDK 17.0.6 and later, on newer Intel/AMD chips) can let attackers run code in apps like Jira and Jenkins. New tonight: CISA urged immediate patching; no attacks are reported yet.",
+      "action": "Update Java to the November Oracle or OpenJDK release on servers running Jira, Confluence, Jenkins, Keycloak or similar, and check vendor appliances that bundle Java.",
+      "heat": 5,
+      "cat": "patch",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html"
+    },
+    {
+      "title": "Attackers exploit a critical Puppet flaw to take over server management systems",
+      "why": "CISA added a Puppet Enterprise and Puppet Core remote code execution bug to its exploited list on Nov. 17. Fixes came out Nov. 3; risk is higher where the Puppet certificate authority signs requests without strong checks.",
+      "action": "Update to Puppet Enterprise 2026.0.1, 2025.12.1 or 2023.8.13, or Puppet Core 9.1.3 or 8.22.2, and rotate credentials if a server may have been hit.",
+      "heat": 4,
+      "cat": "patch",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html"
+    },
+    {
+      "title": "Microsoft's AI agent toolkit on PyPI was hijacked to steal cloud credentials",
+      "why": "Versions 1.26.1 and 1.26.2 of the agent-framework Python package, live for about 45 minutes on Nov. 17, ran a stealer that grabs Azure, GitHub and other keys and tokens. The package gets about 190,000 downloads a month.",
+      "action": "Ask developers to check for agent-framework 1.26.1 or 1.26.2, pin to 1.26.0, rebuild affected machines and rotate their cloud and code keys.",
+      "heat": 4,
+      "cat": "malware",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html"
+    },
+    {
+      "title": "Google sees attackers' AI agents find and exploit web app flaws from patches on their own",
+      "why": "Google's threat team found an AI framework that compares patched and unpatched code, then builds and runs working exploits with no human help. The gap between a patch and an attack keeps shrinking.",
+      "action": "Apply security updates for internet-facing websites and apps within days, not weeks, and turn on automatic updates where your vendor offers them.",
+      "heat": 4,
+      "cat": "ai",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/ai-framework-autonomously-weaponized-flaws-in-real-attacks-google-says/"
+    },
+    {
+      "title": "Russian hackers used one hacked Google Workspace to break into a second US firm",
+      "why": "Google says the Cold Relic group got a Super Admin password, wore down the victim with MFA push prompts, then exported company data and used stolen identities to phish a second organization.",
+      "action": "Put phishing-resistant MFA such as passkeys or security keys on Google Workspace admins, and review registered devices, backup codes and app grants.",
+      "heat": 3,
+      "cat": "cloud",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html"
+    },
+    {
+      "title": "Ukraine and FBI arrest suspects in a fake IT support ransomware gang tied to $40 million",
+      "why": "Police arrested four suspected leaders of a group that used AI-voiced calls posing as IT support to get passwords or remote access, then stole data and encrypted systems. At least 28 companies, including US firms, paid ransoms.",
+      "action": "Tell staff that real IT support will never call asking for passwords or to install remote tools; verify any such call by calling IT back on a known number.",
+      "heat": 3,
+      "cat": "ransomware",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/"
+    }
   ]
 }
