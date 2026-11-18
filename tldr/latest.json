@@ -1,59 +1,35 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "items": [
-    {
-      "title": "Optimizely hack put card skimmers, crypto stealers and iPhone exploits on 178 major sites",
-      "why": "Attackers abused an Optimizely flaw on Nov. 16 to add code to scripts on sites like CNN, the BBC and Zoom. It stole card details and, new tonight, tried iPhone exploit kits on visitors running older iOS; no takeovers are confirmed.",
-      "action": "Update staff iPhones to the latest iOS, list every outside script your website loads, and take card payments on your processor's hosted page, not your own form.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
-      "heat": 5,
-      "cat": "malware"
-    },
-    {
-      "title": "Visa says a supplier was breached as the n0n gang names it, JPMorgan and 57 others",
-      "why": "The n0n extortion group listed 59 firms on Nov. 16, claiming marketing data held by suppliers. Visa says the break-in was at an Asia Pacific provider and card numbers were not affected; JPMorgan blames its outage on a software bug.",
-      "action": "Ask the agencies and vendors that hold your customer lists what data they keep, delete what they no longer need, and require breach notice in your contracts.",
-      "heat": 4,
-      "cat": "breach",
-      "source_name": "Cybernews",
-      "source_url": "https://cybernews.com/security/visa-jpmorgan-data-breach/"
-    },
-    {
-      "title": "Attackers use a ScreenConnect client flaw to take over MSP technicians' computers",
-      "why": "Attackers sent hundreds of thousands of 'run file' requests to MSP ScreenConnect servers; a technician on an older client who joins a malicious session runs the file with no prompt. Fixed clients are 26.6.5 and later.",
-      "action": "Ask your IT provider to confirm every technician's ScreenConnect client is on 26.6.5 or later; updating the server alone does not fix this.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/screenconnect-vulnerability-abused/",
-      "heat": 4,
-      "cat": "patch"
-    },
-    {
-      "title": "N-able ships N-central Hotfix 3 with 17 more fixes as earlier flaws stay under attack",
-      "why": "New since last week's attacks: N-central 2026.4 Hotfix 3 fixes 17 more security bugs and removes the legacy API setting the exploited flaws rely on. N-able warns agents and probes that aren't updated can be impersonated.",
-      "action": "Upgrade on-premises N-central servers to 2026.4 Hotfix 3 and update all agents and probes; if an MSP runs it for you, ask them to confirm.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
-      "heat": 4,
-      "cat": "patch"
-    },
-    {
-      "title": "Microsoft issues emergency Windows updates to fix activation errors from November patches",
-      "why": "November's security updates broke slmgr license and KMS activation commands with error 0x80041008 on Windows Server 2019 to 2025 and some Windows 10 and 11 editions. Devices already activated stay activated.",
-      "action": "If you activate or re-key Windows with scripts or KMS, install Microsoft's out-of-band update from Windows Update's optional updates or the Update Catalog.",
-      "source_name": "The Register",
-      "source_url": "https://www.theregister.com/software/2026/11/16/microsoft-fixes-windows-activation-as-admins-pick-through-exchange-outage-wreckage/5310102",
-      "heat": 3,
-      "cat": "patch"
-    },
-    {
-      "title": "Old Bitly links in posts by the FBI, McDonald's and others now redirect to other sites",
-      "why": "Short links in X posts from 2009 to 2014 by accounts including the FBI, the Defense Department and Burger King were repointed to unrelated pages. Bitly says it suspended the accounts involved; no malware has been confirmed.",
-      "action": "Check where the short links in your old social posts, emails and printed materials now lead, and replace them with direct links to your own site.",
-      "source_name": "GBHackers",
-      "source_url": "https://gbhackers.com/old-bitly-links-hijacked-to-redirect-users/",
-      "heat": 3,
-      "cat": "phishing"
-    }
+    {"title": "Java4Shell: critical Java flaw opens Jira, Confluence, Jenkins and others to takeover",
+     "why": "A bug in Java's fast Base64 decoder (OpenJDK 17.0.6 and later, on newer Intel/AMD chips) can let attackers run code in common apps. Oracle patched it Nov. 17; a proof of concept is public, no attacks reported yet.",
+     "action": "Update Java on servers running Jira, Confluence, Jenkins, Keycloak or similar apps; if you can't yet, start Java with -XX:-UseBASE64Intrinsics.",
+     "heat": 4, "cat": "patch", "source_name": "BleepingComputer",
+     "source_url": "https://bleepingcomputer.com/news/security/critical-java4shell-flaw-allows-rce-attacks-on-major-java-applications"},
+    {"title": "Google sees attackers' AI agents find and exploit web app flaws from patches on their own",
+     "why": "Google's threat team found an AI framework that compares patched and unpatched code, then builds and runs working exploits with no human help. The gap between a patch and an attack keeps shrinking.",
+     "action": "Apply security updates for internet-facing websites and apps within days, not weeks, and turn on automatic updates where your vendor offers them.",
+     "heat": 4, "cat": "ai", "source_name": "SecurityWeek",
+     "source_url": "https://www.securityweek.com/ai-framework-autonomously-weaponized-flaws-in-real-attacks-google-says/"},
+    {"title": "Apple iCloud outage traced to an internal update; Equinor reports a cyberattack",
+     "why": "On Nov. 17 an Apple internal update knocked out iCloud sign-in, the App Store and new iPhone activation for many users. Separately, energy firm Equinor said attackers hit some IT systems, with no impact on production.",
+     "action": "Treat surprise Apple ID password prompts during outages with care: sign in only through Settings, never from a link in an email or text.",
+     "heat": 3, "cat": "cloud", "source_name": "Security Affairs",
+     "source_url": "https://securityaffairs.com/203354/security/apple-outages-add-to-growing-concerns-over-technology-service-disruptions.html"},
+    {"title": "Google Project Zero will publish bug details after 90 days, falling to 30 days by 2028",
+     "why": "Google's bug hunters now disclose 90 days after reporting a flaw, fixed or not, dropping to 60 days in February 2027 and 30 days in January 2028. Exploited bugs get 7 days. Vendors and customers will have less time to patch.",
+     "action": "Shorten your own patch cycle now: set a target of patching critical updates within 14 days and check monthly that it is being met.",
+     "heat": 3, "cat": "policy", "source_name": "SecurityWeek",
+     "source_url": "https://securityweek.com/google-project-zero-sets-course-for-30-day-disclosure-deadline"},
+    {"title": "Alleged INC and Lynx ransomware affiliate extradited to the US",
+     "why": "A Kazakh man accused of attacks on schools, hospitals and companies in at least six states appeared in a Tennessee federal court. His group claimed 50 TB of stolen data and $500 million in ransom demands.",
+     "action": "Keep offline or immutable backups and test a restore this month; INC and Lynx affiliates steal data first, then encrypt.",
+     "heat": 2, "cat": "ransomware", "source_name": "The Record",
+     "source_url": "https://therecord.media/kazakh-suspected-extradited-charges-8-digits-team-inc-lynx"},
+    {"title": "California fines Hertz $1.55 million for ignoring browser privacy opt-out signals",
+     "why": "California's privacy agency said Hertz did not honor automatic opt-out signals from browsers and made opting out harder. Any business covered by California's privacy law must respect these signals.",
+     "action": "Check that your website's cookie or consent tool honors Global Privacy Control signals if you serve California customers.",
+     "heat": 2, "cat": "policy", "source_name": "The Record",
+     "source_url": "https://therecord.media/california-fines-hertz-state-data-privacy-law"}
   ]
 }
