@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "items": [
+    {
+      "date": "2026-11-19",
+      "title": "Java4Shell update: attackers are now probing for the critical Java flaw",
+      "why": "New since yesterday: scanners and early exploit attempts are hitting servers running OpenJDK 17+, and Cisco, Elastic, Red Hat, Atlassian and Jenkins have posted advisories. No confirmed break-ins yet.",
+      "action": "Update Java to the November 17 builds now, starting with internet-facing Jira, Confluence, Jenkins, Keycloak and Elasticsearch, and follow vendor workarounds where no patch exists.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/",
+      "heat": 5,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-19",
+      "title": "CISA says a Synology NAS flaw is being exploited, with ransomware hitting the devices",
+      "why": "CISA added an unauthenticated takeover flaw in Synology DSM to its exploited list on November 18; recent attacks on Synology boxes have deployed C3RB3R ransomware. Apache Axis, REDCap and LiteLLM flaws were added too.",
+      "action": "Update every Synology NAS to the latest DSM release, take it off the open internet, and confirm your backups are not reachable from the NAS itself.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
+      "heat": 4,
+      "cat": "ransomware"
+    },
+    {
+      "date": "2026-11-19",
+      "title": "N-able confirms hackers got into its Mail Assure and SpamExperts cloud",
+      "why": "An intruder accessed a server in N-able's hosted email filtering cloud, knocking out the admin portal, quarantine and logs in the Americas, Europe and APAC since November 16. Mail filtering still works; no data theft found so far.",
+      "action": "Ask your MSP or N-able whether you are affected, watch for spam and phishing that quarantine would normally catch, and reset any admin passwords for the portal once it returns.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+      "heat": 4,
+      "cat": "cloud"
+    },
+    {
+      "date": "2026-11-19",
+      "title": "PHP releases critical security fixes for all supported versions today",
+      "why": "PHP warned of critical flaws, including a remote code execution bug tied to session settings, with fixes due November 19 around 2 p.m. UTC. It follows October's PHP2Shell flaws, which have seen limited attacks.",
+      "action": "Ask your web host or developer to install today's PHP update on WordPress and other PHP sites; until then, set session.upload_progress.enabled to 0 and restart PHP.",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html",
+      "heat": 3,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-19",
+      "title": "Deepfake Elon Musk livestream lured crypto users; Coinbase blocked $4.7 million",
+      "why": "A fake YouTube 'Tesla flying car' stream with an AI Musk promised to double crypto sent to a QR code. Hundreds of Coinbase users tried to send money within two hours; Coinbase stopped about 91 percent.",
+      "action": "Tell staff that any livestream or video promising to double money is a scam, and require a second person to approve any crypto or wire payment.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/",
+      "heat": 3,
+      "cat": "crypto"
+    },
+    {
+      "date": "2026-11-19",
+      "title": "Atlassian's November update fixes 318 flaws across Jira, Confluence and Bitbucket",
+      "why": "Atlassian's November 17 bulletin covers 52 critical and 266 high-severity entries, mostly in bundled components such as Spring and Tomcat, for its self-hosted Data Center products. Cloud customers need no action.",
+      "action": "Upgrade self-hosted Jira, Confluence, Bitbucket, Bamboo and Crowd to the fixed LTS versions in Atlassian's bulletin.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/atlassian-releases-november-2026-security-updates/",
+      "heat": 2,
+      "cat": "patch"
+    },
     {
       "date": "2026-11-18",
       "title": "Java4Shell: critical Java flaw opens Jira, Confluence, Jenkins and others to takeover",

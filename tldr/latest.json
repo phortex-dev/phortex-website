@@ -1,59 +1,35 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "items": [
-    {
-      "title": "Java4Shell: critical Java flaw opens Jira, Confluence, Jenkins and others to takeover",
-      "why": "A bug in Java's fast Base64 decoder (OpenJDK 17.0.6 and later, on newer Intel/AMD chips) can let attackers run code in apps like Jira and Jenkins. New tonight: CISA urged immediate patching; no attacks are reported yet.",
-      "action": "Update Java to the November Oracle or OpenJDK release on servers running Jira, Confluence, Jenkins, Keycloak or similar, and check vendor appliances that bundle Java.",
-      "heat": 5,
-      "cat": "patch",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html"
-    },
-    {
-      "title": "Attackers exploit a critical Puppet flaw to take over server management systems",
-      "why": "CISA added a Puppet Enterprise and Puppet Core remote code execution bug to its exploited list on Nov. 17. Fixes came out Nov. 3; risk is higher where the Puppet certificate authority signs requests without strong checks.",
-      "action": "Update to Puppet Enterprise 2026.0.1, 2025.12.1 or 2023.8.13, or Puppet Core 9.1.3 or 8.22.2, and rotate credentials if a server may have been hit.",
-      "heat": 4,
-      "cat": "patch",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploiting-critical-puppet-rce.html"
-    },
-    {
-      "title": "Microsoft's AI agent toolkit on PyPI was hijacked to steal cloud credentials",
-      "why": "Versions 1.26.1 and 1.26.2 of the agent-framework Python package, live for about 45 minutes on Nov. 17, ran a stealer that grabs Azure, GitHub and other keys and tokens. The package gets about 190,000 downloads a month.",
-      "action": "Ask developers to check for agent-framework 1.26.1 or 1.26.2, pin to 1.26.0, rebuild affected machines and rotate their cloud and code keys.",
-      "heat": 4,
-      "cat": "malware",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/attackers-compromise-microsofts-agent.html"
-    },
-    {
-      "title": "Google sees attackers' AI agents find and exploit web app flaws from patches on their own",
-      "why": "Google's threat team found an AI framework that compares patched and unpatched code, then builds and runs working exploits with no human help. The gap between a patch and an attack keeps shrinking.",
-      "action": "Apply security updates for internet-facing websites and apps within days, not weeks, and turn on automatic updates where your vendor offers them.",
-      "heat": 4,
-      "cat": "ai",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/ai-framework-autonomously-weaponized-flaws-in-real-attacks-google-says/"
-    },
-    {
-      "title": "Russian hackers used one hacked Google Workspace to break into a second US firm",
-      "why": "Google says the Cold Relic group got a Super Admin password, wore down the victim with MFA push prompts, then exported company data and used stolen identities to phish a second organization.",
-      "action": "Put phishing-resistant MFA such as passkeys or security keys on Google Workspace admins, and review registered devices, backup codes and app grants.",
-      "heat": 3,
-      "cat": "cloud",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/russian-cold-relic-hackers-use-stolen.html"
-    },
-    {
-      "title": "Ukraine and FBI arrest suspects in a fake IT support ransomware gang tied to $40 million",
-      "why": "Police arrested four suspected leaders of a group that used AI-voiced calls posing as IT support to get passwords or remote access, then stole data and encrypted systems. At least 28 companies, including US firms, paid ransoms.",
-      "action": "Tell staff that real IT support will never call asking for passwords or to install remote tools; verify any such call by calling IT back on a known number.",
-      "heat": 3,
-      "cat": "ransomware",
-      "source_name": "BleepingComputer",
-      "source_url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/"
-    }
+    {"title": "Java4Shell update: attackers are now probing for the critical Java flaw",
+     "why": "New since yesterday: scanners and early exploit attempts are hitting servers running OpenJDK 17+, and Cisco, Elastic, Red Hat, Atlassian and Jenkins have posted advisories. No confirmed break-ins yet.",
+     "action": "Update Java to the November 17 builds now, starting with internet-facing Jira, Confluence, Jenkins, Keycloak and Elasticsearch, and follow vendor workarounds where no patch exists.",
+     "heat": 5, "cat": "patch",
+     "source_name": "SecurityWeek", "source_url": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/"},
+    {"title": "CISA says a Synology NAS flaw is being exploited, with ransomware hitting the devices",
+     "why": "CISA added an unauthenticated takeover flaw in Synology DSM to its exploited list on November 18; recent attacks on Synology boxes have deployed C3RB3R ransomware. Apache Axis, REDCap and LiteLLM flaws were added too.",
+     "action": "Update every Synology NAS to the latest DSM release, take it off the open internet, and confirm your backups are not reachable from the NAS itself.",
+     "heat": 4, "cat": "ransomware",
+     "source_name": "The Hacker News", "source_url": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html"},
+    {"title": "N-able confirms hackers got into its Mail Assure and SpamExperts cloud",
+     "why": "An intruder accessed a server in N-able's hosted email filtering cloud, knocking out the admin portal, quarantine and logs in the Americas, Europe and APAC since November 16. Mail filtering still works; no data theft found so far.",
+     "action": "Ask your MSP or N-able whether you are affected, watch for spam and phishing that quarantine would normally catch, and reset any admin passwords for the portal once it returns.",
+     "heat": 4, "cat": "cloud",
+     "source_name": "The Hacker News", "source_url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html"},
+    {"title": "PHP releases critical security fixes for all supported versions today",
+     "why": "PHP warned of critical flaws, including a remote code execution bug tied to session settings, with fixes due November 19 around 2 p.m. UTC. It follows October's PHP2Shell flaws, which have seen limited attacks.",
+     "action": "Ask your web host or developer to install today's PHP update on WordPress and other PHP sites; until then, set session.upload_progress.enabled to 0 and restart PHP.",
+     "heat": 3, "cat": "patch",
+     "source_name": "The Hacker News", "source_url": "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html"},
+    {"title": "Deepfake Elon Musk livestream lured crypto users; Coinbase blocked $4.7 million",
+     "why": "A fake YouTube 'Tesla flying car' stream with an AI Musk promised to double crypto sent to a QR code. Hundreds of Coinbase users tried to send money within two hours; Coinbase stopped about 91 percent.",
+     "action": "Tell staff that any livestream or video promising to double money is a scam, and require a second person to approve any crypto or wire payment.",
+     "heat": 3, "cat": "crypto",
+     "source_name": "BleepingComputer", "source_url": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/"},
+    {"title": "Atlassian's November update fixes 318 flaws across Jira, Confluence and Bitbucket",
+     "why": "Atlassian's November 17 bulletin covers 52 critical and 266 high-severity entries, mostly in bundled components such as Spring and Tomcat, for its self-hosted Data Center products. Cloud customers need no action.",
+     "action": "Upgrade self-hosted Jira, Confluence, Bitbucket, Bamboo and Crowd to the fixed LTS versions in Atlassian's bulletin.",
+     "heat": 2, "cat": "patch",
+     "source_name": "GBHackers", "source_url": "https://gbhackers.com/atlassian-releases-november-2026-security-updates/"}
   ]
 }
