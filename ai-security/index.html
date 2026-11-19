@@ -66,12 +66,26 @@
       <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Simon Willison&#x27;s Weblog &middot; <time datetime="2026-11-19">Nov 19, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Willison notes PostgreSQL 19 shipped two months late after a wave of AI-reported vulnerabilities</h3>
+        <p class="intel-tldr">Simon Willison pointed out that PostgreSQL 19, normally released in September, only arrived in November. He ties the delay to the flood of AI-reported security issues the Postgres team had to work through first.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Confirm every PostgreSQL database you run, including ones inside vendor products, is on a supported version with current security updates.</div>
+        <a class="intel-link" href="https://simonwillison.net/2026/Nov/19/postgresql-19/" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek &middot; <time datetime="2026-11-19">Nov 19, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Attackers start probing for Java4Shell as Cisco, Red Hat and others list affected products</h3>
         <p class="intel-tldr">Two days after the AI-found Java flaw was patched, GreyNoise, watchTowr and Cloudflare logged scanning and blind exploit attempts, with no confirmed break-ins so far. Cloudflare saw one address used for both Java4Shell probes and the ARTEX AI attack tool, as Cisco, Siemens, Elastic and Red Hat named affected products.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Ask each software vendor whether its product bundles OpenJDK 17 or later, and apply patched Java builds to Jira, Jenkins and Keycloak first.</div>
         <a class="intel-link" href="https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Intruder &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Survey: data privacy and production safety, not quality, are what hold back AI pentesting</h3>
+        <p class="intel-tldr">An Intruder survey of 500 US and UK security and engineering leaders found 55% already use AI pentesting, yet only 4% think they test often enough. The main worries were data privacy (40%) and safety in production (36%), ahead of the quality of findings.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Trial an AI pentest on a staging copy of production alongside your next manual test, and compare what each one finds.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/quality-isnt-main-worry-about-ai.html" target="_blank" rel="noopener noreferrer">Read the article &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="voices">
         <div class="intel-meta"><span class="tag">Voices</span><span>Simon Willison, quoting Daniel Stenberg &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
@@ -471,20 +485,6 @@
         <p class="intel-tldr">Elastic reviewed 27 infostealer cases and found attackers used stolen logins about eight minutes after infection. In two cases, intruders who already had access ran commands through AI assistants installed on the victim&#x27;s computer, one to build tools and one to open a saved password store.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Treat AI coding and desktop assistants as powerful admin tools: limit who has them, keep them off machines that hold sensitive passwords, and log what they run.</div>
         <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/09/elastic-businesses-remote-access-attacks-report/" target="_blank" rel="noopener noreferrer">Read the report summary &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Wirken, a free gateway that assumes your chat-connected AI agent will be turned against you</h3>
-        <p class="intel-tldr">Wirken is a new open-source gateway that sits between apps like Slack, Teams or WhatsApp and an AI agent. It keeps credentials out of the agent&#x27;s reach, runs shell commands in a sandbox with no network, asks for approval before risky actions, and keeps a tamper-evident log, though its authors list gaps.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Before connecting an AI agent to company chat, put an approval step in front of any action that deletes, installs or touches passwords, whatever tool you use.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/09/wirken-open-source-ai-agent-gateway/" target="_blank" rel="noopener noreferrer">Read about the tool &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>Schneier on Security &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Schneier: split AI security into security of AI, with AI and from AI</h3>
-        <p class="intel-tldr">Back from the [un]prompted conference in San Francisco, Bruce Schneier sorted AI security into three areas: protecting AI systems, using AI for defense, and defending against AI-enabled threats. He argues researchers should know which area their work serves and that the field needs all three.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Sort your AI security to-do list into those three buckets and give each one an owner and at least one next step.</div>
-        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-security.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>

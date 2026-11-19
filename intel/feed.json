@@ -11,6 +11,26 @@
   },
   "items": [
     {
+      "cat": "voices",
+      "source": "Simon Willison's Weblog",
+      "date": "2026-11-19",
+      "title": "Willison notes PostgreSQL 19 shipped two months late after a wave of AI-reported vulnerabilities",
+      "tldr": "Simon Willison pointed out that PostgreSQL 19, normally released in September, only arrived in November. He ties the delay to the flood of AI-reported security issues the Postgres team had to work through first.",
+      "smb": "Confirm every PostgreSQL database you run, including ones inside vendor products, is on a supported version with current security updates.",
+      "url": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+      "link_label": "Read the post"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Intruder",
+      "date": "2026-11-18",
+      "title": "Survey: data privacy and production safety, not quality, are what hold back AI pentesting",
+      "tldr": "An Intruder survey of 500 US and UK security and engineering leaders found 55% already use AI pentesting, yet only 4% think they test often enough. The main worries were data privacy (40%) and safety in production (36%), ahead of the quality of findings.",
+      "smb": "Trial an AI pentest on a staging copy of production alongside your next manual test, and compare what each one finds.",
+      "url": "https://thehackernews.com/2026/11/quality-isnt-main-worry-about-ai.html",
+      "link_label": "Read the article"
+    },
+    {
       "cat": "news",
       "source": "SecurityWeek",
       "date": "2026-11-19",
