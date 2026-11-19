@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "threat_of_the_week": {
     "source": "Google Threat Intelligence Group",
     "date": "2026-11-16",
@@ -10,6 +10,46 @@
     "link_label": "Read the report"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "SecurityWeek",
+      "date": "2026-11-19",
+      "title": "Attackers start probing for Java4Shell as Cisco, Red Hat and others list affected products",
+      "tldr": "Two days after the AI-found Java flaw was patched, GreyNoise, watchTowr and Cloudflare logged scanning and blind exploit attempts, with no confirmed break-ins so far. Cloudflare saw one address used for both Java4Shell probes and the ARTEX AI attack tool, as Cisco, Siemens, Elastic and Red Hat named affected products.",
+      "smb": "Ask each software vendor whether its product bundles OpenJDK 17 or later, and apply patched Java builds to Jira, Jenkins and Keycloak first.",
+      "url": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Simon Willison, quoting Daniel Stenberg",
+      "date": "2026-11-18",
+      "title": "Willison flags Stenberg's point that AI rewrites of curl lack the project's security fixes",
+      "tldr": "Willison highlighted curl maintainer Daniel Stenberg's note that AI agents turned curl's C code into Rust while the real project merged over 200 bug fixes and several vulnerability fixes in the same three weeks. The clones carry none of those fixes, and Stenberg doubts they will keep up.",
+      "smb": "Before adopting an AI-generated clone of a known library, check who maintains it and how it gets security fixes, and prefer the original project.",
+      "url": "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
+      "link_label": "Read the post"
+    },
+    {
+      "cat": "news",
+      "source": "OpenAI GPT-6.2 system card",
+      "date": "2026-11-17",
+      "title": "OpenAI rates its new GPT-6.2 models Critical for cyber, able to build exploits without human help",
+      "tldr": "OpenAI's system card says GPT-6.2 Astra and Sol reach its highest cyber risk level, meaning they can write working zero-day exploits for hardened systems without a person guiding them. OpenAI says it tightened default limits on risky security help and now monitors outside use as well as its own.",
+      "smb": "Assume new flaws can be turned into exploits within hours, and move critical patches for internet-facing systems to the front of the queue.",
+      "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+      "link_label": "Read the system card"
+    },
+    {
+      "cat": "news",
+      "source": "BleepingComputer",
+      "date": "2026-11-17",
+      "title": "Researchers took over a popular AI voice model's Hugging Face account through a lapsed domain",
+      "tldr": "Alon Hertz's team registered an expired domain named in the Kokoro text-to-speech project and used it to reset the publisher's Hugging Face password. Kokoro gets nearly 13 million downloads a month; the team altered the weights only to show the risk and did not upload them.",
+      "smb": "Pin AI models to a specific version and file hash instead of pulling the latest upload, and keep an approved copy in your own storage.",
+      "url": "https://www.bleepingcomputer.com/news/security/researchers-hijack-hugging-face-account-for-popular-kokoro-ai-model/",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "The Record, on the U.S. Senate",

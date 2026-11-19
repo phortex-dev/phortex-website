@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 18, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 19, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -66,6 +66,20 @@
       <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek &middot; <time datetime="2026-11-19">Nov 19, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Attackers start probing for Java4Shell as Cisco, Red Hat and others list affected products</h3>
+        <p class="intel-tldr">Two days after the AI-found Java flaw was patched, GreyNoise, watchTowr and Cloudflare logged scanning and blind exploit attempts, with no confirmed break-ins so far. Cloudflare saw one address used for both Java4Shell probes and the ARTEX AI attack tool, as Cisco, Siemens, Elastic and Red Hat named affected products.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask each software vendor whether its product bundles OpenJDK 17 or later, and apply patched Java builds to Jira, Jenkins and Keycloak first.</div>
+        <a class="intel-link" href="https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Simon Willison, quoting Daniel Stenberg &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Willison flags Stenberg&#x27;s point that AI rewrites of curl lack the project&#x27;s security fixes</h3>
+        <p class="intel-tldr">Willison highlighted curl maintainer Daniel Stenberg&#x27;s note that AI agents turned curl&#x27;s C code into Rust while the real project merged over 200 bug fixes and several vulnerability fixes in the same three weeks. The clones carry none of those fixes, and Stenberg doubts they will keep up.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Before adopting an AI-generated clone of a known library, check who maintains it and how it gets security fixes, and prefer the original project.</div>
+        <a class="intel-link" href="https://simonwillison.net/2026/Nov/18/daniel-stenberg/" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Record, on the U.S. Senate &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Senators Cantwell and Rounds ask the White House for a national plan against AI-driven cyberattacks</h3>
@@ -107,6 +121,20 @@
         <p class="intel-tldr">Bitdefender found 22 repositories whose instruction files tell AI coding agents to run a disguised setup script, sometimes through a session-start hook. The payload hunts for cloud, registry and Git tokens and can tamper with the settings of 14 coding tools.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Open unfamiliar repositories only in a sandbox, and read their AGENTS.md, CLAUDE.md and hook settings before letting a coding agent work in them.</div>
         <a class="intel-link" href="https://gbhackers.com/ai-coding-agent" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>OpenAI GPT-6.2 system card &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">OpenAI rates its new GPT-6.2 models Critical for cyber, able to build exploits without human help</h3>
+        <p class="intel-tldr">OpenAI&#x27;s system card says GPT-6.2 Astra and Sol reach its highest cyber risk level, meaning they can write working zero-day exploits for hardened systems without a person guiding them. OpenAI says it tightened default limits on risky security help and now monitors outside use as well as its own.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Assume new flaws can be turned into exploits within hours, and move critical patches for internet-facing systems to the front of the queue.</div>
+        <a class="intel-link" href="https://deploymentsafety.openai.com/gpt-6-2-astra-sol" target="_blank" rel="noopener noreferrer">Read the system card &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>BleepingComputer &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Researchers took over a popular AI voice model&#x27;s Hugging Face account through a lapsed domain</h3>
+        <p class="intel-tldr">Alon Hertz&#x27;s team registered an expired domain named in the Kokoro text-to-speech project and used it to reset the publisher&#x27;s Hugging Face password. Kokoro gets nearly 13 million downloads a month; the team altered the weights only to show the risk and did not upload them.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Pin AI models to a specific version and file hash instead of pulling the latest upload, and keep an approved copy in your own storage.</div>
+        <a class="intel-link" href="https://www.bleepingcomputer.com/news/security/researchers-hijack-hugging-face-account-for-popular-kokoro-ai-model/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="voices">
         <div class="intel-meta"><span class="tag">Voices</span><span>Bruce Schneier &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
@@ -457,34 +485,6 @@
         <p class="intel-tldr">Back from the [un]prompted conference in San Francisco, Bruce Schneier sorted AI security into three areas: protecting AI systems, using AI for defense, and defending against AI-enabled threats. He argues researchers should know which area their work serves and that the field needs all three.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Sort your AI security to-do list into those three buckets and give each one an owner and at least one next step.</div>
         <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-security.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Cyber Security News, on Microsoft and Todyl &middot; <time datetime="2026-11-09">Nov 9, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">AI attack agents went from a GitHub leak to Azure Key Vault secrets in five minutes</h3>
-        <p class="intel-tldr">Microsoft and Todyl say attackers ran ARTEX AI agents that searched public GitHub code for leaked cloud and AI keys, then used them to sign in to Azure from late October. About 27 organizations were reached, including MSP clients, and one agent pulled Key Vault secrets five minutes after its first search.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Turn on secret scanning for your code, rotate any key that was ever public even if you deleted it, and check cloud sign-in logs back to October 28.</div>
-        <a class="intel-link" href="https://cybersecuritynews.com/artex-ai-azure-key-vault-secrets/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Malbear Labs &middot; <time datetime="2026-11-08">Nov 8, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Exposed server shows a jailbroken DeepSeek agent breaking into a telecom and the firms it hosted</h3>
-        <p class="intel-tldr">Malbear Labs found an open directory holding two weeks of logs from an AI agent that a Chinese-speaking operator pointed at a European telecom and 13 organizations on its network. The agent found its own way in, wrote new tools when blocked, and used default database passwords to reach a large patient records system.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Change every default password on databases and admin tools, including old systems, and ask your hosting or IT provider how they keep customers separated from each other.</div>
-        <a class="intel-link" href="https://malbearlabs.com/posts/operation-snowball-inside-an-autonomous-ai-intrusion-campaign" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>Cybersecurity Insiders, Merium Khalid &middot; <time datetime="2026-11-07">Nov 7, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Barracuda&#x27;s Khalid: phishing emails now carry hidden orders for the AI assistant that reads them</h3>
-        <p class="intel-tldr">Merium Khalid of Barracuda describes a recruiting-style email with hidden text telling an email assistant to forward it to colleagues and send crypto-related mail to an outside Gmail address. She argues that assistants able to act, not just summarize, give such emails reach into calendars, files and business apps.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Block AI email assistants from forwarding mail outside the company or to group lists, and require a person to approve payments and vendor changes.</div>
-        <a class="intel-link" href="https://www.cybersecurity-insiders.com/phishing-has-a-new-target-the-ai-assistant-reading-your-email/" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>iTWire, on Apiiro research &middot; <time datetime="2026-11-07">Nov 7, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Claude Code&#x27;s don&#x27;t-ask-again approvals left passwords and keys in public GitHub repositories</h3>
-        <p class="intel-tldr">Apiiro found that approving a command with don&#x27;t ask again saves the full command, including any inline password, to a local settings file that developers then push to GitHub. It counted 2,539 distinct secrets across 1,994 repositories, and one company confirmed its exposed key was live.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Search your repositories for .claude/settings.local.json, rotate any secret found in it or its history, and add the file to .gitignore.</div>
-        <a class="intel-link" href="https://itwire.com/business-it-news/security/claude-code-approval-files-found-exposing-company-secrets-on-github-says-apirro-researchers" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
