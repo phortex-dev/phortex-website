@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "items": [
     {
-      "title": "Java4Shell update: attackers are now probing for the critical Java flaw",
-      "why": "Scanners and early exploit attempts are hitting servers running OpenJDK 17+, with no confirmed break-ins yet. Keycloak, Amazon, Microsoft and Azul now have patched builds; Cisco has no fix yet.",
-      "action": "Update Java to the November 17 builds now, starting with internet-facing Jira, Confluence, Jenkins, Keycloak and Elasticsearch, and follow vendor workarounds where no patch exists.",
+      "title": "Yesterday's VMware vCenter flaw was used as a zero-day by China-linked hackers",
+      "why": "Google and Mandiant say the Armory Castle group exploited the vCenter login bypass since early September to get admin access, forge sign-in tokens and steal data. Broadcom's November 19 builds fix it.",
+      "action": "Install Broadcom's November 19 vCenter fix today (8.0 U3m or newer), keep vCenter off the internet, and have your IT provider check for unknown SSO admin accounts.",
       "heat": 5,
       "cat": "patch",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/"
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html"
     },
     {
-      "title": "Critical VMware vCenter flaw lets attackers skip login over the network",
-      "why": "Broadcom fixed an authentication bypass rated 9.8 in vCenter 8.0, 9.0 and 9.1 and related VCF products. No attacks yet, but similar vCenter bugs from July were used to deploy ransomware on ESXi hosts.",
-      "action": "Patch vCenter to Broadcom's fixed build as an emergency change, and make sure vCenter is only reachable from your admin network, never the internet.",
+      "title": "SonicWall says Gen 6 firewalls will get no more patches, even for critical flaws",
+      "why": "SonicWall urges anyone still running Gen 6 models such as the TZ300-TZ600, SOHO 250 and NSA 2600-6600 to replace them now, and expects internet-facing units to be actively targeted.",
+      "action": "Check your firewall model; if it is Gen 6, plan a replacement, and until then turn off WAN management, restrict or disable SSL VPN, require MFA and reset local passwords.",
+      "heat": 4,
+      "cat": "vpn",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html"
+    },
+    {
+      "title": "Attackers exploit a critical Cisco Expressway flaw soon after exploit code went public",
+      "why": "Researchers at F6 saw attackers gain root on internet-facing Expressway devices, then move into the internal network to steal credentials. Cisco released fixes on October 21.",
+      "action": "Update Cisco Expressway to X15.5.20 or later, and ask your IT provider to check the devices for signs of compromise.",
       "heat": 4,
       "cat": "patch",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html"
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html"
     },
     {
-      "title": "F5 patches five critical NGINX flaws as exploit code goes public",
-      "why": "The 'NGINX2Root' bugs allow unauthenticated remote code execution in NGINX Open Source and Plus, two of them via HTTP/2. F5 reports no attacks, but proof-of-concept code is out and Censys counts about 9 million exposed servers.",
-      "action": "Upgrade NGINX to 1.30.7 or 1.31.9 (Plus 37.0.8.1 or 37.3.0.1), or ask your host to; if you cannot yet, turn off HTTP/2.",
+      "title": "JPMorgan, Visa and Mastercard confirm vendor breaches after the n0n gang leaks data",
+      "why": "All three say outside service providers were hit and that marketing data such as customer emails was exposed, not card numbers. The gang has posted the data for download.",
+      "action": "Expect phishing that uses these bank and card brands, and remind staff to reach their bank only through its app or the number on the card.",
       "heat": 4,
-      "cat": "patch",
+      "cat": "breach",
       "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/f5-patches-critical-nginx2root-flaws-as-poc-exploits-go-public/"
+      "source_url": "https://www.securityweek.com/jpmorgan-visa-mastercard-cite-third-party-incidents-amid-data-leak/"
     },
     {
-      "title": "CISA says a Synology NAS flaw is being exploited, with ransomware hitting the devices",
-      "why": "CISA added an unauthenticated takeover flaw in Synology DSM to its exploited list on November 18; recent attacks on Synology boxes have deployed C3RB3R ransomware. Apache Axis, REDCap and LiteLLM flaws were added too.",
-      "action": "Update every Synology NAS to the latest DSM release, take it off the open internet, and confirm your backups are not reachable from the NAS itself.",
-      "heat": 4,
-      "cat": "ransomware",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html"
-    },
-    {
-      "title": "N-able confirms hackers got into its Mail Assure and SpamExperts cloud",
-      "why": "An intruder accessed a server in N-able's hosted email filtering cloud, knocking out the admin portal, quarantine and logs in the Americas, Europe and APAC since November 16. Mail filtering still works; no data theft found so far.",
-      "action": "Ask your MSP or N-able whether you are affected, watch for spam and phishing that quarantine would normally catch, and reset any admin passwords for the portal once it returns.",
-      "heat": 4,
+      "title": "N-able says credentials may have been taken in its Mail Assure hack; portal still down",
+      "why": "N-able says an intruder on one web server may have accessed stored credentials. It revoked customer API tokens and OAuth tokens and reset local passwords; mail filtering still works.",
+      "action": "If you or your MSP use Mail Assure or SpamExperts, follow N-able's guidance, reissue API tokens and change any passwords that were stored on the platform.",
+      "heat": 3,
       "cat": "cloud",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html"
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/n-able-blames-service-disruption-on-cyberattack/"
     },
     {
-      "title": "PHP fixes seven critical flaws; updates for all supported versions are out",
-      "why": "Updated: the promised PHP release shipped today, fixing seven critical bugs ranging from remote code execution to crashes in PHP 8.2 through 8.5. No attacks reported yet. This affects most WordPress and PHP sites.",
-      "action": "Ask your web host or developer to move PHP to 8.2.36, 8.3.37, 8.4.28 or 8.5.13 on every site this week.",
+      "title": "Unpatched Windows 'FastUnlock' trick runs programs on a locked PC",
+      "why": "A researcher showed that someone holding a locked Windows computer can start programs from the lock screen in a limited account. There is no fix yet and no attacks seen.",
+      "action": "Add a BitLocker startup PIN on laptops that travel, and shut down or hibernate them rather than just locking the screen when they leave your hands.",
       "heat": 3,
       "cat": "patch",
       "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html"
+      "source_url": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html"
     }
   ]
 }

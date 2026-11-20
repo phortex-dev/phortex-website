@@ -147,37 +147,37 @@
 <!-- TLDR:START -->
 <section class="compact" id="tldr" aria-labelledby="tldr-heading">
   <div class="container">
-    <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-11-19">November 19, 2026</time></div>
+    <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-11-20">November 20, 2026</time></div>
     <h2 class="heading-md" id="tldr-heading">Today&rsquo;s top security stories, <span class="text-accent-cyan">ranked</span></h2>
     <div class="tl-grid">
 <article class="tl-card tl-feature" data-cat="patch">
   <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
   <div class="tl-body">
     <div class="tl-meta"><span class="tl-rank">#1</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 5 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Top story</span></div>
-    <h3 class="tl-title">Java4Shell update: attackers are now probing for the critical Java flaw</h3>
-    <p class="tl-why">Scanners and early exploit attempts are hitting servers running OpenJDK 17+, with no confirmed break-ins yet. Keycloak, Amazon, Microsoft and Azul now have patched builds; Cisco has no fix yet.</p>
-    <p class="tl-do"><strong>Do this:</strong> Update Java to the November 17 builds now, starting with internet-facing Jira, Confluence, Jenkins, Keycloak and Elasticsearch, and follow vendor workarounds where no patch exists.</p>
-    <a class="tl-src" href="https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/" target="_blank" rel="noopener noreferrer">SecurityWeek &rarr;</a>
+    <h3 class="tl-title">Yesterday&#x27;s VMware vCenter flaw was used as a zero-day by China-linked hackers</h3>
+    <p class="tl-why">Google and Mandiant say the Armory Castle group exploited the vCenter login bypass since early September to get admin access, forge sign-in tokens and steal data. Broadcom&#x27;s November 19 builds fix it.</p>
+    <p class="tl-do"><strong>Do this:</strong> Install Broadcom&#x27;s November 19 vCenter fix today (8.0 U3m or newer), keep vCenter off the internet, and have your IT provider check for unknown SSO admin accounts.</p>
+    <a class="tl-src" href="https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html" target="_blank" rel="noopener noreferrer">The Hacker News &rarr;</a>
   </div>
 </article>
-<article class="tl-card tl-feature" data-cat="patch">
-  <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
+<article class="tl-card tl-feature" data-cat="vpn">
+  <div class="tl-art tl-art-md" style="--c:#00D4F0" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M17 24h14M17 18h14M17 30h14M24 18v6M20 24v6M28 24v6"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">Critical VMware vCenter flaw lets attackers skip login over the network</h3>
-    <p class="tl-why">Broadcom fixed an authentication bypass rated 9.8 in vCenter 8.0, 9.0 and 9.1 and related VCF products. No attacks yet, but similar vCenter bugs from July were used to deploy ransomware on ESXi hosts.</p>
-    <p class="tl-do"><strong>Do this:</strong> Patch vCenter to Broadcom&#x27;s fixed build as an emergency change, and make sure vCenter is only reachable from your admin network, never the internet.</p>
-    <a class="tl-src" href="https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html" target="_blank" rel="noopener noreferrer">The Hacker News &rarr;</a>
+    <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#00D4F0">Firewall &amp; VPN</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <h3 class="tl-title">SonicWall says Gen 6 firewalls will get no more patches, even for critical flaws</h3>
+    <p class="tl-why">SonicWall urges anyone still running Gen 6 models such as the TZ300-TZ600, SOHO 250 and NSA 2600-6600 to replace them now, and expects internet-facing units to be actively targeted.</p>
+    <p class="tl-do"><strong>Do this:</strong> Check your firewall model; if it is Gen 6, plan a replacement, and until then turn off WAN management, restrict or disable SSL VPN, require MFA and reset local passwords.</p>
+    <a class="tl-src" href="https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html" target="_blank" rel="noopener noreferrer">The Hacker News &rarr;</a>
   </div>
 </article>
 <article class="tl-card tl-feature" data-cat="patch">
   <div class="tl-art tl-art-md" style="--c:#10D98A" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34L34 14"/><rect x="9" y="19" width="30" height="10" rx="5" transform="rotate(-45 24 24)"/><path d="M21 24h.01M24 21h.01M27 24h.01M24 27h.01"/></svg></div>
   <div class="tl-body">
     <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#10D98A">Patch now</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">F5 patches five critical NGINX flaws as exploit code goes public</h3>
-    <p class="tl-why">The &#x27;NGINX2Root&#x27; bugs allow unauthenticated remote code execution in NGINX Open Source and Plus, two of them via HTTP/2. F5 reports no attacks, but proof-of-concept code is out and Censys counts about 9 million exposed servers.</p>
-    <p class="tl-do"><strong>Do this:</strong> Upgrade NGINX to 1.30.7 or 1.31.9 (Plus 37.0.8.1 or 37.3.0.1), or ask your host to; if you cannot yet, turn off HTTP/2.</p>
-    <a class="tl-src" href="https://www.securityweek.com/f5-patches-critical-nginx2root-flaws-as-poc-exploits-go-public/" target="_blank" rel="noopener noreferrer">SecurityWeek &rarr;</a>
+    <h3 class="tl-title">Attackers exploit a critical Cisco Expressway flaw soon after exploit code went public</h3>
+    <p class="tl-why">Researchers at F6 saw attackers gain root on internet-facing Expressway devices, then move into the internal network to steal credentials. Cisco released fixes on October 21.</p>
+    <p class="tl-do"><strong>Do this:</strong> Update Cisco Expressway to X15.5.20 or later, and ask your IT provider to check the devices for signs of compromise.</p>
+    <a class="tl-src" href="https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html" target="_blank" rel="noopener noreferrer">The Hacker News &rarr;</a>
   </div>
 </article>
     </div>
