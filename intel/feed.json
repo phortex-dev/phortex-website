@@ -11,6 +11,46 @@
   },
   "items": [
     {
+      "cat": "news",
+      "source": "The Record, on the U.S. House",
+      "date": "2026-11-20",
+      "title": "House committees warn U.S. firms against building on China-developed open-weight AI models",
+      "tldr": "A joint report from the House Homeland Security and China select committees names Airbnb, DoorDash and Cursor's owner Anysphere as companies using China-developed open-weight models. It makes 12 recommendations, including an AI bill of materials and barring such models from federal contracts and key infrastructure.",
+      "smb": "List which AI models your products and tools run on, including the ones vendors embed, and record where each came from.",
+      "url": "https://therecord.media/chinese-open-weight-AI-use-by-US-companies-house-investigation",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "BleepingComputer, on Ukraine and the FBI",
+      "date": "2026-11-18",
+      "title": "Ukraine and the FBI arrest four in a ransomware gang that used AI voice calls posing as IT support",
+      "tldr": "Ukrainian police and the FBI arrested four suspected members of a ransomware group tied to more than $40.5 million in ransoms from at least 28 companies. The gang ran a platform that placed AI-voiced calls posing as IT support to get staff to hand over logins or install remote-access tools.",
+      "smb": "Tell staff that IT will never ask them to install remote-access software on a call, and give them one number to verify any such request.",
+      "url": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Postman",
+      "date": "2026-11-20",
+      "title": "Postman survey: a quarter of companies have AI agents calling their APIs, few track them",
+      "tldr": "Postman surveyed nearly 9,000 developers and leaders and found about a quarter already have AI agents using their APIs in production. Three in ten let agents share the same credentials as other clients, and fewer than a quarter keep an inventory of their agents.",
+      "smb": "Give each AI agent its own API key or account so you can see, limit and revoke what it does on its own.",
+      "url": "https://www.helpnetsecurity.com/2026/11/20/ai-agent-api-security-production/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on university research",
+      "date": "2026-11-20",
+      "title": "Research: training AI agents on more prompt-injection attacks can make them easier to hijack",
+      "tldr": "Researchers from Waterloo, Zhejiang and KTH found that agents retrained on a larger but repetitive set of prompt-injection attacks were hijacked more often in three of four tests. Their fix rewards finding new attack techniques and has the agent check each action against what the user asked.",
+      "smb": "Ask AI vendors how many distinct attack techniques they tested their agent against, not how many attacks they ran.",
+      "url": "https://www.helpnetsecurity.com/2026/11/20/ai-prompt-injection-red-team/",
+      "link_label": "Read the story"
+    },
+    {
       "cat": "voices",
       "source": "Simon Willison's Weblog",
       "date": "2026-11-20",

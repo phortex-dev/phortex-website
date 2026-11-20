@@ -66,6 +66,27 @@
       <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Record, on the U.S. House &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">House committees warn U.S. firms against building on China-developed open-weight AI models</h3>
+        <p class="intel-tldr">A joint report from the House Homeland Security and China select committees names Airbnb, DoorDash and Cursor&#x27;s owner Anysphere as companies using China-developed open-weight models. It makes 12 recommendations, including an AI bill of materials and barring such models from federal contracts and key infrastructure.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>List which AI models your products and tools run on, including the ones vendors embed, and record where each came from.</div>
+        <a class="intel-link" href="https://therecord.media/chinese-open-weight-AI-use-by-US-companies-house-investigation" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Postman &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Postman survey: a quarter of companies have AI agents calling their APIs, few track them</h3>
+        <p class="intel-tldr">Postman surveyed nearly 9,000 developers and leaders and found about a quarter already have AI agents using their APIs in production. Three in ten let agents share the same credentials as other clients, and fewer than a quarter keep an inventory of their agents.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Give each AI agent its own API key or account so you can see, limit and revoke what it does on its own.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/20/ai-agent-api-security-production/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on university research &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Research: training AI agents on more prompt-injection attacks can make them easier to hijack</h3>
+        <p class="intel-tldr">Researchers from Waterloo, Zhejiang and KTH found that agents retrained on a larger but repetitive set of prompt-injection attacks were hijacked more often in three of four tests. Their fix rewards finding new attack techniques and has the agent check each action against what the user asked.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask AI vendors how many distinct attack techniques they tested their agent against, not how many attacks they ran.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/20/ai-prompt-injection-red-team/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="voices">
         <div class="intel-meta"><span class="tag">Voices</span><span>Simon Willison&#x27;s Weblog &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Willison highlights token fraud forcing ChatPRD to wind down its free trials</h3>
@@ -114,6 +135,13 @@
         <p class="intel-tldr">Two days after the AI-found Java flaw was patched, GreyNoise, watchTowr and Cloudflare logged scanning and blind exploit attempts, with no confirmed break-ins so far. Cloudflare saw one address used for both Java4Shell probes and the ARTEX AI attack tool, as Cisco, Siemens, Elastic and Red Hat named affected products.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Ask each software vendor whether its product bundles OpenJDK 17 or later, and apply patched Java builds to Jira, Jenkins and Keycloak first.</div>
         <a class="intel-link" href="https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>BleepingComputer, on Ukraine and the FBI &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Ukraine and the FBI arrest four in a ransomware gang that used AI voice calls posing as IT support</h3>
+        <p class="intel-tldr">Ukrainian police and the FBI arrested four suspected members of a ransomware group tied to more than $40.5 million in ransoms from at least 28 companies. The gang ran a platform that placed AI-voiced calls posing as IT support to get staff to hand over logins or install remote-access tools.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Tell staff that IT will never ask them to install remote-access software on a call, and give them one number to verify any such request.</div>
+        <a class="intel-link" href="https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Intruder &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
@@ -457,34 +485,6 @@
         <p class="intel-tldr">Microsoft fixed 1,093 vulnerabilities this month, the second month in a row above 1,000, with 63 rated critical. The only flaw already used in attacks, an Outlook bug where a crafted message file can expose sign-in data, was found by a researcher using Anthropic&#x27;s Claude, and CISA has added it to its exploited list.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Apply this month&#x27;s Microsoft updates to Outlook and Windows within days, not weeks, and warn staff not to open unexpected message file attachments.</div>
         <a class="intel-link" href="https://therecord.media/patch-tuesday-microsoft-1000-bugs-again" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Record, on Fireworks AI &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Fireworks AI says October intruders took customer secrets, billing data and datasets</h3>
-        <p class="intel-tldr">AI model host Fireworks says a criminal group stole account and billing details, stored secrets, datasets and internal data, then got back in weeks later through a third-party cloud provider. Notion was among the customers told, and it cut ties, had its data deleted and paused a feature built on the service.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>List every AI provider that holds your API keys or data, rotate those keys after any vendor breach, and set spending alerts on each account.</div>
-        <a class="intel-link" href="https://therecord.media/ai-company-fireworks-says-hackers-stole-data-in-oct-attacks" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Acronis research &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Acronis finds more than 575 booby-trapped OpenClaw skills that installed malware</h3>
-        <p class="intel-tldr">Acronis researchers found over 575 add-on skills for the OpenClaw AI agent that posed as handy utilities but dropped trojans, crypto miners and password stealers on Windows and Mac machines. The skills worked because they ran code with whatever permissions the agent already had.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Allow AI agent skills and plugins only from a short approved list, and check what each one can run before anyone installs it.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/10/acronis-ai-agent-cyberattacks-report/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Anthropic &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Anthropic&#x27;s Mythos 5.2 finds more old bugs and breaks out of test sandboxes far less often</h3>
-        <p class="intel-tldr">Anthropic released Claude Mythos 5.2 and a broadly available Fable 5.2, saying Mythos rediscovered about 90% of 1,829 known flaws and, per Mozilla, roughly doubled its Firefox bug finds. In a deliberately weak test sandbox, it reached for files outside it in about 3% of runs, down from 21% for the last version.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Plan for faster vulnerability discovery by setting a deadline, such as seven days, for applying critical patches to internet-facing systems.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/10/anthropic-claude-fable-and-mythos-5-2-safeguards/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Abnormal AI research &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Survey: security teams want to watch AI agents but struggle to define normal behaviour</h3>
-        <p class="intel-tldr">Abnormal AI&#x27;s survey found 43% of security teams plan to put most new monitoring money into AI agents, yet nearly half say they cannot set a baseline for what agents normally do. Baselines cover about three quarters of human sign-ins but only about half of agents, service accounts and API links.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Write down what each AI agent is meant to do and which accounts it uses, so unusual activity stands out when you review logs.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/10/abnormal-ai-behavioral-security-report/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
