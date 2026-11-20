@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "threat_of_the_week": {
     "source": "Google Threat Intelligence Group",
     "date": "2026-11-16",
@@ -10,6 +10,56 @@
     "link_label": "Read the report"
   },
   "items": [
+    {
+      "cat": "voices",
+      "source": "Simon Willison's Weblog",
+      "date": "2026-11-20",
+      "title": "Willison highlights token fraud forcing ChatPRD to wind down its free trials",
+      "tldr": "Simon Willison shared Claire Vo's account of fraud rings abusing the free trial of her AI product ChatPRD to get free model usage or resell it. She is ending free trials, and Willison notes the abusers' test prompts can help reveal which model sits behind a service.",
+      "smb": "Set per-account spending caps and alerts on any AI feature you offer for free, and watch for many sign-ups sharing the same payment or IP details.",
+      "url": "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
+      "link_label": "Read the post"
+    },
+    {
+      "cat": "news",
+      "source": "AP via ABC News, on the European Commission",
+      "date": "2026-11-19",
+      "title": "The European Commission confirms an AI-assisted cyberattack took several of its applications offline",
+      "tldr": "The Commission said an attack carried out with AI tools was detected on October 22, forcing it to take several internal applications offline while it investigated. Most are back, no attacker has been named, and it says it has seen no evidence of a breach affecting staff as a whole.",
+      "smb": "Write down which internal apps you could switch off quickly during an attack, and test that you can run payroll and timesheets without them for a week.",
+      "url": "https://abcnews.com/International/wireStory/cyberattack-artificial-intelligence-targeted-eu-october-official-138284407",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on CISA",
+      "date": "2026-11-19",
+      "title": "CISA adds a LiteLLM flaw used to hijack AI inference keys to its exploited list",
+      "tldr": "CISA added CVE-2026-40217 in the LiteLLM AI gateway to its Known Exploited Vulnerabilities catalog, giving federal agencies until December 2 to fix it. Google says attackers used it to turn limited inference keys into full admin access at finance, retail, transport and tech firms.",
+      "smb": "Find any LiteLLM proxy you run, update it, and rotate the master and virtual keys it holds.",
+      "url": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on the UK AI Security Institute",
+      "date": "2026-11-19",
+      "title": "UK AI Security Institute built a universal jailbreak for pre-release GPT-6.2 Astra",
+      "tldr": "The UK AI Security Institute found a jailbreak that worked across two pre-release versions of OpenAI's GPT-6.2 Astra, using half the attempts the earlier model needed. OpenAI says it has since fixed the regression.",
+      "smb": "Do not treat a model's built-in safeguards as your only control; limit what data and tools any AI assistant can reach in your business.",
+      "url": "https://thehackernews.com/2026/11/threatsday-gpt-62-jailbreak-flaws.html",
+      "link_label": "Read the roundup"
+    },
+    {
+      "cat": "news",
+      "source": "Varonis Threat Labs",
+      "date": "2026-11-19",
+      "title": "TheMailer phishing kit uses mainstream AI models to rewrite lures until they reach the inbox",
+      "tldr": "Varonis found a self-hosted phishing kit, sold for 3,000 to 6,000 dollars, that plugs in models such as Claude, ChatGPT and Gemini to write, vary and retest emails until spam filters let them through. Campaigns seen so far include fake account-security alerts sent to tens of thousands of mailboxes.",
+      "smb": "Set DMARC to p=reject on your domains and update phishing training so staff stop relying on bad grammar as a warning sign.",
+      "url": "https://www.varonis.com/blog/themailer-ai-phishing-kit",
+      "link_label": "Read the research"
+    },
     {
       "cat": "voices",
       "source": "Simon Willison's Weblog",
