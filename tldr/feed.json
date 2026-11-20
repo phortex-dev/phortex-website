@@ -23,6 +23,16 @@
     },
     {
       "date": "2026-11-20",
+      "title": "Bell Canada says an 'agentic' hacker stole business customer data from a test system",
+      "why": "Bell says an intruder got into a pre-production copy of its circuit ordering system on November 17 and took enterprise customers' contact details, ticket titles and some IP addresses. Services were not affected.",
+      "action": "Treat test and staging systems like production: keep real customer data out of them, put them behind MFA, and watch Bell-themed emails for social engineering.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
+      "heat": 4,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-20",
       "title": "Attackers exploit a critical Cisco Expressway flaw soon after exploit code went public",
       "why": "Researchers at F6 saw attackers gain root on internet-facing Expressway devices, then move into the internal network to steal credentials. Cisco released fixes on October 21.",
       "action": "Update Cisco Expressway to X15.5.20 or later, and ask your IT provider to check the devices for signs of compromise.",
@@ -50,16 +60,6 @@
       "source_url": "https://www.securityweek.com/n-able-blames-service-disruption-on-cyberattack/",
       "heat": 3,
       "cat": "cloud"
-    },
-    {
-      "date": "2026-11-20",
-      "title": "Unpatched Windows 'FastUnlock' trick runs programs on a locked PC",
-      "why": "A researcher showed that someone holding a locked Windows computer can start programs from the lock screen in a limited account. There is no fix yet and no attacks seen.",
-      "action": "Add a BitLocker startup PIN on laptops that travel, and shut down or hibernate them rather than just locking the screen when they leave your hands.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
-      "heat": 3,
-      "cat": "patch"
     },
     {
       "date": "2026-11-19",
