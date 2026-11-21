@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 20, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 21, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -66,6 +66,27 @@
       <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Amazon Threat Intelligence &middot; <time datetime="2026-11-21">Nov 21, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Attackers&#x27; AI agents found an unpatched flaw in MONAI Label medical imaging servers and took root</h3>
+        <p class="intel-tldr">Amazon says suspected China-linked operators used the Cairn agent framework to discover a path-traversal bug in MONAI Label 0.8.5 and earlier, then gained root on a university server. A source fix exists, but no patched release is on PyPI yet.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Take any MONAI Label or similar AI lab server off the open internet, turn on authentication, and run it under a low-privilege account until a patched release ships.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Signal &middot; <time datetime="2026-11-21">Nov 21, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Signal now blocks screenshots by default so built-in AI agents on phones cannot read chats</h3>
+        <p class="intel-tldr">Signal turned on screenshot blocking by default on Android and iOS to stop operating-system AI agents from reading conversations off the screen. It follows reports that Meta&#x27;s Muse agent read Signal messages, and Signal says agents can still reach some content through other routes.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Review which AI assistants on company phones and laptops can read the screen or notifications, and exclude messaging and finance apps where the OS allows it.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on NebuSec &middot; <time datetime="2026-11-21">Nov 21, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">One malicious webpage let researchers take over Meta&#x27;s Muse agent and its users&#x27; private chats</h3>
+        <p class="intel-tldr">NebuSec showed that a booby-trapped page opened by Meta&#x27;s Muse agent could copy and change a user&#x27;s chat history and memories without any approval prompt. Chained with a Linux kernel bug, it gave full control of that user&#x27;s cloud machine; the researchers say the issues were fixed before publication.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Keep browsing agents away from accounts and memories holding sensitive data, and require a human approval step before an agent sends data anywhere new.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Record, on the U.S. House &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
         <h3 class="heading-sm intel-title">House committees warn U.S. firms against building on China-developed open-weight AI models</h3>
@@ -464,27 +485,6 @@
         <p class="intel-tldr">Schneier points to US charges against three men accused of cloning executives&#x27; and lawyers&#x27; voices and faces to talk staff into wiring over $129 million from companies worldwide. He files it under the third part of AI security, attacks that use AI against people and organisations.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Require a call-back on a known number and a second approver for any urgent or unusual wire request, even when it seems to come from a boss.</div>
         <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/three-people-arrested-for-ai-enhanced-impersonation-fraud.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Claroc &middot; <time datetime="2026-11-11">Nov 11, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">More than 35,000 apps built with Grok were open to anyone with the address</h3>
-        <p class="intel-tldr">Claroc found 35,578 apps made with Grok&#x27;s app builder that needed no sign-in, because sharing defaulted to anyone with the link and the addresses show up in public DNS data. About one in ten held internal or personal data, from sales plans at X and SpaceXSI to hospital staff lists and plain-text passwords.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Ask staff which AI app builders they use, set any app holding company data to invited users only, and test it from an outside account.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>OWASP GenAI Security Project &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">OWASP publishes version 2 of its guide to securing agentic AI applications</h3>
-        <p class="intel-tldr">The OWASP GenAI Security Project released a second version of its builder and defender guide for AI agents. It covers secure design, identity and access controls, runtime protection, supply chain security and testing for single-agent and multi-agent systems.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Use the guide as a checklist before you connect an AI agent to company email, files or payments, starting with its identity and access controls section.</div>
-        <a class="intel-link" href="https://genai.owasp.org/resource/securing-agentic-applications-v2/" target="_blank" rel="noopener noreferrer">Get the guide &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Record, on Microsoft Patch Tuesday &middot; <time datetime="2026-11-10">Nov 10, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">November Patch Tuesday tops 1,000 bugs again, and the one exploited Outlook flaw was found with Claude</h3>
-        <p class="intel-tldr">Microsoft fixed 1,093 vulnerabilities this month, the second month in a row above 1,000, with 63 rated critical. The only flaw already used in attacks, an Outlook bug where a crafted message file can expose sign-in data, was found by a researcher using Anthropic&#x27;s Claude, and CISA has added it to its exploited list.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Apply this month&#x27;s Microsoft updates to Outlook and Windows within days, not weeks, and warn staff not to open unexpected message file attachments.</div>
-        <a class="intel-link" href="https://therecord.media/patch-tuesday-microsoft-1000-bugs-again" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>

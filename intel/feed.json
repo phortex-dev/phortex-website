@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "threat_of_the_week": {
     "source": "Google Threat Intelligence Group",
     "date": "2026-11-16",
@@ -10,6 +10,36 @@
     "link_label": "Read the report"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Amazon Threat Intelligence",
+      "date": "2026-11-21",
+      "title": "Attackers' AI agents found an unpatched flaw in MONAI Label medical imaging servers and took root",
+      "tldr": "Amazon says suspected China-linked operators used the Cairn agent framework to discover a path-traversal bug in MONAI Label 0.8.5 and earlier, then gained root on a university server. A source fix exists, but no patched release is on PyPI yet.",
+      "smb": "Take any MONAI Label or similar AI lab server off the open internet, turn on authentication, and run it under a low-privilege account until a patched release ships.",
+      "url": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on Signal",
+      "date": "2026-11-21",
+      "title": "Signal now blocks screenshots by default so built-in AI agents on phones cannot read chats",
+      "tldr": "Signal turned on screenshot blocking by default on Android and iOS to stop operating-system AI agents from reading conversations off the screen. It follows reports that Meta's Muse agent read Signal messages, and Signal says agents can still reach some content through other routes.",
+      "smb": "Review which AI assistants on company phones and laptops can read the screen or notifications, and exclude messaging and finance apps where the OS allows it.",
+      "url": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on NebuSec",
+      "date": "2026-11-21",
+      "title": "One malicious webpage let researchers take over Meta's Muse agent and its users' private chats",
+      "tldr": "NebuSec showed that a booby-trapped page opened by Meta's Muse agent could copy and change a user's chat history and memories without any approval prompt. Chained with a Linux kernel bug, it gave full control of that user's cloud machine; the researchers say the issues were fixed before publication.",
+      "smb": "Keep browsing agents away from accounts and memories holding sensitive data, and require a human approval step before an agent sends data anywhere new.",
+      "url": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "The Record, on the U.S. House",
