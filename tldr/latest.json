@@ -1,59 +1,59 @@
 {
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "items": [
     {
-      "title": "Yesterday's VMware vCenter flaw was used as a zero-day by China-linked hackers",
-      "why": "Google and Mandiant say the Armory Castle group exploited the vCenter login bypass since early September to get admin access, forge sign-in tokens and steal data. Broadcom's November 19 builds fix it.",
-      "action": "Install Broadcom's November 19 vCenter fix today (8.0 U3m or newer), keep vCenter off the internet, and have your IT provider check for unknown SSO admin accounts.",
-      "heat": 5,
-      "cat": "patch",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html"
-    },
-    {
-      "title": "SonicWall says Gen 6 firewalls will get no more patches, even for critical flaws",
-      "why": "SonicWall urges anyone still running Gen 6 models such as the TZ300-TZ600, SOHO 250 and NSA 2600-6600 to replace them now, and expects internet-facing units to be actively targeted.",
-      "action": "Check your firewall model; if it is Gen 6, plan a replacement, and until then turn off WAN management, restrict or disable SSL VPN, require MFA and reset local passwords.",
-      "heat": 4,
-      "cat": "vpn",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html"
-    },
-    {
-      "title": "Bell Canada says an 'agentic' hacker stole business customer data from a test system",
-      "why": "Bell says an intruder got into a pre-production copy of its circuit ordering system on November 17 and took enterprise customers' contact details, ticket titles and some IP addresses. Services were not affected.",
-      "action": "Treat test and staging systems like production: keep real customer data out of them, put them behind MFA, and watch Bell-themed emails for social engineering.",
+      "title": "FBI investigates a breach of NCIC, the national crime database police use daily",
+      "why": "The FBI is probing an apparent intrusion into the National Crime Information Center, which agencies use for warrants and background checks. It is the second FBI system breach in recent months; no details on the data taken yet.",
+      "action": "Treat any call or email citing a warrant, background check or police record as suspect, and verify it by calling the agency's published number before acting.",
       "heat": 4,
       "cat": "breach",
-      "source_name": "BleepingComputer",
-      "source_url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/"
+      "source_name": "WSVN 7News (CNN)",
+      "source_url": "https://wsvn.com/news/us-world/fbi-investigates-ncic-breach/"
     },
     {
-      "title": "Attackers exploit a critical Cisco Expressway flaw soon after exploit code went public",
-      "why": "Researchers at F6 saw attackers gain root on internet-facing Expressway devices, then move into the internal network to steal credentials. Cisco released fixes on October 21.",
-      "action": "Update Cisco Expressway to X15.5.20 or later, and ask your IT provider to check the devices for signs of compromise.",
-      "heat": 4,
-      "cat": "patch",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-cisco.html"
-    },
-    {
-      "title": "JPMorgan, Visa and Mastercard confirm vendor breaches after the n0n gang leaks data",
-      "why": "All three say outside service providers were hit and that marketing data such as customer emails was exposed, not card numbers. The gang has posted the data for download.",
-      "action": "Expect phishing that uses these bank and card brands, and remind staff to reach their bank only through its app or the number on the card.",
-      "heat": 4,
-      "cat": "breach",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/jpmorgan-visa-mastercard-cite-third-party-incidents-amid-data-leak/"
-    },
-    {
-      "title": "N-able says credentials may have been taken in its Mail Assure hack; portal still down",
-      "why": "N-able says an intruder on one web server may have accessed stored credentials. It revoked customer API tokens and OAuth tokens and reset local passwords; mail filtering still works.",
-      "action": "If you or your MSP use Mail Assure or SpamExperts, follow N-able's guidance, reissue API tokens and change any passwords that were stored on the platform.",
+      "title": "Unpatched Windows 11 trick uses Narrator to get past the lock screen",
+      "why": "A researcher released a working exploit, FastUnlock, that abuses the Narrator screen reader to run code from the Windows 11 lock screen. It needs physical access and a Microsoft-linked account. No patch yet.",
+      "action": "Keep laptops physically secured, turn on BitLocker, and watch for Microsoft's fix in the next Windows update; install it as soon as it ships.",
       "heat": 3,
-      "cat": "cloud",
+      "cat": "patch",
       "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/n-able-blames-service-disruption-on-cyberattack/"
+      "source_url": "https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/"
+    },
+    {
+      "title": "Ruby patches seven flaws, including 'Ruby2Shell' that can reach Rails and Sinatra apps",
+      "why": "Ruby fixed seven bugs in its regex and string code; proof-of-concept code exists for five. Default Rails and Sinatra apps may be reachable without login. GitLab, Mastodon, Discourse and others have patched.",
+      "action": "Update Ruby to 4.0.10, 3.4.13 or 3.3.14, and ask vendors of any Ruby-based web app or GitHub Enterprise Server you run when their patched build ships.",
+      "heat": 3,
+      "cat": "patch",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/"
+    },
+    {
+      "title": "European Commission confirms an AI-assisted attack took services offline for over 10 days",
+      "why": "The Commission said attackers used an AI tool; its HR, medical claims and translation systems were pulled offline. The Artex AI framework has also been tied to attacks on Barracuda, Railway and ConnectWise customers.",
+      "action": "Patch internet-facing systems within days, not weeks, and remove old vendor and integration keys you no longer use; AI tools are speeding up how fast attackers find gaps.",
+      "heat": 3,
+      "cat": "ai",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/"
+    },
+    {
+      "title": "West Virginia Legislature hit by a cyberattack that took down its website and IT systems",
+      "why": "The attack began Thursday and was still ongoing Friday; some legislative systems were disabled. Officials did not say whether it was ransomware, and no group has claimed it. Other state agencies are not affected.",
+      "action": "Write down how your office would keep working for a week without email or its website, and test that your backups restore before you need them.",
+      "heat": 3,
+      "cat": "ransomware",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/west-virginia-legislature-cyberattack"
+    },
+    {
+      "title": "WhatsApp fixes an Android flaw a scammer used to make messages look more credible",
+      "why": "A bug in Click to WhatsApp ad replies could reveal a phone's IP address; WhatsApp believes a scammer abused it. It affects WhatsApp and WhatsApp Business for Android before 2.26.17.4.",
+      "action": "Update WhatsApp and WhatsApp Business on staff Android phones to 2.26.17.4 or later, and remind staff not to act on payment requests sent over WhatsApp.",
+      "heat": 2,
+      "cat": "phishing",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/"
     }
   ]
 }

@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "items": [
+    {
+      "date": "2026-11-21",
+      "title": "FBI investigates a breach of NCIC, the national crime database police use daily",
+      "why": "The FBI is probing an apparent intrusion into the National Crime Information Center, which agencies use for warrants and background checks. It is the second FBI system breach in recent months; no details on the data taken yet.",
+      "action": "Treat any call or email citing a warrant, background check or police record as suspect, and verify it by calling the agency's published number before acting.",
+      "source_name": "WSVN 7News (CNN)",
+      "source_url": "https://wsvn.com/news/us-world/fbi-investigates-ncic-breach/",
+      "heat": 4,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-21",
+      "title": "Unpatched Windows 11 trick uses Narrator to get past the lock screen",
+      "why": "A researcher released a working exploit, FastUnlock, that abuses the Narrator screen reader to run code from the Windows 11 lock screen. It needs physical access and a Microsoft-linked account. No patch yet.",
+      "action": "Keep laptops physically secured, turn on BitLocker, and watch for Microsoft's fix in the next Windows update; install it as soon as it ships.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/",
+      "heat": 3,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-21",
+      "title": "Ruby patches seven flaws, including 'Ruby2Shell' that can reach Rails and Sinatra apps",
+      "why": "Ruby fixed seven bugs in its regex and string code; proof-of-concept code exists for five. Default Rails and Sinatra apps may be reachable without login. GitLab, Mastodon, Discourse and others have patched.",
+      "action": "Update Ruby to 4.0.10, 3.4.13 or 3.3.14, and ask vendors of any Ruby-based web app or GitHub Enterprise Server you run when their patched build ships.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/",
+      "heat": 3,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-21",
+      "title": "European Commission confirms an AI-assisted attack took services offline for over 10 days",
+      "why": "The Commission said attackers used an AI tool; its HR, medical claims and translation systems were pulled offline. The Artex AI framework has also been tied to attacks on Barracuda, Railway and ConnectWise customers.",
+      "action": "Patch internet-facing systems within days, not weeks, and remove old vendor and integration keys you no longer use; AI tools are speeding up how fast attackers find gaps.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/",
+      "heat": 3,
+      "cat": "ai"
+    },
+    {
+      "date": "2026-11-21",
+      "title": "West Virginia Legislature hit by a cyberattack that took down its website and IT systems",
+      "why": "The attack began Thursday and was still ongoing Friday; some legislative systems were disabled. Officials did not say whether it was ransomware, and no group has claimed it. Other state agencies are not affected.",
+      "action": "Write down how your office would keep working for a week without email or its website, and test that your backups restore before you need them.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/west-virginia-legislature-cyberattack",
+      "heat": 3,
+      "cat": "ransomware"
+    },
+    {
+      "date": "2026-11-21",
+      "title": "WhatsApp fixes an Android flaw a scammer used to make messages look more credible",
+      "why": "A bug in Click to WhatsApp ad replies could reveal a phone's IP address; WhatsApp believes a scammer abused it. It affects WhatsApp and WhatsApp Business for Android before 2.26.17.4.",
+      "action": "Update WhatsApp and WhatsApp Business on staff Android phones to 2.26.17.4 or later, and remind staff not to act on payment requests sent over WhatsApp.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/",
+      "heat": 2,
+      "cat": "phishing"
+    },
     {
       "date": "2026-11-20",
       "title": "Yesterday's VMware vCenter flaw was used as a zero-day by China-linked hackers",
