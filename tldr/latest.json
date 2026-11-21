@@ -2,6 +2,15 @@
   "date": "2026-11-21",
   "items": [
     {
+      "title": "CISA confirms attacks on VMware vCenter and Cisco Expressway flaws; patch by Nov. 23",
+      "why": "CISA added four exploited flaws to its KEV list on Friday: VMware vCenter, Cisco Expressway, Apache Roller and SAP NetWeaver. China-linked hackers paired the vCenter bug with a BeyondTrust Remote Support flaw.",
+      "action": "Install the November vCenter and Apache Roller fixes and the October Expressway update now, and confirm BeyondTrust Remote Support is fully patched.",
+      "heat": 4,
+      "cat": "patch",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html"
+    },
+    {
       "title": "FBI investigates a breach of NCIC, the national crime database police use daily",
       "why": "The FBI is probing an apparent intrusion into the National Crime Information Center, which agencies use for warrants and background checks. It is the second FBI system breach in recent months; no details on the data taken yet.",
       "action": "Treat any call or email citing a warrant, background check or police record as suspect, and verify it by calling the agency's published number before acting.",
@@ -9,6 +18,15 @@
       "cat": "breach",
       "source_name": "WSVN 7News (CNN)",
       "source_url": "https://wsvn.com/news/us-world/fbi-investigates-ncic-breach/"
+    },
+    {
+      "title": "Fake 'verify you are human' prompts push remote-control malware via ads and hacked sites",
+      "why": "Several ClickFix campaigns trick people into pasting a command that installs remote-access tools, using 70,000 hacked sites, WordPress admin logins and a Google ad for Amazon Business that leads to a fake login page.",
+      "action": "Tell staff that no real website asks them to paste a command into Windows Run or PowerShell, and block or alert on unapproved remote tools like NetSupport.",
+      "heat": 3,
+      "cat": "phishing",
+      "source_name": "The Hacker News",
+      "source_url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html"
     },
     {
       "title": "Unpatched Windows 11 trick uses Narrator to get past the lock screen",
@@ -36,24 +54,6 @@
       "cat": "ai",
       "source_name": "SecurityWeek",
       "source_url": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/"
-    },
-    {
-      "title": "West Virginia Legislature hit by a cyberattack that took down its website and IT systems",
-      "why": "The attack began Thursday and was still ongoing Friday; some legislative systems were disabled. Officials did not say whether it was ransomware, and no group has claimed it. Other state agencies are not affected.",
-      "action": "Write down how your office would keep working for a week without email or its website, and test that your backups restore before you need them.",
-      "heat": 3,
-      "cat": "ransomware",
-      "source_name": "The Record",
-      "source_url": "https://therecord.media/west-virginia-legislature-cyberattack"
-    },
-    {
-      "title": "WhatsApp fixes an Android flaw a scammer used to make messages look more credible",
-      "why": "A bug in Click to WhatsApp ad replies could reveal a phone's IP address; WhatsApp believes a scammer abused it. It affects WhatsApp and WhatsApp Business for Android before 2.26.17.4.",
-      "action": "Update WhatsApp and WhatsApp Business on staff Android phones to 2.26.17.4 or later, and remind staff not to act on payment requests sent over WhatsApp.",
-      "heat": 2,
-      "cat": "phishing",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/whatsapp-fixes-flaw-uncovered-while-disrupting-scam-campaign/"
     }
   ]
 }
