@@ -136,7 +136,7 @@
       btn.disabled = true; btn.textContent = 'Sending…';
       fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
         .then(function (r) { if (!r.ok) throw new Error(); f.reset(); btn.textContent = 'You’re on the list'; msg.textContent = 'Thanks. We’ll email you when the PQC Toolkit launches.'; })
-        .catch(function () { btn.disabled = false; btn.textContent = label; msg.textContent = 'That didn’t go through. Please try again, or email contact@phortex.com.'; });
+        .catch(function () { btn.disabled = false; btn.textContent = label; msg.textContent = 'That didn’t go through. Please try again, or email jeff@phortex.com.'; });
     });
   });
 })();

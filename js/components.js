@@ -32,13 +32,7 @@
       <div>
         <div class="footer-brand-logo">PHORTEX<span style="color:var(--cyan)">.</span></div>
         <p class="footer-tagline">Cybersecurity consulting, AI strategy, and a learning academy — built on 25 years of hands-on expertise and Wharton business thinking.</p>
-        <p class="footer-contact"><a href="tel:+12676411557">267-641-1557</a><br><a href="mailto:contact@phortex.com">contact@phortex.com</a></p>
-        <div class="footer-socials">
-          <a href="https://linkedin.com/company/phortex-llc" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">in</a>
-          <a href="https://x.com/PhortexLLC" target="_blank" rel="noopener" class="footer-social-btn" aria-label="X / Twitter">𝕏</a>
-          <a href="https://youtube.com/@PhortexLLC" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">▶</a>
-          <a href="https://tiktok.com/@PhortexSecure" target="_blank" rel="noopener" class="footer-social-btn" aria-label="TikTok">♪</a>
-        </div>
+        <p class="footer-contact"><a href="tel:+12676411557">267-641-1557</a><br><a href="mailto:jeff@phortex.com">jeff@phortex.com</a></p>
       </div>
       <div class="footer-col">
         <h5>Security</h5>

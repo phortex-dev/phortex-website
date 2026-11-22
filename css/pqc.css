@@ -237,7 +237,7 @@
 .pq-band-tl span { font-size: 0.875rem; color: var(--gray-300); }
 
 /* Contact form consent */
-.form-consent { display: flex; gap: 0.75rem; align-items: flex-start; }
+.form-group.form-consent { display: flex; flex-direction: row; gap: 0.75rem; align-items: flex-start; }
 .form-consent input { width: 20px; height: 20px; margin-top: 3px; flex: none; accent-color: var(--cyan); }
 .form-consent label { font-size: 0.78rem; line-height: 1.6; color: var(--gray-300); }
 .form-consent a { color: var(--cyan); text-decoration: underline; }
