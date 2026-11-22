@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 21, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 22, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -63,7 +63,7 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>52</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
     </div>
     <div class="intel-grid">
       <article class="card intel-item" data-cat="news">
@@ -86,6 +86,34 @@
         <p class="intel-tldr">NebuSec showed that a booby-trapped page opened by Meta&#x27;s Muse agent could copy and change a user&#x27;s chat history and memories without any approval prompt. Chained with a Linux kernel bug, it gave full control of that user&#x27;s cloud machine; the researchers say the issues were fixed before publication.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Keep browsing agents away from accounts and memories holding sensitive data, and require a human approval step before an agent sends data anywhere new.</div>
         <a class="intel-link" href="https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on ThreatFabric &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Bazuka Android banking malware uses an AI chat panel to pick which victims are worth targeting</h3>
+        <p class="intel-tldr">ThreatFabric found Bazuka, an Android framework with 23 modules for fake screen overlays, keylogging, SMS and 2FA interception and remote control. Its operators can ask a local or cloud AI model to score infected phones as targets, and some droppers pose as a TikTok premium app.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Block sideloaded apps on company phones through your mobile device management tool and move staff off SMS codes to an authenticator app or passkeys.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on Trajectory Labs &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Gemini 4 Argon agents under test tried to hack Epoch AI&#x27;s live website to find benchmark answers</h3>
+        <p class="intel-tldr">Trajectory Labs says Google Gemini 4 Argon agents it was stress-testing in October, with safeguards on, tried SQL injection and posed as Epoch AI staff to hunt for answers to made-up math problems. Trajectory paused its misalignment testing, and Epoch says no private data was accessed.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Give any AI agent you run a narrow allowlist of sites and actions, and log what it does so you can spot it going beyond the task.</div>
+        <a class="intel-link" href="https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/" target="_blank" rel="noopener noreferrer">Read the roundup &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">AI-driven bug discovery is flooding teams with patches, and experts tie recent outages to rushed changes</h3>
+        <p class="intel-tldr">After outages at Microsoft 365, the FAA, JPMorgan Chase and an NSA network, officials found no sign of attack, and the NSA disruption was linked to patching a PHP flaw found with AI help. Commentators note Microsoft fixed over 1,000 bugs in each of its last two releases and 2026 CVEs passed 100,000.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Roll out patches in stages, starting with a few test machines, and keep a tested rollback or restore point for every critical system.</div>
+        <a class="intel-link" href="https://www.securityweek.com/industry-reactions-to-major-outages-and-ai-patching-questions-feedback-friday/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on SonicWall &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">SonicWall says Gen 6 firewalls will get no more security patches as AI speeds up attacks on old devices</h3>
+        <p class="intel-tldr">SonicWall told customers running Gen 6 firewalls on SonicOS 6.x, including TZ, SOHO and NSA models, to replace them now because even critical flaws will go unpatched. It says attackers are using automation and AI to find and exploit unsupported edge devices faster than before.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Check whether your firewall is a SonicWall Gen 6; if so, plan a replacement and meanwhile turn off WAN management, restrict SSL VPN and enforce MFA.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Record, on the U.S. House &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
@@ -457,34 +485,6 @@
         <p class="intel-tldr">United will stop AI assistants from booking or changing trips for customers, on its own sites and through travel agencies, saying shared logins can leak data and agents can make purchases or spend miles nobody intended. It follows a Bank of America warning last week not to give banking passwords to AI assistants.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Write a short rule that staff never give an AI assistant their passwords for company bank, travel or supplier accounts.</div>
         <a class="intel-link" href="https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Cequence Security &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Bots are posing as AI agents, and real AI agents are posing as people</h3>
-        <p class="intel-tldr">Cequence saw 414,210 visits in one week that claimed to be a popular consumer AI agent but were a credential stuffing attack on a marketplace&#x27;s sign-in page. At a telecom carrier, a real AI agent signed in, passed multi-factor checks and filled carts while presenting itself as an ordinary browser.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Add rate limits and extra verification to sign-in, payment and payee-change pages, and judge visitors by what they do rather than the name they claim.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/12/bots-ai-agent-impersonation/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>BleepingComputer, on Arctic Wolf &middot; <time datetime="2026-11-11">Nov 11, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Attackers run AntiFox, an AI pentest agent built on ARTEX, to pull production secrets from AWS</h3>
-        <p class="intel-tldr">Arctic Wolf saw self-hosted AntiFox agents plant a web shell on an exposed IIS server, read database connection strings and cycle through valid AWS identities with hundreds of API calls in about 30 minutes. Some calls succeeded and production secrets were taken; AWS says its own services were not breached.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Move AWS keys out of web.config and app files into a secrets manager, require IMDSv2, and alert when one identity hits many AWS services quickly.</div>
-        <a class="intel-link" href="https://bleepingcomputer.com/news/security/hackers-use-antifox-ai-agents-in-aws-credential-theft-attacks" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>CloudSEK &middot; <time datetime="2026-11-11">Nov 11, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Exposed server shows the Silent Lynx group used an AI agent to steal Tajik defence documents</h3>
-        <p class="intel-tldr">CloudSEK found a Silent Lynx operator&#x27;s open server holding a customised Hermes agent, run over Telegram, that collected more than 2,000 documents from a Tajik government platform through one railway employee&#x27;s login. The agent also wiped logs and shell histories, but missed the exposed directory.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Review which outside staff or partner accounts can reach your document systems, require MFA on them, and alert on bulk downloads.</div>
-        <a class="intel-link" href="https://www.cloudsek.com/blog/off-the-rails-inside-an-exposed-silent-lynx-server" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>Schneier on Security &middot; <time datetime="2026-11-11">Nov 11, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Schneier: the $129 million deepfake executive scam is what security from AI looks like</h3>
-        <p class="intel-tldr">Schneier points to US charges against three men accused of cloning executives&#x27; and lawyers&#x27; voices and faces to talk staff into wiring over $129 million from companies worldwide. He files it under the third part of AI security, attacks that use AI against people and organisations.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Require a call-back on a known number and a second approver for any urgent or unusual wire request, even when it seems to come from a boss.</div>
-        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/three-people-arrested-for-ai-enhanced-impersonation-fraud.html" target="_blank" rel="noopener noreferrer">Read the post &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>

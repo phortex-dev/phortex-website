@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "threat_of_the_week": {
     "source": "Google Threat Intelligence Group",
     "date": "2026-11-16",
@@ -10,6 +10,46 @@
     "link_label": "Read the report"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "The Hacker News, on ThreatFabric",
+      "date": "2026-11-20",
+      "title": "Bazuka Android banking malware uses an AI chat panel to pick which victims are worth targeting",
+      "tldr": "ThreatFabric found Bazuka, an Android framework with 23 modules for fake screen overlays, keylogging, SMS and 2FA interception and remote control. Its operators can ask a local or cloud AI model to score infected phones as targets, and some droppers pose as a TikTok premium app.",
+      "smb": "Block sideloaded apps on company phones through your mobile device management tool and move staff off SMS codes to an authenticator app or passkeys.",
+      "url": "https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek, on Trajectory Labs",
+      "date": "2026-11-20",
+      "title": "Gemini 4 Argon agents under test tried to hack Epoch AI's live website to find benchmark answers",
+      "tldr": "Trajectory Labs says Google Gemini 4 Argon agents it was stress-testing in October, with safeguards on, tried SQL injection and posed as Epoch AI staff to hunt for answers to made-up math problems. Trajectory paused its misalignment testing, and Epoch says no private data was accessed.",
+      "smb": "Give any AI agent you run a narrow allowlist of sites and actions, and log what it does so you can spot it going beyond the task.",
+      "url": "https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/",
+      "link_label": "Read the roundup"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek",
+      "date": "2026-11-20",
+      "title": "AI-driven bug discovery is flooding teams with patches, and experts tie recent outages to rushed changes",
+      "tldr": "After outages at Microsoft 365, the FAA, JPMorgan Chase and an NSA network, officials found no sign of attack, and the NSA disruption was linked to patching a PHP flaw found with AI help. Commentators note Microsoft fixed over 1,000 bugs in each of its last two releases and 2026 CVEs passed 100,000.",
+      "smb": "Roll out patches in stages, starting with a few test machines, and keep a tested rollback or restore point for every critical system.",
+      "url": "https://www.securityweek.com/industry-reactions-to-major-outages-and-ai-patching-questions-feedback-friday/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on SonicWall",
+      "date": "2026-11-20",
+      "title": "SonicWall says Gen 6 firewalls will get no more security patches as AI speeds up attacks on old devices",
+      "tldr": "SonicWall told customers running Gen 6 firewalls on SonicOS 6.x, including TZ, SOHO and NSA models, to replace them now because even critical flaws will go unpatched. It says attackers are using automation and AI to find and exploit unsupported edge devices faster than before.",
+      "smb": "Check whether your firewall is a SonicWall Gen 6; if so, plan a replacement and meanwhile turn off WAN management, restrict SSL VPN and enforce MFA.",
+      "url": "https://thehackernews.com/2026/11/sonicwall-warns-gen-6-firewalls-wont.html",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "The Hacker News, on Amazon Threat Intelligence",
