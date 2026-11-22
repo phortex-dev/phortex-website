@@ -1,59 +1,30 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "items": [
-    {
-      "title": "CISA confirms attacks on VMware vCenter and Cisco Expressway flaws; patch by Nov. 23",
-      "why": "CISA added four exploited flaws to its KEV list on Friday: VMware vCenter, Cisco Expressway, Apache Roller and SAP NetWeaver. China-linked hackers paired the vCenter bug with a BeyondTrust Remote Support flaw.",
-      "action": "Install the November vCenter and Apache Roller fixes and the October Expressway update now, and confirm BeyondTrust Remote Support is fully patched.",
-      "heat": 4,
-      "cat": "patch",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html"
-    },
-    {
-      "title": "FBI investigates a breach of NCIC, the national crime database police use daily",
-      "why": "The FBI is probing an apparent intrusion into the National Crime Information Center, which agencies use for warrants and background checks. It is the second FBI system breach in recent months; no details on the data taken yet.",
-      "action": "Treat any call or email citing a warrant, background check or police record as suspect, and verify it by calling the agency's published number before acting.",
-      "heat": 4,
-      "cat": "breach",
-      "source_name": "WSVN 7News (CNN)",
-      "source_url": "https://wsvn.com/news/us-world/fbi-investigates-ncic-breach/"
-    },
-    {
-      "title": "Fake 'verify you are human' prompts push remote-control malware via ads and hacked sites",
-      "why": "Several ClickFix campaigns trick people into pasting a command that installs remote-access tools, using 70,000 hacked sites, WordPress admin logins and a Google ad for Amazon Business that leads to a fake login page.",
-      "action": "Tell staff that no real website asks them to paste a command into Windows Run or PowerShell, and block or alert on unapproved remote tools like NetSupport.",
-      "heat": 3,
-      "cat": "phishing",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html"
-    },
-    {
-      "title": "Unpatched Windows 11 trick uses Narrator to get past the lock screen",
-      "why": "A researcher released a working exploit, FastUnlock, that abuses the Narrator screen reader to run code from the Windows 11 lock screen. It needs physical access and a Microsoft-linked account. No patch yet.",
-      "action": "Keep laptops physically secured, turn on BitLocker, and watch for Microsoft's fix in the next Windows update; install it as soon as it ships.",
-      "heat": 3,
-      "cat": "patch",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/in-other-news-norwegian-energy-firm-cyberattacks-supercomputer-hack-new-nightmare-eclipse-exploit/"
-    },
-    {
-      "title": "Ruby patches seven flaws, including 'Ruby2Shell' that can reach Rails and Sinatra apps",
-      "why": "Ruby fixed seven bugs in its regex and string code; proof-of-concept code exists for five. Default Rails and Sinatra apps may be reachable without login. GitLab, Mastodon, Discourse and others have patched.",
-      "action": "Update Ruby to 4.0.10, 3.4.13 or 3.3.14, and ask vendors of any Ruby-based web app or GitHub Enterprise Server you run when their patched build ships.",
-      "heat": 3,
-      "cat": "patch",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/"
-    },
-    {
-      "title": "European Commission confirms an AI-assisted attack took services offline for over 10 days",
-      "why": "The Commission said attackers used an AI tool; its HR, medical claims and translation systems were pulled offline. The Artex AI framework has also been tied to attacks on Barracuda, Railway and ConnectWise customers.",
-      "action": "Patch internet-facing systems within days, not weeks, and remove old vendor and integration keys you no longer use; AI tools are speeding up how fast attackers find gaps.",
-      "heat": 3,
-      "cat": "ai",
-      "source_name": "SecurityWeek",
-      "source_url": "https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/"
-    }
+    {"title": "Microsoft says a flaw in Entra Connect Health was exploited to read tenant data",
+     "why": "Attackers had read-only access to tenant metadata, including admin and technical contact emails, tenant IDs and license tiers. Microsoft fixed it server-side on Nov. 19 and says no passwords or tokens were exposed.",
+     "action": "Check Azure Service Health for a notice, warn admins to expect targeted phishing, and require phishing-resistant MFA on every privileged account.",
+     "heat": 5, "cat": "cloud", "source_name": "BleepingComputer",
+     "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/"},
+    {"title": "Rackspace Spot breach let hackers read customers' Kubernetes secrets",
+     "why": "Using leaked credentials, an intruder acted as real users in some Spot customer accounts on Nov. 17, able to read cluster secrets and create pods. Rackspace revoked tokens and says service was fully restored Nov. 21.",
+     "action": "If you use Rackspace Spot, reissue API and refresh tokens, rotate every credential stored in cluster secrets, and review logs back to Nov. 17.",
+     "heat": 4, "cat": "cloud", "source_name": "BleepingComputer",
+     "source_url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/"},
+    {"title": "Supplier breach exposed payment details at 40-plus credit unions, unnoticed for six weeks",
+     "why": "Hackers exploited a flaw at software supplier Wellington IT in early October and reached mobile banking members' payment details. Credit unions were not told until Nov. 16. Officials see no sign funds were taken.",
+     "action": "Ask key software vendors in writing how fast they will tell you about a breach, and put a notification deadline in your contracts.",
+     "heat": 3, "cat": "breach", "source_name": "The Record",
+     "source_url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach"},
+    {"title": "The Container Store restores systems after a cyberattack disrupted online orders",
+     "why": "An attack shut down online ordering and limited in-store payments at about 100 US stores; the company says customer financial data does not appear stolen. The n0n extortion gang had listed it on its leak site.",
+     "action": "Write down and practice a manual way to take payments and orders, so the business can keep selling if your main systems go offline.",
+     "heat": 3, "cat": "ransomware", "source_name": "The Record",
+     "source_url": "https://therecord.media/container-store-restores-systems-cyberattack"},
+    {"title": "Austria's Foreign Ministry says intruders viewed staff contact data via its web provider",
+     "why": "Unauthorized access to the ministry's website, run by an outside provider, on Nov. 12-13 exposed names and work contact details of staff at home and abroad. Citizens' data was not affected.",
+     "action": "Confirm that whoever runs your website uses MFA and keeps access logs, and treat any leaked staff contact list as fuel for phishing.",
+     "heat": 2, "cat": "breach", "source_name": "Security Affairs",
+     "source_url": "https://securityaffairs.com/203680/hacking/cyberattack-on-austrian-foreign-ministry-exposes-diplomatic-staff-data.html"}
   ]
 }

@@ -1,6 +1,56 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "items": [
+    {
+      "date": "2026-11-22",
+      "title": "Microsoft says a flaw in Entra Connect Health was exploited to read tenant data",
+      "why": "Attackers had read-only access to tenant metadata, including admin and technical contact emails, tenant IDs and license tiers. Microsoft fixed it server-side on Nov. 19 and says no passwords or tokens were exposed.",
+      "action": "Check Azure Service Health for a notice, warn admins to expect targeted phishing, and require phishing-resistant MFA on every privileged account.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
+      "heat": 5,
+      "cat": "cloud"
+    },
+    {
+      "date": "2026-11-22",
+      "title": "Rackspace Spot breach let hackers read customers' Kubernetes secrets",
+      "why": "Using leaked credentials, an intruder acted as real users in some Spot customer accounts on Nov. 17, able to read cluster secrets and create pods. Rackspace revoked tokens and says service was fully restored Nov. 21.",
+      "action": "If you use Rackspace Spot, reissue API and refresh tokens, rotate every credential stored in cluster secrets, and review logs back to Nov. 17.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/",
+      "heat": 4,
+      "cat": "cloud"
+    },
+    {
+      "date": "2026-11-22",
+      "title": "Supplier breach exposed payment details at 40-plus credit unions, unnoticed for six weeks",
+      "why": "Hackers exploited a flaw at software supplier Wellington IT in early October and reached mobile banking members' payment details. Credit unions were not told until Nov. 16. Officials see no sign funds were taken.",
+      "action": "Ask key software vendors in writing how fast they will tell you about a breach, and put a notification deadline in your contracts.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach",
+      "heat": 3,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-22",
+      "title": "The Container Store restores systems after a cyberattack disrupted online orders",
+      "why": "An attack shut down online ordering and limited in-store payments at about 100 US stores; the company says customer financial data does not appear stolen. The n0n extortion gang had listed it on its leak site.",
+      "action": "Write down and practice a manual way to take payments and orders, so the business can keep selling if your main systems go offline.",
+      "source_name": "The Record",
+      "source_url": "https://therecord.media/container-store-restores-systems-cyberattack",
+      "heat": 3,
+      "cat": "ransomware"
+    },
+    {
+      "date": "2026-11-22",
+      "title": "Austria's Foreign Ministry says intruders viewed staff contact data via its web provider",
+      "why": "Unauthorized access to the ministry's website, run by an outside provider, on Nov. 12-13 exposed names and work contact details of staff at home and abroad. Citizens' data was not affected.",
+      "action": "Confirm that whoever runs your website uses MFA and keeps access logs, and treat any leaked staff contact list as fuel for phishing.",
+      "source_name": "Security Affairs",
+      "source_url": "https://securityaffairs.com/203680/hacking/cyberattack-on-austrian-foreign-ministry-exposes-diplomatic-staff-data.html",
+      "heat": 2,
+      "cat": "breach"
+    },
     {
       "date": "2026-11-21",
       "title": "CISA confirms attacks on VMware vCenter and Cisco Expressway flaws; patch by Nov. 23",
