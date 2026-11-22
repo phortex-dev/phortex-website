@@ -12,6 +12,36 @@
   "items": [
     {
       "cat": "news",
+      "source": "BleepingComputer",
+      "date": "2026-11-20",
+      "title": "Bell Canada says an intruder it calls agentic stole enterprise customer contact data",
+      "tldr": "Bell Canada confirmed an attacker it describes as agentic got into a pre-production copy of its Maximo circuit-ordering system on November 17 and took business contact details, ticket titles and some IP addresses. Bell says no credentials were exposed and it is sharing indicators with affected business customers.",
+      "smb": "Treat test and pre-production systems that hold real customer data like production: lock down access, require MFA and watch their logs.",
+      "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "CSO Online",
+      "date": "2026-11-18",
+      "title": "AI agents found critical nginx flaws, one hidden since 2015, that can lead to full server takeover",
+      "tldr": "F5 patched nginx flaws including CVE-2026-123007, an unauthenticated remote code execution bug in HTTP/2 handling, and four of the five credited research teams used AI agents to find them. Xint chained its finds with an unpatched Linux kernel bug to escape a container to host root.",
+      "smb": "Update nginx to 1.30.7 or 1.31.9, fully restart it rather than reloading, and ask your hosting or web provider to confirm they have done the same.",
+      "url": "https://www.csoonline.com/article/4250460/ai-unearths-internet-breaker-flaws-in-nginx-web-server.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "talk",
+      "source": "null x OWASP Bangalore (slides)",
+      "date": "2026-11-22",
+      "title": "Talk slides: why loading an AI model can run hidden code, and how model signing helps",
+      "tldr": "PayPal security engineer Shivam Saraswat posted slides for a null and OWASP Bangalore talk on AI supply-chain risk, covering backdoored models, poisoned datasets, typosquatted repos and malicious agent skills. The deck recommends signing models when they are made and checking the signature before every load.",
+      "smb": "List the AI models, plugins and agent skills your team downloads, and only allow ones from verified publishers, with pinned versions.",
+      "url": "https://speakerdeck.com/shivamsaraswat/the-invisible-threat-null-x-owasp-bangalore",
+      "link_label": "View the slides"
+    },
+    {
+      "cat": "news",
       "source": "The Hacker News, on ThreatFabric",
       "date": "2026-11-20",
       "title": "Bazuka Android banking malware uses an AI chat panel to pick which victims are worth targeting",

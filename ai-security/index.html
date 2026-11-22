@@ -63,9 +63,16 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>52</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>1</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="talk">
+        <div class="intel-meta"><span class="tag">Talks</span><span>null x OWASP Bangalore (slides) &middot; <time datetime="2026-11-22">Nov 22, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Talk slides: why loading an AI model can run hidden code, and how model signing helps</h3>
+        <p class="intel-tldr">PayPal security engineer Shivam Saraswat posted slides for a null and OWASP Bangalore talk on AI supply-chain risk, covering backdoored models, poisoned datasets, typosquatted repos and malicious agent skills. The deck recommends signing models when they are made and checking the signature before every load.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>List the AI models, plugins and agent skills your team downloads, and only allow ones from verified publishers, with pinned versions.</div>
+        <a class="intel-link" href="https://speakerdeck.com/shivamsaraswat/the-invisible-threat-null-x-owasp-bangalore" target="_blank" rel="noopener noreferrer">View the slides &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Amazon Threat Intelligence &middot; <time datetime="2026-11-21">Nov 21, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Attackers&#x27; AI agents found an unpatched flaw in MONAI Label medical imaging servers and took root</h3>
@@ -86,6 +93,13 @@
         <p class="intel-tldr">NebuSec showed that a booby-trapped page opened by Meta&#x27;s Muse agent could copy and change a user&#x27;s chat history and memories without any approval prompt. Chained with a Linux kernel bug, it gave full control of that user&#x27;s cloud machine; the researchers say the issues were fixed before publication.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Keep browsing agents away from accounts and memories holding sensitive data, and require a human approval step before an agent sends data anywhere new.</div>
         <a class="intel-link" href="https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>BleepingComputer &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Bell Canada says an intruder it calls agentic stole enterprise customer contact data</h3>
+        <p class="intel-tldr">Bell Canada confirmed an attacker it describes as agentic got into a pre-production copy of its Maximo circuit-ordering system on November 17 and took business contact details, ticket titles and some IP addresses. Bell says no credentials were exposed and it is sharing indicators with affected business customers.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Treat test and pre-production systems that hold real customer data like production: lock down access, require MFA and watch their logs.</div>
+        <a class="intel-link" href="https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on ThreatFabric &middot; <time datetime="2026-11-20">Nov 20, 2026</time></span></div>
@@ -184,6 +198,13 @@
         <p class="intel-tldr">Two days after the AI-found Java flaw was patched, GreyNoise, watchTowr and Cloudflare logged scanning and blind exploit attempts, with no confirmed break-ins so far. Cloudflare saw one address used for both Java4Shell probes and the ARTEX AI attack tool, as Cisco, Siemens, Elastic and Red Hat named affected products.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Ask each software vendor whether its product bundles OpenJDK 17 or later, and apply patched Java builds to Jira, Jenkins and Keycloak first.</div>
         <a class="intel-link" href="https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>CSO Online &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">AI agents found critical nginx flaws, one hidden since 2015, that can lead to full server takeover</h3>
+        <p class="intel-tldr">F5 patched nginx flaws including CVE-2026-123007, an unauthenticated remote code execution bug in HTTP/2 handling, and four of the five credited research teams used AI agents to find them. Xint chained its finds with an unpatched Linux kernel bug to escape a container to host root.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Update nginx to 1.30.7 or 1.31.9, fully restart it rather than reloading, and ask your hosting or web provider to confirm they have done the same.</div>
+        <a class="intel-link" href="https://www.csoonline.com/article/4250460/ai-unearths-internet-breaker-flaws-in-nginx-web-server.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>BleepingComputer, on Ukraine and the FBI &middot; <time datetime="2026-11-18">Nov 18, 2026</time></span></div>
@@ -464,27 +485,6 @@
         <p class="intel-tldr">Palo Alto Networks&#x27; Unit 42 says a likely China-linked operator ran 25 autonomous intrusions with a modified Cairn framework, targeting 19 chip makers, defence groups and civil society bodies and breaching 10, including a US teachers&#x27; union. The AI found weak passwords, exposed APIs and old CVEs, not new tricks.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Run a quick audit for default or reused passwords, open registration pages and internet-facing APIs, since AI attack tools find those first.</div>
         <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/12/cairn-autonomous-ai-cyberattacks/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Aikido Security and SafeDep &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Stolen logins for 4,837 GitHub accounts used to plant a CI secret stealer that also grabs AI keys</h3>
-        <p class="intel-tldr">Since Tuesday an attacker has used hijacked GitHub accounts to slip a stealer into at least 1,806 repositories, taking cloud credentials, CI tokens and AI service keys before quietly reverting the changes. Some victims publish npm, Go, Packagist and PyPI packages, and the attacker left AWS and Azure backdoors.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Search your repositories for a wfx-docs branch, rotate every secret your workflows can read, including AI keys, and require 2FA on all GitHub accounts.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Apache &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Critical Apache web server flaw, first reported by Anthropic&#x27;s AI scanner, is fixed in 2.4.71</h3>
-        <p class="intel-tldr">A flaw in Apache&#x27;s HTTP/2 module lets an unauthenticated attacker run code on servers from 2.4.55 to 2.4.70 that have HTTP/2 turned on. Anthropic&#x27;s free AI scanner for open-source projects reported it in October, Google researchers found it independently, and several Linux distributions still lack a fix.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Ask your web host or IT provider whether your Apache servers run HTTP/2, and update to 2.4.71 or switch HTTP/2 off until a patch is available.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>TechCrunch, on United Airlines &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">United Airlines blocks AI agents from booking flights and managing reservations</h3>
-        <p class="intel-tldr">United will stop AI assistants from booking or changing trips for customers, on its own sites and through travel agencies, saying shared logins can leak data and agents can make purchases or spend miles nobody intended. It follows a Bank of America warning last week not to give banking passwords to AI assistants.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Write a short rule that staff never give an AI assistant their passwords for company bank, travel or supplier accounts.</div>
-        <a class="intel-link" href="https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
