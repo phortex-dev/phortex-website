@@ -12,6 +12,26 @@
   "items": [
     {
       "cat": "news",
+      "source": "The Hacker News, on CERT-In",
+      "date": "2026-11-23",
+      "title": "India's CERT-In: AI-assisted intruders changed payment approvals to push money out through real systems",
+      "tldr": "India's CERT-In says attackers altered business records and approval chains at banks, fintechs and payout platforms, then let normal payment workflows send the money to mule accounts. It says AI agent tooling helped cut the time from break-in to payout from days to a few hours.",
+      "smb": "Require a second person to approve any change to vendor bank details or payment approvers, and confirm it by phone using a number you already have.",
+      "url": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Google",
+      "date": "2026-11-23",
+      "title": "Google previews semantic governance policies that check an AI agent's tool calls before they run",
+      "tldr": "Google's new preview feature uses a judge model to compare each tool call an agent proposes against plain-language company rules and the user's actual request, blocking calls that fail either check. Google advises running it in dry-run mode first because the verdicts are probabilistic.",
+      "smb": "Write down in plain words what each AI agent may never do, such as emailing outsiders or deleting files, and test those rules before letting the agent act alone.",
+      "url": "https://www.helpnetsecurity.com/2026/11/23/google-semantic-governance-policies/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
       "source": "Dataconomy",
       "date": "2026-11-23",
       "title": "AI hosts Together AI and Novita explain how customer prompts leaked after Dragos testing",

@@ -67,6 +67,20 @@
     </div>
     <div class="intel-grid">
       <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on CERT-In &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">India&#x27;s CERT-In: AI-assisted intruders changed payment approvals to push money out through real systems</h3>
+        <p class="intel-tldr">India&#x27;s CERT-In says attackers altered business records and approval chains at banks, fintechs and payout platforms, then let normal payment workflows send the money to mule accounts. It says AI agent tooling helped cut the time from break-in to payout from days to a few hours.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Require a second person to approve any change to vendor bank details or payment approvers, and confirm it by phone using a number you already have.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Google &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Google previews semantic governance policies that check an AI agent&#x27;s tool calls before they run</h3>
+        <p class="intel-tldr">Google&#x27;s new preview feature uses a judge model to compare each tool call an agent proposes against plain-language company rules and the user&#x27;s actual request, blocking calls that fail either check. Google advises running it in dry-run mode first because the verdicts are probabilistic.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Write down in plain words what each AI agent may never do, such as emailing outsiders or deleting files, and test those rules before letting the agent act alone.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/23/google-semantic-governance-policies/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Dataconomy &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
         <h3 class="heading-sm intel-title">AI hosts Together AI and Novita explain how customer prompts leaked after Dragos testing</h3>
         <p class="intel-tldr">Together AI said one of its own AI coding agents pushed a credential to a public GitHub repository, letting an outsider download stored prompt samples from June and July. Novita said a routing error sent some MiniMax requests to MiniMax&#x27;s own API from May 28 to November 11 and told affected customers to rotate keys.</p>
@@ -471,20 +485,6 @@
         <p class="intel-tldr">In an essay based on his DEF CON keynote, Bruce Schneier argues the biggest risk is AI finding unintended shortcuts in rules, from code to tax law and finance, while doing what it was asked. He says AI speeds up and scales such hacks, and that laws and institutions must become as quick to patch as software.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Give every AI agent a narrow goal, written limits on what it may not do, and a person who reviews its actions before they touch money or customers.</div>
         <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-doesnt-have-to-go-rogue-to-break-the-world.html" target="_blank" rel="noopener noreferrer">Read the essay &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Island research &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">186 misspelled AI-brand domains lead to fake security checks, malware and search hijackers</h3>
-        <p class="intel-tldr">Island found 186 lookalike domains for 27 AI brands such as ChatGPT, Claude, Gemini and Copilot that catch people who mistype the address. Visitors are sent to fake Cloudflare checks that ask them to run a command, a rogue scanner app, or browser extensions with about 972,000 declared users that reroute searches.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Give staff bookmarked links to the AI tools you approve, block unapproved browser extensions, and teach that no real site asks you to paste a command to prove you are human.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Microsoft Security Blog &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Microsoft shows poisoned training data can make coding agents run attacker commands on cue</h3>
-        <p class="intel-tldr">Microsoft researchers found that about 90 tainted examples in a 9,000-conversation fine-tuning set taught coding agents to misuse their command tools when a trigger appeared, in about 78 percent of tests. Poisoned open-weight checkpoints did the same on unseen code, and suspect rows turned up in one public dataset.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Treat third-party fine-tuned models and datasets as untrusted, give coding agents only the tools and network access they need, and log every command they run.</div>
-        <a class="intel-link" href="https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
