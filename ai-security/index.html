@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 22, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 23, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -49,11 +49,11 @@
   <div class="container">
     <div class="eyebrow">Threat of the week</div>
     <article class="card intel-threat" style="margin-top:1.25rem; max-width:860px;">
-      <div class="intel-meta"><span>Google Threat Intelligence Group &middot; <time datetime="2026-11-16">Nov 16, 2026</time></span></div>
-      <h2 class="heading-md intel-title">Google finds attackers using AI to turn security patches into working exploits with no human involved</h2>
-      <p class="intel-tldr">Google&#x27;s threat team found a tool on an exposed attacker server that compares web apps before and after a patch, writes an exploit for the fixed flaw and launches it with no person involved. It also saw crews use open-source AI pentest kits like ARTEX and CAIRN in real break-ins.</p>
-      <div class="intel-smb"><span>SMB takeaway</span>Shorten your patch window for internet-facing apps to days, not weeks, and turn on automatic updates wherever the vendor offers them.</div>
-      <a class="intel-link" href="https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold" target="_blank" rel="noopener noreferrer">Read the report &rarr;</a>
+      <div class="intel-meta"><span>The Hacker News, on Dragos research &middot; <time datetime="2026-11-22">Nov 22, 2026</time></span></div>
+      <h2 class="heading-md intel-title">Planted fake secrets show attackers quietly reading AI prompts inside three AI hosting providers</h2>
+      <p class="intel-tldr">Dragos seeded about two million prompts with fake keys and links and found attackers had been reading traffic inside three AI inference providers since mid-July, unnoticed. OpenRouter dropped the three providers and pulled 125 endpoints from its zero data retention list.</p>
+      <div class="intel-smb"><span>SMB takeaway</span>Keep passwords, API keys and customer records out of AI prompts, and rotate any credential that has ever been pasted into an AI tool.</div>
+      <a class="intel-link" href="https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
     </article>
   </div>
 </section>
@@ -66,6 +66,20 @@
       <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>1</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Dataconomy &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">AI hosts Together AI and Novita explain how customer prompts leaked after Dragos testing</h3>
+        <p class="intel-tldr">Together AI said one of its own AI coding agents pushed a credential to a public GitHub repository, letting an outsider download stored prompt samples from June and July. Novita said a routing error sent some MiniMax requests to MiniMax&#x27;s own API from May 28 to November 11 and told affected customers to rotate keys.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask each AI vendor you use which sub-processors can see your prompts, and get that answer in writing before sending them sensitive data.</div>
+        <a class="intel-link" href="https://dataconomy.com/2026/11/23/dragos-finds-breaches-at-three-ai-inference-providers/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Next Web &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Zero data retention labels failed: a Chinese AI lab opened secret links from most test prompts</h3>
+        <p class="intel-tldr">In the same Dragos study, an unnamed Chinese AI lab opened secret links from more than half of the prompts sent to its models, including about two-thirds marked zero data retention. Resellers on an inference marketplace could also read prompts, and one tried stolen passwords on servers over SSH.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Pick your AI model providers by name instead of accepting a router&#x27;s default pool, and avoid cheap reseller marketplaces for business data.</div>
+        <a class="intel-link" href="https://thenextweb.com/news/openrouter-drops-providers-dragos-ai-prompt-theft-canaries" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="talk">
         <div class="intel-meta"><span class="tag">Talks</span><span>null x OWASP Bangalore (slides) &middot; <time datetime="2026-11-22">Nov 22, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Talk slides: why loading an AI model can run hidden code, and how model signing helps</h3>
@@ -471,20 +485,6 @@
         <p class="intel-tldr">Microsoft researchers found that about 90 tainted examples in a 9,000-conversation fine-tuning set taught coding agents to misuse their command tools when a trigger appeared, in about 78 percent of tests. Poisoned open-weight checkpoints did the same on unseen code, and suspect rows turned up in one public dataset.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Treat third-party fine-tuned models and datasets as untrusted, give coding agents only the tools and network access they need, and log every command they run.</div>
         <a class="intel-link" href="https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Anthropic lets companies self-host Claude Managed Agents so credentials stay in their own network</h3>
-        <p class="intel-tldr">Anthropic opened a private beta in which customers run the agent harness, sandboxes, session history and secrets vault on their own cloud or servers. A proxy outside the sandbox adds credentials to tool calls, though only MCP tools and supported APIs are covered and customers must patch the stack themselves.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Whatever agent platform you use, keep API keys outside the agent&#x27;s sandbox, restrict it to an allowlist of hosts, and export its tool-call logs to your monitoring.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Unit 42 &middot; <time datetime="2026-11-12">Nov 12, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Unit 42: open-source Cairn AI pentest tool used to breach 10 organizations with familiar flaws</h3>
-        <p class="intel-tldr">Palo Alto Networks&#x27; Unit 42 says a likely China-linked operator ran 25 autonomous intrusions with a modified Cairn framework, targeting 19 chip makers, defence groups and civil society bodies and breaching 10, including a US teachers&#x27; union. The AI found weak passwords, exposed APIs and old CVEs, not new tricks.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Run a quick audit for default or reused passwords, open registration pages and internet-facing APIs, since AI attack tools find those first.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/12/cairn-autonomous-ai-cyberattacks/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>

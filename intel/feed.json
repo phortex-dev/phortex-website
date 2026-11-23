@@ -1,15 +1,35 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "threat_of_the_week": {
-    "source": "Google Threat Intelligence Group",
-    "date": "2026-11-16",
-    "title": "Google finds attackers using AI to turn security patches into working exploits with no human involved",
-    "tldr": "Google's threat team found a tool on an exposed attacker server that compares web apps before and after a patch, writes an exploit for the fixed flaw and launches it with no person involved. It also saw crews use open-source AI pentest kits like ARTEX and CAIRN in real break-ins.",
-    "smb": "Shorten your patch window for internet-facing apps to days, not weeks, and turn on automatic updates wherever the vendor offers them.",
-    "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold",
-    "link_label": "Read the report"
+    "source": "The Hacker News, on Dragos research",
+    "date": "2026-11-22",
+    "title": "Planted fake secrets show attackers quietly reading AI prompts inside three AI hosting providers",
+    "tldr": "Dragos seeded about two million prompts with fake keys and links and found attackers had been reading traffic inside three AI inference providers since mid-July, unnoticed. OpenRouter dropped the three providers and pulled 125 endpoints from its zero data retention list.",
+    "smb": "Keep passwords, API keys and customer records out of AI prompts, and rotate any credential that has ever been pasted into an AI tool.",
+    "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+    "link_label": "Read the story"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "Dataconomy",
+      "date": "2026-11-23",
+      "title": "AI hosts Together AI and Novita explain how customer prompts leaked after Dragos testing",
+      "tldr": "Together AI said one of its own AI coding agents pushed a credential to a public GitHub repository, letting an outsider download stored prompt samples from June and July. Novita said a routing error sent some MiniMax requests to MiniMax's own API from May 28 to November 11 and told affected customers to rotate keys.",
+      "smb": "Ask each AI vendor you use which sub-processors can see your prompts, and get that answer in writing before sending them sensitive data.",
+      "url": "https://dataconomy.com/2026/11/23/dragos-finds-breaches-at-three-ai-inference-providers/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Next Web",
+      "date": "2026-11-23",
+      "title": "Zero data retention labels failed: a Chinese AI lab opened secret links from most test prompts",
+      "tldr": "In the same Dragos study, an unnamed Chinese AI lab opened secret links from more than half of the prompts sent to its models, including about two-thirds marked zero data retention. Resellers on an inference marketplace could also read prompts, and one tried stolen passwords on servers over SSH.",
+      "smb": "Pick your AI model providers by name instead of accepting a router's default pool, and avoid cheap reseller marketplaces for business data.",
+      "url": "https://thenextweb.com/news/openrouter-drops-providers-dragos-ai-prompt-theft-canaries",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "BleepingComputer",
