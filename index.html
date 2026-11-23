@@ -145,42 +145,42 @@
 <!-- TLDR:START -->
 <section class="compact" id="tldr" aria-labelledby="tldr-heading">
   <div class="container">
-    <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-11-22">November 22, 2026</time></div>
+    <div class="eyebrow">Security TL;DR &middot; <time datetime="2026-11-23">November 23, 2026</time></div>
     <h2 class="heading-md" id="tldr-heading">Today&rsquo;s top security stories, <span class="text-accent-cyan">ranked</span></h2>
     <div class="tl-grid">
-<article class="tl-card tl-feature" data-cat="cloud">
-  <div class="tl-art tl-art-md" style="--c:#38E1C6" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34a8 8 0 0 1 0-16 11 11 0 0 1 21-2 8 8 0 0 1-1 18z"/><circle cx="24" cy="25" r="3"/><path d="M24 28v4"/></svg></div>
+<article class="tl-card tl-feature" data-cat="vpn">
+  <div class="tl-art tl-art-md" style="--c:#00D4F0" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M17 24h14M17 18h14M17 30h14M24 18v6M20 24v6M28 24v6"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#1</span><span class="tl-cat" style="--c:#38E1C6">Cloud &amp; accounts</span><span class="tl-heat" title="Heat 5 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Top story</span></div>
-    <h3 class="tl-title">Microsoft says a flaw in Entra Connect Health was exploited to read tenant data</h3>
-    <p class="tl-why">Attackers had read-only access to tenant metadata, including admin and technical contact emails, tenant IDs and license tiers. Microsoft fixed it server-side on Nov. 19 and says no passwords or tokens were exposed.</p>
-    <p class="tl-do"><strong>Do this:</strong> Check Azure Service Health for a notice, warn admins to expect targeted phishing, and require phishing-resistant MFA on every privileged account.</p>
-    <a class="tl-src" href="https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/" target="_blank" rel="noopener noreferrer">BleepingComputer &rarr;</a>
-  </div>
-</article>
-<article class="tl-card tl-feature" data-cat="cloud">
-  <div class="tl-art tl-art-md" style="--c:#38E1C6" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 34a8 8 0 0 1 0-16 11 11 0 0 1 21-2 8 8 0 0 1-1 18z"/><circle cx="24" cy="25" r="3"/><path d="M24 28v4"/></svg></div>
-  <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#38E1C6">Cloud &amp; accounts</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
-    <h3 class="tl-title">Rackspace Spot breach let hackers read customers&#x27; Kubernetes secrets</h3>
-    <p class="tl-why">Using leaked credentials, an intruder acted as real users in some Spot customer accounts on Nov. 17, able to read cluster secrets and create pods. Rackspace revoked tokens and says service was fully restored Nov. 21.</p>
-    <p class="tl-do"><strong>Do this:</strong> If you use Rackspace Spot, reissue API and refresh tokens, rotate every credential stored in cluster secrets, and review logs back to Nov. 17.</p>
-    <a class="tl-src" href="https://www.bleepingcomputer.com/news/security/rackspace-spot-breach-let-hackers-access-customer-kubernetes-secrets/" target="_blank" rel="noopener noreferrer">BleepingComputer &rarr;</a>
+    <div class="tl-meta"><span class="tl-rank">#1</span><span class="tl-cat" style="--c:#00D4F0">Firewall &amp; VPN</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <h3 class="tl-title">Hackers abused GL.iNet&#x27;s cloud service to plant malware on routers and KVM devices</h3>
+    <p class="tl-why">GL.iNet says attackers used a flaw in its GoodCloud remote management service to install malware on routers and remote KVM devices. The cloud hole is closed, but already-infected devices still carry the malware.</p>
+    <p class="tl-do"><strong>Do this:</strong> Update every GL.iNet router and KVM to the newest firmware, and if one shows signs of infection, reinstall firmware without saved settings and change its passwords.</p>
+    <a class="tl-src" href="https://bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices" target="_blank" rel="noopener noreferrer">BleepingComputer &rarr;</a>
   </div>
 </article>
 <article class="tl-card tl-feature" data-cat="breach">
   <div class="tl-art tl-art-md" style="--c:#8B5CF6" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="12" rx="13" ry="5"/><path d="M11 12v12c0 3 6 5 13 5s13-2 13-5V12"/><path d="M11 24v10c0 3 6 5 13 5"/><path d="M33 31l6 6M39 31l-6 6"/></svg></div>
   <div class="tl-body">
-    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#8B5CF6">Data breach</span><span class="tl-heat" title="Heat 3 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span>Notable</span></div>
-    <h3 class="tl-title">Supplier breach exposed payment details at 40-plus credit unions, unnoticed for six weeks</h3>
-    <p class="tl-why">Hackers exploited a flaw at software supplier Wellington IT in early October and reached mobile banking members&#x27; payment details. Credit unions were not told until Nov. 16. Officials see no sign funds were taken.</p>
-    <p class="tl-do"><strong>Do this:</strong> Ask key software vendors in writing how fast they will tell you about a breach, and put a notification deadline in your contracts.</p>
-    <a class="tl-src" href="https://therecord.media/dozens-of-credit-unions-hit-by-supplier-breach" target="_blank" rel="noopener noreferrer">The Record &rarr;</a>
+    <div class="tl-meta"><span class="tl-rank">#2</span><span class="tl-cat" style="--c:#8B5CF6">Data breach</span><span class="tl-heat" title="Heat 4 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span>Hot</span></div>
+    <h3 class="tl-title">Cleverbridge says hackers copied card numbers and CVVs from its software checkout platform</h3>
+    <p class="tl-why">Cleverbridge, which handles online checkout for many software and SaaS vendors, says a third party copied stored card numbers, expiry dates and security codes. It began notifying customers on Nov. 20 and has not said how many were affected.</p>
+    <p class="tl-do"><strong>Do this:</strong> Check recent card statements for any software you bought online, and ask your bank to reissue a card if you get a Cleverbridge notice.</p>
+    <a class="tl-src" href="https://bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach" target="_blank" rel="noopener noreferrer">BleepingComputer &rarr;</a>
+  </div>
+</article>
+<article class="tl-card tl-feature" data-cat="vpn">
+  <div class="tl-art tl-art-md" style="--c:#00D4F0" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l14 5v11c0 9-6 16-14 20-8-4-14-11-14-20V11z"/><path d="M17 24h14M17 18h14M17 30h14M24 18v6M20 24v6M28 24v6"/></svg></div>
+  <div class="tl-body">
+    <div class="tl-meta"><span class="tl-rank">#3</span><span class="tl-cat" style="--c:#00D4F0">Firewall &amp; VPN</span><span class="tl-heat" title="Heat 3 of 5"><span class="tl-dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span>Notable</span></div>
+    <h3 class="tl-title">Palo Alto firewalls with HTTP/2 turned on need fixes for two critical NGINX flaws</h3>
+    <p class="tl-why">Palo Alto Networks says two critical NGINX flaws reach PAN-OS and Panorama when HTTP/2 is enabled, with no login needed. It knows of no attacks yet, and some fixed builds are due around Nov. 23.</p>
+    <p class="tl-do"><strong>Do this:</strong> Install the fixed PAN-OS build for your version, or turn off HTTP/2 on PAN-OS and Panorama until you can.</p>
+    <a class="tl-src" href="https://security.paloaltonetworks.com/CVE-2026-123633" target="_blank" rel="noopener noreferrer">Palo Alto Networks &rarr;</a>
   </div>
 </article>
     </div>
     <div class="tl-foot">
-      <a class="btn btn-ghost btn-arrow" href="/security-tldr/">See all 5 of today&rsquo;s stories and past days</a>
+      <a class="btn btn-ghost btn-arrow" href="/security-tldr/">See all 6 of today&rsquo;s stories and past days</a>
       <p>Updated daily. Summaries link to the original source; not legal or incident-response advice. <a href="/ai-security/">AI Security TL;DR &rarr;</a></p>
     </div>
   </div>

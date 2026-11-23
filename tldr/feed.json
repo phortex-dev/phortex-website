@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "items": [
+    {
+      "date": "2026-11-23",
+      "title": "Hackers abused GL.iNet's cloud service to plant malware on routers and KVM devices",
+      "why": "GL.iNet says attackers used a flaw in its GoodCloud remote management service to install malware on routers and remote KVM devices. The cloud hole is closed, but already-infected devices still carry the malware.",
+      "action": "Update every GL.iNet router and KVM to the newest firmware, and if one shows signs of infection, reinstall firmware without saved settings and change its passwords.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices",
+      "heat": 4,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-11-23",
+      "title": "Cleverbridge says hackers copied card numbers and CVVs from its software checkout platform",
+      "why": "Cleverbridge, which handles online checkout for many software and SaaS vendors, says a third party copied stored card numbers, expiry dates and security codes. It began notifying customers on Nov. 20 and has not said how many were affected.",
+      "action": "Check recent card statements for any software you bought online, and ask your bank to reissue a card if you get a Cleverbridge notice.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/cleverbridge-warns-hackers-stole-credit-card-numbers-cvvs-in-data-breach",
+      "heat": 4,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-23",
+      "title": "Palo Alto firewalls with HTTP/2 turned on need fixes for two critical NGINX flaws",
+      "why": "Palo Alto Networks says two critical NGINX flaws reach PAN-OS and Panorama when HTTP/2 is enabled, with no login needed. It knows of no attacks yet, and some fixed builds are due around Nov. 23.",
+      "action": "Install the fixed PAN-OS build for your version, or turn off HTTP/2 on PAN-OS and Panorama until you can.",
+      "source_name": "Palo Alto Networks",
+      "source_url": "https://security.paloaltonetworks.com/CVE-2026-123633",
+      "heat": 3,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-11-23",
+      "title": "Info-stealing malware on 600 PCs harvested US bank, Login.gov and Microsoft 365 access",
+      "why": "Researchers at Hunt.io found the stash of a credential-theft operation that infected 603 Windows PCs since October, taking bank and government logins, a password vault and Microsoft 365 session cookies that skipped MFA.",
+      "action": "Require phishing-resistant MFA and device-based conditional access for Microsoft 365, and reset passwords and sessions on any PC you suspect is infected.",
+      "source_name": "Security Affairs",
+      "source_url": "https://securityaffairs.com/203554/cyber-crime/hunt-io-uncovers-russian-speaking-credential-theft-operation-targeting-us-banks-and-government-accounts.html",
+      "heat": 3,
+      "cat": "malware"
+    },
+    {
+      "date": "2026-11-23",
+      "title": "Attackers used an AI agent tool to find an unknown flaw and take over a server in minutes",
+      "why": "Amazon says a likely China-linked group used the open-source AI framework Cairn to find a zero-day in a medical imaging app and gain root access, moving from mapping to exploit in about 11 minutes.",
+      "action": "Patch internet-facing apps quickly and remove or lock down any exposed admin or testing panels, since automated tools now find them fast.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server",
+      "heat": 3,
+      "cat": "ai"
+    },
+    {
+      "date": "2026-11-23",
+      "title": "WhatsApp fixes a bug scammers used to make their messages look more legitimate",
+      "why": "WhatsApp's November advisory fixes three flaws, including one in Click to WhatsApp ads that a scammer exploited in a live campaign. WhatsApp Business on Android is among the affected apps.",
+      "action": "Update WhatsApp and WhatsApp Business on every company and personal phone used for customer contact.",
+      "source_name": "Security Affairs",
+      "source_url": "https://securityaffairs.com/203622/security/cve-2026-23871-whatsapp-bug-helped-scammers-make-messages-look-legitimate.html",
+      "heat": 2,
+      "cat": "phishing"
+    },
     {
       "date": "2026-11-22",
       "title": "Microsoft says a flaw in Entra Connect Health was exploited to read tenant data",
