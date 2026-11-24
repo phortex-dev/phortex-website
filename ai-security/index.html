@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 23, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 24, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -49,11 +49,11 @@
   <div class="container">
     <div class="eyebrow">Threat of the week</div>
     <article class="card intel-threat" style="margin-top:1.25rem; max-width:860px;">
-      <div class="intel-meta"><span>The Hacker News, on Dragos research &middot; <time datetime="2026-11-22">Nov 22, 2026</time></span></div>
-      <h2 class="heading-md intel-title">Planted fake secrets show attackers quietly reading AI prompts inside three AI hosting providers</h2>
-      <p class="intel-tldr">Dragos seeded about two million prompts with fake keys and links and found attackers had been reading traffic inside three AI inference providers since mid-July, unnoticed. OpenRouter dropped the three providers and pulled 125 endpoints from its zero data retention list.</p>
-      <div class="intel-smb"><span>SMB takeaway</span>Keep passwords, API keys and customer records out of AI prompts, and rotate any credential that has ever been pasted into an AI tool.</div>
-      <a class="intel-link" href="https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      <div class="intel-meta"><span>Wiz Research &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
+      <h2 class="heading-md intel-title">AI agent attack toolkits are now everyday tools for many attackers, Wiz finds</h2>
+      <p class="intel-tldr">Wiz reports a threefold rise in incident requests and ties a campaign against more than a dozen organisations to ARTEX, an AI attack framework with hundreds of open-source copies. Censys counted over 1,400 exposed ARTEX consoles in early November, showing how widely these tools now spread.</p>
+      <div class="intel-smb"><span>SMB takeaway</span>Turn on multi-factor sign-in for code hosting and cloud accounts, and alert on new access keys or admin tokens created outside business hours.</div>
+      <a class="intel-link" href="https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
     </article>
   </div>
 </section>
@@ -66,6 +66,41 @@
       <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>1</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on OpenAI and Cisco &middot; <time datetime="2026-11-24">Nov 24, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">OpenAI and Cisco release Shirudo, open-source AI-written shields for unpatched Linux flaws</h3>
+        <p class="intel-tldr">Shirudo uses eBPF to block a known vulnerability on a running Linux system until the real patch is installed, with each shield signed and approved by an operator. In a test, a Codex-written shield stopped a Java4Shell exploit against Elasticsearch, but the tool is pre-release and not meant for production yet.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Keep patching as the main defence and note which internet-facing Linux servers you could not patch quickly if a new flaw dropped.</div>
+        <a class="intel-link" href="https://www.securityweek.com/openai-cisco-unveil-open-source-tool-to-shield-unpatched-linux-systems/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Wiz Research &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Wiz: many unrelated attackers now run AI agent toolkits such as ARTEX and CyberStrikeAI against cloud targets</h3>
+        <p class="intel-tldr">Wiz says one campaign it calls ARTEX-Harvester hit more than a dozen organisations from late October, using stolen code-hosting logins to reach CI secrets, Terraform state and Kubernetes admin. In another case an AI agent moved through two AWS accounts in four days and collected Anthropic API keys from 50 hosts.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Require multi-factor sign-in on GitHub or GitLab accounts and move CI secrets into a vault with short-lived credentials.</div>
+        <a class="intel-link" href="https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks" target="_blank" rel="noopener noreferrer">Read the research &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on AIR research &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Study finds web search tools used by AI coding agents sometimes return malicious install instructions</h3>
+        <p class="intel-tldr">Researchers at AIR ran about 4,700 coding-style searches through eight search APIs and found every one returned known-malicious results, at 0.8 to 2.2 percent, highest for install queries. One example was a starred GitHub starter kit whose one-line install command dropped a remote access tool.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Tell developers not to let AI coding agents run install commands from web results without a person checking the source first.</div>
+        <a class="intel-link" href="https://thehackernews.com/expert-insights/2026/11/ai-coding-agents-are-getting-malicious.html" target="_blank" rel="noopener noreferrer">Read the article &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Record &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Oregon and Virginia sue SpaceX and X, saying Grok was allowed to generate sexual deepfakes</h3>
+        <p class="intel-tldr">The two state attorneys general allege executives let the Grok chatbot produce non-consensual intimate images, including of children, to grow its user base. They want court orders, civil penalties and the return of profits.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Check which AI image tools staff can use for work and block those without clear content safeguards in your acceptable use policy.</div>
+        <a class="intel-link" href="https://therecord.media/oregon-virginia-sue-spacex-over-grok-csam-ncii" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Schneier on Security &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Schneier argues AI makers should be liable for chatbot output instead of calling it protected speech</h3>
+        <p class="intel-tldr">Bruce Schneier says AI companies claim free-speech protection for chatbot output when sued, then disown that same output when it causes harm. He argues that output no person chose, and agents that take actions like breaking into networks, should be treated as products their makers answer for.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask each AI vendor you use what liability and indemnity its contract gives you if the tool causes harm to customers.</div>
+        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/humans-have-rights-machines-do-not.html" target="_blank" rel="noopener noreferrer">Read the essay &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on CERT-In &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
         <h3 class="heading-sm intel-title">India&#x27;s CERT-In: AI-assisted intruders changed payment approvals to push money out through real systems</h3>
@@ -450,41 +485,6 @@
         <p class="intel-tldr">Project Zero now publishes bug details 90 days after reporting them, fixed or not, and the window shrinks to 60 days in February 2027 and 30 days in January 2028. Google ties the change partly to AI tools that let attackers turn a fresh patch into a working exploit within hours.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Measure how many days it really takes you to install vendor patches, and set a goal of under two weeks for internet-facing systems.</div>
         <a class="intel-link" href="https://projectzero.google/vulnerability-disclosure-policy.html" target="_blank" rel="noopener noreferrer">Read the policy &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Corelight research &middot; <time datetime="2026-11-13">Nov 13, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">A pinned MCP server quietly ran 15 different sets of dependencies in five weeks</h3>
-        <p class="intel-tldr">Corelight found that an AI tool server locked to one release still pulled 23 changed packages from PyPI because its launcher re-resolved dependencies on each rebuild. Of 35 MCP servers it reviewed, 23 fetched fresh code from public registries at launch, often while holding admin keys to security tools.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Install MCP servers once from a hash-pinned lock file, avoid npx or uvx launch commands and latest tags, and update them on a set schedule.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/13/corelight-mcp-server-supply-chain/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on OpenAI &middot; <time datetime="2026-11-13">Nov 13, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">OpenAI launches Daybreak, AI agents that test web apps and draft fixes for found flaws</h3>
-        <p class="intel-tldr">OpenAI introduced Daybreak, with a Red Team service that probes web applications in isolated environments and a Defense Factory plugin that traces findings through a GitHub repository and proposes patches. Red Team is in early access, Defense Factory is in preview, and engineers review each fix before merging.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Before trying an AI code-fixing tool, connect it only to the repositories it needs and keep human review required on every pull request it opens.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/13/openai-daybreak-vulnerability-remediation-red-team-defense-factory-agents/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Record, on the FBI &middot; <time datetime="2026-11-13">Nov 13, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">FBI flash alert warns the ARTEX AI attack tool lets low-skill crews break in within hours</h3>
-        <p class="intel-tldr">The FBI says ARTEX, an open-source tool that lets any language model run an intrusion step by step, is being used against finance, government, health, legal and other sectors, at times reaching privileged access in under three hours. It often targets less watched systems such as supplier portals and mobile backends.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>List every partner portal, vendor login and third-party integration you expose, then put them behind MFA and add them to your log monitoring.</div>
-        <a class="intel-link" href="https://therecord.media/artex-ai-tool-fbi-flash-alert" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Cloud Security Alliance, on Darktrace research &middot; <time datetime="2026-11-13">Nov 13, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Darktrace shows stolen Claude keys can turn a developer&#x27;s coding agent into a remote-controlled implant</h3>
-        <p class="intel-tldr">In a lab test, Darktrace took a developer&#x27;s Claude credentials and used memory stores as a hidden job queue, so the installed coding agent scanned the network, sprayed passwords and uploaded a 1 GB file. All traffic went to the normal AI API, and Darktrace says it has not seen this in the wild.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Find where AI API keys sit on developer machines and CI, rotate any on a suspect host, and switch off permission-bypass modes for coding agents.</div>
-        <a class="intel-link" href="https://labs.cloudsecurityalliance.org/research/csa-research-note-coding-agent-api-key-implant-20261113-csa/" target="_blank" rel="noopener noreferrer">Read the research note &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>Schneier on Security &middot; <time datetime="2026-11-13">Nov 13, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Schneier: AI does not need to go rogue to break the systems we rely on</h3>
-        <p class="intel-tldr">In an essay based on his DEF CON keynote, Bruce Schneier argues the biggest risk is AI finding unintended shortcuts in rules, from code to tax law and finance, while doing what it was asked. He says AI speeds up and scales such hacks, and that laws and institutions must become as quick to patch as software.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Give every AI agent a narrow goal, written limits on what it may not do, and a person who reviews its actions before they touch money or customers.</div>
-        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/ai-doesnt-have-to-go-rogue-to-break-the-world.html" target="_blank" rel="noopener noreferrer">Read the essay &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>

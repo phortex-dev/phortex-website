@@ -1,15 +1,65 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "threat_of_the_week": {
-    "source": "The Hacker News, on Dragos research",
-    "date": "2026-11-22",
-    "title": "Planted fake secrets show attackers quietly reading AI prompts inside three AI hosting providers",
-    "tldr": "Dragos seeded about two million prompts with fake keys and links and found attackers had been reading traffic inside three AI inference providers since mid-July, unnoticed. OpenRouter dropped the three providers and pulled 125 endpoints from its zero data retention list.",
-    "smb": "Keep passwords, API keys and customer records out of AI prompts, and rotate any credential that has ever been pasted into an AI tool.",
-    "url": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
-    "link_label": "Read the story"
+    "source": "Wiz Research",
+    "date": "2026-11-23",
+    "title": "AI agent attack toolkits are now everyday tools for many attackers, Wiz finds",
+    "tldr": "Wiz reports a threefold rise in incident requests and ties a campaign against more than a dozen organisations to ARTEX, an AI attack framework with hundreds of open-source copies. Censys counted over 1,400 exposed ARTEX consoles in early November, showing how widely these tools now spread.",
+    "smb": "Turn on multi-factor sign-in for code hosting and cloud accounts, and alert on new access keys or admin tokens created outside business hours.",
+    "url": "https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks",
+    "link_label": "Read the research"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "Wiz Research",
+      "date": "2026-11-23",
+      "title": "Wiz: many unrelated attackers now run AI agent toolkits such as ARTEX and CyberStrikeAI against cloud targets",
+      "tldr": "Wiz says one campaign it calls ARTEX-Harvester hit more than a dozen organisations from late October, using stolen code-hosting logins to reach CI secrets, Terraform state and Kubernetes admin. In another case an AI agent moved through two AWS accounts in four days and collected Anthropic API keys from 50 hosts.",
+      "smb": "Require multi-factor sign-in on GitHub or GitLab accounts and move CI secrets into a vault with short-lived credentials.",
+      "url": "https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks",
+      "link_label": "Read the research"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek, on OpenAI and Cisco",
+      "date": "2026-11-24",
+      "title": "OpenAI and Cisco release Shirudo, open-source AI-written shields for unpatched Linux flaws",
+      "tldr": "Shirudo uses eBPF to block a known vulnerability on a running Linux system until the real patch is installed, with each shield signed and approved by an operator. In a test, a Codex-written shield stopped a Java4Shell exploit against Elasticsearch, but the tool is pre-release and not meant for production yet.",
+      "smb": "Keep patching as the main defence and note which internet-facing Linux servers you could not patch quickly if a new flaw dropped.",
+      "url": "https://www.securityweek.com/openai-cisco-unveil-open-source-tool-to-shield-unpatched-linux-systems/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "The Hacker News, on AIR research",
+      "date": "2026-11-23",
+      "title": "Study finds web search tools used by AI coding agents sometimes return malicious install instructions",
+      "tldr": "Researchers at AIR ran about 4,700 coding-style searches through eight search APIs and found every one returned known-malicious results, at 0.8 to 2.2 percent, highest for install queries. One example was a starred GitHub starter kit whose one-line install command dropped a remote access tool.",
+      "smb": "Tell developers not to let AI coding agents run install commands from web results without a person checking the source first.",
+      "url": "https://thehackernews.com/expert-insights/2026/11/ai-coding-agents-are-getting-malicious.html",
+      "link_label": "Read the article"
+    },
+    {
+      "cat": "news",
+      "source": "The Record",
+      "date": "2026-11-23",
+      "title": "Oregon and Virginia sue SpaceX and X, saying Grok was allowed to generate sexual deepfakes",
+      "tldr": "The two state attorneys general allege executives let the Grok chatbot produce non-consensual intimate images, including of children, to grow its user base. They want court orders, civil penalties and the return of profits.",
+      "smb": "Check which AI image tools staff can use for work and block those without clear content safeguards in your acceptable use policy.",
+      "url": "https://therecord.media/oregon-virginia-sue-spacex-over-grok-csam-ncii",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Schneier on Security",
+      "date": "2026-11-23",
+      "title": "Schneier argues AI makers should be liable for chatbot output instead of calling it protected speech",
+      "tldr": "Bruce Schneier says AI companies claim free-speech protection for chatbot output when sued, then disown that same output when it causes harm. He argues that output no person chose, and agents that take actions like breaking into networks, should be treated as products their makers answer for.",
+      "smb": "Ask each AI vendor you use what liability and indemnity its contract gives you if the tool causes harm to customers.",
+      "url": "https://www.schneier.com/blog/archives/2026/11/humans-have-rights-machines-do-not.html",
+      "link_label": "Read the essay"
+    },
     {
       "cat": "news",
       "source": "The Hacker News, on CERT-In",
