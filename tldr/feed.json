@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-26",
   "items": [
+    {
+      "date": "2026-11-26",
+      "title": "1Password says a hijacked employee GitHub account let a hacker copy customer account data",
+      "why": "An attacker used a compromised engineer's GitHub account to push code to 1Password's backend and take customer names, emails and account metadata plus internal source code. 1Password says vaults and their keys were not accessed.",
+      "action": "Warn staff who use 1Password to expect convincing phishing, and confirm any 1Password email or invite inside the app before clicking links in it.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/1password-breach-exposes-customer-data-internal-source-code/",
+      "heat": 5,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-26",
+      "title": "Drupal installer flaw is under attack, and last week's fix missed some sites",
+      "why": "Attackers are using a Drupal core installer bug to take over sites, and CISA added it to its exploited list. Drupal says its Nov. 18 patch left some sites open and released a second fix on Nov. 25.",
+      "action": "Update Drupal to 11.4.14, 11.3.23 or 10.6.23, run the update hook, block public access to install.php, and check logs for signs of takeover.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/drupal-installer-patch-left-a-gap-attackers-are-already-exploiting/",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-26",
+      "title": "Palo Alto patches a firewall root flaw that a China-linked group chained in attacks",
+      "why": "Attackers combined an older PAN-OS bug with a new Linux kernel flaw called Fragnesia to take full control of 24 firewalls and a management server. Only management interfaces exposed to the internet are known to be at risk.",
+      "action": "Install the PAN-OS hotfix for your version and make sure the firewall management interface is reachable only from an internal network or VPN.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/",
+      "heat": 4,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-11-26",
+      "title": "Radware breach exposed some customers' cloud storage keys used for log exports",
+      "why": "An intruder reached an unprotected internal API for Radware's Cloud WAF on Nov. 19 and took customer contacts and, for some, AWS S3, Azure Blob or SFTP credentials used to export logs.",
+      "action": "If you use Radware Cloud WAF, rotate its log-export credentials now and review your storage access logs since Nov. 19 for unfamiliar IPs.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+      "heat": 3,
+      "cat": "cloud"
+    },
+    {
+      "date": "2026-11-26",
+      "title": "Hackers took over Check Point management servers at 22 organizations in 17 countries",
+      "why": "GreyNoise tracked a likely espionage campaign that used a known Check Point SmartConsole login bypass to gain admin control of 24 management servers. Check Point says fixes for the flaw have been out since July.",
+      "action": "Confirm your Check Point management server has the July fixes applied, and keep management access off the open internet.",
+      "source_name": "BleepingComputer",
+      "source_url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-check-point-servers-in-22-organizations/",
+      "heat": 3,
+      "cat": "vpn"
+    },
+    {
+      "date": "2026-11-26",
+      "title": "CIA, ODNI and NGA confirm intruders reached an unclassified analysis system",
+      "why": "Officials say attackers exposed some unclassified data on a system used for open-source intelligence work; classified material was not affected. Treasury's FinCEN also took systems offline after a separate incident this week.",
+      "action": "Review which outside-facing research or analysis tools your team uses, and make sure they require MFA and are covered by your logging.",
+      "source_name": "GBHackers",
+      "source_url": "https://gbhackers.com/cia-and-odni-suffer-cyberattack/",
+      "heat": 3,
+      "cat": "breach"
+    },
     {
       "date": "2026-11-23",
       "title": "Hackers abused GL.iNet's cloud service to plant malware on routers and KVM devices",
