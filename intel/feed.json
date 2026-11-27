@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-26",
   "threat_of_the_week": {
     "source": "Wiz Research",
     "date": "2026-11-23",
@@ -10,6 +10,36 @@
     "link_label": "Read the research"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "SecurityWeek, on Accenture research",
+      "date": "2026-11-26",
+      "title": "Mitel MiCollab zero-days used to steal company data, with attacker servers talking to AI services",
+      "tldr": "Accenture says attackers broke into Mitel MiCollab phone servers through five flaws before patches shipped on November 16, reaching root in about 30 minutes and backup servers within a day. Their infrastructure was in contact with two commercial AI services, though Accenture cannot say how the AI was used.",
+      "smb": "Patch any Mitel MiCollab server now, then check it for web shells and unfamiliar accounts, since attackers were inside before the fixes came out.",
+      "url": "https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek",
+      "date": "2026-11-25",
+      "title": "Drupal installer flaw found by Anthropic's AI scanner was exploited a day after the fix",
+      "tldr": "A Drupal core installer bug, CVE-2026-132165, lets an unauthenticated attacker reinstall a site or run code, and attacks began on November 19, one day after the patch. Anthropic's free scanner for open-source projects found it, and CISA has added it to its list of exploited flaws.",
+      "smb": "Update Drupal sites to 11.4.13, 11.3.22 or 10.6.22 today, and replace any site still on an end-of-life version, which gets no fix.",
+      "url": "https://www.securityweek.com/drupal-flaw-found-by-anthropic-scanner-exploited-in-attacks/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek",
+      "date": "2026-11-25",
+      "title": "Palo Alto patches Fragnesia, the root bug chained in an AI-assisted attack on 25 firewall servers",
+      "tldr": "Palo Alto Networks shipped PAN-OS fixes for Fragnesia, a Linux kernel flaw a China-linked group paired with the PHP2Shell bug to plant root-level web shells. The campaign, described as AI-assisted, hit 24 firewalls and one management server whose admin pages faced the internet.",
+      "smb": "Take firewall management pages off the internet, allowing access only from an internal network or VPN, and install the latest PAN-OS build.",
+      "url": "https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/",
+      "link_label": "Read the story"
+    },
     {
       "cat": "news",
       "source": "Wiz Research",

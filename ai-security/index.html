@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 24, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 26, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -63,9 +63,30 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>1</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>52</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>1</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>7</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on Accenture research &middot; <time datetime="2026-11-26">Nov 26, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Mitel MiCollab zero-days used to steal company data, with attacker servers talking to AI services</h3>
+        <p class="intel-tldr">Accenture says attackers broke into Mitel MiCollab phone servers through five flaws before patches shipped on November 16, reaching root in about 30 minutes and backup servers within a day. Their infrastructure was in contact with two commercial AI services, though Accenture cannot say how the AI was used.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Patch any Mitel MiCollab server now, then check it for web shells and unfamiliar accounts, since attackers were inside before the fixes came out.</div>
+        <a class="intel-link" href="https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek &middot; <time datetime="2026-11-25">Nov 25, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Drupal installer flaw found by Anthropic&#x27;s AI scanner was exploited a day after the fix</h3>
+        <p class="intel-tldr">A Drupal core installer bug, CVE-2026-132165, lets an unauthenticated attacker reinstall a site or run code, and attacks began on November 19, one day after the patch. Anthropic&#x27;s free scanner for open-source projects found it, and CISA has added it to its list of exploited flaws.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Update Drupal sites to 11.4.13, 11.3.22 or 10.6.22 today, and replace any site still on an end-of-life version, which gets no fix.</div>
+        <a class="intel-link" href="https://www.securityweek.com/drupal-flaw-found-by-anthropic-scanner-exploited-in-attacks/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek &middot; <time datetime="2026-11-25">Nov 25, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Palo Alto patches Fragnesia, the root bug chained in an AI-assisted attack on 25 firewall servers</h3>
+        <p class="intel-tldr">Palo Alto Networks shipped PAN-OS fixes for Fragnesia, a Linux kernel flaw a China-linked group paired with the PHP2Shell bug to plant root-level web shells. The campaign, described as AI-assisted, hit 24 firewalls and one management server whose admin pages faced the internet.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Take firewall management pages off the internet, allowing access only from an internal network or VPN, and install the latest PAN-OS build.</div>
+        <a class="intel-link" href="https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on OpenAI and Cisco &middot; <time datetime="2026-11-24">Nov 24, 2026</time></span></div>
         <h3 class="heading-sm intel-title">OpenAI and Cisco release Shirudo, open-source AI-written shields for unpatched Linux flaws</h3>
@@ -464,27 +485,6 @@
         <p class="intel-tldr">Crissy Field and Handelsblatt checked about 34,500 Lovable apps that use Supabase and found 24,664 sending database records with no login, including passport numbers, chats and invoices. The cause was missing or loose database access rules, not a break-in, and Lovable calls it a known setup issue.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Before an AI-built app touches customer data, have someone confirm row-level access rules are on for every table and run the builder&#x27;s security scan.</div>
         <a class="intel-link" href="https://www.trendingtopics.eu/lovable-apps-sensitive-data-exposed/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="voices">
-        <div class="intel-meta"><span class="tag">Voices</span><span>SecurityWeek column, Joshua Goldfarb &middot; <time datetime="2026-11-14">Nov 14, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Goldfarb: leaning on AI for every task may be wearing down security teams&#x27; judgment</h3>
-        <p class="intel-tldr">F5 field CISO Joshua Goldfarb argues that handing research, analysis and writing to AI can weaken the creativity and critical thinking security work depends on. He says he keeps that core work human and urges others to set clear limits on when they use AI.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Decide which security tasks staff must still do themselves, such as incident write-ups and alert triage reviews, so skills stay sharp when there is no playbook.</div>
-        <a class="intel-link" href="https://www.securityweek.com/is-ai-making-us-worse-at-cybersecurity/" target="_blank" rel="noopener noreferrer">Read the column &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>CSA research note, on an FBI FLASH alert &middot; <time datetime="2026-11-14">Nov 14, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">FBI warns North Korean FaceStealer crews use replayed and deepfaked video calls to steal crypto</h3>
-        <p class="intel-tldr">The FBI says North Korean operators hijack messaging accounts, then invite the victim&#x27;s contacts to fake meetings that show recorded or deepfaked footage of the real person. A staged audio fault gets the target to run a fix command, and the scheme has taken more than 400 million dollars in about 18 months.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Tell staff that no real meeting ever needs them to paste a command or run a script to fix audio, and confirm payment or code requests on a second, known channel.</div>
-        <a class="intel-link" href="https://labs.cloudsecurityalliance.org/research/csa-research-note-facestealer-deepfake-meeting-intrusion-202" target="_blank" rel="noopener noreferrer">Read the research note &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Google Project Zero &middot; <time datetime="2026-11-13">Nov 13, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Google Project Zero drops its patch grace period and will cut disclosure deadlines to 30 days by 2028</h3>
-        <p class="intel-tldr">Project Zero now publishes bug details 90 days after reporting them, fixed or not, and the window shrinks to 60 days in February 2027 and 30 days in January 2028. Google ties the change partly to AI tools that let attackers turn a fresh patch into a working exploit within hours.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Measure how many days it really takes you to install vendor patches, and set a goal of under two weeks for internet-facing systems.</div>
-        <a class="intel-link" href="https://projectzero.google/vulnerability-disclosure-policy.html" target="_blank" rel="noopener noreferrer">Read the policy &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
