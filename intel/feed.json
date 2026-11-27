@@ -12,6 +12,26 @@
   "items": [
     {
       "cat": "news",
+      "source": "The Hacker News (Rapid7 research)",
+      "date": "2026-11-26",
+      "title": "Rapid7: thousands of self-hosted AI servers are online with no login, and many are already used by strangers",
+      "tldr": "Rapid7 scanned about 20,000 internet-facing hosts and found thousands of AI and notebook servers that answer without any authentication. More than half of the exposed Ollama servers had already been used by someone other than their owner, which Rapid7 calls self-hosted LLMjacking.",
+      "smb": "Put any self-hosted AI server, such as Ollama, behind a login or VPN and confirm its port is not reachable from the internet.",
+      "url": "https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html",
+      "link_label": "Read the ThreatsDay bulletin"
+    },
+    {
+      "cat": "news",
+      "source": "Cloud Security Alliance",
+      "date": "2026-11-27",
+      "title": "Study: cloud and AI keys left in public container images were used within seconds",
+      "tldr": "Stony Brook researchers planted AWS, OpenAI and Anthropic keys in 300 decoy container images across eight registries. The AWS keys drew more than 140,000 API calls from over 5,000 addresses, and the fastest first use came less than eight seconds after publishing.",
+      "smb": "Scan container images for secrets before pushing them, switch to short-lived credentials, and set spending caps with your cloud and AI providers.",
+      "url": "https://labs.cloudsecurityalliance.org/research/ciso-daily-briefing-20261127/",
+      "link_label": "Read the CSA briefing"
+    },
+    {
+      "cat": "news",
       "source": "Microsoft Threat Intelligence",
       "date": "2026-11-25",
       "title": "Microsoft: Chinese and North Korean state groups, including Salt Typhoon, now run ARTEX AI agents",

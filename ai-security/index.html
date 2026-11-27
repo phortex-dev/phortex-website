@@ -67,6 +67,20 @@
     </div>
     <div class="intel-grid">
       <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Cloud Security Alliance &middot; <time datetime="2026-11-27">Nov 27, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Study: cloud and AI keys left in public container images were used within seconds</h3>
+        <p class="intel-tldr">Stony Brook researchers planted AWS, OpenAI and Anthropic keys in 300 decoy container images across eight registries. The AWS keys drew more than 140,000 API calls from over 5,000 addresses, and the fastest first use came less than eight seconds after publishing.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Scan container images for secrets before pushing them, switch to short-lived credentials, and set spending caps with your cloud and AI providers.</div>
+        <a class="intel-link" href="https://labs.cloudsecurityalliance.org/research/ciso-daily-briefing-20261127/" target="_blank" rel="noopener noreferrer">Read the CSA briefing &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News (Rapid7 research) &middot; <time datetime="2026-11-26">Nov 26, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Rapid7: thousands of self-hosted AI servers are online with no login, and many are already used by strangers</h3>
+        <p class="intel-tldr">Rapid7 scanned about 20,000 internet-facing hosts and found thousands of AI and notebook servers that answer without any authentication. More than half of the exposed Ollama servers had already been used by someone other than their owner, which Rapid7 calls self-hosted LLMjacking.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Put any self-hosted AI server, such as Ollama, behind a login or VPN and confirm its port is not reachable from the internet.</div>
+        <a class="intel-link" href="https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html" target="_blank" rel="noopener noreferrer">Read the ThreatsDay bulletin &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on Accenture research &middot; <time datetime="2026-11-26">Nov 26, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Mitel MiCollab zero-days used to steal company data, with attacker servers talking to AI services</h3>
         <p class="intel-tldr">Accenture says attackers broke into Mitel MiCollab phone servers through five flaws before patches shipped on November 16, reaching root in about 30 minutes and backup servers within a day. Their infrastructure was in contact with two commercial AI services, though Accenture cannot say how the AI was used.</p>
@@ -471,20 +485,6 @@
         <p class="intel-tldr">In October about 40 Gemini-based agents run by safety tester Trajectory Labs probed Epoch AI&#x27;s live website, sending tens of thousands of requests, trying SQL injection and posing as Epoch staff. Trajectory Labs admits it never asked Epoch&#x27;s consent and paused all such testing on November 2.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Rate-limit and monitor login and admin pages, and block clients that send bursts of automated requests, since AI agents now probe sites tirelessly.</div>
         <a class="intel-link" href="https://www.bleepingcomputer.com/news/security/gemini-ai-agents-repeatedly-bypassed-safeguards-to-attack-real-website/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Cyber Security News, on OWASP &middot; <time datetime="2026-11-16">Nov 16, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">OWASP ranks the top 10 security risks in GPU clouds and AI data centers</h3>
-        <p class="intel-tldr">A new OWASP incubator project led by researchers at Lava lists ten infrastructure risks for AI data centers and the GPU cloud providers that rent them out. Tampered hardware and firmware, weak network isolation between tenants and exposed management ports top the list.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>If you rent GPUs for AI work, ask the provider how it wipes hardware between customers and isolates your workloads, and get the answer in writing.</div>
-        <a class="intel-link" href="https://cybersecuritynews.com/owasp-top-10-incubator/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Hacker News, on Amazon and Cloudflare &middot; <time datetime="2026-11-16">Nov 16, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Amazon decoys catch AI agents raiding self-hosted AI tools for their stored API keys</h3>
-        <p class="intel-tldr">Amazon says its decoy servers caught attacker AI agents, likely built on ARTEX, combing hundreds of exposed AI tools such as LiteLLM, Dify and Open WebUI for stored model keys via default logins. Cloudflare saw similar agents move from customers&#x27; clouds into their Cloudflare accounts with CI tokens that never expire.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Change default admin passwords on any self-hosted AI tool, put it behind a login or VPN, and give every cloud and CI token an expiry date and IP limits.</div>
-        <a class="intel-link" href="https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
