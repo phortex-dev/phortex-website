@@ -13,6 +13,16 @@
     },
     {
       "date": "2026-11-27",
+      "title": "Hackers breached Cloud One, one of the US Air Force's main cloud platforms",
+      "why": "Reuters reports the intrusion was found about a month ago during an upgrade; one source says a software flaw gave access to the platform's control plane. Migrations are paused, updates are blocked, and data theft is not confirmed.",
+      "action": "Lock down your cloud admin consoles: require multifactor sign-in for every admin, review who holds admin rights, and patch management tools as soon as fixes ship.",
+      "source_name": "Security Affairs",
+      "source_url": "https://securityaffairs.com/204136/security/air-force-cloud-one-breach-updates-blocked-migration-paused-scope-unknown.html",
+      "heat": 4,
+      "cat": "cloud"
+    },
+    {
+      "date": "2026-11-27",
       "title": "CISA adds 10 exploited flaws, led by Mitel MiCollab bugs used in data-theft attacks",
       "why": "Five Mitel MiCollab flaws were used as zero-days to plant web shells and steal data; flaws in Juniper Session Smart Router, Xen Orchestra and Danfoss store controllers were also added to CISA's exploited list.",
       "action": "Update Mitel MiCollab to 10.3.0.18 or later today; if you can't, block outside access to its AWV web conferencing component and check the server for unfamiliar files.",
@@ -33,13 +43,13 @@
     },
     {
       "date": "2026-11-27",
-      "title": "Switzerland confirms AI agents broke into organizations, including small firms",
-      "why": "Swiss cyber authorities confirmed four breaches by automated AI attack tools, two at critical infrastructure operators. The tools used old weaknesses: leaked passwords, missing logins on systems and misconfigured cloud setups.",
-      "action": "Patch internet-facing systems within a day of a fix, turn on multifactor or passkeys everywhere, and remove passwords saved in code or config files.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/switzerland-confirms-ai-assisted.html",
+      "title": "Colorado's myColorado app breach may expose ID photos of about 100,000 people",
+      "why": "Attackers reached uploaded documents in the state app, including photos of driver's licenses, vehicle registrations and insurance cards. The app is offline, no payment data was taken, and notices began Nov. 27.",
+      "action": "If you or staff use myColorado, watch for the state's notice, consider a credit freeze, and treat calls or emails citing your ID or insurance details with caution.",
+      "source_name": "SecurityWeek",
+      "source_url": "https://www.securityweek.com/100000-potentially-impacted-by-colorado-data-breach/",
       "heat": 3,
-      "cat": "ai"
+      "cat": "breach"
     },
     {
       "date": "2026-11-27",
@@ -50,16 +60,6 @@
       "source_url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
       "heat": 3,
       "cat": "patch"
-    },
-    {
-      "date": "2026-11-27",
-      "title": "North Korea-linked campaign plants malware in thousands of GitHub repositories",
-      "why": "The PolinRider campaign uses stolen developer tokens to slip a hidden loader into commits on more than 7,600 repositories; the newest version runs when a folder is opened in VS Code.",
-      "action": "Have developers review recent commits for unexpected conftest.py or utils changes, rotate GitHub tokens, and only open code from trusted sources in VS Code.",
-      "source_name": "The Hacker News",
-      "source_url": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html",
-      "heat": 2,
-      "cat": "malware"
     },
     {
       "date": "2026-11-26",
