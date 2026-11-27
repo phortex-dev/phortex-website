@@ -1,15 +1,55 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "threat_of_the_week": {
-    "source": "Wiz Research",
-    "date": "2026-11-23",
-    "title": "AI agent attack toolkits are now everyday tools for many attackers, Wiz finds",
-    "tldr": "Wiz reports a threefold rise in incident requests and ties a campaign against more than a dozen organisations to ARTEX, an AI attack framework with hundreds of open-source copies. Censys counted over 1,400 exposed ARTEX consoles in early November, showing how widely these tools now spread.",
-    "smb": "Turn on multi-factor sign-in for code hosting and cloud accounts, and alert on new access keys or admin tokens created outside business hours.",
-    "url": "https://www.wiz.io/blog/agentic-attacks-artex-offensive-ai-frameworks",
-    "link_label": "Read the research"
+    "source": "Microsoft Threat Intelligence",
+    "date": "2026-11-25",
+    "title": "Microsoft: Chinese and North Korean state groups, including Salt Typhoon, now run ARTEX AI agents",
+    "tldr": "Microsoft says six groups, among them Salt Typhoon, Crystal Typhoon and North Korea's Onyx Sleet, use the ARTEX agent framework for scanning, password attacks and web app exploits. In one case a password spray hit more than 151,000 failed sign-ins, and some intrusions reached admin access in under three hours.",
+    "smb": "Require phishing-resistant multi-factor sign-in for admins, block legacy sign-in methods, and rotate any app secret or key that has ever sat in code.",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse/",
+    "link_label": "Read Microsoft's analysis"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "Microsoft Threat Intelligence",
+      "date": "2026-11-25",
+      "title": "Microsoft: Chinese and North Korean state groups, including Salt Typhoon, now run ARTEX AI agents",
+      "tldr": "Microsoft says six groups, among them Salt Typhoon, Crystal Typhoon and North Korea's Onyx Sleet, use the ARTEX agent framework for scanning, password attacks and web app exploits. In one case a password spray hit more than 151,000 failed sign-ins, and some intrusions reached admin access in under three hours.",
+      "smb": "Require phishing-resistant multi-factor sign-in for admins, block legacy sign-in methods, and rotate any app secret or key that has ever sat in code.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/11/25/what-defenders-need-to-know-artex-agentic-ai-framework-threat-actors-abuse/",
+      "link_label": "Read Microsoft's analysis"
+    },
+    {
+      "cat": "news",
+      "source": "BleepingComputer, on Swiss NCSC and CSIRT Italia",
+      "date": "2026-11-25",
+      "title": "Switzerland and Italy confirm AI agents have broken into critical infrastructure operators",
+      "tldr": "Switzerland's NCSC reported its first confirmed AI-assisted intrusions, at critical infrastructure firms in at least two sectors, and said every known attempt succeeded. CSIRT Italia described agents working in parallel through weak passwords, known flaws and exposed endpoints, compromising many systems within hours.",
+      "smb": "Patch internet-facing systems within a day for flaws known to be exploited, and switch off remote management pages you do not use.",
+      "url": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
+      "link_label": "Read the report"
+    },
+    {
+      "cat": "news",
+      "source": "SecurityWeek, on GreyNoise",
+      "date": "2026-11-24",
+      "title": "GreyNoise: suspected AI-assisted campaign took over 24 Check Point management servers at 22 organizations",
+      "tldr": "GreyNoise tracks a campaign it calls GT13 that compromised 24 Check Point Security Management servers across energy, finance, government and other sectors in about ten countries. It believes agent tools automated discovery and exploitation, though how the attackers first got in is still unknown.",
+      "smb": "Keep firewall management consoles off the internet, reachable only over VPN, and review their admin logins for unfamiliar addresses.",
+      "url": "https://www.securityweek.com/check-point-security-management-servers-hacked-in-ai-assisted-campaign/",
+      "link_label": "Read the story"
+    },
+    {
+      "cat": "voices",
+      "source": "Schneier on Security",
+      "date": "2026-11-25",
+      "title": "Schneier points readers to Daniel Miessler's running list of AI-assisted hacking incidents",
+      "tldr": "Bruce Schneier recommends Daniel Miessler's tracker of real incidents where attackers used AI, along with the attack toolkits behind them. The post treats the list as a useful way to follow how fast these attacks are spreading.",
+      "smb": "Pick one trusted incident tracker and review it monthly to check whether your own exposed systems match the targets attackers favor.",
+      "url": "https://www.schneier.com/blog/archives/2026/11/tracking-incidents-of-hacking-using-ai-tools.html",
+      "link_label": "Read the post"
+    },
     {
       "cat": "news",
       "source": "SecurityWeek, on Accenture research",
