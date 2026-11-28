@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "threat_of_the_week": {
     "source": "Microsoft Threat Intelligence",
     "date": "2026-11-25",
@@ -10,6 +10,46 @@
     "link_label": "Read Microsoft's analysis"
   },
   "items": [
+    {
+      "cat": "news",
+      "source": "Help Net Security, on Google",
+      "date": "2026-11-26",
+      "title": "Google will require AI agents to reach Workspace only through its MCP servers or CLI from February 2027",
+      "tldr": "Under a new Workspace AI Tools Addendum, outside AI agents must connect through Google's MCP servers or command-line tool from February 1, 2027. Those routes make users confirm sensitive actions such as sending email or changing Drive sharing, and training on raw Workspace data is banned.",
+      "smb": "Review which AI apps and agents are connected to your Google Workspace, remove any you do not use, and ask vendors how they will move to the new access rules.",
+      "url": "https://www.helpnetsecurity.com/2026/11/26/google-ai-agent-security-requirements/",
+      "link_label": "Read the Help Net report"
+    },
+    {
+      "cat": "news",
+      "source": "Wiz Research",
+      "date": "2026-11-25",
+      "title": "Wiz: ARTEX and Cairn attack agents leave numbered intent IDs in victims' cloud logs",
+      "tldr": "Wiz found that the ARTEX and Cairn offensive agent frameworks stamp incrementing IDs such as i0123 into cloud command comments, resource names and User-Agent strings. Wiz used these IDs to link intrusions across more than a dozen organizations, including the Barracuda and Bitrise incidents.",
+      "smb": "Ask your cloud or security provider to alert on new resources and commands carrying i-number tags next to words like artex, pentest or probe.",
+      "url": "https://www.wiz.io/blog/agentic-offensive-frameworks-intent-ids-artex-cairn",
+      "link_label": "Read Wiz's research"
+    },
+    {
+      "cat": "news",
+      "source": "VulnCheck",
+      "date": "2026-11-23",
+      "title": "VulnCheck: attackers now exploit bugs mainly to grab keys, including OpenAI and Claude credentials",
+      "tldr": "VulnCheck's honeypots saw credential-stealing requests grow about six-fold between July and October, and 61% of the CVEs used this way were in open-source, AI and developer tools. Since May it has logged 1,756 attempts to steal AI provider keys, most aimed at OpenAI and Anthropic.",
+      "smb": "Keep .env files and cloud key files out of any folder a web server can read, and rotate every key an app could see after patching a file-read bug.",
+      "url": "https://www.vulncheck.com/blog/credential-harvesting",
+      "link_label": "Read VulnCheck's analysis"
+    },
+    {
+      "cat": "voices",
+      "source": "Schneier on Security",
+      "date": "2026-11-27",
+      "title": "Schneier says this month's big outages came from cost cutting, not AI attacks",
+      "tldr": "Bruce Schneier argues the recent Microsoft, FAA, bank and airline outages were unrelated and do not appear to be caused by AI. He blames profit pressure and market concentration for brittle systems with single points of failure, and calls for regulation with real fines.",
+      "smb": "List the one or two outside services your business cannot run without and write down a manual fallback for each.",
+      "url": "https://www.schneier.com/blog/archives/2026/11/recent-outages-have-economic-causes.html",
+      "link_label": "Read Schneier's post"
+    },
     {
       "cat": "news",
       "source": "The Hacker News (Rapid7 research)",

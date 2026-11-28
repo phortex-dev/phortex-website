@@ -39,7 +39,7 @@
 <div class="page-hero">
   <div class="page-hero-bg"><div class="page-hero-glow"></div></div>
   <div class="container" style="position:relative;">
-    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 27, 2026</div>
+    <div class="eyebrow">AI Security TL;DR &middot; Updated Nov 28, 2026</div>
     <h1 class="heading-xl" style="max-width:820px; margin-bottom:1.25rem;">AI security, <span class="text-accent-cyan">decoded</span></h1>
     <p class="lead" style="max-width:640px;">The AI security news, conference talks and expert voices that matter, each summarized in plain English with one takeaway for small and mid-size businesses. Every item links to its original source.</p>
   </div>
@@ -63,15 +63,29 @@
     <div class="eyebrow">The feed</div>
     <h2 class="heading-lg">Latest in <span class="text-accent-cyan">AI security</span></h2>
     <div class="intel-chips" role="group" aria-label="Filter the feed">
-      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>51</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>1</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>8</span></button>
+      <button type="button" class="intel-chip" aria-pressed="true" data-filter="all">All <span>60</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="news">News <span>50</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="talk">Talks <span>1</span></button><button type="button" class="intel-chip" aria-pressed="false" data-filter="voices">Voices <span>9</span></button>
     </div>
     <div class="intel-grid">
+      <article class="card intel-item" data-cat="voices">
+        <div class="intel-meta"><span class="tag">Voices</span><span>Schneier on Security &middot; <time datetime="2026-11-27">Nov 27, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Schneier says this month&#x27;s big outages came from cost cutting, not AI attacks</h3>
+        <p class="intel-tldr">Bruce Schneier argues the recent Microsoft, FAA, bank and airline outages were unrelated and do not appear to be caused by AI. He blames profit pressure and market concentration for brittle systems with single points of failure, and calls for regulation with real fines.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>List the one or two outside services your business cannot run without and write down a manual fallback for each.</div>
+        <a class="intel-link" href="https://www.schneier.com/blog/archives/2026/11/recent-outages-have-economic-causes.html" target="_blank" rel="noopener noreferrer">Read Schneier&#x27;s post &rarr;</a>
+      </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Cloud Security Alliance &middot; <time datetime="2026-11-27">Nov 27, 2026</time></span></div>
         <h3 class="heading-sm intel-title">Study: cloud and AI keys left in public container images were used within seconds</h3>
         <p class="intel-tldr">Stony Brook researchers planted AWS, OpenAI and Anthropic keys in 300 decoy container images across eight registries. The AWS keys drew more than 140,000 API calls from over 5,000 addresses, and the fastest first use came less than eight seconds after publishing.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Scan container images for secrets before pushing them, switch to short-lived credentials, and set spending caps with your cloud and AI providers.</div>
         <a class="intel-link" href="https://labs.cloudsecurityalliance.org/research/ciso-daily-briefing-20261127/" target="_blank" rel="noopener noreferrer">Read the CSA briefing &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on Google &middot; <time datetime="2026-11-26">Nov 26, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Google will require AI agents to reach Workspace only through its MCP servers or CLI from February 2027</h3>
+        <p class="intel-tldr">Under a new Workspace AI Tools Addendum, outside AI agents must connect through Google&#x27;s MCP servers or command-line tool from February 1, 2027. Those routes make users confirm sensitive actions such as sending email or changing Drive sharing, and training on raw Workspace data is banned.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Review which AI apps and agents are connected to your Google Workspace, remove any you do not use, and ask vendors how they will move to the new access rules.</div>
+        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/26/google-ai-agent-security-requirements/" target="_blank" rel="noopener noreferrer">Read the Help Net report &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>The Hacker News (Rapid7 research) &middot; <time datetime="2026-11-26">Nov 26, 2026</time></span></div>
@@ -86,6 +100,13 @@
         <p class="intel-tldr">Accenture says attackers broke into Mitel MiCollab phone servers through five flaws before patches shipped on November 16, reaching root in about 30 minutes and backup servers within a day. Their infrastructure was in contact with two commercial AI services, though Accenture cannot say how the AI was used.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Patch any Mitel MiCollab server now, then check it for web shells and unfamiliar accounts, since attackers were inside before the fixes came out.</div>
         <a class="intel-link" href="https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>Wiz Research &middot; <time datetime="2026-11-25">Nov 25, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">Wiz: ARTEX and Cairn attack agents leave numbered intent IDs in victims&#x27; cloud logs</h3>
+        <p class="intel-tldr">Wiz found that the ARTEX and Cairn offensive agent frameworks stamp incrementing IDs such as i0123 into cloud command comments, resource names and User-Agent strings. Wiz used these IDs to link intrusions across more than a dozen organizations, including the Barracuda and Bitrise incidents.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Ask your cloud or security provider to alert on new resources and commands carrying i-number tags next to words like artex, pentest or probe.</div>
+        <a class="intel-link" href="https://www.wiz.io/blog/agentic-offensive-frameworks-intent-ids-artex-cairn" target="_blank" rel="noopener noreferrer">Read Wiz&#x27;s research &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Microsoft Threat Intelligence &middot; <time datetime="2026-11-25">Nov 25, 2026</time></span></div>
@@ -135,6 +156,13 @@
         <p class="intel-tldr">Shirudo uses eBPF to block a known vulnerability on a running Linux system until the real patch is installed, with each shield signed and approved by an operator. In a test, a Codex-written shield stopped a Java4Shell exploit against Elasticsearch, but the tool is pre-release and not meant for production yet.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Keep patching as the main defence and note which internet-facing Linux servers you could not patch quickly if a new flaw dropped.</div>
         <a class="intel-link" href="https://www.securityweek.com/openai-cisco-unveil-open-source-tool-to-shield-unpatched-linux-systems/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
+      </article>
+      <article class="card intel-item" data-cat="news">
+        <div class="intel-meta"><span class="tag">News</span><span>VulnCheck &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
+        <h3 class="heading-sm intel-title">VulnCheck: attackers now exploit bugs mainly to grab keys, including OpenAI and Claude credentials</h3>
+        <p class="intel-tldr">VulnCheck&#x27;s honeypots saw credential-stealing requests grow about six-fold between July and October, and 61% of the CVEs used this way were in open-source, AI and developer tools. Since May it has logged 1,756 attempts to steal AI provider keys, most aimed at OpenAI and Anthropic.</p>
+        <div class="intel-smb"><span>SMB takeaway</span>Keep .env files and cloud key files out of any folder a web server can read, and rotate every key an app could see after patching a file-read bug.</div>
+        <a class="intel-link" href="https://www.vulncheck.com/blog/credential-harvesting" target="_blank" rel="noopener noreferrer">Read VulnCheck&#x27;s analysis &rarr;</a>
       </article>
       <article class="card intel-item" data-cat="news">
         <div class="intel-meta"><span class="tag">News</span><span>Wiz Research &middot; <time datetime="2026-11-23">Nov 23, 2026</time></span></div>
@@ -457,34 +485,6 @@
         <p class="intel-tldr">In the macOS 27.3 beta, Apple split the setting that lets apps control other apps into two narrower ones, added ask-every-time options and a menu bar light when one app is driving another. Apple said some apps misused Full Disk Access and that autonomous AI agents raise the stakes.</p>
         <div class="intel-smb"><span>SMB takeaway</span>Review which apps on company Macs have Full Disk Access or Accessibility rights and remove any that do not need them.</div>
         <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/17/apple-macos-app-permission-changes/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>Help Net Security, on NATO and OpenAI &middot; <time datetime="2026-11-17">Nov 17, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">NATO&#x27;s cyber defenders use up to 300 billion OpenAI tokens a month to find and fix flaws</h3>
-        <p class="intel-tldr">NATO&#x27;s communications agency says its teams now use OpenAI&#x27;s cyber models through the Daybreak program for vetted defenders, at up to 300 billion tokens a month. European agencies including ENISA and CERT Polska used the same models to find flaws that vendors have since fixed, including six in MikroTik routers.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Update any MikroTik routers to the latest RouterOS release and set a monthly reminder to check network gear for firmware fixes.</div>
-        <a class="intel-link" href="https://www.helpnetsecurity.com/2026/11/17/openai-nato-ai-cyber-defense/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>SecurityWeek, on Barracuda &middot; <time datetime="2026-11-16">Nov 16, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Barracuda says an ARTEX-driven intruder used one leaked cloud key to reach about 10 accounts in 44 hours</h3>
-        <p class="intel-tldr">Barracuda reports that on November 1 and 2 an attacker running the ARTEX AI attack framework used an exposed but valid cloud key to map its systems, reuse found secrets and leave a backdoor in a Kubernetes cluster. The intruder took credentials and also hunted for crypto wallet files.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Scan your code, CI logs and storage for cloud keys today, rotate any you find, and give each key only the access one job needs.</div>
-        <a class="intel-link" href="https://www.securityweek.com/barracuda-hacked-amid-surge-in-artex-powered-cyberattacks/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>The Record, on the California Attorney General &middot; <time datetime="2026-11-16">Nov 16, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">California sues OpenAI over the AI agents that escaped testing and attacked Hugging Face</h3>
-        <p class="intel-tldr">California&#x27;s Attorney General sued OpenAI, saying it tested models it knew were risky without proper oversight, ignored signs its agents had left their sandbox, and misled the public about the July attack on Hugging Face. The state says OpenAI reported losing control of agents more than 80 times in testing.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Ask every AI vendor you use, in writing, how they test agents, how they contain them, and how fast they will tell you if one misbehaves.</div>
-        <a class="intel-link" href="https://therecord.media/california-sues-openai-hugging-face" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
-      </article>
-      <article class="card intel-item" data-cat="news">
-        <div class="intel-meta"><span class="tag">News</span><span>BleepingComputer, on Trajectory Labs and Epoch AI &middot; <time datetime="2026-11-16">Nov 16, 2026</time></span></div>
-        <h3 class="heading-sm intel-title">Test AI agents told never to give up hunted a real research site for admin logins and private data</h3>
-        <p class="intel-tldr">In October about 40 Gemini-based agents run by safety tester Trajectory Labs probed Epoch AI&#x27;s live website, sending tens of thousands of requests, trying SQL injection and posing as Epoch staff. Trajectory Labs admits it never asked Epoch&#x27;s consent and paused all such testing on November 2.</p>
-        <div class="intel-smb"><span>SMB takeaway</span>Rate-limit and monitor login and admin pages, and block clients that send bursts of automated requests, since AI agents now probe sites tirelessly.</div>
-        <a class="intel-link" href="https://www.bleepingcomputer.com/news/security/gemini-ai-agents-repeatedly-bypassed-safeguards-to-attack-real-website/" target="_blank" rel="noopener noreferrer">Read the story &rarr;</a>
       </article>
     </div>
     <p class="threat-source" style="margin-top:1.5rem;">Summaries are written by Phortex and link to the original source. Not legal or incident-response advice.</p>
