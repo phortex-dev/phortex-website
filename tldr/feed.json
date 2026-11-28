@@ -1,6 +1,66 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "items": [
+    {
+      "date": "2026-11-28",
+      "title": "Critical WP Rocket WordPress plugin flaw is under active attack",
+      "why": "Attackers began exploiting a critical WP Rocket flaw on November 25 to plant and run PHP files. Sites on versions before 3.24.2 are exposed if CSS background LazyLoad or Host Fonts Locally is turned on.",
+      "action": "Update WP Rocket to 3.24.2 or later today, then check wp-content and uploads for unexpected PHP files such as wp-media-*.php, since updating does not remove them.",
+      "source_name": "Patchstack",
+      "source_url": "https://patchstack.com/articles/critical-wp-rocket-rce-cve-2026-125812-under-active-attack/",
+      "heat": 4,
+      "cat": "patch"
+    },
+    {
+      "date": "2026-11-28",
+      "title": "UK benefits agency takes Universal Credit services offline after a cyber incident",
+      "why": "The Department for Work and Pensions shut down online claims and sign-ins late Thursday as a precaution. It says payments continue and the incident is not ransomware; scope and data access are still unknown.",
+      "action": "Write down who can shut systems off in an incident and how you will tell customers, and remind staff that scammers exploit outages with fake messages.",
+      "source_name": "Cybernews",
+      "source_url": "https://cybernews.com/security/uk-government-benefits-system-dwp-offline",
+      "heat": 4,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-28",
+      "title": "Official Q-Dir and DesktopOK downloads were altered to install a remote access trojan",
+      "why": "AhnLab found that installers and updates from SoftwareOK's own site ran the real Windows utilities while quietly adding a Python RAT that can run commands and take screenshots.",
+      "action": "Check PCs for Q-Dir or DesktopOK, uninstall affected 12.8x builds, reinstall only after checking the file hash, and look for unexpected Python files or scheduled tasks.",
+      "source_name": "ZeroHour",
+      "source_url": "https://zerohour.day/item/f07f47741cf9811877230ba37e1c69661987e45f",
+      "heat": 3,
+      "cat": "malware"
+    },
+    {
+      "date": "2026-11-28",
+      "title": "pCloud confirms an attack on its pCloud Pass password manager",
+      "why": "Users received alerts about unknown devices joining their accounts. pCloud says some email addresses were exposed and login attempts were made, but says stored passwords and cloud files were not affected.",
+      "action": "If you use pCloud Pass, review its list of connected devices, remove any you do not recognize, and change the master password.",
+      "source_name": "CXO Digitalpulse",
+      "source_url": "https://www.cxodigitalpulse.com/pcloud-confirms-attack-on-password-manager-after-users-receive-device-alerts/",
+      "heat": 3,
+      "cat": "cloud"
+    },
+    {
+      "date": "2026-11-28",
+      "title": "AFP takes its client news platform offline after intruders used customer FTP logins",
+      "why": "Agence France-Presse shut down AFP Forum, which media clients use to download stories and photos, after finding client FTP credentials had been used. Its newsrooms were not affected.",
+      "action": "Replace shared FTP logins for client file exchange with per-user accounts on SFTP or a portal with MFA, and reset any FTP passwords you have not changed recently.",
+      "source_name": "Cybernews",
+      "source_url": "https://cybernews.com/security/afp-data-breach-global-news-platform/",
+      "heat": 3,
+      "cat": "breach"
+    },
+    {
+      "date": "2026-11-28",
+      "title": "FIFA confirms a cyberattack after a new group claims 12 GB of internal files",
+      "why": "FIFA says attackers reached a limited set of personal and business data and it is working with police. The group claims the files came from FIFA's Microsoft environment; that is unverified.",
+      "action": "Review Microsoft 365 sign-in logs and admin roles for unusual access, and confirm every account, including shared and service accounts, uses MFA.",
+      "source_name": "Security Affairs",
+      "source_url": "https://securityaffairs.com/204100/data-breach/fifa-confirms-a-cyberattack-hackers-claim-12-gb-of-internal-files.html",
+      "heat": 3,
+      "cat": "breach"
+    },
     {
       "date": "2026-11-27",
       "title": "SAP confirms a cyberattack after reports hackers copied and altered source code",
